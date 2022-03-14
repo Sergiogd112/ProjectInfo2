@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anna peña garcia\\Source\\Repos\\ProjectInfo2\\FlightLib\\FlightLib.csproj": {}
+    "C:\\Users\\anna peña garcia\\source\\repos\\ProjectInfo2\\FlightLib\\FlightLib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anna peña garcia\\Source\\Repos\\ProjectInfo2\\FlightLib\\FlightLib.csproj": {
+    "C:\\Users\\anna peña garcia\\source\\repos\\ProjectInfo2\\FlightLib\\FlightLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anna peña garcia\\Source\\Repos\\ProjectInfo2\\FlightLib\\FlightLib.csproj",
+        "projectUniqueName": "C:\\Users\\anna peña garcia\\source\\repos\\ProjectInfo2\\FlightLib\\FlightLib.csproj",
         "projectName": "FlightLib",
-        "projectPath": "C:\\Users\\anna peña garcia\\Source\\Repos\\ProjectInfo2\\FlightLib\\FlightLib.csproj",
+        "projectPath": "C:\\Users\\anna peña garcia\\source\\repos\\ProjectInfo2\\FlightLib\\FlightLib.csproj",
         "packagesPath": "C:\\Users\\anna peña garcia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anna peña garcia\\Source\\Repos\\ProjectInfo2\\FlightLib\\obj\\",
+        "outputPath": "C:\\Users\\anna peña garcia\\source\\repos\\ProjectInfo2\\FlightLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\anna peña garcia\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -100,7 +100,7 @@ namespace SimulatorConsole
             }
             Console.WriteLine("End");
             fligthList.WriteAll();
-            Console.WriteLine("Hola");
+            Console.WriteLine("Hoa");
 
             Console.ReadLine();
 
