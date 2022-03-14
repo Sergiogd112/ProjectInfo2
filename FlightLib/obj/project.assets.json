@@ -180,28 +180,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sergi\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\anna peña garcia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sergi\\Documents\\GitHub\\ProjectInfo2\\FlightLib\\FlightLib.csproj",
+      "projectUniqueName": "C:\\Users\\anna peña garcia\\Source\\Repos\\ProjectInfo2\\FlightLib\\FlightLib.csproj",
       "projectName": "FlightLib",
-      "projectPath": "C:\\Users\\sergi\\Documents\\GitHub\\ProjectInfo2\\FlightLib\\FlightLib.csproj",
-      "packagesPath": "C:\\Users\\sergi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sergi\\Documents\\GitHub\\ProjectInfo2\\FlightLib\\obj\\",
+      "projectPath": "C:\\Users\\anna peña garcia\\Source\\Repos\\ProjectInfo2\\FlightLib\\FlightLib.csproj",
+      "packagesPath": "C:\\Users\\anna peña garcia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\anna peña garcia\\Source\\Repos\\ProjectInfo2\\FlightLib\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sergi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\anna peña garcia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
