@@ -15,7 +15,7 @@ namespace SimulatorConsole
             // instanciar la FligthPlanList
             FligthPlanList fligthList = new FligthPlanList();
 
-
+            int patata;
 
             // Determinar el numero de iteraciones en la simulación
 
