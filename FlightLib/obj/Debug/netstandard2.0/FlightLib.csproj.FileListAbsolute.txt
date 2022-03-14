@@ -1,0 +1,38 @@
+C:\Users\roc\Desktop\INFII\PrimerProyecto\FlightLib\bin\Debug\netstandard2.0\FlightLib.deps.json
+C:\Users\roc\Desktop\INFII\PrimerProyecto\FlightLib\bin\Debug\netstandard2.0\FlightLib.dll
+C:\Users\roc\Desktop\INFII\PrimerProyecto\FlightLib\bin\Debug\netstandard2.0\FlightLib.pdb
+C:\Users\roc\Desktop\INFII\PrimerProyecto\FlightLib\obj\Debug\netstandard2.0\FlightLib.csprojAssemblyReference.cache
+C:\Users\roc\Desktop\INFII\PrimerProyecto\FlightLib\obj\Debug\netstandard2.0\FlightLib.csproj.CoreCompileInputs.cache
+C:\Users\roc\Desktop\INFII\PrimerProyecto\FlightLib\obj\Debug\netstandard2.0\FlightLib.AssemblyInfoInputs.cache
+C:\Users\roc\Desktop\INFII\PrimerProyecto\FlightLib\obj\Debug\netstandard2.0\FlightLib.AssemblyInfo.cs
+C:\Users\roc\Desktop\INFII\PrimerProyecto\FlightLib\obj\Debug\netstandard2.0\FlightLib.dll
+C:\Users\roc\Desktop\INFII\PrimerProyecto\FlightLib\obj\Debug\netstandard2.0\FlightLib.pdb
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\FlightLib\bin\Debug\netstandard2.0\FlightLib.deps.json
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\FlightLib\bin\Debug\netstandard2.0\FlightLib.dll
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\FlightLib\bin\Debug\netstandard2.0\FlightLib.pdb
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.csprojAssemblyReference.cache
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.csproj.CoreCompileInputs.cache
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.AssemblyInfoInputs.cache
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.AssemblyInfo.cs
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.dll
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.pdb
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.dll
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.pdb
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\FlightLib\bin\Debug\netstandard2.0\FlightLib.deps.json
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\FlightLib\bin\Debug\netstandard2.0\FlightLib.dll
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\FlightLib\bin\Debug\netstandard2.0\FlightLib.pdb
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.csproj.AssemblyReference.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.AssemblyInfoInputs.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.AssemblyInfo.cs
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\FlightLib\obj\Debug\netstandard2.0\FlightLib.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\FlightLib\bin\Debug\netstandard2.0\FlightLib.deps.json
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\FlightLib\bin\Debug\netstandard2.0\FlightLib.dll
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\FlightLib\bin\Debug\netstandard2.0\FlightLib.pdb
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\FlightLib\obj\Debug\netstandard2.0\FlightLib.csproj.AssemblyReference.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\FlightLib\obj\Debug\netstandard2.0\FlightLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\FlightLib\obj\Debug\netstandard2.0\FlightLib.AssemblyInfoInputs.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\FlightLib\obj\Debug\netstandard2.0\FlightLib.AssemblyInfo.cs
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\FlightLib\obj\Debug\netstandard2.0\FlightLib.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\FlightLib\obj\Debug\netstandard2.0\FlightLib.dll
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\FlightLib\obj\Debug\netstandard2.0\FlightLib.pdb

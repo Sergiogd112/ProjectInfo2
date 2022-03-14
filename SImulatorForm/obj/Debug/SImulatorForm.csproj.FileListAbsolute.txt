@@ -1,0 +1,11 @@
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SImulatorForm\bin\Debug\SImulatorForm.exe.config
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SImulatorForm\bin\Debug\SImulatorForm.exe
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SImulatorForm\bin\Debug\SImulatorForm.pdb
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SImulatorForm\obj\Debug\SImulatorForm.csproj.AssemblyReference.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SImulatorForm\obj\Debug\SImulatorForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SImulatorForm\obj\Debug\SImulatorForm.Fligthdisplay.resources
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SImulatorForm\obj\Debug\SImulatorForm.Properties.Resources.resources
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SImulatorForm\obj\Debug\SImulatorForm.csproj.GenerateResource.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SImulatorForm\obj\Debug\SImulatorForm.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SImulatorForm\obj\Debug\SImulatorForm.exe
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SImulatorForm\obj\Debug\SImulatorForm.pdb

@@ -1,0 +1,42 @@
+C:\Users\roc\Desktop\INFII\PrimerProyecto\SimulatorConsole\bin\Debug\SimulatorConsole.exe.config
+C:\Users\roc\Desktop\INFII\PrimerProyecto\SimulatorConsole\bin\Debug\SimulatorConsole.exe
+C:\Users\roc\Desktop\INFII\PrimerProyecto\SimulatorConsole\bin\Debug\SimulatorConsole.pdb
+C:\Users\roc\Desktop\INFII\PrimerProyecto\SimulatorConsole\bin\Debug\FlightLib.dll
+C:\Users\roc\Desktop\INFII\PrimerProyecto\SimulatorConsole\bin\Debug\FlightLib.pdb
+C:\Users\roc\Desktop\INFII\PrimerProyecto\SimulatorConsole\obj\Debug\SimulatorConsole.csprojAssemblyReference.cache
+C:\Users\roc\Desktop\INFII\PrimerProyecto\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CoreCompileInputs.cache
+C:\Users\roc\Desktop\INFII\PrimerProyecto\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CopyComplete
+C:\Users\roc\Desktop\INFII\PrimerProyecto\SimulatorConsole\obj\Debug\SimulatorConsole.exe
+C:\Users\roc\Desktop\INFII\PrimerProyecto\SimulatorConsole\obj\Debug\SimulatorConsole.pdb
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\SimulatorConsole\obj\Debug\SimulatorConsole.csprojAssemblyReference.cache
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CoreCompileInputs.cache
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\SimulatorConsole\obj\Debug\SimulatorConsole.exe
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\SimulatorConsole\obj\Debug\SimulatorConsole.pdb
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\SimulatorConsole\bin\Debug\SimulatorConsole.exe.config
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\SimulatorConsole\bin\Debug\SimulatorConsole.exe
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\SimulatorConsole\bin\Debug\SimulatorConsole.pdb
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\SimulatorConsole\bin\Debug\FlightLib.dll
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\SimulatorConsole\bin\Debug\FlightLib.pdb
+C:\Users\roc\Desktop\INFII\Sesion1\PrimerProyectoBefore\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CopyComplete
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\SimulatorConsole\bin\Debug\FlightLib.dll
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\SimulatorConsole\bin\Debug\FlightLib.pdb
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CopyComplete
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\SimulatorConsole\obj\Debug\SimulatorConsole.exe
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\SimulatorConsole\obj\Debug\SimulatorConsole.pdb
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.AssemblyReference.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\SimulatorConsole\bin\Debug\SimulatorConsole.exe.config
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\SimulatorConsole\bin\Debug\SimulatorConsole.exe
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\SimulatorConsole\bin\Debug\SimulatorConsole.pdb
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoBefore\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.SuggestedBindingRedirects.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\bin\Debug\SimulatorConsole.exe.config
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\bin\Debug\SimulatorConsole.exe
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\bin\Debug\SimulatorConsole.pdb
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\bin\Debug\FlightLib.dll
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\bin\Debug\FlightLib.pdb
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.AssemblyReference.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.SuggestedBindingRedirects.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CopyComplete
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\obj\Debug\SimulatorConsole.exe
+C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\obj\Debug\SimulatorConsole.pdb
