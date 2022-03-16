@@ -31,5 +31,20 @@ namespace SImulatorForm
         {
 
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// al pulsar el botton Move se llama a la funcion MoveAl de FligthPlanList
+        /// TODO
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Move_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

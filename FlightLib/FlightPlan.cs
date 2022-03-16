@@ -9,6 +9,7 @@ namespace FlightLib
         // Atributos
 
         string id; // identificador
+        Position startPosition;
         Position currentPosition; // posicion actual
         Position finalPosition; // posicion final
         double velocidad;
@@ -17,6 +18,7 @@ namespace FlightLib
         public FlightPlan()
         {
             this.id = "";
+            this.startPosition = new Position(0, 0);
             this.currentPosition = new Position(0, 0);
             this.finalPosition = new Position(0, 0);
             this.velocidad = 0;
@@ -24,6 +26,7 @@ namespace FlightLib
         public FlightPlan(string id, double cpx, double cpy, double fpx, double fpy, double velocidad)
         {
             this.id = id;
+            this.startPosition = new Position(cpx, cpy);
             this.currentPosition = new Position(cpx, cpy);
             this.finalPosition = new Position(fpx, fpy);
             this.velocidad = velocidad;
@@ -45,7 +48,22 @@ namespace FlightLib
         {
             return this.velocidad;
         }
-
+        
+        /// <summary>
+        /// Genera un vector de doubles[3,2] con las tres posiciones: start, current y end. 
+        /// </summary>
+        /// <returns>[[startx,starty],[currentx,currenty],[endx,endy]]</returns>
+        public double[,] GetPositions()
+        {
+            double[,] data = new double[3, 2];
+            data[0, 0] = this.startPosition.GetX();
+            data[0, 1] = this.startPosition.GetY();
+            data[1, 0] = this.currentPosition.GetX();
+            data[1, 1] = this.currentPosition.GetY();
+            data[2, 0] = this.finalPosition.GetX();
+            data[2, 1] = this.finalPosition.GetY();
+            return data;
+        }
         /// <summary>
         /// Setter de la velocidad
         /// </summary>
@@ -93,7 +111,7 @@ namespace FlightLib
                 this.currentPosition = this.finalPosition;
             }
         }
-        
+
         /// <summary>
         /// Comprueva si el avion está en destino
         /// </summary>
@@ -328,7 +346,7 @@ namespace FlightLib
         /// </summary>
         /// <param name="b">segundo avion</param>
         /// <returns>[distancia minima, interaccionan(0 o 1)]</returns>
-        public double[] Interaction(FlightPlan b, double distanciaSeguridad,bool clamp=true)
+        public double[] Interaction(FlightPlan b, double distanciaSeguridad, bool clamp = true)
         {
             double[,] data = new double[3, 2];
             data = this.ShortestDistanceBetweenPaths(b, clamp);
@@ -438,7 +456,7 @@ namespace FlightLib
 
 
         }
-        
+
         /// <summary>
         /// Escribe los datos del FligthPlan por consola
         /// </summary>

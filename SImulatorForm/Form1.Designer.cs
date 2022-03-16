@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Auto = new System.Windows.Forms.Button();
+            this.Move = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Move = new System.Windows.Forms.Button();
-            this.Auto = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -58,10 +58,29 @@
             this.panel1.Controls.Add(this.Move);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(313, 774);
             this.panel1.TabIndex = 1;
+            // 
+            // Auto
+            // 
+            this.Auto.Location = new System.Drawing.Point(112, 367);
+            this.Auto.Name = "Auto";
+            this.Auto.Size = new System.Drawing.Size(75, 23);
+            this.Auto.TabIndex = 4;
+            this.Auto.Text = "Auto";
+            this.Auto.UseVisualStyleBackColor = true;
+            // 
+            // Move
+            // 
+            this.Move.Location = new System.Drawing.Point(112, 263);
+            this.Move.Name = "Move";
+            this.Move.Size = new System.Drawing.Size(75, 23);
+            this.Move.TabIndex = 3;
+            this.Move.Text = "Move";
+            this.Move.UseVisualStyleBackColor = true;
+            this.Move.Click += new System.EventHandler(this.Move_Click);
             // 
             // panel2
             // 
@@ -70,7 +89,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(317, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1019, 774);
             this.panel2.TabIndex = 2;
@@ -84,24 +103,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1000, 700);
             this.panel3.TabIndex = 1;
-            // 
-            // Move
-            // 
-            this.Move.Location = new System.Drawing.Point(112, 263);
-            this.Move.Name = "Move";
-            this.Move.Size = new System.Drawing.Size(75, 23);
-            this.Move.TabIndex = 3;
-            this.Move.Text = "Move";
-            this.Move.UseVisualStyleBackColor = true;
-            // 
-            // Auto
-            // 
-            this.Auto.Location = new System.Drawing.Point(112, 367);
-            this.Auto.Name = "Auto";
-            this.Auto.Size = new System.Drawing.Size(75, 23);
-            this.Auto.TabIndex = 4;
-            this.Auto.Text = "Auto";
-            this.Auto.UseVisualStyleBackColor = true;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // Fligthdisplay
             // 
@@ -110,7 +112,7 @@
             this.ClientSize = new System.Drawing.Size(1336, 774);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Fligthdisplay";
             this.Text = "Fligth display";
             this.Load += new System.EventHandler(this.Form1_Load);
