@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "B3w5rTBOJ/dXHbhQM8AlcjqqZ6BVF6i9tQFFuRMqNEx6CQyCLNDLQxqMNTsx6T0ySRyu74WHnygjGoOFHB28vw==",
+  "dgSpecHash": "FgCwZVvAtkfwp1YRZF3NhcsLsAqRHlc3aoPuI4Wvd0BG2Zxyy16xTBf16gFF/hSigbwbYWfL9VCekQa11ZQtUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\anna peña garcia\\source\\repos\\ProjectInfo2\\FlightLib\\FlightLib.csproj",
+  "projectFilePath": "C:\\Users\\sergi\\Documents\\GitHub\\ProjectInfo2\\FlightLib\\FlightLib.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\anna peña garcia\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\anna peña garcia\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\sergi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
