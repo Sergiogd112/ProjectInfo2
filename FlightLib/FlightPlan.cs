@@ -81,6 +81,16 @@ namespace FlightLib
             return data;
         }
 
+        /// <summary>
+        /// Calcula la distancia entre la posicion actual y destino
+        /// </summary>
+        /// <returns>Distancia al destino</returns>
+        public double getDistanciaDestino()
+        {
+            return Math.Sqrt((this.finalPosition.GetX() - this.currentPosition.GetX()) * (this.finalPosition.GetX() - this.currentPosition.GetX()) +
+                                            (this.finalPosition.GetY() - this.currentPosition.GetY()) * (this.finalPosition.GetY() - currentPosition.GetY()));
+        }
+
         // SETTERS
         /// <summary>
         /// Setter para Id
@@ -136,44 +146,7 @@ namespace FlightLib
             this.velocidad = v;
         }
 
-        /// <summary>
-        /// Calcula la distancia entre la posicion actual y destino
-        /// </summary>
-        /// <returns>Distancia al destino</returns>
-        public double getDistanciaDestino()
-        {
-            return Math.Sqrt((this.finalPosition.GetX() - this.currentPosition.GetX()) * (this.finalPosition.GetX() - this.currentPosition.GetX()) +
-                                            (this.finalPosition.GetY() - this.currentPosition.GetY()) * (this.finalPosition.GetY() - currentPosition.GetY()));
-        }
-
-        /// <summary>
-        /// Desplaza el avion durante un tiempo dado
-        /// </summary>
-        /// <param name="tiempo">numero de segundos</param>
-        public void Mover(double tiempo)
-        {
-            //Calculamos la distancia recorrida en el tiempo dado
-            double distancia = tiempo * this.velocidad / 60;
-
-            //Calculamos las razones trigonométricas
-            double hipotenusa = Math.Sqrt((finalPosition.GetX() - currentPosition.GetX()) * (finalPosition.GetX() - currentPosition.GetX()) + (finalPosition.GetY() - currentPosition.GetY()) * (finalPosition.GetY() - currentPosition.GetY()));
-            double coseno = (finalPosition.GetX() - currentPosition.GetX()) / hipotenusa;
-            double seno = (finalPosition.GetY() - currentPosition.GetY()) / hipotenusa;
-
-            //Caculamos la nueva posición del vuelo
-            double x = currentPosition.GetX() + distancia * coseno;
-            double y = currentPosition.GetY() + distancia * seno;
-
-            Position nextPosition = new Position(x, y);
-            if (this.currentPosition.Distancia(nextPosition) < hipotenusa)
-            {
-                this.currentPosition = nextPosition;
-            }
-            else
-            {
-                this.currentPosition = this.finalPosition;
-            }
-        }
+        // CHECKERS
 
         /// <summary>
         /// Comprueva si el avion está en destino
@@ -202,13 +175,6 @@ namespace FlightLib
             return success;
         }
 
-        /// <summary>
-        /// Reinicia las posiciones de los aviones
-        /// </summary>
-        public void Restart()
-        {
-            this.currentPosition = this.initialPosition;
-        }
 
 
         /// <summary>
@@ -546,6 +512,48 @@ namespace FlightLib
 
 
         }
+
+
+        // METODOS
+
+        /// <summary>
+        /// Desplaza el avion durante un tiempo dado
+        /// </summary>
+        /// <param name="tiempo">numero de segundos</param>
+        public void Mover(double tiempo)
+        {
+            //Calculamos la distancia recorrida en el tiempo dado
+            double distancia = tiempo * this.velocidad / 60;
+
+            //Calculamos las razones trigonométricas
+            double hipotenusa = Math.Sqrt((finalPosition.GetX() - currentPosition.GetX()) * (finalPosition.GetX() - currentPosition.GetX()) + (finalPosition.GetY() - currentPosition.GetY()) * (finalPosition.GetY() - currentPosition.GetY()));
+            double coseno = (finalPosition.GetX() - currentPosition.GetX()) / hipotenusa;
+            double seno = (finalPosition.GetY() - currentPosition.GetY()) / hipotenusa;
+
+            //Caculamos la nueva posición del vuelo
+            double x = currentPosition.GetX() + distancia * coseno;
+            double y = currentPosition.GetY() + distancia * seno;
+
+            Position nextPosition = new Position(x, y);
+            if (this.currentPosition.Distancia(nextPosition) < hipotenusa)
+            {
+                this.currentPosition = nextPosition;
+            }
+            else
+            {
+                this.currentPosition = this.finalPosition;
+            }
+        }
+
+        /// <summary>
+        /// Reinicia las posiciones de los aviones
+        /// </summary>
+        public void Restart()
+        {
+            this.currentPosition = this.initialPosition;
+        }
+
+        // CONSOLE
 
         /// <summary>
         /// Escribe los datos del FligthPlan por consola
