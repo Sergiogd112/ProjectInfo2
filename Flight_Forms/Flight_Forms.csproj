@@ -99,12 +99,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FlightLib\FlightLib.csproj">
-      <Project>{43697531-441d-42ba-bdf3-b9a9823b24d3}</Project>
-      <Name>FlightLib</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\universo.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\inicioCIELO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FligthLib\FligthLib.csproj">
+      <Project>{1523f3df-2b89-474f-99a5-64bb03fe99ae}</Project>
+      <Name>FligthLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

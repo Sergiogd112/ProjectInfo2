@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FlightLib
+namespace FligthLib
 {
     /// <summary>
     /// Clase en la que se guarda una lista de FligthPlans y como se afectan los unos a los otros.
