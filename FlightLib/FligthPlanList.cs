@@ -18,6 +18,8 @@ namespace FlightLib
         private double[,] confd;
         private double distanciaSeguridad;
 
+        // CONSTRUCTOR
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -31,6 +33,8 @@ namespace FlightLib
             this.confd = new double[maxLen, maxLen];
             this.distanciaSeguridad = 0.0;
         }
+
+        // GETTERS
 
         /// <summary>
         /// Leer el numero de FligthPlans añadidos a la lista
@@ -59,15 +63,8 @@ namespace FlightLib
             return this.distanciaSeguridad;
         }
 
-        /// <summary>
-        /// Modificar la distancia de seguridad. Usa el valor absoluto
-        /// </summary>
-        /// <param name="d"></param>
-        public void SetDistanciaSeguridad(double d)
-        {
 
-            this.distanciaSeguridad = Math.Abs(d);
-        }
+        //SETTERS
 
         /// <summary>
         /// Leer el FligthPlan en un indice
@@ -186,6 +183,11 @@ namespace FlightLib
             this.CheckInteractions();
             this.CheckConflicts();
         }
+        
+        /// <summary>
+        /// Lee los planes en del fichero txt
+        /// </summary>
+        /// <param name="filename">Path del fichero</param>
         public void AddFromfile(string filename)
         {
             string[] lines = System.IO.File.ReadAllLines(filename);
@@ -203,6 +205,18 @@ namespace FlightLib
             this.CheckInteractions();
             this.CheckConflicts();
         }
+
+        /// <summary>
+        /// Modificar la distancia de seguridad. Usa el valor absoluto
+        /// </summary>
+        /// <param name="d"></param>
+        public void SetDistanciaSeguridad(double d)
+        {
+
+            this.distanciaSeguridad = Math.Abs(d);
+        }
+
+        // CHECKERS
 
         /// <summary>
         /// Comprueva las minimas distancias posibles entre aviones(independiente de velocidad)
@@ -260,6 +274,8 @@ namespace FlightLib
             }
         }
 
+        // METHODS
+
         /// <summary>
         /// Mueve todos los aviones n moves
         /// </summary>
@@ -271,6 +287,8 @@ namespace FlightLib
                 this.flights[i].Mover(10);
             }
         }
+
+        // CONSOLE
 
         /// <summary>
         /// Escribe todos los FligthPlans por consola
