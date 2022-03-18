@@ -9,7 +9,7 @@ namespace FlightLib
         // Atributos
 
         string id; // identificador
-        Position startPosition;
+        Position initialPosition;
         Position currentPosition; // posicion actual
         Position finalPosition; // posicion final
         double velocidad;
@@ -18,7 +18,7 @@ namespace FlightLib
         public FlightPlan()
         {
             this.id = "";
-            this.startPosition = new Position(0, 0);
+            this.initialPosition = new Position(0, 0);
             this.currentPosition = new Position(0, 0);
             this.finalPosition = new Position(0, 0);
             this.velocidad = 0;
@@ -26,11 +26,13 @@ namespace FlightLib
         public FlightPlan(string id, double cpx, double cpy, double fpx, double fpy, double velocidad)
         {
             this.id = id;
-            this.startPosition = new Position(cpx, cpy);
+            this.initialPosition = new Position(cpx, cpy);
             this.currentPosition = new Position(cpx, cpy);
             this.finalPosition = new Position(fpx, fpy);
             this.velocidad = velocidad;
         }
+
+        // GETTER
 
         /// <summary>
         /// Getter del identificador
@@ -40,6 +42,7 @@ namespace FlightLib
         {
             return this.id;
         }
+        
         /// <summary>
         /// Getter de la velocidad
         /// </summary>
@@ -47,6 +50,19 @@ namespace FlightLib
         public double GetVelocidad()
         {
             return this.velocidad;
+        }
+
+        public Position GetInitialPosition()
+        {
+            return this.initialPosition;
+        }
+        public Position GetCurrentPosition()
+        {
+            return this.currentPosition;
+        }
+        public Position GetFinalPosition()
+        {
+            return this.finalPosition;
         }
         
         /// <summary>
@@ -56,21 +72,68 @@ namespace FlightLib
         public double[,] GetPositions()
         {
             double[,] data = new double[3, 2];
-            data[0, 0] = this.startPosition.GetX();
-            data[0, 1] = this.startPosition.GetY();
+            data[0, 0] = this.initialPosition.GetX();
+            data[0, 1] = this.initialPosition.GetY();
             data[1, 0] = this.currentPosition.GetX();
             data[1, 1] = this.currentPosition.GetY();
             data[2, 0] = this.finalPosition.GetX();
             data[2, 1] = this.finalPosition.GetY();
             return data;
         }
+
+        // SETTERS
+        /// <summary>
+        /// Setter para Id
+        /// </summary>
+        /// <param name="identificator">Identificador del avion</param>
+        public void SetId(string identificator)
+        {
+            this.id = identificator;
+        }
+        
+        /// <summary>
+        /// Setter para la posicion incial
+        /// </summary>
+        /// <param name="x">coordenada en x</param>
+        /// <param name="y">coordenada en y</param>
+
+        public void SetInitialPosition(double x, double y)
+        {
+            this.initialPosition = new Position(x, y);
+        }
+
+        /// <summary>
+        /// Setter para la posición actual
+        /// </summary>
+        /// <param name="x">coordenada en x</param>
+        /// <param name="y">coordenada en y</param>
+
+        public void SetCurrentPosition(double x, double y)
+        {
+            this.currentPosition = new Position(x, y);
+
+        }
+
+        /// <summary>
+        /// Setter para la posición final
+        /// </summary>
+        /// <param name="x">coordenada en x</param>
+        /// <param name="y">coordenada en y</param>
+
+        public void SetFinalPosition(double x, double y)
+        {
+            this.finalPosition = new Position(x, y);
+
+        }
+
         /// <summary>
         /// Setter de la velocidad
         /// </summary>
         /// <param name="velocidad"></param>
-        public void SetVelocidad(double velocidad)
+
+        public void SetVelocidad(double v)
         {
-            this.velocidad = velocidad;
+            this.velocidad = v;
         }
 
         /// <summary>
@@ -120,6 +183,33 @@ namespace FlightLib
         {
             return this.currentPosition == this.finalPosition;
         }
+        
+        /// <summary>
+        /// Comprueva si ha llegado
+        /// </summary>
+        /// <returns><see langword="true"/>si ha llegado</returns>
+        public Boolean HasArrived()
+        {
+            bool success;
+            if (EstaDestino() == false)
+            {
+                success = false;
+            }
+            else
+            {
+                success = true;
+            }
+            return success;
+        }
+
+        /// <summary>
+        /// Reinicia las posiciones de los aviones
+        /// </summary>
+        public void Restart()
+        {
+            this.currentPosition = this.initialPosition;
+        }
+
 
         /// <summary>
         /// Determina la distancia mas corta entre trayectorias. Convertido de Python a C//.

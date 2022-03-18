@@ -9,7 +9,7 @@ namespace FlightLib
     /// </summary>
     public class FligthPlanList
     {
-        private int len;
+        private int number;
         const int maxLen = 1000;
         private FlightPlan[] flights;
         private bool[,] interactions;
@@ -23,7 +23,7 @@ namespace FlightLib
         /// </summary>
         public FligthPlanList()
         {
-            this.len = 0;
+            this.number = 0;
             this.flights = new FlightPlan[maxLen];
             this.interactions = new bool[maxLen, maxLen];
             this.conflicts = new bool[maxLen, maxLen];
@@ -38,7 +38,16 @@ namespace FlightLib
         /// <returns></returns>
         public int GetLen()
         {
-            return len;
+            return number;
+        }
+
+        /// <summary>
+        /// Leer el numero de fligthplans añadidos a la lista
+        /// </summary>
+        /// <returns></returns>
+        public int GetAmountFlights()
+        {
+            return this.number;
         }
 
         /// <summary>
@@ -67,7 +76,7 @@ namespace FlightLib
         /// <returns></returns>
         public FlightPlan GetFlightAtIndex(int index)
         {
-            if (index < 0 || index >= len)
+            if (index < 0 || index >= number)
             {
                 return null;
             }
@@ -81,13 +90,13 @@ namespace FlightLib
         /// <returns></returns>
         public int AddFligthPlan(FlightPlan fligth)
         {
-            if (len == maxLen)
+            if (number == maxLen)
             {
                 return -1;
             }
-            this.flights[len] = fligth;
-            this.len++;
-            return this.len;
+            this.flights[number] = fligth;
+            this.number++;
+            return this.number;
         }
 
         /// <summary>
@@ -170,7 +179,7 @@ namespace FlightLib
         /// <param name="nAviones"></param>
         public void AddNConsole(int nAviones)
         {
-            for (int i = 0; i < this.len; i++)
+            for (int i = 0; i < this.number; i++)
             {
                 this.AddFromConsole(false);
             }
@@ -206,9 +215,9 @@ namespace FlightLib
         public void CheckInteractions()
         {
             double[] data = new double[2];
-            for (int i = 0; i < this.len; i++)
+            for (int i = 0; i < this.number; i++)
             {
-                for (int j = i; j < this.len; j++)
+                for (int j = i; j < this.number; j++)
                 {
                     data = this.flights[i].Interaction(this.flights[j], this.distanciaSeguridad, true);
                     this.interactions[i, j] = Math.Abs(data[0]) <= this.distanciaSeguridad;
@@ -227,9 +236,9 @@ namespace FlightLib
         public void CheckConflicts(bool checkAll = false)
         {
             double[] data = new double[2];
-            for (int i = 0; i < this.len; i++)
+            for (int i = 0; i < this.number; i++)
             {
-                for (int j = i; j < this.len; j++)
+                for (int j = i; j < this.number; j++)
                 {
                     if (this.interactions[i, j] || checkAll)
                     {
@@ -257,7 +266,7 @@ namespace FlightLib
         /// <param name="moves"></param>
         public void MoveAll(int moves)
         {
-            for (int i = 0; i < this.len; i++)
+            for (int i = 0; i < this.number; i++)
             {
                 this.flights[i].Mover(10);
             }
@@ -268,7 +277,7 @@ namespace FlightLib
         /// </summary>
         public void WriteFligthPlans()
         {
-            for (int i = 0; i < this.len; i++)
+            for (int i = 0; i < this.number; i++)
             {
                 this.flights[i].EscribeConsola();
             }
@@ -280,7 +289,7 @@ namespace FlightLib
         public void WriteInteractions()
         {
             string row, separator;
-            for (int i = 0; i < this.len; i++)
+            for (int i = 0; i < this.number; i++)
             {
                 if (interactions[i, 0])
                 {
@@ -292,7 +301,7 @@ namespace FlightLib
                 }
 
                 separator = "-";
-                for (int j = 1; j < this.len; j++)
+                for (int j = 1; j < this.number; j++)
                 {
 
                     if (interactions[i, j])
@@ -316,7 +325,7 @@ namespace FlightLib
         public void WriteConflicts()
         {
             string row, separator;
-            for (int i = 0; i < this.len; i++)
+            for (int i = 0; i < this.number; i++)
             {
                 if (this.conflicts[i, 0])
                 {
@@ -328,7 +337,7 @@ namespace FlightLib
                 }
 
                 separator = "-";
-                for (int j = 1; j < this.len; j++)
+                for (int j = 1; j < this.number; j++)
                 {
 
                     if (this.conflicts[i, j])
@@ -352,7 +361,7 @@ namespace FlightLib
         public void WriteAll()
         {
             Console.WriteLine("Distancia de seguridad: {0}", this.distanciaSeguridad);
-            Console.WriteLine("Numero de aviones: {0}", this.len);
+            Console.WriteLine("Numero de aviones: {0}", this.number);
             this.WriteFligthPlans();
             Console.WriteLine("Interacciones:");
             this.WriteInteractions();

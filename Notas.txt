@@ -1,0 +1,151 @@
+-------------------------
+DEBUGAR
+- Paso a paso por instrucciones (F11). Entramos dentro de una parte del código. 
+* podemos ver cómo funciona el código de una función del mismo. Podemos acceder a otras partes.
+* podemos ir línea a línea una vez accedido al código. 
+	
+
+- Paso a paso por procedimientos (F10). Ejecutamos linea a linea.
+	1. Aparece flecha amarilla y botonera superior
+	2. nos ejecuta linea a linea todo lo que ocurre
+	*podemos ver el valor de cualquier variable en todo momento en la caja de info inferior
+
+En el caso de estar interesadx en una parte del código concreta, en una linea, utilizamos 'breakpoint'.
+	1. Click derecho sobre linea
+	2. punto de interrupcion
+	3. sin ir paso a paso: clicamos a 'iniciar'. Ejecuta directamente hasta ese punto
+		3.1. ahora decidimos cómo queremos debugar hasta ese punto sin tener que ejecturar lentamente el codigo superior
+
+ERRORES EN LOS DATOS DE ENTRADA
+* cuando es en tiempo de ejecución: el programa está bien escrito, debe haber otro error 
+* cuando hay error de tipado y no queremos que pete el programa:
+	- SOLUCIÓN: TRY-CATCH
+	1. Try: código a analizar
+	2. Qué hay que hacer si se detecta un error de excepción
+
+	try
+	{
+	}
+	catch(FormatException)
+	{
+	Console.WriteLine()
+	}
+
+
+BUCLE DE SIMULACION. Ciclos y tiempo
+* queremos hacer un bucle que ejecute una función reiteradas veces. 
+- while 
+
+
+FORMATEO DEL TEXTO. Facilitar legibilidad de texto. 
+* magnitudes resultantes pueden tener decimales infinitos. Esto en la vida real no es práctico. Damos decimales finitos
+Console.WriteLine("...{0:(type)(cantindad)}",(...));
+pe: Console.WriteLine("Velocidad {0:F2}, a.GetVelocidad()");
+
+Es decir, entre corchetes indicamos con la primera cifra un argumento indicada en esa misma posicion, siguiendo el orden marcado, y tras los dos puntos, indicamos con una letra el tipado del argumento y con el valor posteriori la cantidad de decimales deseados
+
+==> cuando queremos implementar un nuevo método a un programa, debemos preguntarnos en qué clase añadirlo
+
+
+CUANDO CREAMOS UN OBJETO DEL TIPO LISTA DESDE CONSOLA, DONDE ASIGNAMOS UNA VARIABLE (introducida por consola) A CADA PARAMETRO DEL CONSTRUCTOR, ESTA VARIABLE DEJA DE SER ACCESIBLE. 
+*PARA ACCEDER A LA INFORMACION, LO HACEMOS MEDIANTE LA POSICION DEL VECTOR
+*PARA CREAR UN NUEVO OBJETO, PODEMOS SERGUIR UTILIZANDO LA VARIABLE SIN QUE SE ACTUALICE EL ANTERIOR OBJETO PORQUE SU PARAMETRIZACIÓN YA HA SIDO ASIGNADA.
+
+
+
+-----------------------------
+PROYECTO 0 - PARTE 1
+-----------------------------
+
+******
+Fase 1: Añadir los siguientes métodos a la clase FlightPlan
+
+	1. Realiza un cambio en los nombres de los proyectos y de la solución de forma que sean
+	auto explicativos.
+	2. Añade un Constructor para inicializar todos los atributos de la clase FlightPlan
+	3. Añade todos los Gets y Sets para leer valores de los atributos y modificar los valores de
+	los atributos.
+	4. Añade el método public Boolean HasArrived(): Este método devuelve true si el avión ha
+	llegado a su destino y false en caso contrario.
+	5. Para realizar el método anterior necesitamos añadir la posición actual, por tanto,
+	necesitas modifica el método public void Move (double time)
+	6. Añade el método public void Restart(): Este método mueve el avión a las posición inicial.
+	7. public double Distance (FlightPlan plan): Este método devuelve la distancia con el plan
+	de vuelo recibido como argumento.
+******
+
+******
+Fase 2: Crear un proyecto Windows Forms y añadir una opción para introducir
+datos
+	1. Crear un proyecto Windows Forms y añadir un menú de opciones.
+	2. Incorporar una primera opción que abra un nuevo formulario en el que introducir los
+	datos de los dos planes de vuelo implicados, verificando que no hay errores en los datos
+	de entrada. Naturalmente, los datos se cargarán en dos objetos de la clase FlightPlan.
+	3. Incorporar una segunda opción al menu que abra un nuevo formulario para introducir
+	la distancia de seguridad y el tiempo de ciclo, verificando que no hay errores en los datos
+	de entrada.
+******
+
+
+******
+Fase 3: Añadir una opción para iniciar la simulación
+	1. Añadir una tercera opción al menú que abra un formulario en el que se muestre
+	el espacio aéreo y la ubicación inicial de los dos vuelos.
+******
+
+
+******
+Fase 4: Mover los aviones
+1. Añadir al formulario de simulación un botón que hace que los dos aviones se muevan
+un ciclo.
+******
+
+
+******
+Fase 5: Ver información de los aviones
+	1. Añadir el código necesario para que al clicar el usuario sobre uno de los aviones se
+	abra un formulario que muestre la información de ese avión.
+******
+
+
+******
+Fase 6: Añadir una línea para mostrar la trayectoria
+	1. Añadir el código necesario para mostrar una línea del origen al destino del plan de
+	vuelo y comprueba que los aviones se mueves a través de dicha trayectoria
+******
+
+
+******
+Fase 7: Mostrar la distancia de seguridad de cada avión
+	1. Añadir el código necesario para dibujar una elipse alrededor de cada avión mostrando
+	el tamaño de la distancia de seguridad. El avión se debe situar en el centro de la elipse
+	cuando realizamos el movimiento a lo largo de la trayectoria.
+******
+
+
+--------------------------------
+Nota importante: Para realizar estas fases puede ser de utilidad volver a ver los videos de la semana 3
+del curso titulados: Windows Forms Videos.
+
+******
+Videos de Soporte de otros años
+******
+Nota importante: Hace unos años que este ejercicio recibía el nombre de ejercicio de integración y tenía una serie
+de video de soporte. En ese ejercicio se trabajaban conceptos diferentes y por tanto ya no aplican a las versiones
+actuales del proyecto. Para alguna de las fases de ese proyecto se aportaba un video de apoyo en el que se realizaba
+una tarea similar, pero para un proyecto diferente. Era necesario extraer lo relevante del video y adaptarlo al caso
+del proyecto que nos ocupa. Os dejamos lo links a dichos video por si queréis echar una ojeada, pero tal y como
+hemos comentado son video obsoletos y que se deben tener en cuenta para el proyecto actual.
+
+										Videos de apoyo Fase 2:
+										http://youtu.be/eC5eXjJ0Kw8
+										http://youtu.be/Y2u9JIJZadQ
+										Videos de apoyo Fase 3:
+										http://youtu.be/vhGsjtx_dSQ
+										http://youtu.be/y01nGA7-J18
+										Videos de apoyo Fase 4:
+										http://youtu.be/XrMgvEarPTA
+										Videos de apoyo Fase 5:
+										http://youtu.be/iaQdOIHbFxA
+
+----------------------------
