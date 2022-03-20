@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FligthLib;
+using FlightLib;
 
 namespace Flight_Forms
 {
@@ -15,6 +15,8 @@ namespace Flight_Forms
     {
         double distSeg;
         double ciclo;
+        FlightPlanList lista;
+        IntroducirParametrosForm form2;
 
         public PrincipalForm()
         {
@@ -23,7 +25,7 @@ namespace Flight_Forms
 
         private void introducirParametrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            IntroducirParametrosForm form2 = new IntroducirParametrosForm();
+            form2 = new IntroducirParametrosForm();
             form2.ShowDialog(); 
             form2.Visible = true;
 
@@ -44,8 +46,19 @@ namespace Flight_Forms
             form1.ShowDialog();
             form1.Visible = true;
 
-            FligthPlanList lista = form1.DameLista();
+            lista = form1.DameLista();
             form1.Visible = false;
+        }
+
+        private void PrincipalForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iniciarSimulaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Espacioaerio espacioaerio = new Espacioaerio(lista,ciclo);
+            espacioaerio.ShowDialog(); 
         }
     }
 }

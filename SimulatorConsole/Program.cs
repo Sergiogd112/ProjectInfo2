@@ -13,7 +13,7 @@ namespace SimulatorConsole
         static void Main(string[] args)
         {
             // instanciar la FligthPlanList
-            FligthPlanList fligthList = new FligthPlanList();
+            FlightPlanList fligthList = new FlightPlanList();
 
             int patata;
 

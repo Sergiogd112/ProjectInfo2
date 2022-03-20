@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Notas.txt = Notas.txt
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FligthLib", "FligthLib\FligthLib.csproj", "{1523F3DF-2B89-474F-99A5-64BB03FE99AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightLib", "FligthLib\FlightLib.csproj", "{1523F3DF-2B89-474F-99A5-64BB03FE99AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

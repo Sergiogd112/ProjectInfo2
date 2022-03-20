@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Espacioaerio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Espacioaerio.Designer.cs">
+      <DependentUpon>Espacioaerio.cs</DependentUpon>
+    </Compile>
     <Compile Include="IntroducirParametrosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Espacioaerio.resx">
+      <DependentUpon>Espacioaerio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IntroducirDatosForm.resx">
       <DependentUpon>IntroducirDatosForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,9 +129,9 @@
     <None Include="Properties\inicioCIELO.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FligthLib\FligthLib.csproj">
+    <ProjectReference Include="..\FligthLib\FlightLib.csproj">
       <Project>{1523f3df-2b89-474f-99a5-64bb03fe99ae}</Project>
-      <Name>FligthLib</Name>
+      <Name>FlightLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
