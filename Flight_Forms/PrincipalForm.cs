@@ -15,6 +15,7 @@ namespace Flight_Forms
     {
         double distSeg;
         double ciclo;
+        FligthPlanList ListaVuelos = new FligthPlanList();
 
         public PrincipalForm()
         {
@@ -46,6 +47,14 @@ namespace Flight_Forms
 
             FligthPlanList lista = form1.DameLista();
             form1.Visible = false;
+        }
+        private void ClickInformacionVuelo(object sender, EventArgs e) 
+        {
+            PictureBox avion = (PictureBox)sender;
+            int i = (int)avion.Tag - 1;
+            Informaciónvuelo formulario = new Informaciónvuelo();
+            formulario.ClickedFlight(ListaVuelos.GetFlightAtIndex(i)); 
+            formulario.ShowDialog(); 
         }
     }
 }
