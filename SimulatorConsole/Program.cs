@@ -15,7 +15,7 @@ namespace SimulatorConsole
             // instanciar la FligthPlanList
             FlightPlanList fligthList = new FlightPlanList();
 
-            int patata;
+
 
             // Determinar el numero de iteraciones en la simulación
 
@@ -66,7 +66,7 @@ namespace SimulatorConsole
             */
             // Añadiendo desde fichero
             string filename = @"C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\data.txt";
-            fligthList.AddFromfile(filename);
+            fligthList.AddFromFile(filename);
 
             // bucle de simulación
 

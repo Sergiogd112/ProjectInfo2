@@ -54,9 +54,10 @@
             this.aceptarButton.FlatAppearance.BorderColor = System.Drawing.Color.PowderBlue;
             this.aceptarButton.FlatAppearance.BorderSize = 3;
             this.aceptarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aceptarButton.Location = new System.Drawing.Point(396, 437);
+            this.aceptarButton.Location = new System.Drawing.Point(264, 280);
+            this.aceptarButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.aceptarButton.Name = "aceptarButton";
-            this.aceptarButton.Size = new System.Drawing.Size(149, 48);
+            this.aceptarButton.Size = new System.Drawing.Size(99, 31);
             this.aceptarButton.TabIndex = 19;
             this.aceptarButton.Text = "Aceptar";
             this.aceptarButton.UseVisualStyleBackColor = false;
@@ -68,18 +69,20 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label2.Location = new System.Drawing.Point(382, 488);
+            this.label2.Location = new System.Drawing.Point(255, 312);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 25);
+            this.label2.Size = new System.Drawing.Size(109, 17);
             this.label2.TabIndex = 20;
             this.label2.Text = "(ingresar datos)";
             // 
             // velocidadBox
             // 
             this.velocidadBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.velocidadBox.Location = new System.Drawing.Point(118, 315);
+            this.velocidadBox.Location = new System.Drawing.Point(79, 202);
+            this.velocidadBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.velocidadBox.Name = "velocidadBox";
-            this.velocidadBox.Size = new System.Drawing.Size(153, 31);
+            this.velocidadBox.Size = new System.Drawing.Size(103, 22);
             this.velocidadBox.TabIndex = 21;
             // 
             // label3
@@ -88,50 +91,56 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label3.Location = new System.Drawing.Point(129, 283);
+            this.label3.Location = new System.Drawing.Point(86, 181);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 29);
+            this.label3.Size = new System.Drawing.Size(81, 18);
             this.label3.TabIndex = 22;
             this.label3.Text = "Velocidad";
             // 
             // xInBox
             // 
             this.xInBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.xInBox.Location = new System.Drawing.Point(387, 122);
+            this.xInBox.Location = new System.Drawing.Point(258, 78);
+            this.xInBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.xInBox.Name = "xInBox";
-            this.xInBox.Size = new System.Drawing.Size(171, 31);
+            this.xInBox.Size = new System.Drawing.Size(115, 22);
             this.xInBox.TabIndex = 36;
             // 
             // yInBox
             // 
             this.yInBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.yInBox.Location = new System.Drawing.Point(645, 122);
+            this.yInBox.Location = new System.Drawing.Point(430, 78);
+            this.yInBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.yInBox.Name = "yInBox";
-            this.yInBox.Size = new System.Drawing.Size(171, 31);
+            this.yInBox.Size = new System.Drawing.Size(115, 22);
             this.yInBox.TabIndex = 35;
             // 
             // yFinBox
             // 
             this.yFinBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.yFinBox.Location = new System.Drawing.Point(645, 329);
+            this.yFinBox.Location = new System.Drawing.Point(430, 211);
+            this.yFinBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.yFinBox.Name = "yFinBox";
-            this.yFinBox.Size = new System.Drawing.Size(171, 31);
+            this.yFinBox.Size = new System.Drawing.Size(115, 22);
             this.yFinBox.TabIndex = 34;
             // 
             // xFinBox
             // 
             this.xFinBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.xFinBox.Location = new System.Drawing.Point(387, 329);
+            this.xFinBox.Location = new System.Drawing.Point(258, 211);
+            this.xFinBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.xFinBox.Name = "xFinBox";
-            this.xFinBox.Size = new System.Drawing.Size(171, 31);
+            this.xFinBox.Size = new System.Drawing.Size(115, 22);
             this.xFinBox.TabIndex = 33;
             // 
             // idBox
             // 
             this.idBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.idBox.Location = new System.Drawing.Point(118, 122);
+            this.idBox.Location = new System.Drawing.Point(79, 78);
+            this.idBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idBox.Name = "idBox";
-            this.idBox.Size = new System.Drawing.Size(153, 31);
+            this.idBox.Size = new System.Drawing.Size(103, 22);
             this.idBox.TabIndex = 32;
             // 
             // label4
@@ -140,9 +149,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label4.Location = new System.Drawing.Point(692, 297);
+            this.label4.Location = new System.Drawing.Point(461, 190);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 29);
+            this.label4.Size = new System.Drawing.Size(51, 18);
             this.label4.TabIndex = 31;
             this.label4.Text = "(final)";
             // 
@@ -152,9 +162,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label5.Location = new System.Drawing.Point(640, 268);
+            this.label5.Location = new System.Drawing.Point(427, 172);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 29);
+            this.label5.Size = new System.Drawing.Size(113, 18);
             this.label5.TabIndex = 30;
             this.label5.Text = "Coordenada y";
             // 
@@ -164,9 +175,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label1.Location = new System.Drawing.Point(672, 90);
+            this.label1.Location = new System.Drawing.Point(448, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 29);
+            this.label1.Size = new System.Drawing.Size(63, 18);
             this.label1.TabIndex = 29;
             this.label1.Text = "(inicial)";
             // 
@@ -176,9 +188,10 @@
             this.xFinLabel.BackColor = System.Drawing.Color.Transparent;
             this.xFinLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xFinLabel.ForeColor = System.Drawing.Color.AliceBlue;
-            this.xFinLabel.Location = new System.Drawing.Point(382, 268);
+            this.xFinLabel.Location = new System.Drawing.Point(255, 172);
+            this.xFinLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.xFinLabel.Name = "xFinLabel";
-            this.xFinLabel.Size = new System.Drawing.Size(176, 29);
+            this.xFinLabel.Size = new System.Drawing.Size(113, 18);
             this.xFinLabel.TabIndex = 28;
             this.xFinLabel.Text = "Coordenada x";
             // 
@@ -188,9 +201,10 @@
             this.xInLabel.BackColor = System.Drawing.Color.Transparent;
             this.xInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xInLabel.ForeColor = System.Drawing.Color.AliceBlue;
-            this.xInLabel.Location = new System.Drawing.Point(382, 61);
+            this.xInLabel.Location = new System.Drawing.Point(255, 39);
+            this.xInLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.xInLabel.Name = "xInLabel";
-            this.xInLabel.Size = new System.Drawing.Size(176, 29);
+            this.xInLabel.Size = new System.Drawing.Size(113, 18);
             this.xInLabel.TabIndex = 27;
             this.xInLabel.Text = "Coordenada x";
             // 
@@ -200,9 +214,10 @@
             this.commentLabel.BackColor = System.Drawing.Color.Transparent;
             this.commentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.commentLabel.ForeColor = System.Drawing.Color.AliceBlue;
-            this.commentLabel.Location = new System.Drawing.Point(420, 90);
+            this.commentLabel.Location = new System.Drawing.Point(280, 58);
+            this.commentLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.commentLabel.Name = "commentLabel";
-            this.commentLabel.Size = new System.Drawing.Size(100, 29);
+            this.commentLabel.Size = new System.Drawing.Size(63, 18);
             this.commentLabel.TabIndex = 26;
             this.commentLabel.Text = "(inicial)";
             // 
@@ -212,9 +227,10 @@
             this.yInLabel.BackColor = System.Drawing.Color.Transparent;
             this.yInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yInLabel.ForeColor = System.Drawing.Color.AliceBlue;
-            this.yInLabel.Location = new System.Drawing.Point(640, 61);
+            this.yInLabel.Location = new System.Drawing.Point(427, 39);
+            this.yInLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.yInLabel.Name = "yInLabel";
-            this.yInLabel.Size = new System.Drawing.Size(176, 29);
+            this.yInLabel.Size = new System.Drawing.Size(113, 18);
             this.yInLabel.TabIndex = 25;
             this.yInLabel.Text = "Coordenada y";
             // 
@@ -224,9 +240,10 @@
             this.comentario.BackColor = System.Drawing.Color.Transparent;
             this.comentario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comentario.ForeColor = System.Drawing.Color.AliceBlue;
-            this.comentario.Location = new System.Drawing.Point(430, 297);
+            this.comentario.Location = new System.Drawing.Point(287, 190);
+            this.comentario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.comentario.Name = "comentario";
-            this.comentario.Size = new System.Drawing.Size(80, 29);
+            this.comentario.Size = new System.Drawing.Size(51, 18);
             this.comentario.TabIndex = 24;
             this.comentario.Text = "(final)";
             // 
@@ -236,19 +253,20 @@
             this.idLabel.BackColor = System.Drawing.Color.Transparent;
             this.idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idLabel.ForeColor = System.Drawing.Color.AliceBlue;
-            this.idLabel.Location = new System.Drawing.Point(113, 90);
+            this.idLabel.Location = new System.Drawing.Point(75, 58);
+            this.idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(158, 29);
+            this.idLabel.Size = new System.Drawing.Size(100, 18);
             this.idLabel.TabIndex = 23;
             this.idLabel.Text = "Identificador";
             // 
             // IntroducirDatosForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.BackgroundImage = global::Flight_Forms.Properties.Resources.estrellas;
-            this.ClientSize = new System.Drawing.Size(940, 556);
+            this.ClientSize = new System.Drawing.Size(627, 356);
             this.Controls.Add(this.xInBox);
             this.Controls.Add(this.yInBox);
             this.Controls.Add(this.yFinBox);
@@ -267,8 +285,10 @@
             this.Controls.Add(this.velocidadBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.aceptarButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "IntroducirDatosForm";
             this.Text = "Introducir los Datos de Vuelo";
+            this.Load += new System.EventHandler(this.IntroducirDatosForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

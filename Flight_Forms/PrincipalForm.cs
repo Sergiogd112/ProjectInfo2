@@ -60,5 +60,18 @@ namespace Flight_Forms
             Espacioaerio espacioaerio = new Espacioaerio(lista,ciclo);
             espacioaerio.ShowDialog(); 
         }
+
+        private void leerDeFicheroDeMuestraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string defaultpath = @"..\..\..\SimulatorConsole\data.txt";
+            try
+            {
+                lista.AddFromFile(defaultpath);
+            }catch (Exception ex)
+            {
+                lista = new FlightPlanList();
+                lista.AddFromFile(defaultpath);
+            }
+        }
     }
 }

@@ -66,5 +66,10 @@ namespace Flight_Forms
         {
             return this.lista;
         }
+
+        private void IntroducirDatosForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
