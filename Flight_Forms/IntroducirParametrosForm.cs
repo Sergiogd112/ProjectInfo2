@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Flight_Library;
+using FlightLib;
 
 namespace Flight_Forms
 {

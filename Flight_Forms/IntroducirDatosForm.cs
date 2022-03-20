@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Flight_Library;
+using FlightLib;
 
 namespace Flight_Forms
 {
@@ -43,7 +43,7 @@ namespace Flight_Forms
                 if (this.lista.GetAmountFlights()==2)
                 {
                     Close();
-                    MessageBox.Show("La lista de vuelos ya está llena.","Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Los 2 vuelos fueron guardados.","Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 
             }

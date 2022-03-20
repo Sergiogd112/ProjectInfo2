@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FligthLib
+namespace FlightLib
 {
     public class FlightPlan
     {
