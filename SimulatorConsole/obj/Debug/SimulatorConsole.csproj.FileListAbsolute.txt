@@ -40,3 +40,7 @@ C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#
 C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CopyComplete
 C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\obj\Debug\SimulatorConsole.exe
 C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\obj\Debug\SimulatorConsole.pdb
+C:\Users\msoll\Source\Repos\Sergiogd112\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.AssemblyReference.cache
+C:\Users\msoll\Source\Repos\Sergiogd112\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CoreCompileInputs.cache
+C:\Users\msoll\Source\Repos\Sergiogd112\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.exe
+C:\Users\msoll\Source\Repos\Sergiogd112\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.pdb
