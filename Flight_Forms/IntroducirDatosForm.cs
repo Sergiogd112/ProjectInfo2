@@ -7,7 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using FligthLib;
+=======
+using FlightLib;
+>>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
 
 namespace Flight_Forms
 {
@@ -43,7 +47,7 @@ namespace Flight_Forms
                 if (this.lista.GetAmountFlights()==2)
                 {
                     Close();
-                    MessageBox.Show("La lista de vuelos ya está llena.","Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Los 2 vuelos fueron guardados.","Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 
             }

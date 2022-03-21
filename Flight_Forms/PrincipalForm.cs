@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FligthLib;
+using FlightLib;
 
 namespace Flight_Forms
 {
@@ -15,7 +15,12 @@ namespace Flight_Forms
     {
         double distSeg;
         double ciclo;
+<<<<<<< HEAD
         FligthPlanList ListaVuelos = new FligthPlanList();
+=======
+        FlightPlanList lista;
+        IntroducirParametrosForm form2;
+>>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
 
         public PrincipalForm()
         {
@@ -24,7 +29,7 @@ namespace Flight_Forms
 
         private void introducirParametrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            IntroducirParametrosForm form2 = new IntroducirParametrosForm();
+            form2 = new IntroducirParametrosForm();
             form2.ShowDialog(); 
             form2.Visible = true;
 
@@ -45,9 +50,10 @@ namespace Flight_Forms
             form1.ShowDialog();
             form1.Visible = true;
 
-            FligthPlanList lista = form1.DameLista();
+            lista = form1.DameLista();
             form1.Visible = false;
         }
+<<<<<<< HEAD
         private void ClickInformacionVuelo(object sender, EventArgs e) 
         {
             PictureBox avion = (PictureBox)sender;
@@ -55,6 +61,18 @@ namespace Flight_Forms
             Informaciónvuelo formulario = new Informaciónvuelo();
             formulario.ClickedFlight(ListaVuelos.GetFlightAtIndex(i)); 
             formulario.ShowDialog(); 
+=======
+
+        private void PrincipalForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iniciarSimulaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Espacioaerio espacioaerio = new Espacioaerio(lista,ciclo);
+            espacioaerio.ShowDialog(); 
+>>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
         }
     }
 }
