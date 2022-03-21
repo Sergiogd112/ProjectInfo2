@@ -16,11 +16,16 @@ namespace Flight_Forms
         double distSeg;
         double ciclo;
 <<<<<<< HEAD
+<<<<<<< HEAD
         FligthPlanList ListaVuelos = new FligthPlanList();
 =======
         FlightPlanList lista;
         IntroducirParametrosForm form2;
 >>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
+=======
+        FlightPlanList lista;
+        IntroducirParametrosForm form2;
+>>>>>>> main
 
         public PrincipalForm()
         {
@@ -54,6 +59,7 @@ namespace Flight_Forms
             form1.Visible = false;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         private void ClickInformacionVuelo(object sender, EventArgs e) 
         {
             PictureBox avion = (PictureBox)sender;
@@ -62,6 +68,8 @@ namespace Flight_Forms
             formulario.ClickedFlight(ListaVuelos.GetFlightAtIndex(i)); 
             formulario.ShowDialog(); 
 =======
+=======
+>>>>>>> main
 
         private void PrincipalForm_Load(object sender, EventArgs e)
         {
@@ -72,7 +80,23 @@ namespace Flight_Forms
         {
             Espacioaerio espacioaerio = new Espacioaerio(lista,ciclo);
             espacioaerio.ShowDialog(); 
+<<<<<<< HEAD
 >>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
+=======
+        }
+
+        private void leerDeFicheroDeMuestraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string defaultpath = @"..\..\..\SimulatorConsole\data.txt";
+            try
+            {
+                lista.AddFromFile(defaultpath);
+            }catch (Exception ex)
+            {
+                lista = new FlightPlanList();
+                lista.AddFromFile(defaultpath);
+            }
+>>>>>>> main
         }
     }
 }

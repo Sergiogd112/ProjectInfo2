@@ -36,6 +36,11 @@ namespace FlightLib
 
         // GETTERS
 
+        public int GetMaxLen()
+        {
+            return maxLen;
+        }
+
         /// <summary>
         /// Leer el numero de FligthPlans añadidos a la lista
         /// </summary>
@@ -188,7 +193,7 @@ namespace FlightLib
         /// Lee los planes en del fichero txt
         /// </summary>
         /// <param name="filename">Path del fichero</param>
-        public void AddFromfile(string filename)
+        public void AddFromFile(string filename)
         {
             string[] lines = System.IO.File.ReadAllLines(filename);
             string[] data = new string[6];

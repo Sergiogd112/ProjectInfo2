@@ -32,14 +32,19 @@
             this.oPCIONESToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.introducirDatosDeVueloToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.introducirParametrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iniciarSimulaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OpcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.introducirDatosDeVueloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.introducirParámetrosDeSimulaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 =======
             this.iniciarSimulaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 >>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
+=======
+            this.leerDeFicheroDeMuestraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> main
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,10 +57,14 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.menuStrip1.Size = new System.Drawing.Size(1084, 28);
 =======
             this.menuStrip1.Size = new System.Drawing.Size(1084, 42);
 >>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
+=======
+            this.menuStrip1.Size = new System.Drawing.Size(1084, 28);
+>>>>>>> main
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,16 +72,21 @@
             // 
             this.oPCIONESToolStripMenuItem1.BackColor = System.Drawing.Color.Thistle;
             this.oPCIONESToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.leerDeFicheroDeMuestraToolStripMenuItem,
             this.introducirDatosDeVueloToolStripMenuItem1,
             this.introducirParametrosToolStripMenuItem,
             this.iniciarSimulaciónToolStripMenuItem});
             this.oPCIONESToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oPCIONESToolStripMenuItem1.Name = "oPCIONESToolStripMenuItem1";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.oPCIONESToolStripMenuItem1.Size = new System.Drawing.Size(96, 24);
 =======
             this.oPCIONESToolStripMenuItem1.Size = new System.Drawing.Size(153, 38);
 >>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
+=======
+            this.oPCIONESToolStripMenuItem1.Size = new System.Drawing.Size(96, 24);
+>>>>>>> main
             this.oPCIONESToolStripMenuItem1.Text = "OPCIONES";
             this.oPCIONESToolStripMenuItem1.Click += new System.EventHandler(this.oPCIONESToolStripMenuItem1_Click);
             // 
@@ -83,10 +97,14 @@
             this.toolStripMenuItem1});
             this.introducirDatosDeVueloToolStripMenuItem1.Name = "introducirDatosDeVueloToolStripMenuItem1";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.introducirDatosDeVueloToolStripMenuItem1.Size = new System.Drawing.Size(347, 26);
 =======
             this.introducirDatosDeVueloToolStripMenuItem1.Size = new System.Drawing.Size(567, 44);
 >>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
+=======
+            this.introducirDatosDeVueloToolStripMenuItem1.Size = new System.Drawing.Size(347, 26);
+>>>>>>> main
             this.introducirDatosDeVueloToolStripMenuItem1.Text = "Introducir datos de vuelo";
             this.introducirDatosDeVueloToolStripMenuItem1.Click += new System.EventHandler(this.introducirDatosDeVueloToolStripMenuItem1_Click);
             // 
@@ -95,12 +113,23 @@
             this.introducirParametrosToolStripMenuItem.BackColor = System.Drawing.Color.Lavender;
             this.introducirParametrosToolStripMenuItem.Name = "introducirParametrosToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.introducirParametrosToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
 =======
             this.introducirParametrosToolStripMenuItem.Size = new System.Drawing.Size(567, 44);
 >>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
+=======
+            this.introducirParametrosToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
+>>>>>>> main
             this.introducirParametrosToolStripMenuItem.Text = "Introducir parámetros de simulación";
             this.introducirParametrosToolStripMenuItem.Click += new System.EventHandler(this.introducirParametrosToolStripMenuItem_Click);
+            // 
+            // iniciarSimulaciónToolStripMenuItem
+            // 
+            this.iniciarSimulaciónToolStripMenuItem.Name = "iniciarSimulaciónToolStripMenuItem";
+            this.iniciarSimulaciónToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
+            this.iniciarSimulaciónToolStripMenuItem.Text = "Iniciar simulación";
+            this.iniciarSimulaciónToolStripMenuItem.Click += new System.EventHandler(this.iniciarSimulaciónToolStripMenuItem_Click);
             // 
             // OpcionesToolStripMenuItem
             // 
@@ -125,6 +154,7 @@
             this.introducirParámetrosDeSimulaciónToolStripMenuItem.Text = "Introducir parámetros de simulación";
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -137,6 +167,14 @@
             this.iniciarSimulaciónToolStripMenuItem.Text = "Iniciar simulación";
             this.iniciarSimulaciónToolStripMenuItem.Click += new System.EventHandler(this.iniciarSimulaciónToolStripMenuItem_Click);
 >>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
+=======
+            // leerDeFicheroDeMuestraToolStripMenuItem
+            // 
+            this.leerDeFicheroDeMuestraToolStripMenuItem.Name = "leerDeFicheroDeMuestraToolStripMenuItem";
+            this.leerDeFicheroDeMuestraToolStripMenuItem.Size = new System.Drawing.Size(347, 26);
+            this.leerDeFicheroDeMuestraToolStripMenuItem.Text = "Leer de fichero de muestra";
+            this.leerDeFicheroDeMuestraToolStripMenuItem.Click += new System.EventHandler(this.leerDeFicheroDeMuestraToolStripMenuItem_Click);
+>>>>>>> main
             // 
             // PrincipalForm
             // 
@@ -168,10 +206,15 @@
         private System.Windows.Forms.ToolStripMenuItem introducirDatosDeVueloToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem introducirParametrosToolStripMenuItem;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
 =======
         private System.Windows.Forms.ToolStripMenuItem iniciarSimulaciónToolStripMenuItem;
 >>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
+=======
+        private System.Windows.Forms.ToolStripMenuItem iniciarSimulaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem leerDeFicheroDeMuestraToolStripMenuItem;
+>>>>>>> main
     }
 }
 

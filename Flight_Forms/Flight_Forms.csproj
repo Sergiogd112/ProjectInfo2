@@ -48,18 +48,24 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Informaciónvuelo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Informaciónvuelo.Designer.cs">
       <DependentUpon>Informaciónvuelo.cs</DependentUpon>
 =======
+=======
+>>>>>>> main
     <Compile Include="Espacioaerio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Espacioaerio.Designer.cs">
       <DependentUpon>Espacioaerio.cs</DependentUpon>
+<<<<<<< HEAD
 >>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
+=======
+>>>>>>> main
     </Compile>
     <Compile Include="IntroducirParametrosForm.cs">
       <SubType>Form</SubType>
@@ -82,12 +88,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <EmbeddedResource Include="Informaciónvuelo.resx">
       <DependentUpon>Informaciónvuelo.cs</DependentUpon>
 =======
     <EmbeddedResource Include="Espacioaerio.resx">
       <DependentUpon>Espacioaerio.cs</DependentUpon>
 >>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
+=======
+    <EmbeddedResource Include="Espacioaerio.resx">
+      <DependentUpon>Espacioaerio.cs</DependentUpon>
+>>>>>>> main
     </EmbeddedResource>
     <EmbeddedResource Include="IntroducirDatosForm.resx">
       <DependentUpon>IntroducirDatosForm.cs</DependentUpon>
@@ -147,6 +158,9 @@
       <Project>{1523f3df-2b89-474f-99a5-64bb03fe99ae}</Project>
       <Name>FlightLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\plane.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
