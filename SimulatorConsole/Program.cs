@@ -14,7 +14,10 @@ namespace SimulatorConsole
         {
             // instanciar la FligthPlanList
             FlightPlanList fligthList = new FlightPlanList();
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 
 
             // Determinar el numero de iteraciones en la simulación

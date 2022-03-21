@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Flight_Forms</RootNamespace>
     <AssemblyName>Flight_Forms</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,11 +47,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <Compile Include="Informaciónvuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informaciónvuelo.Designer.cs">
+      <DependentUpon>Informaciónvuelo.cs</DependentUpon>
+=======
+=======
+>>>>>>> main
     <Compile Include="Espacioaerio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Espacioaerio.Designer.cs">
       <DependentUpon>Espacioaerio.cs</DependentUpon>
+<<<<<<< HEAD
+>>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
+=======
+>>>>>>> main
     </Compile>
     <Compile Include="IntroducirParametrosForm.cs">
       <SubType>Form</SubType>
@@ -72,8 +87,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <EmbeddedResource Include="Informaciónvuelo.resx">
+      <DependentUpon>Informaciónvuelo.cs</DependentUpon>
+=======
     <EmbeddedResource Include="Espacioaerio.resx">
       <DependentUpon>Espacioaerio.cs</DependentUpon>
+>>>>>>> ba5451f8733f949cb8a1c47aa2e50ebb007bb926
+=======
+    <EmbeddedResource Include="Espacioaerio.resx">
+      <DependentUpon>Espacioaerio.cs</DependentUpon>
+>>>>>>> main
     </EmbeddedResource>
     <EmbeddedResource Include="IntroducirDatosForm.resx">
       <DependentUpon>IntroducirDatosForm.cs</DependentUpon>
