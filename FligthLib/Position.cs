@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FligthLib
+namespace FlightLib
 {
     public class Position
     {
@@ -20,7 +20,7 @@ namespace FligthLib
 
         public double GetX()
         // getter del atributo x
-        { return x;  }
+        { return x; }
 
         public double GetY()
         // getter del atributo y

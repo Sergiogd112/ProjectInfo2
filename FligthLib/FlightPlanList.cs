@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FligthLib
+namespace FlightLib
 {
     /// <summary>
     /// Clase en la que se guarda una lista de FligthPlans y como se afectan los unos a los otros.
     /// </summary>
-    public class FligthPlanList
+    public class FlightPlanList
     {
         private int number;
         const int maxLen = 1000;
@@ -23,7 +23,7 @@ namespace FligthLib
         /// <summary>
         /// Constructor
         /// </summary>
-        public FligthPlanList()
+        public FlightPlanList()
         {
             this.number = 0;
             this.flights = new FlightPlan[maxLen];
@@ -35,6 +35,11 @@ namespace FligthLib
         }
 
         // GETTERS
+
+        public int GetMaxLen()
+        {
+            return maxLen;
+        }
 
         /// <summary>
         /// Leer el numero de FligthPlans añadidos a la lista
@@ -85,7 +90,7 @@ namespace FligthLib
         /// </summary>
         /// <param name="fligth"></param>
         /// <returns></returns>
-        public int AddFligthPlan(FlightPlan fligth)
+        public int AddFlightPlan(FlightPlan fligth)
         {
             if (number == maxLen)
             {
@@ -97,7 +102,7 @@ namespace FligthLib
         }
 
         /// <summary>
-        /// Añadir un FligthPlan desde consola
+        /// Añadir un FlightPlan desde consola
         /// </summary>
         /// <param name="checkInteractions"></param>
         /// <returns></returns>
@@ -161,7 +166,7 @@ namespace FligthLib
                 fy = Convert.ToDouble(trozos[1]);
             }
             FlightPlan fligth = new FlightPlan(identificador, ix, iy, fx, fy, velocidad);
-            this.AddFligthPlan(fligth);
+            this.AddFlightPlan(fligth);
             if (checkInteractions)
             {
                 this.CheckInteractions();
@@ -188,7 +193,7 @@ namespace FligthLib
         /// Lee los planes en del fichero txt
         /// </summary>
         /// <param name="filename">Path del fichero</param>
-        public void AddFromfile(string filename)
+        public void AddFromFile(string filename)
         {
             string[] lines = System.IO.File.ReadAllLines(filename);
             string[] data = new string[6];
@@ -200,7 +205,7 @@ namespace FligthLib
                 {
                     coordsAndSpeed[j - 1] = Convert.ToDouble(data[j]);
                 }
-                this.AddFligthPlan(new FlightPlan(data[0], coordsAndSpeed[0], coordsAndSpeed[1], coordsAndSpeed[2], coordsAndSpeed[3], coordsAndSpeed[4]));
+                this.AddFlightPlan(new FlightPlan(data[0], coordsAndSpeed[0], coordsAndSpeed[1], coordsAndSpeed[2], coordsAndSpeed[3], coordsAndSpeed[4]));
             }
             this.CheckInteractions();
             this.CheckConflicts();

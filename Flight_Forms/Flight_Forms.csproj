@@ -8,11 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Flight_Forms</RootNamespace>
     <AssemblyName>Flight_Forms</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Informaciónvuelo.cs">
+    <Compile Include="Espacioaerio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Informaciónvuelo.Designer.cs">
-      <DependentUpon>Informaciónvuelo.cs</DependentUpon>
+    <Compile Include="Espacioaerio.Designer.cs">
+      <DependentUpon>Espacioaerio.cs</DependentUpon>
     </Compile>
     <Compile Include="IntroducirParametrosForm.cs">
       <SubType>Form</SubType>
@@ -73,8 +72,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Informaciónvuelo.resx">
-      <DependentUpon>Informaciónvuelo.cs</DependentUpon>
+    <EmbeddedResource Include="Espacioaerio.resx">
+      <DependentUpon>Espacioaerio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IntroducirDatosForm.resx">
       <DependentUpon>IntroducirDatosForm.cs</DependentUpon>
@@ -130,10 +129,13 @@
     <None Include="Properties\inicioCIELO.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FligthLib\FligthLib.csproj">
+    <ProjectReference Include="..\FligthLib\FlightLib.csproj">
       <Project>{1523f3df-2b89-474f-99a5-64bb03fe99ae}</Project>
-      <Name>FligthLib</Name>
+      <Name>FlightLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\plane.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
