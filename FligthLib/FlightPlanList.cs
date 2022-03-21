@@ -188,7 +188,7 @@ namespace FlightLib
             this.CheckInteractions();
             this.CheckConflicts();
         }
-        
+
         /// <summary>
         /// Lee los planes en del fichero txt
         /// </summary>

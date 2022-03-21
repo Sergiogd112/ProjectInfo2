@@ -52,6 +52,12 @@
     <Compile Include="Espacioaerio.Designer.cs">
       <DependentUpon>Espacioaerio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informaciónvuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informaciónvuelo.Designer.cs">
+      <DependentUpon>Informaciónvuelo.cs</DependentUpon>
+    </Compile>
     <Compile Include="IntroducirParametrosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Espacioaerio.resx">
       <DependentUpon>Espacioaerio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informaciónvuelo.resx">
+      <DependentUpon>Informaciónvuelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IntroducirDatosForm.resx">
       <DependentUpon>IntroducirDatosForm.cs</DependentUpon>
