@@ -79,5 +79,12 @@ namespace Flight_Forms
             Espacioaerio espacioaerio = new Espacioaerio(lista, ciclo);
             espacioaerio.ShowDialog();
         }
+       
+        private void listaDeVuelosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            TablaAviones aparece = new TablaAviones();
+            aparece.GetListFlights(lista); 
+            aparece.ShowDialog();
+        }
     }
 }

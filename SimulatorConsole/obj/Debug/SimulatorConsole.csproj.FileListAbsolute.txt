@@ -55,3 +55,13 @@ C:\Users\anna peña garcia\source\repos\ProjectInfo2\SimulatorConsole\obj\Debug\
 C:\Users\anna peña garcia\source\repos\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CopyComplete
 C:\Users\anna peña garcia\source\repos\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.exe
 C:\Users\anna peña garcia\source\repos\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.pdb
+C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\bin\Debug\SimulatorConsole.exe.config
+C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\bin\Debug\SimulatorConsole.exe
+C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\bin\Debug\SimulatorConsole.pdb
+C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\bin\Debug\FlightLib.dll
+C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\bin\Debug\FlightLib.pdb
+C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.AssemblyReference.cache
+C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CoreCompileInputs.cache
+C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CopyComplete
+C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.exe
+C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.pdb

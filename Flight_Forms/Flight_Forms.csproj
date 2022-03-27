@@ -52,6 +52,12 @@
     <Compile Include="Espacioaerio.Designer.cs">
       <DependentUpon>Espacioaerio.cs</DependentUpon>
     </Compile>
+    <Compile Include="TablaAviones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TablaAviones.Designer.cs">
+      <DependentUpon>TablaAviones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informaciónvuelo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TablaAviones.resx">
+      <DependentUpon>TablaAviones.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
