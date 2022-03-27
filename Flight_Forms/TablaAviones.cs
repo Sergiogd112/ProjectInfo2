@@ -18,6 +18,7 @@ namespace Flight_Forms
         {
             InitializeComponent();
         }
+        
         public void GetListFlights(FlightPlanList listavuelos) //Obtenemos la lista 
         {
             this.ListaVuelos = listavuelos;
@@ -70,6 +71,13 @@ namespace Flight_Forms
         private void Cerrar_Click_1(object sender, EventArgs e)
         {
             Close();
+        }
+
+        
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int j = e.RowIndex;
+           
         }
     }
 }
