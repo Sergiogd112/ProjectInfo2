@@ -15,6 +15,9 @@ namespace Flight_Forms
     {
         FlightPlanList lista;
         double ciclo;
+        Position plane0;
+        Position plane1;
+        double dist;
 
         PictureBox[] plane;
         Graphics[] distanciaSeguridadArea;
@@ -56,6 +59,8 @@ namespace Flight_Forms
                 distanciaSeguridadArea[i].Dispose();
                 panel2.Controls.Add(plane[i]);
             }
+            //if(distanciaInferior())
+                //this.Close();  
         }
 
 
@@ -97,8 +102,8 @@ namespace Flight_Forms
                     label.Text = "El avión no aparece en el panel";
                 }
             }
-
-            
+            if (distanciaInferior())
+                this.Close();
 
         }
 
@@ -166,6 +171,45 @@ namespace Flight_Forms
                     this.butt = 0;
                 }
             }
+            if (distanciaInferior())
+                this.Close();
+        }
+        private bool distanciaInferior()
+        {
+            plane0 = lista.GetFlightAtIndex(0).GetCurrentPosition();
+            plane1 = lista.GetFlightAtIndex(1).GetCurrentPosition();
+            dist = lista.GetDistanciaSeguridad();
+            if (plane0.Distancia(plane1) <= dist)
+            {
+                MessageBox.Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
+                return true;
+            }
+            return false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           plane0 = lista.GetFlightAtIndex(0).GetCurrentPosition();
+           plane1 = lista.GetFlightAtIndex(1).GetCurrentPosition();
+           int distplane0 = Convert.ToInt32(lista.GetFlightAtIndex(0).GetFinalPosition().Distancia(plane0));
+           int distplane1 = Convert.ToInt32(lista.GetFlightAtIndex(1).GetFinalPosition().Distancia(plane1));
+
+            for (int i = 1; distplane0 != 0 && distplane1 != 0; i++)
+            {
+                this.lista.MoveAll(Convert.ToInt32(ciclo*i));// moure l'avió i no el picturebox
+                dist = lista.GetDistanciaSeguridad(); // agafo la distancia de segurertat que han introduit
+                plane0 = lista.GetFlightAtIndex(0).GetCurrentPosition(); // agafo la posició actual de l'avió prmier
+                plane1 = lista.GetFlightAtIndex(1).GetCurrentPosition(); // agafo la posició actual de l'avió segon
+                distplane0 = Convert.ToInt32(lista.GetFlightAtIndex(0).GetFinalPosition().Distancia(plane0));
+                distplane1 = Convert.ToInt32(lista.GetFlightAtIndex(1).GetFinalPosition().Distancia(plane1));
+                if (plane0.Distancia(plane1) <= dist) // comparo si la distància de seguretat és mes gran que la distància entre els avions
+                {
+                    MessageBox.Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
+                    return;
+                }
+            }
+            MessageBox.Show("LOS AVIONES NO VAN A COLISIONAR");
+            return;
         }
     }
 }

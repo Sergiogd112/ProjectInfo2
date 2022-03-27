@@ -13,7 +13,7 @@ namespace Flight_Forms
 {
     public partial class PrincipalForm : Form
     {
-        double distSeg;
+        //double distSeg;
         double ciclo;
         FlightPlanList lista;
         IntroducirParametrosForm form2;
@@ -30,7 +30,7 @@ namespace Flight_Forms
             form2.Visible = true;
 
             double[] parametros = form2.DameParametros();
-            distSeg = parametros[0];
+            lista.SetDistanciaSeguridad(parametros[0]); //la distància que escriu la persona
             ciclo = parametros[1];
             form2.Visible = false;
         }
@@ -56,10 +56,6 @@ namespace Flight_Forms
             Informaciónvuelo formulario = new Informaciónvuelo();
             formulario.ClickedFlight(this.lista.GetFlightAtIndex(i)); 
             formulario.ShowDialog(); 
-
-        }
-        private void PrincipalForm_Load(object sender, EventArgs e)
-        {
 
         }
 
