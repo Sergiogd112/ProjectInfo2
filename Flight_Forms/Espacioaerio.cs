@@ -39,22 +39,29 @@ namespace Flight_Forms
         {
             for (int i = 0; i < lista.GetLen(); i++)
             {
-                this.plan = lista.GetFlightAtIndex(i);
-                this.plane[i] = new PictureBox();
-                this.plane[i].Location = new Point(Convert.ToInt32(plan.GetInitialPosition().GetX()), Convert.ToInt32(plan.GetInitialPosition().GetY()));
-                this.plane[i].ClientSize = new Size(40, 40);
-                this.plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                this.plane[i].BackColor = Color.Transparent;
-                this.plane[i].Image = new Bitmap(@"..\..\Properties\avion.gif");
-                
-                //mostramos trayectoria en ponernos sobre uno de los aviones
-                this.plane[i]
+                plan = this.lista.GetFlightAtIndex(i);
+                plane[i] = new PictureBox();
+                plane[i].Location = new Point(Convert.ToInt32(plan.GetInitialPosition().GetX()), Convert.ToInt32(plan.GetInitialPosition().GetY()));
+                plane[i].ClientSize = new Size(40, 40);
+                plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                plane[i].BackColor = Color.Transparent;
+                plane[i].Image = new Bitmap(@"..\..\Properties\avion.gif");
+
+                /*
+                plane[i].DoubleClick += delegate (object s, EventArgs events)
+                {
+                    clickFlight(plan);
+                };
+                */
+
 
 
                 panel2.Controls.Add(plane[i]);
             }
-             
+
         }
+
+        private void clickFli
 
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
@@ -165,9 +172,8 @@ namespace Flight_Forms
                 }
             }
             if (distanciaInferior())
-            {
                 this.Close();
-            }
+
         }
         private bool distanciaInferior()
         {
@@ -184,10 +190,10 @@ namespace Flight_Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            plane0 = lista.GetFlightAtIndex(0).GetCurrentPosition();
-            plane1 = lista.GetFlightAtIndex(1).GetCurrentPosition();
-            int distplane0 = Convert.ToInt32(lista.GetFlightAtIndex(0).GetFinalPosition().Distancia(plane0));
-            int distplane1 = Convert.ToInt32(lista.GetFlightAtIndex(1).GetFinalPosition().Distancia(plane1));
+            plane0 = lista.GetFlightAtIndex(0).GetCurrentPosition(); // la posició actual de l'avió en la posició 0
+            plane1 = lista.GetFlightAtIndex(1).GetCurrentPosition(); // la posició actual de l'avió en la posició 1
+            int distplane0 = Convert.ToInt32(lista.GetFlightAtIndex(0).GetFinalPosition().Distancia(plane0)); // la distància entre la posició final i actual de l'avió en la posició 0
+            int distplane1 = Convert.ToInt32(lista.GetFlightAtIndex(1).GetFinalPosition().Distancia(plane1)); // la distància entre la posició final i actual de l'avió en la posició 1
 
             for (int i = 1; distplane0 != 0 && distplane1 != 0; i++)
             {
