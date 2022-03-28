@@ -20,7 +20,6 @@ namespace Flight_Forms
         double dist;
 
         PictureBox[] plane;
-        Graphics[] distanciaSeguridadArea;
         FlightPlan plan;
 
         int butt = 1;
@@ -29,7 +28,6 @@ namespace Flight_Forms
         {
             this.lista = l;
             this.plane = new PictureBox[lista.GetMaxLen()];
-            this.distanciaSeguridadArea = new Graphics[lista.GetMaxLen()];
             this.ciclo = c;
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);
 
@@ -48,19 +46,14 @@ namespace Flight_Forms
                 plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
                 plane[i].BackColor = Color.Transparent;
                 plane[i].Image = new Bitmap(@"..\..\Properties\avion.gif");
-                /*                Color newColor = Color.FromArgb(128, Color.Green);
-                                SolidBrush myBrush = new SolidBrush(newColor);
-                                distanciaSeguridadArea[i] = panel2.CreateGraphics();
-                                distanciaSeguridadArea[i].FillEllipse(myBrush, new Rectangle(Convert.ToInt32(plan.GetInitialPosition().GetX())- Convert.ToInt32(lista.GetDistanciaSeguridad()),
-                                    Convert.ToInt32(plan.GetInitialPosition().GetY())- Convert.ToInt32(lista.GetDistanciaSeguridad()),
-                                    Convert.ToInt32(plan.GetInitialPosition().GetX())+ Convert.ToInt32(lista.GetDistanciaSeguridad()), 
-                                    Convert.ToInt32(plan.GetInitialPosition().GetY())+ Convert.ToInt32(lista.GetDistanciaSeguridad())));
-                                myBrush.Dispose();
-                                distanciaSeguridadArea[i].Dispose();
-                */
+                
+                //mostramos trayectoria en ponernos sobre uno de los aviones
+                plane
+
+
                 panel2.Controls.Add(plane[i]);
             }
-            //this.Close();  
+             
         }
 
 
