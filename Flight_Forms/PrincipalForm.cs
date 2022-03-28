@@ -13,7 +13,7 @@ namespace Flight_Forms
 {
     public partial class PrincipalForm : Form
     {
-        double distSeg;
+        //double distSeg;
         double ciclo;
         FlightPlanList lista;
         IntroducirParametrosForm form2;
@@ -30,7 +30,7 @@ namespace Flight_Forms
             form2.Visible = true;
 
             double[] parametros = form2.DameParametros();
-            distSeg = parametros[0];
+            lista.SetDistanciaSeguridad(parametros[0]); //la distància que escriu la persona
             ciclo = parametros[1];
             form2.Visible = false;
         }
@@ -58,10 +58,6 @@ namespace Flight_Forms
             formulario.ShowDialog(); 
 
         }
-        private void PrincipalForm_Load(object sender, EventArgs e)
-        {
-
-        }
 
 
         private void leerDeFicheroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,6 +78,13 @@ namespace Flight_Forms
         {
             Espacioaerio espacioaerio = new Espacioaerio(lista, ciclo);
             espacioaerio.ShowDialog();
+        }
+       
+        private void listaDeVuelosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            TablaAviones aparece = new TablaAviones();
+            aparece.GetListFlights(lista); 
+            aparece.ShowDialog();
         }
     }
 }

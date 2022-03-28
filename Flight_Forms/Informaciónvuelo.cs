@@ -39,5 +39,10 @@ namespace Flight_Forms
         {
             Close();
         }
+
+        private void Informaciónvuelo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
