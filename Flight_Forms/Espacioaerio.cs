@@ -172,7 +172,9 @@ namespace Flight_Forms
                 }
             }
             if (distanciaInferior())
+            {
                 this.Close();
+            }
         }
         private bool distanciaInferior()
         {
