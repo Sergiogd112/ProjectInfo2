@@ -149,3 +149,29 @@ hemos comentado son video obsoletos y que se deben tener en cuenta para el proye
 										http://youtu.be/iaQdOIHbFxA
 
 ----------------------------
+
+
+FASE 1
+Fase 8: Añadir un botón para realizar la simulación automática
+1. Incorporar al formulario de simulación los botones y código necesarios para poder realizar una simulación automática (iniciar y detener simulación automática).
+
+Fase 9: Mostrar datos y distancias de los vuelos
+1. Incorporar al formulario de simulación un nuevo botón que al ser clicado muestra un formulario con un DataGridView que muestra los datos de los dos vuelos.
+2. Añadir el código necesario para que al clicar sobre la fila correspondiente a un vuelo se abra un nuevo formulario que muestre la distancia entre ese vuelo y el otro.
+
+
+		ATENCIÓN: Puesto que de momento sólo se trabaja con dos vuelos, esta fase podría implementarse sin utilizar un DataGridView, 
+		de forma incluso más simple que la indicada. Sin embargo, en el momento en que pasemos a la versión 2 (con múltiples planes de vuelo) 
+		será necesario usar un DataGridView.
+
+
+Fase 10: Alarma de perdida de separación entre vuelos
+1. Añadir el código necesario para informar al usuario, durante la simulación, del momento en el que los vuelos están a una distancia inferior a la de seguridad.
+2. Añadir al formulario un botón que al clicar en él se informará al usuario de si los vuelos entrarán en conflicto o no.
+
+
+Fase 11: Resolución automática de conflicto
+1. Añadir el código necesario para que, antes de iniciar la simulación, compruebe si los vuelos entrarán en conflicto y 
+pregunte al usuario si quieres resolver el conflicto. En el caso que el usuario responda de forma afirmativa el programa debe 
+cambiar automáticamente la velocidad de uno de los vuelos para evitar el conflicto, y proceder a simular con la nueva velocidad. 
+En el caso que el usuario responda de forma negativa la simulación continuará de forma habitual.

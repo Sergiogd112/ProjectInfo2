@@ -96,6 +96,10 @@ namespace FlightLib
         /// Setter para Id
         /// </summary>
         /// <param name="identificator">Identificador del avion</param>
+        public double Distanciaentrevuelos(FlightPlan a, FlightPlan b)
+        {
+            return Math.Sqrt((Convert.ToInt32(a.GetCurrentPosition().GetX() - b.GetCurrentPosition().GetX())^2) + (Convert.ToInt32(a.GetCurrentPosition().GetY() - b.GetCurrentPosition().GetY())^2));
+        }
         public void SetId(string identificator)
         {
             this.id = identificator;
