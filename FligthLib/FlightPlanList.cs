@@ -297,6 +297,13 @@ namespace FlightLib
             }
         }
 
+        public void Restart()
+        {
+            for(int i =0; i< this.number; i++)
+            {
+                this.flights[i].Restart();
+            }
+        }
         // CONSOLE
 
         /// <summary>

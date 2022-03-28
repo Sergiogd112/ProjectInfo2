@@ -254,7 +254,26 @@ namespace Flight_Forms
             return;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.lista.Restart();
+            for (int i = 0; i < this.lista.GetLen(); i++) //aquí moc el PictureBox
 
+            {
+                plane[i].Location = new Point(Convert.ToInt32(this.lista.GetFlightAtIndex(i).GetCurrentPosition().GetX()), Convert.ToInt32(lista.GetFlightAtIndex(i).GetCurrentPosition().GetY()));
+                Position position = this.lista.GetFlightAtIndex(i).GetCurrentPosition();
 
+                if ((position.GetX() >= panel2.Width) || (position.GetX() <= 0))
+                {
+                    Label label = new Label();
+                    label.Text = "El avión no aparece en el panel";
+                }
+                else if ((position.GetY() >= panel2.Height) || (position.GetY() <= 0))
+                {
+                    Label label = new Label();
+                    label.Text = "El avión no aparece en el panel";
+                }
+            }
+        }
     }
 }
