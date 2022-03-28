@@ -52,18 +52,20 @@ namespace Flight_Forms
                 {
                     clickFlight(plan);
                 };
-                */
+                
+
+                
+                //mostramos trayectoria en ponernos sobre uno de los aviones
 
 
-
-                panel2.Controls.Add(plane[i]);
+                panel2.Controls.Add(plane[i]);*/
             }
 
         }
-
+/*
         private void clickFli
 
-
+*/
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
             //cada vez que el ratón se mueva por el panel, se disparará un evento, nos lleva a esta funcion
