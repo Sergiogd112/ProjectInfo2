@@ -39,16 +39,16 @@ namespace Flight_Forms
         {
             for (int i = 0; i < lista.GetLen(); i++)
             {
-                plan = lista.GetFlightAtIndex(i);
-                plane[i] = new PictureBox();
-                plane[i].Location = new Point(Convert.ToInt32(plan.GetInitialPosition().GetX()), Convert.ToInt32(plan.GetInitialPosition().GetY()));
-                plane[i].ClientSize = new Size(40, 40);
-                plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                plane[i].BackColor = Color.Transparent;
-                plane[i].Image = new Bitmap(@"..\..\Properties\avion.gif");
+                this.plan = lista.GetFlightAtIndex(i);
+                this.plane[i] = new PictureBox();
+                this.plane[i].Location = new Point(Convert.ToInt32(plan.GetInitialPosition().GetX()), Convert.ToInt32(plan.GetInitialPosition().GetY()));
+                this.plane[i].ClientSize = new Size(40, 40);
+                this.plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                this.plane[i].BackColor = Color.Transparent;
+                this.plane[i].Image = new Bitmap(@"..\..\Properties\avion.gif");
                 
                 //mostramos trayectoria en ponernos sobre uno de los aviones
-                plane
+                this.plane[i]
 
 
                 panel2.Controls.Add(plane[i]);
