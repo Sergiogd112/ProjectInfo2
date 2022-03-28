@@ -48,19 +48,19 @@ namespace Flight_Forms
                 plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
                 plane[i].BackColor = Color.Transparent;
                 plane[i].Image = new Bitmap(@"..\..\Properties\avion.gif");
-                Color newColor = Color.FromArgb(128, Color.Green);
-                SolidBrush myBrush = new SolidBrush(newColor);
-                distanciaSeguridadArea[i] = panel2.CreateGraphics();
-                distanciaSeguridadArea[i].FillEllipse(myBrush, new Rectangle(Convert.ToInt32(plan.GetInitialPosition().GetX())- Convert.ToInt32(lista.GetDistanciaSeguridad()),
-                    Convert.ToInt32(plan.GetInitialPosition().GetY())- Convert.ToInt32(lista.GetDistanciaSeguridad()),
-                    Convert.ToInt32(plan.GetInitialPosition().GetX())+ Convert.ToInt32(lista.GetDistanciaSeguridad()), 
-                    Convert.ToInt32(plan.GetInitialPosition().GetY())+ Convert.ToInt32(lista.GetDistanciaSeguridad())));
-                myBrush.Dispose();
-                distanciaSeguridadArea[i].Dispose();
+                /*                Color newColor = Color.FromArgb(128, Color.Green);
+                                SolidBrush myBrush = new SolidBrush(newColor);
+                                distanciaSeguridadArea[i] = panel2.CreateGraphics();
+                                distanciaSeguridadArea[i].FillEllipse(myBrush, new Rectangle(Convert.ToInt32(plan.GetInitialPosition().GetX())- Convert.ToInt32(lista.GetDistanciaSeguridad()),
+                                    Convert.ToInt32(plan.GetInitialPosition().GetY())- Convert.ToInt32(lista.GetDistanciaSeguridad()),
+                                    Convert.ToInt32(plan.GetInitialPosition().GetX())+ Convert.ToInt32(lista.GetDistanciaSeguridad()), 
+                                    Convert.ToInt32(plan.GetInitialPosition().GetY())+ Convert.ToInt32(lista.GetDistanciaSeguridad())));
+                                myBrush.Dispose();
+                                distanciaSeguridadArea[i].Dispose();
+                */
                 panel2.Controls.Add(plane[i]);
             }
-            //if(distanciaInferior())
-                //this.Close();  
+            //this.Close();  
         }
 
 
@@ -91,7 +91,7 @@ namespace Flight_Forms
                 plane[i].Location = new Point(Convert.ToInt32(this.lista.GetFlightAtIndex(i).GetCurrentPosition().GetX()), Convert.ToInt32(lista.GetFlightAtIndex(i).GetCurrentPosition().GetY()));
                 Position position = this.lista.GetFlightAtIndex(i).GetCurrentPosition();
 
-                if ((position.GetX()>=panel2.Width)||(position.GetX()<=0))
+                if ((position.GetX() >= panel2.Width) || (position.GetX() <= 0))
                 {
                     Label label = new Label();
                     label.Text = "El avión no aparece en el panel";
@@ -154,8 +154,8 @@ namespace Flight_Forms
                 //imponemos la posicion de la lista (Actualizada) al picturebox
                 Position pos = this.lista.GetFlightAtIndex(i).GetCurrentPosition();
                 plane[i].Location = new Point(Convert.ToInt32(pos.GetX()), Convert.ToInt32(pos.GetY()));
-                
-                
+
+
                 //comprobamos que los picturebox no se salgan del panel
                 //en caso de hacerlo, avisamos y paramos simulacion
                 if ((pos.GetX() >= panel2.Width) || (pos.GetX() <= 0))
@@ -189,14 +189,14 @@ namespace Flight_Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-           plane0 = lista.GetFlightAtIndex(0).GetCurrentPosition();
-           plane1 = lista.GetFlightAtIndex(1).GetCurrentPosition();
-           int distplane0 = Convert.ToInt32(lista.GetFlightAtIndex(0).GetFinalPosition().Distancia(plane0));
-           int distplane1 = Convert.ToInt32(lista.GetFlightAtIndex(1).GetFinalPosition().Distancia(plane1));
+            plane0 = lista.GetFlightAtIndex(0).GetCurrentPosition();
+            plane1 = lista.GetFlightAtIndex(1).GetCurrentPosition();
+            int distplane0 = Convert.ToInt32(lista.GetFlightAtIndex(0).GetFinalPosition().Distancia(plane0));
+            int distplane1 = Convert.ToInt32(lista.GetFlightAtIndex(1).GetFinalPosition().Distancia(plane1));
 
             for (int i = 1; distplane0 != 0 && distplane1 != 0; i++)
             {
-                this.lista.MoveAll(Convert.ToInt32(ciclo*i));// moure l'avió i no el picturebox
+                this.lista.MoveAll(Convert.ToInt32(ciclo * i));// moure l'avió i no el picturebox
                 dist = lista.GetDistanciaSeguridad(); // agafo la distancia de segurertat que han introduit
                 plane0 = lista.GetFlightAtIndex(0).GetCurrentPosition(); // agafo la posició actual de l'avió prmier
                 plane1 = lista.GetFlightAtIndex(1).GetCurrentPosition(); // agafo la posició actual de l'avió segon
