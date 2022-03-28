@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Flight_Forms"
   ],
-  "SelectedNode": "\\ProyectoInfo2.sln",
+  "SelectedNode": "\\Flight_Forms\\IntroducirParametrosForm.Designer.cs",
   "PreviewInSolutionExplorer": false
 }

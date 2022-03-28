@@ -41,7 +41,7 @@ namespace Flight_Forms
                 plane[i].ClientSize = new Size(40, 40);
                 plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
                 plane[i].BackColor = Color.Transparent;
-                plane[i].Image = new Bitmap(@"..\..\Properties\plane.png");
+                plane[i].Image = new Bitmap(@"..\..\Properties\avion.gif");
                 Color newColor = Color.FromArgb(128, Color.Green);
                 SolidBrush myBrush = new SolidBrush(newColor);
                 distanciaSeguridadArea[i] = panel2.CreateGraphics();
