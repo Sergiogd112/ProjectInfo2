@@ -68,6 +68,10 @@ namespace FlightLib
             return this.distanciaSeguridad;
         }
 
+        public Boolean[,] GetConflicts()
+        {
+            return  this.conflicts;
+        }
 
         //SETTERS
 
