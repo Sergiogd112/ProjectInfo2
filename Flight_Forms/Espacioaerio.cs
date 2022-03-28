@@ -39,30 +39,71 @@ namespace Flight_Forms
         {
             for (int i = 0; i < lista.GetLen(); i++)
             {
-                plan = this.lista.GetFlightAtIndex(i);
-                plane[i] = new PictureBox();
-                plane[i].Location = new Point(Convert.ToInt32(plan.GetInitialPosition().GetX()), Convert.ToInt32(plan.GetInitialPosition().GetY()));
-                plane[i].ClientSize = new Size(40, 40);
-                plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                plane[i].BackColor = Color.Transparent;
-                plane[i].Image = new Bitmap(@"..\..\Properties\avion.gif");
+                this.plan = this.lista.GetFlightAtIndex(i);
+                this.plane[i] = new PictureBox();
+                this.plane[i].Location = new Point(Convert.ToInt32(plan.GetInitialPosition().GetX()), Convert.ToInt32(plan.GetInitialPosition().GetY()));
+                this.plane[i].ClientSize = new Size(40, 40);
+                this.plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                this.plane[i].BackColor = Color.Transparent;
+                this.plane[i].Image = new Bitmap(@"..\..\Properties\avion.gif");
 
-                /*
-                plane[i].DoubleClick += delegate (object s, EventArgs events)
+                this.panel2.Controls.Add(plane[i]);
+
+                this.plane[i].MouseEnter += delegate (object s, EventArgs events)
                 {
-                    clickFlight(plan);
+                    //si estamos sobre el avión:
+                    showRecorrido(plan, true, s);
                 };
-                */
-
-
-
-                panel2.Controls.Add(plane[i]);
+                this.plane[i].MouseEnter += delegate (object s, EventArgs events)
+                {
+                    //si estamos sobre el avión:
+                    showRecorrido(plan, false, s);
+                };
             }
 
         }
 
-        private void clickFli
+        void showRecorrido(FlightPlan flight, bool isEnter, object sender)   
+            //Cuando el cursor pasa sobre un avión, se observa una línea que indica la trayectoria
+        {       //el booleano isEnter nos indica si estamos posicionados sobre un picturebox
 
+            
+            if (isEnter)
+            {
+                Label label = new Label();
+                label.Text = flight.GetId();
+                label.Location = new Point(Convert.ToInt32(flight.GetCurrentPosition().GetX() + 25), Convert.ToInt32(flight.GetCurrentPosition().GetY() + 11));
+                label.Size = new System.Drawing.Size(45, 12);
+                label.Name = "labelId";
+                label.ForeColor = System.Drawing.Color.Black;
+                this.panel2.Controls.Add(label);
+
+                PictureBox p = (PictureBox)sender;
+
+                using (Graphics g = this.panel2.CreateGraphics())
+                {
+                    Pen P = new Pen(Color.Purple, 2);
+                    SolidBrush B = new SolidBrush(Color.MidnightBlue);
+
+                    Point PuntoDestino = new Point((int)flight.GetFinalPosition().GetX() + p.Width / 2, (int)flight.GetFinalPosition().GetY() + p.Height / 2);
+                    Point PuntoOrigen = new Point((int)flight.GetInitialPosition().GetX() + p.Width / 2, (int)flight.GetInitialPosition().GetY() + p.Height / 2);
+                    
+                    
+                    g.DrawLines(P, new Point[] { PuntoOrigen, PuntoDestino });
+                    g.FillEllipse(B, (int)flight.GetFinalPosition().GetX() + 5, (int)flight.GetFinalPosition().GetY() + 5, 10, 10);
+                }
+            }
+            else
+            {
+                foreach (Control item in this.panel2.Controls.OfType<Control>().ToList())
+                { 
+                    if (item.Name == "labelId") panel2.Controls.Remove(item); 
+                }
+                
+                
+                panel2.Invalidate();
+            }
+        }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
@@ -212,5 +253,8 @@ namespace Flight_Forms
             MessageBox.Show("LOS AVIONES NO VAN A COLISIONAR");
             return;
         }
+
+
+
     }
 }
