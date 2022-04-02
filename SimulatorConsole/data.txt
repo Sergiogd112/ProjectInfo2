@@ -1,4 +1,4 @@
-Rebecca 161 77 151 80 39
-Charlotte 58 159 60 168 47
-Mary 165 0 177 27 48
-Lessie 12 29 46 94 28
+Rebecca 10 0 0 800 700
+Charlotte 10 300 0 0 300
+Mary 10 400 0 400 700
+Lessie 10 350 0 350 800

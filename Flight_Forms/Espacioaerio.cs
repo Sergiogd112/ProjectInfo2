@@ -49,13 +49,6 @@ namespace Flight_Forms
 
                 this.panel2.Controls.Add(plane[i]);
 
-                /*
-                this.plane[i].DoubleClick += delegate(object s, EventArgs events)
-                {
-
-                }
-                */
-
                 this.plane[i].MouseEnter += delegate (object s, EventArgs events)
                 {
                     //si estamos sobre el avión:
@@ -69,15 +62,6 @@ namespace Flight_Forms
             }
 
         }
-
-
-        /*
-        private bool clickFlight(FlightPlan a)
-        {
-            //en caso de picar sobre uno de los vuelos, mostramos la información del mismo
-                //nuevo formulario
-        }
-        */
 
         void showRecorrido(FlightPlan flight, bool isEnter, object sender)   
             //Cuando el cursor pasa sobre un avión, se observa una línea que indica la trayectoria
@@ -270,17 +254,26 @@ namespace Flight_Forms
             return;
         }
 
-        private void vel50_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            if (this.lista.encuentraPlanVelocidad()==null)
+            this.lista.Restart();
+            for (int i = 0; i < this.lista.GetLen(); i++) //aquí moc el PictureBox
+
             {
-                MessageBox.Show("no se ha encontrado ningún plan de vuelo con velocidad mayor a 50.");
+                plane[i].Location = new Point(Convert.ToInt32(this.lista.GetFlightAtIndex(i).GetCurrentPosition().GetX()), Convert.ToInt32(lista.GetFlightAtIndex(i).GetCurrentPosition().GetY()));
+                Position position = this.lista.GetFlightAtIndex(i).GetCurrentPosition();
+
+                if ((position.GetX() >= panel2.Width) || (position.GetX() <= 0))
+                {
+                    Label label = new Label();
+                    label.Text = "El avión no aparece en el panel";
+                }
+                else if ((position.GetY() >= panel2.Height) || (position.GetY() <= 0))
+                {
+                    Label label = new Label();
+                    label.Text = "El avión no aparece en el panel";
+                }
             }
-            else
-            {
-                MessageBox.Show("El primer avión con velocidad mayor a 50 tiene por identificador:", this.lista.encuentraPlanVelocidad());  
-            }
-            
         }
     }
 }
