@@ -18,6 +18,12 @@ namespace FlightLib
         private double[,] confd;
         private double distanciaSeguridad;
 
+
+
+        int count;
+
+
+
         // CONSTRUCTOR
 
         /// <summary>
@@ -394,6 +400,72 @@ namespace FlightLib
             this.WriteInteractions();
             Console.WriteLine("Conflictos:");
             this.WriteConflicts();
+        }
+
+
+
+        public string encuentraPlanVelocidad()
+        {
+            /*
+            int count=0;
+            while (count < 2)
+            {
+                
+                FlightPlan a = this.flights[count];
+                if (a.GetVelocidad()<=50)
+                {
+                    
+                    found = null;
+
+                }
+                else
+                {
+                    //si se ha encontrado, guardamos el plan de vuelo
+                    found = a.GetId();
+                }
+
+                count++;
+              
+
+            }
+            return found;
+            */
+
+            
+
+            FlightPlan a = this.flights[0];
+            FlightPlan b = this.flights[1];
+
+
+            if (a.GetVelocidad()>50)
+            {
+                count = 0;
+            }
+            else
+            {
+                if (b.GetVelocidad()>50)
+                {
+                    count = 1;
+                }
+                else
+                {
+                    count = -1;
+                }
+
+            }
+
+            if (count == 0)
+            {
+                return a.GetId();
+            }
+            if (count ==1)
+            {
+                return b.GetId();
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

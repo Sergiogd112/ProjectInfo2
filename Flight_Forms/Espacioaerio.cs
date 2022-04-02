@@ -49,6 +49,13 @@ namespace Flight_Forms
 
                 this.panel2.Controls.Add(plane[i]);
 
+                /*
+                this.plane[i].DoubleClick += delegate(object s, EventArgs events)
+                {
+
+                }
+                */
+
                 this.plane[i].MouseEnter += delegate (object s, EventArgs events)
                 {
                     //si estamos sobre el avión:
@@ -62,6 +69,15 @@ namespace Flight_Forms
             }
 
         }
+
+
+        /*
+        private bool clickFlight(FlightPlan a)
+        {
+            //en caso de picar sobre uno de los vuelos, mostramos la información del mismo
+                //nuevo formulario
+        }
+        */
 
         void showRecorrido(FlightPlan flight, bool isEnter, object sender)   
             //Cuando el cursor pasa sobre un avión, se observa una línea que indica la trayectoria
@@ -254,7 +270,17 @@ namespace Flight_Forms
             return;
         }
 
-
-
+        private void vel50_Click(object sender, EventArgs e)
+        {
+            if (this.lista.encuentraPlanVelocidad()==null)
+            {
+                MessageBox.Show("no se ha encontrado ningún plan de vuelo con velocidad mayor a 50.");
+            }
+            else
+            {
+                MessageBox.Show("El primer avión con velocidad mayor a 50 tiene por identificador:", this.lista.encuentraPlanVelocidad());  
+            }
+            
+        }
     }
 }

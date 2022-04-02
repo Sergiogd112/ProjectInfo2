@@ -44,6 +44,8 @@
             this.reloj = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.vel50 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel2
@@ -195,12 +197,33 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "Comprovar si los vuelos entraran en conflicto:";
             // 
+            // vel50
+            // 
+            this.vel50.Location = new System.Drawing.Point(155, 718);
+            this.vel50.Name = "vel50";
+            this.vel50.Size = new System.Drawing.Size(173, 57);
+            this.vel50.TabIndex = 16;
+            this.vel50.Text = "Avion";
+            this.vel50.UseVisualStyleBackColor = true;
+            this.vel50.Click += new System.EventHandler(this.vel50_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(111, 778);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(258, 25);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "con velocidad mayor a 50";
+            // 
             // Espacioaerio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1465, 920);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.vel50);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
@@ -240,5 +263,7 @@
         private System.Windows.Forms.Timer reloj;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button vel50;
+        private System.Windows.Forms.Label label10;
     }
 }
