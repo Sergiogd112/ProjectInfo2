@@ -13,13 +13,13 @@ namespace Flight_Forms
 {
     public partial class Espacioaerio : Form
     {
-        FlightPlanList lista;
+        public FlightPlanList lista;
         double ciclo;
         Position plane0;
         Position plane1;
         double dist;
 
-        PictureBox[] plane;
+        private PictureBox[] plane;
         FlightPlan plan;
 
         int butt = 1;
@@ -37,32 +37,51 @@ namespace Flight_Forms
 
         private void Espacioaerio_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < lista.GetLen(); i++)
+            plane = new PictureBox[this.lista.GetLen()];
+            for (int i = 0; i < this.lista.GetLen(); i++)
             {
                 this.plan = this.lista.GetFlightAtIndex(i);
-                this.plane[i] = new PictureBox();
-                this.plane[i].Location = new Point(Convert.ToInt32(plan.GetInitialPosition().GetX()), Convert.ToInt32(plan.GetInitialPosition().GetY()));
-                this.plane[i].ClientSize = new Size(40, 40);
-                this.plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                this.plane[i].BackColor = Color.Transparent;
-                this.plane[i].Image = new Bitmap(@"..\..\Properties\avion.gif");
+                PictureBox pic = new PictureBox();
+                pic.Location = new Point(Convert.ToInt32(plan.GetInitialPosition().GetX()), Convert.ToInt32(plan.GetInitialPosition().GetY()));
+                pic.ClientSize = new Size(40, 40);
+                pic.SizeMode = PictureBoxSizeMode.StretchImage;
+                pic.BackColor = Color.Transparent;
+                pic.Image = new Bitmap(@"..\..\Properties\avion.gif");
+                this.panel2.Controls.Add(pic);
+                //agregamos método en clicar sobre el flightplan
+                pic.DoubleClick += delegate (object s, EventArgs events)
+                {
+                    ClickFlight(this.plan);
+                };
 
-                this.panel2.Controls.Add(plane[i]);
-
-                this.plane[i].MouseEnter += delegate (object s, EventArgs events)
+                plane[i] = pic;
+                pic.MouseEnter += delegate (object s, EventArgs events)
                 {
                     //si estamos sobre el avión:
-                    showRecorrido(plan, true, s);
+                    showRecorrido(this.plan, true, s);
                 };
-                this.plane[i].MouseEnter += delegate (object s, EventArgs events)
+                pic.MouseLeave += delegate (object s, EventArgs events)
                 {
                     //si estamos sobre el avión:
-                    showRecorrido(plan, false, s);
+                    showRecorrido(this.plan, false, s);
                 };
+
+                
+
             }
 
         }
 
+
+        private void ClickFlight(FlightPlan flight)
+        {
+            //en hacer click sobre el plan de vuelo del panel de simulacion, mostramos un formulario con la info del mismo
+            Informaciónvuelo info = new Informaciónvuelo();
+
+            info.SetFlight(flight);
+            info.ShowDialog();
+            info.Visible = true;
+        }
         void showRecorrido(FlightPlan flight, bool isEnter, object sender)   
             //Cuando el cursor pasa sobre un avión, se observa una línea que indica la trayectoria
         {       //el booleano isEnter nos indica si estamos posicionados sobre un picturebox
@@ -131,15 +150,15 @@ namespace Flight_Forms
             {
                 plane[i].Location = new Point(Convert.ToInt32(this.lista.GetFlightAtIndex(i).GetCurrentPosition().GetX()), Convert.ToInt32(lista.GetFlightAtIndex(i).GetCurrentPosition().GetY()));
                 Position position = this.lista.GetFlightAtIndex(i).GetCurrentPosition();
-
+                Label label; 
                 if ((position.GetX() >= panel2.Width) || (position.GetX() <= 0))
                 {
-                    Label label = new Label();
+                    label = new Label();
                     label.Text = "El avión no aparece en el panel";
                 }
                 else if ((position.GetY() >= panel2.Height) || (position.GetY() <= 0))
                 {
-                    Label label = new Label();
+                    label = new Label();
                     label.Text = "El avión no aparece en el panel";
                 }
             }
@@ -231,30 +250,25 @@ namespace Flight_Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            plane0 = lista.GetFlightAtIndex(0).GetCurrentPosition(); // la posició actual de l'avió en la posició 0
-            plane1 = lista.GetFlightAtIndex(1).GetCurrentPosition(); // la posició actual de l'avió en la posició 1
-            int distplane0 = Convert.ToInt32(lista.GetFlightAtIndex(0).GetFinalPosition().Distancia(plane0)); // la distància entre la posició final i actual de l'avió en la posició 0
-            int distplane1 = Convert.ToInt32(lista.GetFlightAtIndex(1).GetFinalPosition().Distancia(plane1)); // la distància entre la posició final i actual de l'avió en la posició 1
-
-            for (int i = 1; distplane0 != 0 && distplane1 != 0; i++)
+            lista.CheckConflicts(false);
+            for (int i = 0; i < lista.GetAmountFlights() - 1; i++)
             {
-                this.lista.MoveAll(Convert.ToInt32(ciclo * i));// moure l'avió i no el picturebox
-                dist = lista.GetDistanciaSeguridad(); // agafo la distancia de segurertat que han introduit
-                plane0 = lista.GetFlightAtIndex(0).GetCurrentPosition(); // agafo la posició actual de l'avió prmier
-                plane1 = lista.GetFlightAtIndex(1).GetCurrentPosition(); // agafo la posició actual de l'avió segon
-                distplane0 = Convert.ToInt32(lista.GetFlightAtIndex(0).GetFinalPosition().Distancia(plane0));
-                distplane1 = Convert.ToInt32(lista.GetFlightAtIndex(1).GetFinalPosition().Distancia(plane1));
-                if (plane0.Distancia(plane1) <= dist) // comparo si la distància de seguretat és mes gran que la distància entre els avions
+                for (int j = i + 1; j < lista.GetAmountFlights(); j++)
                 {
-                    MessageBox.Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
-                    return;
+                    if (lista.GetConflicts()[i, j])
+                    {
+                        MessageBox.Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
+                        return;
+                    }
                 }
             }
             MessageBox.Show("LOS AVIONES NO VAN A COLISIONAR");
-            return;
-        }
 
-        private void button2_Click(object sender, EventArgs e)
+            }
+
+
+
+            private void reiniciarButton_Click(object sender, EventArgs e)
         {
             this.lista.Restart();
             for (int i = 0; i < this.lista.GetLen(); i++) //aquí moc el PictureBox
@@ -273,6 +287,24 @@ namespace Flight_Forms
                     Label label = new Label();
                     label.Text = "El avión no aparece en el panel";
                 }
+            }
+        }
+
+        private void retroButt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                for (int i = 0; i < this.lista.GetMaxLen(); i++)
+                {
+                    FlightPlan f = lista.GetFlightAtIndex(i);
+                    f.GetLastPosition(ciclo);
+                    plane[i].Location = new Point(Convert.ToInt32(f.GetCurrentPosition().GetX()), Convert.ToInt32(f.GetCurrentPosition().GetY()));
+                }   
+                
+            }
+            catch(OverflowException)
+            {
+                MessageBox.Show("Desbordamiento de operaciones!!!");
             }
         }
     }

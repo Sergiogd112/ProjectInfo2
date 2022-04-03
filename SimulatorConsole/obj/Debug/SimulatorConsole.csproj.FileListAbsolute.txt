@@ -65,3 +65,25 @@ C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorCon
 C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CopyComplete
 C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.exe
 C:\Users\msoll\Source\Repos\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.pdb
+C:\Users\marttagarz\source\repos\Sergiogd112\MartaProyecto_TWC1\ProjectInfo2\SimulatorConsole\bin\Debug\SimulatorConsole.exe.config
+C:\Users\marttagarz\source\repos\Sergiogd112\MartaProyecto_TWC1\ProjectInfo2\SimulatorConsole\bin\Debug\SimulatorConsole.exe
+C:\Users\marttagarz\source\repos\Sergiogd112\MartaProyecto_TWC1\ProjectInfo2\SimulatorConsole\bin\Debug\SimulatorConsole.pdb
+C:\Users\marttagarz\source\repos\Sergiogd112\MartaProyecto_TWC1\ProjectInfo2\SimulatorConsole\bin\Debug\FlightLib.dll
+C:\Users\marttagarz\source\repos\Sergiogd112\MartaProyecto_TWC1\ProjectInfo2\SimulatorConsole\bin\Debug\FlightLib.pdb
+C:\Users\marttagarz\source\repos\Sergiogd112\MartaProyecto_TWC1\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.AssemblyReference.cache
+C:\Users\marttagarz\source\repos\Sergiogd112\MartaProyecto_TWC1\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.SuggestedBindingRedirects.cache
+C:\Users\marttagarz\source\repos\Sergiogd112\MartaProyecto_TWC1\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CoreCompileInputs.cache
+C:\Users\marttagarz\source\repos\Sergiogd112\MartaProyecto_TWC1\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CopyComplete
+C:\Users\marttagarz\source\repos\Sergiogd112\MartaProyecto_TWC1\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.exe
+C:\Users\marttagarz\source\repos\Sergiogd112\MartaProyecto_TWC1\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.pdb
+C:\Users\anna peña garcia\Desktop\ProjectInfo2 (1)\ProjectInfo2\SimulatorConsole\bin\Debug\SimulatorConsole.exe.config
+C:\Users\anna peña garcia\Desktop\ProjectInfo2 (1)\ProjectInfo2\SimulatorConsole\bin\Debug\SimulatorConsole.exe
+C:\Users\anna peña garcia\Desktop\ProjectInfo2 (1)\ProjectInfo2\SimulatorConsole\bin\Debug\SimulatorConsole.pdb
+C:\Users\anna peña garcia\Desktop\ProjectInfo2 (1)\ProjectInfo2\SimulatorConsole\bin\Debug\FlightLib.dll
+C:\Users\anna peña garcia\Desktop\ProjectInfo2 (1)\ProjectInfo2\SimulatorConsole\bin\Debug\FlightLib.pdb
+C:\Users\anna peña garcia\Desktop\ProjectInfo2 (1)\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.AssemblyReference.cache
+C:\Users\anna peña garcia\Desktop\ProjectInfo2 (1)\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.SuggestedBindingRedirects.cache
+C:\Users\anna peña garcia\Desktop\ProjectInfo2 (1)\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CoreCompileInputs.cache
+C:\Users\anna peña garcia\Desktop\ProjectInfo2 (1)\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.csproj.CopyComplete
+C:\Users\anna peña garcia\Desktop\ProjectInfo2 (1)\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.exe
+C:\Users\anna peña garcia\Desktop\ProjectInfo2 (1)\ProjectInfo2\SimulatorConsole\obj\Debug\SimulatorConsole.pdb

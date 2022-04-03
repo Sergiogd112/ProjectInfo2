@@ -13,71 +13,87 @@ namespace Flight_Forms
 {
     public partial class TablaAviones : Form
     {
-        FlightPlanList ListaVuelos = new FlightPlanList();
+        
         public TablaAviones()
         {
             InitializeComponent();
         }
-        
-        public void GetListFlights(FlightPlanList listavuelos) //Obtenemos la lista 
+
+
+        FlightPlanList ListaVuelos = new FlightPlanList();
+        public void SetListFlights(FlightPlanList listavuelos) //Obtenemos la lista 
         {
             this.ListaVuelos = listavuelos;
         }
+        
              
         private void MostrarPuntos_Load(object sender, EventArgs e)
         {
-            if (ListaVuelos.GetAmountFlights() != 0)
-            {
-                try
-                {
-                                     
-                    for (int numeros = 0; numeros < 7; numeros++)
-                    {
-                        dataGridView1.ColumnCount = 6;
-                        dataGridView1.RowCount = ListaVuelos.GetAmountFlights();
-                        dataGridView1.Columns[0].Name = "Id";                       
-                        dataGridView1.Columns[1].Name = "X actual";
-                        dataGridView1.Columns[2].Name = "Y actual";
-                        dataGridView1.Columns[3].Name = "X final";
-                        dataGridView1.Columns[4].Name = "Y final";
-                        dataGridView1.Columns[5].Name = "Velocidad";
-                       
-                        int i = 0;
-                        while (i < ListaVuelos.GetAmountFlights())
-                        {
-                            dataGridView1.Rows[i].Cells[0].Value = ListaVuelos.GetFlightAtIndex(i).GetId();                           
-                            dataGridView1.Rows[i].Cells[1].Value = ListaVuelos.GetFlightAtIndex(i).GetCurrentPosition().GetX();
-                            dataGridView1.Rows[i].Cells[2].Value = ListaVuelos.GetFlightAtIndex(i).GetCurrentPosition().GetY();
-                            dataGridView1.Rows[i].Cells[3].Value = ListaVuelos.GetFlightAtIndex(i).GetFinalPosition().GetX();
-                            dataGridView1.Rows[i].Cells[4].Value = ListaVuelos.GetFlightAtIndex(i).GetFinalPosition().GetY();
-                            dataGridView1.Rows[i].Cells[5].Value = ListaVuelos.GetFlightAtIndex(i).GetVelocidad();                         
-                            i++;
-                        }
-                    }
-                }
-                catch (FormatException)
-                {
-                    MessageBox.Show("Error de formato");
-                    Close();
-                }
-            }
-            else
-            {
-                Close();
-                MessageBox.Show("Tiene que haber mas de un avion");
-            }
+            
         }
+        
 
         private void Cerrar_Click_1(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+            this.Visible = false;
+
         }
 
         
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int j = e.RowIndex;
+          
            
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        
+        private void TablaAviones_Load(object sender, EventArgs e)
+        {
+            if (this.ListaVuelos.GetAmountFlights() != 0)
+            {
+                try
+                {
+                    dataGridView1.ColumnCount = 5;
+                    dataGridView1.RowCount = this.ListaVuelos.GetAmountFlights() + 1;
+                    dataGridView1.ColumnHeadersVisible = false;
+                    dataGridView1.RowHeadersVisible = false;
+                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+                    dataGridView1[0, 0].Value = "Id";
+                    dataGridView1[1, 0].Value = "Posición inicial";
+                    dataGridView1[2, 0].Value = "Posición actual";
+                    dataGridView1[3, 0].Value = "Posición final";
+                    dataGridView1[4, 0].Value = "Velocidad";
+
+                    int i = 0;
+                    while (i < this.ListaVuelos.GetAmountFlights())
+                    {
+                        FlightPlan flight = this.ListaVuelos.GetFlightAtIndex(i);
+                        dataGridView1[0, i + 1].Value = flight.GetId();
+                        dataGridView1[1, i + 1].Value = "X: " + Math.Round(flight.GetInitialPosition().GetX(), 2) + "Y: " +Math.Round(flight.GetInitialPosition().GetY(), 2);
+                        dataGridView1[2, i + 1].Value = "X: " + Math.Round(flight.GetCurrentPosition().GetX(), 2) + "Y: " + Math.Round(flight.GetCurrentPosition().GetY(), 2);
+                        dataGridView1[3, i + 1].Value = "X: " + Math.Round(flight.GetFinalPosition().GetX(), 2) + "Y: " + Math.Round(flight.GetFinalPosition().GetY(), 2);
+                        dataGridView1[4, i + 1].Value = flight.GetVelocidad();
+                        i++;
+                    }
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Error de formato");
+                    this.Close();
+                }
+            }
+            else
+            {
+                this.Close();
+                MessageBox.Show("La lista de vuelos no debe estar vacía");
+            }
         }
     }
 }

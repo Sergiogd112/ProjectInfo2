@@ -14,11 +14,14 @@ namespace Flight_Forms
     
     public partial class IntroducirDatosForm : Form
     {
-        private FlightPlanList lista = new FlightPlanList();
+        
         public IntroducirDatosForm()
         {
             InitializeComponent();
         }
+
+        private FlightPlanList lista = new FlightPlanList();
+        int butt = 1;
 
         private void aceptarButton_Click(object sender, EventArgs e)
         {
@@ -69,6 +72,38 @@ namespace Flight_Forms
 
         private void IntroducirDatosForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void rellenoButton_Click(object sender, EventArgs e)
+        {
+            if (this.butt == 1)
+            {
+                idBox.Text = "IB123";
+                velocidadBox.Text = "150";
+                xInBox.Text = "15";
+                yInBox.Text = "33";
+                xFinBox.Text = "201";
+                yFinBox.Text = "300";
+
+                this.butt = 0;
+                    
+            }
+            else
+            {
+                idBox.Text = "NW550";
+                velocidadBox.Text = "90";
+                xInBox.Text = "100";
+                yInBox.Text = "20";
+                xFinBox.Text = "350";
+                yFinBox.Text = "144";
+
+                this.butt = 1;
+            }
+
+               
+            
+            
 
         }
     }
