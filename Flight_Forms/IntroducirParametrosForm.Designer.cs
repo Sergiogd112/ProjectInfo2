@@ -33,6 +33,8 @@
             this.distanciaSeguridadBox = new System.Windows.Forms.TextBox();
             this.cicloLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.rellenarButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // aceptarButton
@@ -89,6 +91,29 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Distancia de Seguridad";
             // 
+            // rellenarButton
+            // 
+            this.rellenarButton.BackColor = System.Drawing.Color.MistyRose;
+            this.rellenarButton.Location = new System.Drawing.Point(105, 328);
+            this.rellenarButton.Name = "rellenarButton";
+            this.rellenarButton.Size = new System.Drawing.Size(127, 45);
+            this.rellenarButton.TabIndex = 10;
+            this.rellenarButton.Text = "Rellenar";
+            this.rellenarButton.UseVisualStyleBackColor = false;
+            this.rellenarButton.Click += new System.EventHandler(this.rellenarButton_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(100, 395);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(276, 25);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "(Rellenar automáticamente)";
+            // 
             // IntroducirParametrosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -96,6 +121,8 @@
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.BackgroundImage = global::Flight_Forms.Properties.Resources.imagen3;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.rellenarButton);
             this.Controls.Add(this.aceptarButton);
             this.Controls.Add(this.cicloBox);
             this.Controls.Add(this.distanciaSeguridadBox);
@@ -116,5 +143,7 @@
         private System.Windows.Forms.TextBox distanciaSeguridadBox;
         private System.Windows.Forms.Label cicloLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button rellenarButton;
+        private System.Windows.Forms.Label label2;
     }
 }

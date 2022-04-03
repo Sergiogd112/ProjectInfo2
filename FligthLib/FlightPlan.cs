@@ -91,6 +91,29 @@ namespace FlightLib
                                             (this.finalPosition.GetY() - this.currentPosition.GetY()) * (this.finalPosition.GetY() - currentPosition.GetY()));
         }
 
+        public void GetLastPosition(double cicle)
+        {
+            if ((this.currentPosition == null || this.currentPosition==this.initialPosition))
+            {
+                this.currentPosition = this.initialPosition;
+                
+            }
+            else
+            {
+                double d = cicle * this.velocidad / 60;
+                double hyp = Math.Sqrt(Math.Pow(this.finalPosition.GetX() - this.currentPosition.GetX(), 2) + Math.Pow(this.finalPosition.GetY() - this.currentPosition.GetY(), 2));
+                double cos = (this.finalPosition.GetX() + this.currentPosition.GetX()) / hyp;
+                double sin = (this.finalPosition.GetY() + this.currentPosition.GetY()) / hyp;
+                double x = currentPosition.GetX()-d*cos;
+                double y = currentPosition.GetY()-d*sin;
+                SetCurrentPosition(x, y);
+            }
+            return ;
+        }
+
+
+
+
         // SETTERS
         /// <summary>
         /// Setter para Id
@@ -124,7 +147,9 @@ namespace FlightLib
 
         public void SetCurrentPosition(double x, double y)
         {
-            this.currentPosition = new Position(x, y);
+            Position p = new Position(x,y);
+            this.currentPosition=p;
+
 
         }
 

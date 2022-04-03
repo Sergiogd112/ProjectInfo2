@@ -16,7 +16,6 @@ namespace Flight_Forms
         //double distSeg;
         double ciclo;
         FlightPlanList lista;
-        IntroducirParametrosForm form2;
 
         public PrincipalForm()
         {
@@ -25,13 +24,13 @@ namespace Flight_Forms
 
         private void introducirParametrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            form2 = new IntroducirParametrosForm();
+            IntroducirParametrosForm form2 = new IntroducirParametrosForm();
             form2.ShowDialog(); 
             form2.Visible = true;
 
             double[] parametros = form2.DameParametros();
-            lista.SetDistanciaSeguridad(parametros[0]); //la distància que escriu la persona
-            ciclo = parametros[1];
+            this.lista.SetDistanciaSeguridad(parametros[0]); //la distància que escriu la persona
+            this.ciclo = parametros[1];
             form2.Visible = false;
         }
 
@@ -46,9 +45,10 @@ namespace Flight_Forms
             form1.ShowDialog();
             form1.Visible = true;
 
-            lista = form1.DameLista();
+            this.lista = form1.DameLista();
             form1.Visible = false;
         }
+        /*
         private void ClickInformacionVuelo(object sender, EventArgs e) 
         {
             PictureBox avion = (PictureBox)sender;
@@ -59,7 +59,7 @@ namespace Flight_Forms
 
         }
 
-
+        */
         private void leerDeFicheroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string defaultpath = @"..\..\..\SimulatorConsole\data.txt";
@@ -83,8 +83,13 @@ namespace Flight_Forms
         private void listaDeVuelosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             TablaAviones aparece = new TablaAviones();
-            aparece.GetListFlights(lista); 
+            aparece.SetListFlights(this.lista); 
             aparece.ShowDialog();
+        }
+
+        private void PrincipalForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

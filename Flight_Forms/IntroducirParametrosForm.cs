@@ -62,5 +62,11 @@ namespace Flight_Forms
         {
             return this.parametros;
         }
+
+        private void rellenarButton_Click(object sender, EventArgs e)
+        {
+            cicloBox.Text = "2";
+            distanciaSeguridadBox.Text = "50";
+        }
     }
 }
