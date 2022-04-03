@@ -275,5 +275,11 @@ namespace Flight_Forms
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int destino = this.lista.encuentraPlanesDestino();
+            MessageBox.Show("Hay "+Convert.ToString(destino)+" en destino");
+        }
     }
 }
