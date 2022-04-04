@@ -310,6 +310,20 @@ namespace FlightLib
                 this.flights[i].Restart();
             }
         }
+        
+        public int encuentraPlanesDestino()
+        {
+            int total = 0;
+            for(int i=0; i<this.number; i++)
+            {
+                if (this.flights[i].GetCurrentPosition().GetX()>=200 & this.flights[i].GetCurrentPosition().GetY()>=200)
+                {
+                    total += 1;
+                }
+            }
+            return total;
+        }
+        
         // CONSOLE
 
         /// <summary>

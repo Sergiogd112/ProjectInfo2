@@ -11,6 +11,9 @@ using FlightLib;
 
 namespace Flight_Forms
 {
+    /// <summary>
+    /// Formulario para visualizar la simulación
+    /// </summary>
     public partial class Espacioaerio : Form
     {
         public FlightPlanList lista;
@@ -24,6 +27,11 @@ namespace Flight_Forms
 
         int butt = 1;
 
+        /// <summary>
+        /// Constructor del espacio aereo donde se instancia la lista de imagenes de aviones.
+        /// </summary>
+        /// <param name="l">objeto FligthPlanList</param>
+        /// <param name="c">numero de doble precison que indica la duración del ciclo</param>
         public Espacioaerio(FlightPlanList l, double c)
         {
             this.lista = l;
@@ -35,6 +43,11 @@ namespace Flight_Forms
 
         }
 
+        /// <summary>
+        /// Prepara el panel para la simulación
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Espacioaerio_Load(object sender, EventArgs e)
         {
             plane = new PictureBox[this.lista.GetLen()];
@@ -66,13 +79,16 @@ namespace Flight_Forms
                     showRecorrido(this.plan, false, s);
                 };
 
-                
+
 
             }
 
         }
 
-
+        /// <summary>
+        /// Al pulsar sobre un avion abre un form con la informacion del fligthplan
+        /// </summary>
+        /// <param name="flight">objeto de tipo FligthPlan</param>
         private void ClickFlight(FlightPlan flight)
         {
             //en hacer click sobre el plan de vuelo del panel de simulacion, mostramos un formulario con la info del mismo
@@ -82,11 +98,18 @@ namespace Flight_Forms
             info.ShowDialog();
             info.Visible = true;
         }
-        void showRecorrido(FlightPlan flight, bool isEnter, object sender)   
-            //Cuando el cursor pasa sobre un avión, se observa una línea que indica la trayectoria
+
+        /// <summary>
+        /// Muestra el recorrido del avión
+        /// </summary>
+        /// <param name="flight"></param>
+        /// <param name="isEnter"></param>
+        /// <param name="sender"></param>
+        void showRecorrido(FlightPlan flight, bool isEnter, object sender)
+        //Cuando el cursor pasa sobre un avión, se observa una línea que indica la trayectoria
         {       //el booleano isEnter nos indica si estamos posicionados sobre un picturebox
 
-            
+
             if (isEnter)
             {
                 Label label = new Label();
@@ -106,8 +129,8 @@ namespace Flight_Forms
 
                     Point PuntoDestino = new Point((int)flight.GetFinalPosition().GetX() + p.Width / 2, (int)flight.GetFinalPosition().GetY() + p.Height / 2);
                     Point PuntoOrigen = new Point((int)flight.GetInitialPosition().GetX() + p.Width / 2, (int)flight.GetInitialPosition().GetY() + p.Height / 2);
-                    
-                    
+
+
                     g.DrawLines(P, new Point[] { PuntoOrigen, PuntoDestino });
                     g.FillEllipse(B, (int)flight.GetFinalPosition().GetX() + 5, (int)flight.GetFinalPosition().GetY() + 5, 10, 10);
                 }
@@ -115,15 +138,20 @@ namespace Flight_Forms
             else
             {
                 foreach (Control item in this.panel2.Controls.OfType<Control>().ToList())
-                { 
-                    if (item.Name == "labelId") panel2.Controls.Remove(item); 
+                {
+                    if (item.Name == "labelId") panel2.Controls.Remove(item);
                 }
-                
-                
+
+
                 panel2.Invalidate();
             }
         }
 
+        /// <summary>
+        /// Muestra la posición del raton sobre el panel de simulacón
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
             //cada vez que el ratón se mueva por el panel, se disparará un evento, nos lleva a esta funcion
@@ -141,6 +169,11 @@ namespace Flight_Forms
             }
         }
 
+        /// <summary>
+        /// Avanza la simulación un ciclo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void manualButton_Click(object sender, EventArgs e)
         {
             this.lista.MoveAll(Convert.ToInt32(ciclo)); //he mogut la posició dels avions però no del PictureBox
@@ -150,7 +183,7 @@ namespace Flight_Forms
             {
                 plane[i].Location = new Point(Convert.ToInt32(this.lista.GetFlightAtIndex(i).GetCurrentPosition().GetX()), Convert.ToInt32(lista.GetFlightAtIndex(i).GetCurrentPosition().GetY()));
                 Position position = this.lista.GetFlightAtIndex(i).GetCurrentPosition();
-                Label label; 
+                Label label;
                 if ((position.GetX() >= panel2.Width) || (position.GetX() <= 0))
                 {
                     label = new Label();
@@ -167,6 +200,11 @@ namespace Flight_Forms
 
         }
 
+        /// <summary>
+        /// Al pulsar el boton, la simulación avanza de forma automática
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void autoButton_Click(object sender, EventArgs e)
         {
             //queremos que en picar automatico se empiecen a mover los vuelos pero que el propio botón cambie su funcionalidad a 'parar'
@@ -202,6 +240,11 @@ namespace Flight_Forms
             }
         }
 
+        /// <summary>
+        /// A cada tick de la simulación avanza los ciclos y actualiza el panel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void reloj_Tick(object sender, EventArgs e)
         {
             //qué queremos que suceda cada intervalo de tiempo?
@@ -235,6 +278,11 @@ namespace Flight_Forms
                 this.Close();
 
         }
+
+        /// <summary>
+        /// Comprueva si la distancia entre aviones es menor a la de seguridad
+        /// </summary>
+        /// <returns><see langword="true"/>si la distancia es menor a la de seguridad</returns>
         private bool distanciaInferior()
         {
             plane0 = lista.GetFlightAtIndex(0).GetCurrentPosition();
@@ -248,6 +296,11 @@ namespace Flight_Forms
             return false;
         }
 
+        /// <summary>
+        /// Al pulsar el boton comprueva los conflictos de forma continua
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             lista.CheckConflicts(false);
@@ -264,11 +317,14 @@ namespace Flight_Forms
             }
             MessageBox.Show("LOS AVIONES NO VAN A COLISIONAR");
 
-            }
+        }
 
-
-
-            private void reiniciarButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Reiniciar la simulación
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void reiniciarButton_Click(object sender, EventArgs e)
         {
             this.lista.Restart();
             for (int i = 0; i < this.lista.GetLen(); i++) //aquí moc el PictureBox
@@ -290,6 +346,11 @@ namespace Flight_Forms
             }
         }
 
+        /// <summary>
+        /// Retrocede la simulación un ciclo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void retroButt_Click(object sender, EventArgs e)
         {
             try
@@ -299,10 +360,10 @@ namespace Flight_Forms
                     FlightPlan f = lista.GetFlightAtIndex(i);
                     f.GetLastPosition(ciclo);
                     plane[i].Location = new Point(Convert.ToInt32(f.GetCurrentPosition().GetX()), Convert.ToInt32(f.GetCurrentPosition().GetY()));
-                }   
-                
+                }
+
             }
-            catch(OverflowException)
+            catch (OverflowException)
             {
                 MessageBox.Show("Desbordamiento de operaciones!!!");
             }
