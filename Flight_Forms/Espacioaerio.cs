@@ -304,11 +304,12 @@ namespace Flight_Forms
         private void button1_Click(object sender, EventArgs e)
         {
             lista.CheckConflicts(false);
-            for (int i = 0; i < lista.GetAmountFlights() - 1; i++)
+            bool[,] conflicts = lista.GetConflicts();
+            for (int i = 0; i < conflicts.Length; i++)
             {
-                for (int j = i + 1; j < lista.GetAmountFlights(); j++)
+                for (int j = i + 1; j < conflicts.Length; j++)
                 {
-                    if (lista.GetConflicts()[i, j])
+                    if (conflicts[i,j])
                     {
                         MessageBox.Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
                         return;
