@@ -50,12 +50,13 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void Espacioaerio_Load(object sender, EventArgs e)
         {
+            FlightPlan avion = new FlightPlan();
             plane = new PictureBox[this.lista.GetLen()];
             for (int i = 0; i < this.lista.GetLen(); i++)
             {
-                this.plan = this.lista.GetFlightAtIndex(i);
+                avion = this.lista.GetFlightAtIndex(i);
                 PictureBox pic = new PictureBox();
-                pic.Location = new Point(Convert.ToInt32(plan.GetInitialPosition().GetX()), Convert.ToInt32(plan.GetInitialPosition().GetY()));
+                pic.Location = new Point(Convert.ToInt32(avion.GetInitialPosition().GetX()), Convert.ToInt32(avion.GetInitialPosition().GetY()));
                 pic.ClientSize = new Size(40, 40);
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
                 pic.BackColor = Color.Transparent;
@@ -64,19 +65,19 @@ namespace Flight_Forms
                 //agregamos método en clicar sobre el flightplan
                 pic.DoubleClick += delegate (object s, EventArgs events)
                 {
-                    ClickFlight(this.plan);
+                    ClickFlight(avion);
                 };
 
                 plane[i] = pic;
                 pic.MouseEnter += delegate (object s, EventArgs events)
                 {
                     //si estamos sobre el avión:
-                    showRecorrido(this.plan, true, s);
+                    showRecorrido(avion, true, s);
                 };
                 pic.MouseLeave += delegate (object s, EventArgs events)
                 {
                     //si estamos sobre el avión:
-                    showRecorrido(this.plan, false, s);
+                    showRecorrido(avion, false, s);
                 };
 
 
