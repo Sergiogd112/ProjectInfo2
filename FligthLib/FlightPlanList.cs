@@ -78,7 +78,10 @@ namespace FlightLib
         {
             return  this.conflicts;
         }
-
+        public double[,] GetConflictd()
+        {
+            return confd;
+        }
         //SETTERS
 
         /// <summary>

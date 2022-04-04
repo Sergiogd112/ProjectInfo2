@@ -304,12 +304,13 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            lista.CheckConflicts(false);
-            for (int i = 0; i < lista.GetAmountFlights() - 1; i++)
+            lista.CheckConflicts(true); // Comprueva si hay conflictos
+            double[,] conflicts = lista.GetConflictd(); // Devuleve conflictos
+            for (int i = 0; i < lista.GetLen(); i++) // Miro el primer avió i amb el següent for el comprovaré amb tots els avions
             {
-                for (int j = i + 1; j < lista.GetAmountFlights(); j++)
+                for (int j = i + 1; j < lista.GetLen(); j++) //Tots els altres avions
                 {
-                    if (lista.GetConflicts()[i, j])
+                    if (conflicts[i,j]<=this.dist)
                     {
                         MessageBox.Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
                         return;
