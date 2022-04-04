@@ -23,7 +23,6 @@ namespace Flight_Forms
         double dist;
 
         private PictureBox[] plane;
-        FlightPlan plan;
 
         int butt = 1;
 
@@ -91,10 +90,11 @@ namespace Flight_Forms
         /// </summary>
         /// <param name="flight">objeto de tipo FligthPlan</param>
         private void ClickFlight(FlightPlan flight)
+
         {
             //en hacer click sobre el plan de vuelo del panel de simulacion, mostramos un formulario con la info del mismo
             Informaciónvuelo info = new Informaciónvuelo();
-
+            
             info.SetFlight(flight);
             info.ShowDialog();
             info.Visible = true;
