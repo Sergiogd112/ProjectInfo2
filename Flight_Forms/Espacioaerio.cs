@@ -303,13 +303,13 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            lista.CheckConflicts(false);
-            bool[,] conflicts = lista.GetConflicts();
-            for (int i = 0; i < conflicts.Length; i++)
+            lista.CheckConflicts(false); // Comprueva si hay conflictos
+            double[,] conflicts = lista.GetConflictd(); // Devuleve bool de conflictos
+            for (int i = 0; i < conflicts.Length; i++) // 
             {
-                for (int j = i + 1; j < conflicts.Length; j++)
+                for (int j = i + 1; j < i; j++)
                 {
-                    if (conflicts[i,j])
+                    if (conflicts[i,j]<=this.dist)
                     {
                         MessageBox.Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
                         return;
