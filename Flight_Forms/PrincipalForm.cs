@@ -16,10 +16,12 @@ namespace Flight_Forms
         //double distSeg;
         double ciclo;
         FlightPlanList lista;
+        bool vuelosguardados = false;
 
         public PrincipalForm()
         {
             InitializeComponent();
+            lista = new FlightPlanList();
         }
 
         private void introducirParametrosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,6 +91,36 @@ namespace Flight_Forms
 
         private void PrincipalForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void cargarFicheroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (cargar.ShowDialog() == DialogResult.OK)
+            {
+                int error = 0;
+                lista.AddFromFile(cargar.FileName);
+                if (error == -1)
+                    MessageBox.Show("No se encontró el fichero de los vuelos");
+                else if (error == -2)
+                    MessageBox.Show("Hay un error en el formato de los datos");
+            }
+        }
+
+        private void guardarFicheroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (lista.GetAmountFlights() != 0)
+            {
+                if (guardar.ShowDialog() == DialogResult.OK)
+                {
+                    lista.GuardarFicheros(guardar.FileName);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay datos para guardar");
+            }
 
         }
     }

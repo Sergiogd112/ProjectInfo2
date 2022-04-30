@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace FlightLib
 {
@@ -206,22 +207,48 @@ namespace FlightLib
         /// Lee los planes en del fichero txt
         /// </summary>
         /// <param name="filename">Path del fichero</param>
-        public void AddFromFile(string filename)
+        public int AddFromFile(string filename)
         {
-            string[] lines = System.IO.File.ReadAllLines(filename);
+            string[] lines;
+            try
+            {
+                lines = System.IO.File.ReadAllLines(filename);
+            }
+            catch(FileNotFoundException)
+            {
+                return -1;
+            }
             string[] data = new string[6];
             double[] coordsAndSpeed = new double[5];
-            foreach (string line in lines)
+            try
             {
-                data = line.Split(' ');
-                for (int j = 1; j < data.Length; j++)
+                foreach (string line in lines)
                 {
-                    coordsAndSpeed[j - 1] = Convert.ToDouble(data[j]);
+                    data = line.Split(' ');
+                    for (int j = 1; j < data.Length; j++)
+                    {
+                        coordsAndSpeed[j - 1] = Convert.ToDouble(data[j]);
+                    }
+                    this.AddFlightPlan(new FlightPlan(data[0], Convert.ToDouble(coordsAndSpeed[0]), Convert.ToDouble(coordsAndSpeed[1]), Convert.ToDouble(coordsAndSpeed[2]), Convert.ToDouble(coordsAndSpeed[3]), Convert.ToDouble(coordsAndSpeed[4])));
                 }
-                this.AddFlightPlan(new FlightPlan(data[0], coordsAndSpeed[0], coordsAndSpeed[1], coordsAndSpeed[2], coordsAndSpeed[3], coordsAndSpeed[4]));
+            }
+            catch (FormatException)
+            {
+                return -2;
             }
             this.CheckInteractions();
             this.CheckConflicts();
+            return 1;
+        }
+        public void GuardarFicheros(string nombre) //guardar el fichero con un nombre
+        {
+            StreamWriter W = new StreamWriter(nombre);
+            W.WriteLine(this.number);
+            for (int i = 0; i < this.number; i++)
+            {
+                W.WriteLine("{0},{1},{2},{3},{4},{5}", this.flights[i].GetId(), this.flights[i].GetCurrentPosition().GetX(), this.flights[i].GetCurrentPosition().GetY(), this.flights[i].GetFinalPosition().GetX(), this.flights[i].GetFinalPosition().GetY(), this.flights[i].GetVelocidad());
+            }
+            W.Close();
         }
 
         /// <summary>
@@ -491,5 +518,6 @@ namespace FlightLib
                 return null;
             }
         }
+
     }
 }
