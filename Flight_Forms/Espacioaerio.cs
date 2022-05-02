@@ -216,8 +216,8 @@ namespace Flight_Forms
                 //cuando picamos al botón automático, la funcion debe iniciar el reloj
                 //lo que tiene que hacer debe hacerlo periódicamente
                 //definimos el intervalo de tiempo en el que va a trabajar
-                reloj.Interval = 1000;          //unidades en ms
-                                                //inicio
+                reloj.Interval = 100;          //unidades en ms
+                                               //inicio
                 reloj.Start();
                 //como hemos picado sobre el botón, debemos cambiar el estado de 1 a 0
                 //mostrar 'parar'
@@ -304,13 +304,14 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+
             lista.CheckConflicts(true); // Comprueva si hay conflictos
             List<List<double>> conflicts = lista.GetConflictd(); // Devuleve conflictos
             for (int i = 0; i < lista.GetLen(); i++) // Miro el primer avió i amb el següent for el comprovaré amb tots els avions
             {
                 for (int j = i + 1; j < lista.GetLen(); j++) //Tots els altres avions
                 {
-                    if (conflicts[i][j] <= this.dist)
+                    if (conflicts[i][j] <= this.dist && conflicts[i][j] != -1)
                     {
                         MessageBox.Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
                         return;

@@ -82,10 +82,6 @@ namespace FlightLib
         /// <returns></returns>
         public FlightPlan GetFlightAtIndex(int index)
         {
-            if (index < 0 || index >= number)
-            {
-                return null;
-            }
             return flights[index];
         }
 
@@ -94,9 +90,36 @@ namespace FlightLib
         /// </summary>
         /// <param name="fligth"></param>
         /// <returns></returns>
-        public int AddFlightPlan(FlightPlan fligth)
+        public int AddFlightPlan(FlightPlan fligth, bool checkinteracions = true)
         {
+            List<double> tmpd1 = new List<double>();
+            List<bool> tmpb1 = new List<bool>();
+            List<double> tmpd2 = new List<double>();
+            List<bool> tmpb2 = new List<bool>();
+            for (int i = 0; i < flights.Count; i++)
+            {
+                tmpd1.Add(-1);
+                tmpb1.Add(false);
+                tmpd2.Add(-1);
+                tmpb2.Add(false);
+                this.interactions[i].Add(false);
+                this.mind[i].Add(-1);
+                this.conflicts[i].Add(false);
+                this.confd[i].Add(-1);
+            }
+            tmpd1.Add(-1);
+            tmpb1.Add(false);
+            tmpd2.Add(-1);
+            tmpb2.Add(false);
             this.flights.Add(fligth);
+            this.interactions.Add(tmpb1);
+            this.mind.Add(tmpd1);
+            this.conflicts.Add(tmpb2);
+            this.confd.Add(tmpd2);
+            if (checkinteracions)
+            {
+                this.CheckInteractions();
+            }
             return 0;
         }
 
@@ -173,12 +196,7 @@ namespace FlightLib
             }
             FlightPlan fligth =
                 new FlightPlan(identificador, ix, iy, fx, fy, velocidad);
-            this.AddFlightPlan(fligth);
-            if (checkInteractions)
-            {
-                this.CheckInteractions();
-                this.CheckConflicts();
-            }
+            this.AddFlightPlan(fligth, checkInteractions);
             return fligth;
         }
 
@@ -244,7 +262,7 @@ namespace FlightLib
         /// Guarda el fichero con un nombre
         /// </summary>
         /// <param name="nombre"></param>
-        public void Dump(string nombre) //guardar el fichero con un nombe
+        public void Dump(string nombre)
         {
             StreamWriter W = new StreamWriter(nombre);
             W.WriteLine(this.DumpString());
@@ -255,7 +273,7 @@ namespace FlightLib
             string dump = "";
             foreach (FlightPlan fligth in flights)
             {
-                dump += fligth.Dumps() + ";";
+                dump += fligth.DumpString() + ";";
             }
             return dump;
         }
@@ -273,7 +291,7 @@ namespace FlightLib
             FlightPlanList list = new FlightPlanList();
             foreach (string planString in data)
             {
-                list.AddFlightPlan(FlightPlan.Loads(planString));
+                list.AddFlightPlan(FlightPlan.LoadString(planString));
             }
             return list;
         }
@@ -301,11 +319,7 @@ namespace FlightLib
             double[] data = new double[2];
             for (int i = 0; i < this.flights.Count; i++)
             {
-                if (i >= this.interactions.Count)
-                {
-                    List<bool> temp = new List<bool>();
-                    this.interactions.Add(temp);
-                }
+
                 for (int j = i; j < this.flights.Count; j++)
                 {
                     data =
@@ -314,10 +328,7 @@ namespace FlightLib
                             .Interaction(this.flights[j],
                             this.distanciaSeguridad,
                             true);
-                    if (j >= this.interactions[i].Count)
-                    {
-                        this.interactions[i].Add(false);
-                    }
+
                     this.interactions[i][j] =
                         Math.Abs(data[0]) <= this.distanciaSeguridad;
                     Console
@@ -326,15 +337,6 @@ namespace FlightLib
                         this.flights[j].GetId(),
                         data[0],
                         data[0] <= this.distanciaSeguridad);
-                    if (j >= this.interactions.Count)
-                    {
-                        List<bool> temp = new List<bool>();
-                        this.interactions.Add(temp);
-                    }
-                    if (i >= this.interactions[j].Count)
-                    {
-                        this.interactions[i].Add(false);
-                    }
                     this.interactions[j][i] =
                         Math.Abs(data[0]) <= this.distanciaSeguridad;
                     this.mind[i][j] = data[0];
@@ -349,29 +351,11 @@ namespace FlightLib
         public void CheckConflicts(bool checkAll = false)
         {
             double[] data = new double[2];
-            for (int i = 0; i < this.number; i++)
+            for (int i = 0; i < this.flights.Count; i++)
             {
-                if (i >= this.interactions.Count)
+                for (int j = i; j < this.flights.Count; j++)
                 {
-                    List<bool> temp = new List<bool>();
-                    this.interactions.Add(temp);
-                }
-                for (int j = i; j < this.number; j++)
-                {
-                    if (j >= this.interactions[i].Count)
-                    {
-                        this.interactions[i].Add(false);
-                    }
-                    if (j >= this.interactions.Count)
-                    {
-                        List<bool> temp = new List<bool>();
-                        this.interactions.Add(temp);
-                    }
-                    if (i >= this.interactions[j].Count)
-                    {
-                        this.interactions[i].Add(false);
-                    }
-                    if (this.interactions[i][j] || checkAll)
+                    if (this.conflicts[i][j] || checkAll)
                     {
                         data =
                             this
@@ -405,9 +389,9 @@ namespace FlightLib
         /// <param name="moves"></param>
         public void MoveAll(int moves)
         {
-            for (int i = 0; i < this.number; i++)
+            for (int i = 0; i < this.flights.Count; i++)
             {
-                this.flights[i].Mover(10);
+                this.flights[i].Mover(moves);
             }
         }
 
@@ -479,8 +463,8 @@ namespace FlightLib
                     }
                     separator += "+-";
                 }
-                Console.WriteLine (row);
-                Console.WriteLine (separator);
+                Console.WriteLine(row);
+                Console.WriteLine(separator);
             }
         }
 
@@ -516,8 +500,8 @@ namespace FlightLib
                     }
                     separator += "+-";
                 }
-                Console.WriteLine (row);
-                Console.WriteLine (separator);
+                Console.WriteLine(row);
+                Console.WriteLine(separator);
             }
         }
 

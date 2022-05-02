@@ -750,7 +750,7 @@ namespace FlightLib
         /// Generates a string of the data in the fligth plan
         /// </summary>
         /// <returns>a string of the fligth plan</returns>
-        public string Dumps()
+        public string DumpString()
         {
             string dump =
                 string
@@ -766,7 +766,7 @@ namespace FlightLib
             return dump;
         }
 
-        public static FlightPlan Loads(string s)
+        public static FlightPlan LoadString(string s)
         {
             string[] data = s.Split(',');
             FlightPlan plan =
