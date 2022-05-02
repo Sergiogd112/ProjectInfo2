@@ -260,11 +260,13 @@ namespace FlightLib
             return dump;
         }
 
-        public static FlightPlanList Load(string file){
+        public static FlightPlanList Load(string file)
+        {
             StreamReader R = new StreamReader(file);
-            string text=R.ReadToEnd();
+            string text = R.ReadToEnd();
             return FlightPlanList.Load(text);
         }
+
         public static FlightPlanList LoadString(string s)
         {
             string[] data = s.Split(';');
@@ -292,7 +294,6 @@ namespace FlightLib
         /// Guarda 2 tablas:
         ///     * interactions: tabla booleana con las interacciones.
         ///     * mind: tabla de distancias minimas possibles (para no tener que recalcular en caso
-
         ///       de modificar la distancia de seguridad).
         /// </summary>
         public void CheckInteractions()
