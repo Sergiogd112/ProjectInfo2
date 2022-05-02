@@ -97,7 +97,6 @@ namespace FlightLib
 
         /// <summary>
         /// Genera un vector de doubles[3,2] con las tres posiciones: start, current y end.
-
         /// </summary>
         /// <returns>[[startx,starty],[currentx,currenty],[endx,endy]]</returns>
         public double[,] GetPositions()
@@ -379,9 +378,8 @@ namespace FlightLib
                                     (a0[1] - b1[1]));
                             return result;
                         }
-                    }
-                    else // Is segment B after A?
-                    if (d0 >= magA && magA <= d1)
+                    } // Is segment B after A?
+                    else if (d0 >= magA && magA <= d1)
                     {
                         if (clampA1 && clampB0)
                         {
@@ -665,7 +663,6 @@ namespace FlightLib
                     (fracY1 - fracY2 + yf0 - yg0);
 
                 // distancia minima ^2
-
                 minimumDistance2 = xSide2 + ySide2;
             }
 
@@ -785,8 +782,7 @@ namespace FlightLib
         /// <summary>
         /// Escribe los datos del FligthPlan por consola
         /// </summary>
-        public void EscribeConsola()// escribe en consola los datos del plan de vuelo
-
+        public void EscribeConsola() // escribe en consola los datos del plan de vuelo
         {
             Console.WriteLine("******************************");
             Console.WriteLine("Datos del vuelo: ");
