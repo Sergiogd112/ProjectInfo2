@@ -114,7 +114,7 @@ namespace Flight_Forms
             {
                 if (guardar.ShowDialog() == DialogResult.OK)
                 {
-                    lista.GuardarFicheros(guardar.FileName);
+                    lista.Dump(guardar.FileName);
                 }
             }
             else
