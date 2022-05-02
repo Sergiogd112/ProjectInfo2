@@ -7,11 +7,14 @@ namespace FlightLib
     public class FlightPlan
     {
         // Atributos
-
         string id; // identificador
+
         Position initialPosition;
+
         Position currentPosition; // posicion actual
+
         Position finalPosition; // posicion final
+
         double velocidad;
 
         // Constructures
@@ -23,7 +26,15 @@ namespace FlightLib
             this.finalPosition = new Position(0, 0);
             this.velocidad = 0;
         }
-        public FlightPlan(string id, double cpx, double cpy, double fpx, double fpy, double velocidad)
+
+        public FlightPlan(
+            string id,
+            double cpx,
+            double cpy,
+            double fpx,
+            double fpy,
+            double velocidad
+        )
         {
             this.id = id;
             this.initialPosition = new Position(cpx, cpy);
@@ -32,8 +43,25 @@ namespace FlightLib
             this.velocidad = velocidad;
         }
 
-        // GETTER
+        public FlightPlan(
+            string id,
+            double spx,
+            double spy,
+            double cpx,
+            double cpy,
+            double fpx,
+            double fpy,
+            double velocidad
+        )
+        {
+            this.id = id;
+            this.initialPosition = new Position(spx, spy);
+            this.currentPosition = new Position(cpx, cpy);
+            this.finalPosition = new Position(fpx, fpy);
+            this.velocidad = velocidad;
+        }
 
+        // GETTER
         /// <summary>
         /// Getter del identificador
         /// </summary>
@@ -42,7 +70,7 @@ namespace FlightLib
         {
             return this.id;
         }
-        
+
         /// <summary>
         /// Getter de la velocidad
         /// </summary>
@@ -56,17 +84,20 @@ namespace FlightLib
         {
             return this.initialPosition;
         }
+
         public Position GetCurrentPosition()
         {
             return this.currentPosition;
         }
+
         public Position GetFinalPosition()
         {
             return this.finalPosition;
         }
-        
+
         /// <summary>
-        /// Genera un vector de doubles[3,2] con las tres posiciones: start, current y end. 
+        /// Genera un vector de doubles[3,2] con las tres posiciones: start, current y end.
+
         /// </summary>
         /// <returns>[[startx,starty],[currentx,currenty],[endx,endy]]</returns>
         public double[,] GetPositions()
@@ -87,32 +118,51 @@ namespace FlightLib
         /// <returns>Distancia al destino</returns>
         public double getDistanciaDestino()
         {
-            return Math.Sqrt((this.finalPosition.GetX() - this.currentPosition.GetX()) * (this.finalPosition.GetX() - this.currentPosition.GetX()) +
-                                            (this.finalPosition.GetY() - this.currentPosition.GetY()) * (this.finalPosition.GetY() - currentPosition.GetY()));
+            return Math
+                .Sqrt((
+                this.finalPosition.GetX() - this.currentPosition.GetX()
+                ) *
+                (this.finalPosition.GetX() - this.currentPosition.GetX()) +
+                (this.finalPosition.GetY() - this.currentPosition.GetY()) *
+                (this.finalPosition.GetY() - currentPosition.GetY()));
         }
 
         public void GetLastPosition(double cicle)
         {
-            if ((this.currentPosition == null || this.currentPosition==this.initialPosition))
+            if (
+                (
+                this.currentPosition == null ||
+                this.currentPosition == this.initialPosition
+                )
+            )
             {
                 this.currentPosition = this.initialPosition;
-                
             }
             else
             {
                 double d = cicle * this.velocidad / 60;
-                double hyp = Math.Sqrt(Math.Pow(this.finalPosition.GetX() - this.currentPosition.GetX(), 2) + Math.Pow(this.finalPosition.GetY() - this.currentPosition.GetY(), 2));
-                double cos = (this.finalPosition.GetX() + this.currentPosition.GetX()) / hyp;
-                double sin = (this.finalPosition.GetY() + this.currentPosition.GetY()) / hyp;
-                double x = currentPosition.GetX()-d*cos;
-                double y = currentPosition.GetY()-d*sin;
-                SetCurrentPosition(x, y);
+                double hyp =
+                    Math
+                        .Sqrt(Math
+                            .Pow(this.finalPosition.GetX() -
+                            this.currentPosition.GetX(),
+                            2) +
+                        Math
+                            .Pow(this.finalPosition.GetY() -
+                            this.currentPosition.GetY(),
+                            2));
+                double cos =
+                    (this.finalPosition.GetX() + this.currentPosition.GetX()) /
+                    hyp;
+                double sin =
+                    (this.finalPosition.GetY() + this.currentPosition.GetY()) /
+                    hyp;
+                double x = currentPosition.GetX() - d * cos;
+                double y = currentPosition.GetY() - d * sin;
+                SetCurrentPosition (x, y);
             }
-            return ;
+            return;
         }
-
-
-
 
         // SETTERS
         /// <summary>
@@ -121,19 +171,31 @@ namespace FlightLib
         /// <param name="identificator">Identificador del avion</param>
         public double Distanciaentrevuelos(FlightPlan a, FlightPlan b)
         {
-            return Math.Sqrt((Convert.ToInt32(a.GetCurrentPosition().GetX() - b.GetCurrentPosition().GetX())^2) + (Convert.ToInt32(a.GetCurrentPosition().GetY() - b.GetCurrentPosition().GetY())^2));
+            return Math
+                .Sqrt((
+                Convert
+                    .ToInt32(a.GetCurrentPosition().GetX() -
+                    b.GetCurrentPosition().GetX()) ^
+                2
+                ) +
+                (
+                Convert
+                    .ToInt32(a.GetCurrentPosition().GetY() -
+                    b.GetCurrentPosition().GetY()) ^
+                2
+                ));
         }
+
         public void SetId(string identificator)
         {
             this.id = identificator;
         }
-        
+
         /// <summary>
         /// Setter para la posicion incial
         /// </summary>
         /// <param name="x">coordenada en x</param>
         /// <param name="y">coordenada en y</param>
-
         public void SetInitialPosition(double x, double y)
         {
             this.initialPosition = new Position(x, y);
@@ -144,13 +206,10 @@ namespace FlightLib
         /// </summary>
         /// <param name="x">coordenada en x</param>
         /// <param name="y">coordenada en y</param>
-
         public void SetCurrentPosition(double x, double y)
         {
-            Position p = new Position(x,y);
-            this.currentPosition=p;
-
-
+            Position p = new Position(x, y);
+            this.currentPosition = p;
         }
 
         /// <summary>
@@ -158,25 +217,21 @@ namespace FlightLib
         /// </summary>
         /// <param name="x">coordenada en x</param>
         /// <param name="y">coordenada en y</param>
-
         public void SetFinalPosition(double x, double y)
         {
             this.finalPosition = new Position(x, y);
-
         }
 
         /// <summary>
         /// Setter de la velocidad
         /// </summary>
         /// <param name="velocidad"></param>
-
         public void SetVelocidad(double v)
         {
             this.velocidad = v;
         }
 
         // CHECKERS
-
         /// <summary>
         /// Comprueva si el avion está en destino
         /// </summary>
@@ -185,7 +240,7 @@ namespace FlightLib
         {
             return this.currentPosition == this.finalPosition;
         }
-        
+
         /// <summary>
         /// Comprueva si ha llegado
         /// </summary>
@@ -204,8 +259,6 @@ namespace FlightLib
             return success;
         }
 
-
-
         /// <summary>
         /// Determina la distancia mas corta entre trayectorias. Convertido de Python a C//.
         /// Codigo original en: https://stackoverflow.com/questions/2824478/shortest-distance-between-two-line-segments
@@ -217,12 +270,18 @@ namespace FlightLib
         /// <param name="clampB0">Puntos a la distancia no antes de la inicial del otro avion</param>
         /// <param name="clampB1">Puntos a la distancia no despues de la final del otro avion</param>
         /// <returns>[primer punto, segundo punto, [distancia minima,(no assignado)]]</returns>
-        public double[,] ShortestDistanceBetweenPaths(FlightPlan b, bool clampAll = false,
-                                                        bool clampA0 = false, bool clampA1 = false,
-                                                        bool clampB0 = false, bool clampB1 = false,
-                                                        double magA = -1, double magB = -1)
+        public double[,]
+        ShortestDistanceBetweenPaths(
+            FlightPlan b,
+            bool clampAll = false,
+            bool clampA0 = false,
+            bool clampA1 = false,
+            bool clampB0 = false,
+            bool clampB1 = false,
+            double magA = -1,
+            double magB = -1
+        )
         {
-
             // If clampAll=True, set all clamps to True
             if (clampAll)
             {
@@ -243,6 +302,7 @@ namespace FlightLib
             double[] b1 = new double[2];
             b1[0] = b.finalPosition.GetX();
             b1[1] = b.finalPosition.GetY();
+
             // Calculate denomitator
             double[] A = new double[2];
             A[0] = a1[0] - a0[0];
@@ -250,6 +310,7 @@ namespace FlightLib
             double[] B = new double[2];
             B[0] = b1[0] - b0[0];
             B[1] = b1[1] - b0[1];
+
             // get the magnitudes
             if (magA == -1)
             {
@@ -258,7 +319,6 @@ namespace FlightLib
             if (magB == -1)
             {
                 magB = this.getDistanciaDestino();
-
             }
 
             double[] _A = new double[2];
@@ -276,7 +336,11 @@ namespace FlightLib
             // If lines are parallel (denom=0) test if lines overlap.
             // If they don't overlap then there is a closest point solution.
             // If they do overlap, there are infinite closest positions, but there is a closest distance
-            double d0, d1, tempx, tempy;
+            double
+                d0,
+                d1,
+                tempx,
+                tempy;
             if (denom == 0)
             {
                 d0 = _A[0] * (b0[0] - a0[0]) + _A[1] * (b0[1] - a0[1]);
@@ -297,19 +361,27 @@ namespace FlightLib
                                 result[0, 1] = a0[1];
                                 result[1, 0] = b0[0];
                                 result[1, 1] = b0[1];
-                                result[2, 0] = Math.Sqrt((a0[0] - b0[0]) * (a0[0] - b0[0]) + (a0[1] - b0[1]) * (a0[1] - b0[1]));
+                                result[2, 0] =
+                                    Math
+                                        .Sqrt((a0[0] - b0[0]) *
+                                        (a0[0] - b0[0]) +
+                                        (a0[1] - b0[1]) * (a0[1] - b0[1]));
                                 return result;
                             }
                             result[0, 0] = a0[0];
                             result[0, 1] = a0[1];
                             result[1, 0] = b1[0];
                             result[1, 1] = b1[1];
-                            result[2, 0] = Math.Sqrt((a0[0] - b1[0]) * (a0[1] - b1[1]) * (a0[1] - b1[1]));
+                            result[2, 0] =
+                                Math
+                                    .Sqrt((a0[0] - b1[0]) *
+                                    (a0[1] - b1[1]) *
+                                    (a0[1] - b1[1]));
                             return result;
                         }
                     }
-                    // Is segment B after A?
-                    else if (d0 >= magA && magA <= d1)
+                    else // Is segment B after A?
+                    if (d0 >= magA && magA <= d1)
                     {
                         if (clampA1 && clampB0)
                         {
@@ -319,18 +391,26 @@ namespace FlightLib
                                 result[0, 1] = a1[1];
                                 result[1, 0] = b0[0];
                                 result[1, 1] = b0[1];
-                                result[2, 0] = Math.Sqrt((a1[0] - b0[0]) * (a1[0] - b0[0]) + (a1[1] - b0[1]) * (a1[1] - b0[1]));
+                                result[2, 0] =
+                                    Math
+                                        .Sqrt((a1[0] - b0[0]) *
+                                        (a1[0] - b0[0]) +
+                                        (a1[1] - b0[1]) * (a1[1] - b0[1]));
                                 return result;
                             }
                             result[0, 0] = a1[0];
                             result[0, 1] = a1[1];
                             result[1, 0] = b1[0];
                             result[1, 1] = b1[1];
-                            result[2, 0] = Math.Sqrt((a1[0] - b1[0]) * (a1[0] - b1[0]) + (a1[1] - b1[1]) * (a1[1] - b1[1]));
+                            result[2, 0] =
+                                Math
+                                    .Sqrt((a1[0] - b1[0]) * (a1[0] - b1[0]) +
+                                    (a1[1] - b1[1]) * (a1[1] - b1[1]));
                             return result;
                         }
                     }
                 }
+
                 //result[0, 0] = 0;
                 //result[0, 1] = 0;
                 //result[1, 0] = 0;
@@ -343,7 +423,6 @@ namespace FlightLib
                 return result;
             }
 
-
             // Lines criss-cross: Calculate the projected closest points
             double[] t = new double[2];
             t[0] = (b0[0] - a0[0]);
@@ -354,13 +433,12 @@ namespace FlightLib
             double t0 = detA / denom;
             double t1 = detB / denom;
 
-            double[] pA = new double[2];// Projected closest point on segment A
+            double[] pA = new double[2]; // Projected closest point on segment A
             pA[0] = a0[0] + _A[0] * t0;
             pA[1] = a0[1] + _A[1] * t0;
-            double[] pB = new double[2];// Projected closest point on segment B
+            double[] pB = new double[2]; // Projected closest point on segment B
             pB[0] = b0[0] + _B[0] * t0;
             pB[1] = b0[1] + _B[1] * t0;
-
 
             // Clamp projections
             if (clampA0 | clampA1 | clampB0 | clampB1)
@@ -386,7 +464,8 @@ namespace FlightLib
                 // Clamp projection A
                 if ((clampA0 & t0 < 0) | (clampA1 & t0 > magA))
                 {
-                    double dot = _B[0] * (pA[0] - b0[0]) + _B[1] * (pA[1] - b0[1]);
+                    double dot =
+                        _B[0] * (pA[0] - b0[0]) + _B[1] * (pA[1] - b0[1]);
                     if (clampB0 & dot < 0)
                     {
                         dot = 0;
@@ -398,10 +477,12 @@ namespace FlightLib
                         pB[1] = b0[1] + dot * _B[1];
                     }
                 }
+
                 // Clamp projection B
                 if ((clampB0 & t1 < 0) | (clampB1 & t1 > magB))
                 {
-                    double dot = _A[0] * (pB[0] - a0[0]) + _A[1] * (pB[1] - a0[1]);
+                    double dot =
+                        _A[0] * (pB[0] - a0[0]) + _A[1] * (pB[1] - a0[1]);
                     if (clampA0 & dot < 0)
                     {
                         dot = 0;
@@ -423,7 +504,6 @@ namespace FlightLib
             result[2, 0] = Math.Sqrt(tempx * tempx + tempy * tempy);
 
             return result;
-
         }
 
         /// <summary>
@@ -431,10 +511,12 @@ namespace FlightLib
         /// </summary>
         /// <param name="b">segundo avion</param>
         /// <returns>[distancia minima, interaccionan(0 o 1)]</returns>
-        public double[] Interaction(FlightPlan b, double distanciaSeguridad, bool clamp = true)
+        public double[]
+        Interaction(FlightPlan b, double distanciaSeguridad, bool clamp = true)
         {
             double[,] data = new double[3, 2];
             data = this.ShortestDistanceBetweenPaths(b, clamp);
+
             //bool defined = true;
             //try
             //{
@@ -470,15 +552,24 @@ namespace FlightLib
         /// <param name="distanciaSeguridad">distancia de seguridad</param>
         /// <param name="minimumDistance2"> por defecto es -1 y implica que se quiere recalcular la misma</param>
         /// <returns>[distancia,conflicto]: conflicto es 0 o 1</returns>
-        public double[] Conflicto(FlightPlan b, double distanciaSeguridad, double minimumDistance2 = -1)
+        public double[]
+        Conflicto(
+            FlightPlan b,
+            double distanciaSeguridad,
+            double minimumDistance2 = -1
+        )
         {
             if (minimumDistance2 < 0)
             {
                 // preparamos las variables de este avion
                 double vf = this.velocidad;
                 double hipotenusaf = this.getDistanciaDestino();
-                double cosenof = (finalPosition.GetX() - currentPosition.GetX()) / hipotenusaf;
-                double senof = (finalPosition.GetY() - currentPosition.GetY()) / hipotenusaf;
+                double cosenof =
+                    (finalPosition.GetX() - currentPosition.GetX()) /
+                    hipotenusaf;
+                double senof =
+                    (finalPosition.GetY() - currentPosition.GetY()) /
+                    hipotenusaf;
                 double vfx = vf * cosenof;
                 double vfy = vf * senof;
                 double vfx2 = vfx * vfx;
@@ -487,44 +578,96 @@ namespace FlightLib
                 double yf0 = this.currentPosition.GetY();
 
                 // preparamos las variables del avion b
-
                 double vg = b.velocidad;
                 double hipotenusag = b.getDistanciaDestino();
-                double cosenog = (b.finalPosition.GetX() - b.currentPosition.GetX()) / hipotenusag;
-                double senog = (b.finalPosition.GetY() - b.currentPosition.GetY()) / hipotenusag;
+                double cosenog =
+                    (b.finalPosition.GetX() - b.currentPosition.GetX()) /
+                    hipotenusag;
+                double senog =
+                    (b.finalPosition.GetY() - b.currentPosition.GetY()) /
+                    hipotenusag;
                 double vgx = vg * cosenog;
                 double vgy = vg * senog;
                 double vgx2 = vgx * vgx;
                 double vgy2 = vgy * vgy;
                 double xg0 = b.currentPosition.GetX();
                 double yg0 = b.currentPosition.GetY();
+
                 // Parte paralela al eje x
-                double fracX1 = (
-                    vfx * (-vfx * xf0 + vfx * xg0 - vfy * yf0 + vfy * yg0 + vgx * xf0 - vgx * xg0 + vgy * yf0 - vgy * yg0) /
+                double fracX1 =
+                    (
+                    vfx *
+                    (
+                    -vfx * xf0 +
+                    vfx * xg0 -
+                    vfy * yf0 +
+                    vfy * yg0 +
+                    vgx * xf0 -
+                    vgx * xg0 +
+                    vgy * yf0 -
+                    vgy * yg0
+                    ) /
                     (vfx2 - 2 * vfx * vgx + vfy2 - 2 * vfy * vgy + vgx2 + vgy2)
                     );
-                double fracX2 = (
-                    vgx * (-vfx * xf0 + vfx * xg0 - vfy * yf0 + vfy * yg0 + vgx * xf0 - vgx * xg0 + vgy * yf0 - vgy * yg0) /
+                double fracX2 =
+                    (
+                    vgx *
+                    (
+                    -vfx * xf0 +
+                    vfx * xg0 -
+                    vfy * yf0 +
+                    vfy * yg0 +
+                    vgx * xf0 -
+                    vgx * xg0 +
+                    vgy * yf0 -
+                    vgy * yg0
+                    ) /
                     (vfx2 - 2 * vfx * vgx + vfy2 - 2 * vfy * vgy + vgx2 + vgy2)
                     );
-                double xSide2 = (fracX1 - fracX2 + xf0 - xg0) * (fracX1 - fracX2 + xf0 - xg0);
+                double xSide2 =
+                    (fracX1 - fracX2 + xf0 - xg0) *
+                    (fracX1 - fracX2 + xf0 - xg0);
+
                 // Parte paralela al eje y
-                double fracY1 = (
-                    vfy * (-vfx * xf0 + vfx * xg0 - vfy * yf0 + vfy * yg0 + vgx * xf0 - vgx * xg0 + vgy * yf0 - vgy * yg0) /
+                double fracY1 =
+                    (
+                    vfy *
+                    (
+                    -vfx * xf0 +
+                    vfx * xg0 -
+                    vfy * yf0 +
+                    vfy * yg0 +
+                    vgx * xf0 -
+                    vgx * xg0 +
+                    vgy * yf0 -
+                    vgy * yg0
+                    ) /
                     (vfx2 - 2 * vfx * vgx + vfy2 - 2 * vfy * vgy + vgx2 + vgy2)
                     );
 
-                double fracY2 = (
-                    vgy * (-vfy * xf0 + vfx * xg0 - vfy * yf0 + vfy * yg0 + vgx * xf0 - vgx * xg0 + vgy * yf0 - vgy * yg0) /
+                double fracY2 =
+                    (
+                    vgy *
+                    (
+                    -vfy * xf0 +
+                    vfx * xg0 -
+                    vfy * yf0 +
+                    vfy * yg0 +
+                    vgx * xf0 -
+                    vgx * xg0 +
+                    vgy * yf0 -
+                    vgy * yg0
+                    ) /
                     (vfx2 - 2 * vfx * vgx + vfy2 - 2 * vfy * vgy + vgx2 + vgy2)
                     );
-                double ySide2 = (fracY1 - fracY2 + yf0 - yg0) * (fracY1 - fracY2 + yf0 - yg0);
+                double ySide2 =
+                    (fracY1 - fracY2 + yf0 - yg0) *
+                    (fracY1 - fracY2 + yf0 - yg0);
 
-                // distancia minima ^2 
+                // distancia minima ^2
 
                 minimumDistance2 = xSide2 + ySide2;
             }
-
 
             // si la distancia minima ^2 es menor o igual a la distancia de seguridad, se produce un conflicto y devulve true
             double[] result = new double[2];
@@ -538,13 +681,9 @@ namespace FlightLib
                 result[1] = 0;
             }
             return result;
-
-
         }
 
-
         // METODOS
-
         /// <summary>
         /// Desplaza el avion durante un tiempo dado
         /// </summary>
@@ -555,9 +694,16 @@ namespace FlightLib
             double distancia = tiempo * this.velocidad / 60;
 
             //Calculamos las razones trigonométricas
-            double hipotenusa = Math.Sqrt((finalPosition.GetX() - currentPosition.GetX()) * (finalPosition.GetX() - currentPosition.GetX()) + (finalPosition.GetY() - currentPosition.GetY()) * (finalPosition.GetY() - currentPosition.GetY()));
-            double coseno = (finalPosition.GetX() - currentPosition.GetX()) / hipotenusa;
-            double seno = (finalPosition.GetY() - currentPosition.GetY()) / hipotenusa;
+            double hipotenusa =
+                Math
+                    .Sqrt((finalPosition.GetX() - currentPosition.GetX()) *
+                    (finalPosition.GetX() - currentPosition.GetX()) +
+                    (finalPosition.GetY() - currentPosition.GetY()) *
+                    (finalPosition.GetY() - currentPosition.GetY()));
+            double coseno =
+                (finalPosition.GetX() - currentPosition.GetX()) / hipotenusa;
+            double seno =
+                (finalPosition.GetY() - currentPosition.GetY()) / hipotenusa;
 
             //Caculamos la nueva posición del vuelo
             double x = currentPosition.GetX() + distancia * coseno;
@@ -582,19 +728,74 @@ namespace FlightLib
             this.currentPosition = this.initialPosition;
         }
 
-        // CONSOLE
+        /// <summary>
+        /// Generates a deep copy of the fligth plan
+        /// </summary>
+        /// <returns>a copy of the fligth plan</returns>
+        public FlightPlan Copy()
+        {
+            FlightPlan copy =
+                new FlightPlan(this.id,
+                    this.initialPosition.GetX(),
+                    this.initialPosition.GetY(),
+                    this.currentPosition.GetX(),
+                    this.currentPosition.GetY(),
+                    this.finalPosition.GetX(),
+                    this.currentPosition.GetY(),
+                    this.velocidad);
+            return copy;
+        }
 
+        /// <summary>
+        /// Generates a string of the data in the fligth plan
+        /// </summary>
+        /// <returns>a string of the fligth plan</returns>
+        public string Dumps()
+        {
+            string dump =
+                string
+                    .Format("{0},{1},{2},{3},{4},{5},{6},{7}",
+                    this.id,
+                    this.initialPosition.GetX(),
+                    this.initialPosition.GetY(),
+                    this.currentPosition.GetX(),
+                    this.currentPosition.GetY(),
+                    this.finalPosition.GetX(),
+                    this.currentPosition.GetY(),
+                    this.velocidad);
+            return dump;
+        }
+
+        public static FlightPlan Loads(string s)
+        {
+            string[] data = s.Split(',');
+            FlightPlan plan =
+                new FlightPlan(data[0],
+                    Convert.ToDouble(data[1]),
+                    Convert.ToDouble(data[2]),
+                    Convert.ToDouble(data[3]),
+                    Convert.ToDouble(data[4]),
+                    Convert.ToDouble(data[5]),
+                    Convert.ToDouble(data[6]),
+                    Convert.ToDouble(data[7]));
+            return plan;
+        }
+
+        // CONSOLE
         /// <summary>
         /// Escribe los datos del FligthPlan por consola
         /// </summary>
-        public void EscribeConsola()
-        // escribe en consola los datos del plan de vuelo
+        public void EscribeConsola()// escribe en consola los datos del plan de vuelo
+
         {
             Console.WriteLine("******************************");
             Console.WriteLine("Datos del vuelo: ");
             Console.WriteLine("Identificador: {0}", id);
             Console.WriteLine("Velocidad: {0:F2}", velocidad);
-            Console.WriteLine("Posición actual: ({0:F2};{1:F2})", currentPosition.GetX(), currentPosition.GetY());
+            Console
+                .WriteLine("Posición actual: ({0:F2};{1:F2})",
+                currentPosition.GetX(),
+                currentPosition.GetY());
             if (this.EstaDestino())
             {
                 Console.WriteLine("Ha llegado a su destino");
@@ -605,6 +806,5 @@ namespace FlightLib
             }
             Console.WriteLine("******************************");
         }
-
     }
 }

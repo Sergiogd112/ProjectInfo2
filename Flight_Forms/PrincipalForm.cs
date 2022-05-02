@@ -27,7 +27,7 @@ namespace Flight_Forms
         private void introducirParametrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             IntroducirParametrosForm form2 = new IntroducirParametrosForm();
-            form2.ShowDialog(); 
+            form2.ShowDialog();
             form2.Visible = true;
 
             double[] parametros = form2.DameParametros();
@@ -69,7 +69,7 @@ namespace Flight_Forms
             {
                 lista.AddFromFile(defaultpath);
             }
-            catch (Exception ex)
+            catch
             {
                 lista = new FlightPlanList();
                 lista.AddFromFile(defaultpath);
@@ -81,11 +81,11 @@ namespace Flight_Forms
             Espacioaerio espacioaerio = new Espacioaerio(lista, ciclo);
             espacioaerio.ShowDialog();
         }
-       
+
         private void listaDeVuelosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             TablaAviones aparece = new TablaAviones();
-            aparece.SetListFlights(this.lista); 
+            aparece.SetListFlights(this.lista);
             aparece.ShowDialog();
         }
 

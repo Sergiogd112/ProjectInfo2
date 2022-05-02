@@ -34,7 +34,7 @@ namespace Flight_Forms
         public Espacioaerio(FlightPlanList l, double c)
         {
             this.lista = l;
-            this.plane = new PictureBox[lista.GetMaxLen()];
+            this.plane = new PictureBox[lista.GetLen()];
             this.ciclo = c;
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);
 
@@ -94,7 +94,7 @@ namespace Flight_Forms
         {
             //en hacer click sobre el plan de vuelo del panel de simulacion, mostramos un formulario con la info del mismo
             Informaciónvuelo info = new Informaciónvuelo();
-            
+
             info.SetFlight(flight);
             info.ShowDialog();
             info.Visible = true;
@@ -305,12 +305,12 @@ namespace Flight_Forms
         private void button1_Click(object sender, EventArgs e)
         {
             lista.CheckConflicts(true); // Comprueva si hay conflictos
-            double[,] conflicts = lista.GetConflictd(); // Devuleve conflictos
+            List<List<double>> conflicts = lista.GetConflictd(); // Devuleve conflictos
             for (int i = 0; i < lista.GetLen(); i++) // Miro el primer avió i amb el següent for el comprovaré amb tots els avions
             {
                 for (int j = i + 1; j < lista.GetLen(); j++) //Tots els altres avions
                 {
-                    if (conflicts[i,j]<=this.dist)
+                    if (conflicts[i][j] <= this.dist)
                     {
                         MessageBox.Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
                         return;
@@ -357,7 +357,7 @@ namespace Flight_Forms
         {
             try
             {
-                for (int i = 0; i < this.lista.GetMaxLen(); i++)
+                for (int i = 0; i < this.lista.GetLen(); i++)
                 {
                     FlightPlan f = lista.GetFlightAtIndex(i);
                     f.GetLastPosition(ciclo);
