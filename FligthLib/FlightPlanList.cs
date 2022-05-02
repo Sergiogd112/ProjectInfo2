@@ -90,7 +90,8 @@ namespace FlightLib
         /// </summary>
         /// <param name="fligth"></param>
         /// <returns></returns>
-        public int AddFlightPlan(FlightPlan fligth, bool checkinteracions = true)
+        public int
+        AddFlightPlan(FlightPlan fligth, bool checkinteracions = true)
         {
             List<double> tmpd1 = new List<double>();
             List<bool> tmpb1 = new List<bool>();
@@ -319,7 +320,6 @@ namespace FlightLib
             double[] data = new double[2];
             for (int i = 0; i < this.flights.Count; i++)
             {
-
                 for (int j = i; j < this.flights.Count; j++)
                 {
                     data =
@@ -463,8 +463,8 @@ namespace FlightLib
                     }
                     separator += "+-";
                 }
-                Console.WriteLine(row);
-                Console.WriteLine(separator);
+                Console.WriteLine (row);
+                Console.WriteLine (separator);
             }
         }
 
@@ -500,8 +500,8 @@ namespace FlightLib
                     }
                     separator += "+-";
                 }
-                Console.WriteLine(row);
-                Console.WriteLine(separator);
+                Console.WriteLine (row);
+                Console.WriteLine (separator);
             }
         }
 
