@@ -244,13 +244,13 @@ namespace FlightLib
         /// Guarda el fichero con un nombre
         /// </summary>
         /// <param name="nombre"></param>
-        public void GuardarFicheros(string nombre) //guardar el fichero con un nombe
+        public void Dump(string nombre) //guardar el fichero con un nombe
         {
             StreamWriter W = new StreamWriter(nombre);
-            W.WriteLine(this.Dumps());
+            W.WriteLine(this.DumpString());
         }
 
-        public string Dumps()
+        public string DumpString()
         {
             string dump = "";
             foreach (FlightPlan fligth in flights)
@@ -260,7 +260,12 @@ namespace FlightLib
             return dump;
         }
 
-        public static FlightPlanList Loads(string s)
+        public static FlightPlanList Load(string file){
+            StreamReader R = new StreamReader(file);
+            string text=R.ReadToEnd();
+            return FlightPlanList.Load(text);
+        }
+        public static FlightPlanList LoadString(string s)
         {
             string[] data = s.Split(';');
             FlightPlanList list = new FlightPlanList();
