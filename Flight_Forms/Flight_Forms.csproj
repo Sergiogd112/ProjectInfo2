@@ -46,11 +46,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CambiarContrseñaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarContrseñaForm.Designer.cs">
+      <DependentUpon>CambiarContrseñaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Espacioaerio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Espacioaerio.Designer.cs">
       <DependentUpon>Espacioaerio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IniciarSesionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IniciarSesionForm.Designer.cs">
+      <DependentUpon>IniciarSesionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroForm.Designer.cs">
+      <DependentUpon>RegistroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TablaAviones copy.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="TablaAviones.cs">
       <SubType>Form</SubType>
@@ -84,12 +105,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CambiarContrseñaForm.resx">
+      <DependentUpon>CambiarContrseñaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Espacioaerio.resx">
       <DependentUpon>Espacioaerio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informaciónvuelo.resx">
       <DependentUpon>Informaciónvuelo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IniciarSesionForm.resx">
+      <DependentUpon>IniciarSesionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz.resx" />
     <EmbeddedResource Include="IntroducirDatosForm.resx">
       <DependentUpon>IntroducirDatosForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +137,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegistroForm.resx">
+      <DependentUpon>RegistroForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TablaAviones.resx">
       <DependentUpon>TablaAviones.cs</DependentUpon>
     </EmbeddedResource>
