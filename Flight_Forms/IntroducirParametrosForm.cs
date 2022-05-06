@@ -28,30 +28,24 @@ namespace Flight_Forms
         }
 
         //lo que pasa cuando se clica el boton aceptar
-        private void aceptarButton_Click(object sender, EventArgs e)
+        private void aceptarButton_Click(object sender, EventArgs e) 
         {
             try
             {
-                double distSeg;
-                double ciclo;
-                try
+                double distSeg = Convert.ToDouble(distanciaSeguridadBox.Text);
+                double ciclo = Convert.ToDouble(cicloBox.Text);
+                if (this.parametros.Length == 0) //this hace referencia al objeto
                 {
-                    distSeg = Convert.ToDouble(Convert.ToInt32(distanciaSeguridadBox.Text));
-                    ciclo = Convert.ToDouble(Convert.ToInt32(cicloBox.Text));
+                    this.parametros[this.parametros.Length] = distSeg;
+                    this.parametros[this.parametros.Length] = ciclo;
+                    
+                    MessageBox.Show("Los parámetros de simulación ya han sido introducidos.");
+                    
                 }
-                catch (FormatException ex)
+                else
                 {
-                    distSeg = Convert.ToDouble(distanciaSeguridadBox.Text);
-                    ciclo = Convert.ToDouble(cicloBox.Text);
+                    MessageBox.Show("Los parámetros de simulación ya han sido introducidos.");
                 }
-
-
-                this.parametros[0] = distSeg;
-                this.parametros[1] = ciclo;
-
-                MessageBox.Show("Los parámetros de simulación ya han sido introducidos.");
-
-
 
                 Close();
                 this.Visible = false;

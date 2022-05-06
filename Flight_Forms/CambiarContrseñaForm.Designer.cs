@@ -43,12 +43,11 @@
             // 
             this.passBx.BeepOnError = true;
             this.passBx.Culture = new System.Globalization.CultureInfo("");
-            this.passBx.Location = new System.Drawing.Point(208, 81);
-            this.passBx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passBx.Location = new System.Drawing.Point(416, 156);
             this.passBx.Name = "passBx";
             this.passBx.PasswordChar = '*';
             this.passBx.RejectInputOnFirstFailure = true;
-            this.passBx.Size = new System.Drawing.Size(108, 20);
+            this.passBx.Size = new System.Drawing.Size(212, 31);
             this.passBx.SkipLiterals = false;
             this.passBx.TabIndex = 4;
             // 
@@ -57,10 +56,9 @@
             this.cambiarButton.BackColor = System.Drawing.Color.AliceBlue;
             this.cambiarButton.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
             this.cambiarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cambiarButton.Location = new System.Drawing.Point(222, 150);
-            this.cambiarButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cambiarButton.Location = new System.Drawing.Point(443, 288);
             this.cambiarButton.Name = "cambiarButton";
-            this.cambiarButton.Size = new System.Drawing.Size(72, 20);
+            this.cambiarButton.Size = new System.Drawing.Size(143, 39);
             this.cambiarButton.TabIndex = 9;
             this.cambiarButton.Text = "Actualizar";
             this.cambiarButton.UseVisualStyleBackColor = false;
@@ -72,19 +70,17 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label1.Location = new System.Drawing.Point(130, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(261, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.Size = new System.Drawing.Size(93, 25);
             this.label1.TabIndex = 10;
             this.label1.Text = "Usuario";
             // 
             // userBox
             // 
-            this.userBox.Location = new System.Drawing.Point(208, 31);
-            this.userBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userBox.Location = new System.Drawing.Point(416, 59);
             this.userBox.Name = "userBox";
-            this.userBox.Size = new System.Drawing.Size(108, 20);
+            this.userBox.Size = new System.Drawing.Size(212, 31);
             this.userBox.TabIndex = 11;
             // 
             // checkRepPass
@@ -92,10 +88,9 @@
             this.checkRepPass.AutoSize = true;
             this.checkRepPass.BackColor = System.Drawing.Color.Transparent;
             this.checkRepPass.ForeColor = System.Drawing.Color.AliceBlue;
-            this.checkRepPass.Location = new System.Drawing.Point(332, 113);
-            this.checkRepPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkRepPass.Location = new System.Drawing.Point(665, 218);
             this.checkRepPass.Name = "checkRepPass";
-            this.checkRepPass.Size = new System.Drawing.Size(89, 19);
+            this.checkRepPass.Size = new System.Drawing.Size(150, 29);
             this.checkRepPass.TabIndex = 13;
             this.checkRepPass.Text = "checkBox2";
             this.checkRepPass.UseVisualStyleBackColor = false;
@@ -107,10 +102,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label4.Location = new System.Drawing.Point(76, 85);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(151, 163);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 17);
+            this.label4.Size = new System.Drawing.Size(203, 25);
             this.label4.TabIndex = 14;
             this.label4.Text = "Nueva contraseña";
             // 
@@ -120,10 +114,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label2.Location = new System.Drawing.Point(49, 115);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(98, 222);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 17);
+            this.label2.Size = new System.Drawing.Size(256, 25);
             this.label2.TabIndex = 15;
             this.label2.Text = "Verifique la contraseña";
             // 
@@ -132,10 +125,9 @@
             this.checkPass.AutoSize = true;
             this.checkPass.BackColor = System.Drawing.Color.Transparent;
             this.checkPass.ForeColor = System.Drawing.Color.AliceBlue;
-            this.checkPass.Location = new System.Drawing.Point(332, 83);
-            this.checkPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkPass.Location = new System.Drawing.Point(665, 159);
             this.checkPass.Name = "checkPass";
-            this.checkPass.Size = new System.Drawing.Size(89, 19);
+            this.checkPass.Size = new System.Drawing.Size(150, 29);
             this.checkPass.TabIndex = 16;
             this.checkPass.Text = "checkBox1";
             this.checkPass.UseVisualStyleBackColor = false;
@@ -145,22 +137,21 @@
             // 
             this.repPass.BeepOnError = true;
             this.repPass.Culture = new System.Globalization.CultureInfo("");
-            this.repPass.Location = new System.Drawing.Point(208, 112);
-            this.repPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.repPass.Location = new System.Drawing.Point(416, 216);
             this.repPass.Name = "repPass";
             this.repPass.PasswordChar = '*';
             this.repPass.RejectInputOnFirstFailure = true;
-            this.repPass.Size = new System.Drawing.Size(108, 20);
+            this.repPass.Size = new System.Drawing.Size(212, 31);
             this.repPass.SkipLiterals = false;
             this.repPass.TabIndex = 17;
             // 
             // CambiarContrseñaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BackgroundImage = global::Flight_Forms.Properties.Resources.inicioCIELO;
-            this.ClientSize = new System.Drawing.Size(439, 205);
+            this.ClientSize = new System.Drawing.Size(878, 394);
             this.Controls.Add(this.repPass);
             this.Controls.Add(this.checkPass);
             this.Controls.Add(this.label2);
@@ -170,10 +161,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cambiarButton);
             this.Controls.Add(this.passBx);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CambiarContrseñaForm";
             this.Text = "Cambiar Contraseña";
-            this.Load += new System.EventHandler(this.CambiarContrseñaForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

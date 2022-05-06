@@ -18,14 +18,14 @@ namespace Flight_Forms
             InitializeComponent();
         }
 
-        Gestion gestion = new Gestion();
+        Gestion gestion = new Gestion(); 
 
         private void cambiarButton_Click(object sender, EventArgs e)
         {
-            string username = userBox.Text;
+            string username= userBox.Text;
             string password = Convert.ToString(passBx.Text);
             string passwordRep = Convert.ToString(repPass.Text);
-            if (username == "" || password == "" || passwordRep == "")
+            if (username == "" || password == "" || passwordRep =="")
             {
                 MessageBox.Show("No se ha actualizado la contraseña porque hay campos vacíos.");
                 userBox.Text = "";
@@ -36,10 +36,10 @@ namespace Flight_Forms
             else
             {
                 int result = this.gestion.ExistsUser(username);
-                if (result == 1)
+                if (result==1)
                 {
                     //usuario existe
-                    if (password != passwordRep)
+                    if (password!=passwordRep)
                     {
                         MessageBox.Show("Las contraseñas no coinciden.");
                         passBx.Text = "";
@@ -48,7 +48,7 @@ namespace Flight_Forms
                     else
                     {
                         int update = this.gestion.updateUser(username, password);
-                        if (update == 1)
+                        if (update==1)
                         {
                             MessageBox.Show("La contraseña ha sido actualizada, {0}.", username);
                             this.Close();
@@ -73,9 +73,9 @@ namespace Flight_Forms
 
         private void checkPass_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkPass.Checked == true)
+            if (checkPass.Checked==true)
             {
-                if (passBx.PasswordChar == '*')
+                if (passBx.PasswordChar=='*')
                 {
                     passBx.PasswordChar = '\0';
                 }
@@ -105,11 +105,6 @@ namespace Flight_Forms
         public Gestion GetDB()
         {
             return this.gestion;
-        }
-
-        private void CambiarContrseñaForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

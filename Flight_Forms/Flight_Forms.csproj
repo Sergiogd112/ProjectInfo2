@@ -35,6 +35,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\proyectoDB\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,9 +72,6 @@
     </Compile>
     <Compile Include="RegistroForm.Designer.cs">
       <DependentUpon>RegistroForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TablaAviones copy.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="TablaAviones.cs">
       <SubType>Form</SubType>
@@ -117,7 +117,6 @@
     <EmbeddedResource Include="IniciarSesionForm.resx">
       <DependentUpon>IniciarSesionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaz.resx" />
     <EmbeddedResource Include="IntroducirDatosForm.resx">
       <DependentUpon>IntroducirDatosForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,9 +181,15 @@
       <Project>{1523f3df-2b89-474f-99a5-64bb03fe99ae}</Project>
       <Name>FlightLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GestionClientes\GestionUsuarios.csproj">
+      <Project>{bdc2844d-e46c-4958-a95d-eef5d235a7c4}</Project>
+      <Name>GestionUsuarios</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\avion.gif" />
+    <None Include="Properties\earth.jpg" />
+    <None Include="Properties\fondo.jpg" />
     <Content Include="Properties\plane.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

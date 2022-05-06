@@ -175,3 +175,94 @@ Fase 11: Resolución automática de conflicto
 pregunte al usuario si quieres resolver el conflicto. En el caso que el usuario responda de forma afirmativa el programa debe 
 cambiar automáticamente la velocidad de uno de los vuelos para evitar el conflicto, y proceder a simular con la nueva velocidad. 
 En el caso que el usuario responda de forma negativa la simulación continuará de forma habitual.
+
+
+
+----------
+BLO4. BASE DE DTOS
+El programa debe salvar en el fichero de texto los datos como han quedado tras la sesión de trabajo. 
+Las bases de datos facilitan el trabajo con datos externos (sobretodo cuando son muchos y variados).
+BASE DE DATOS: Fichero con datos + sistema de gestión que permite realizar operaciones
+Las operaciones ya están implementadas en la base de datos: solo deben especificarse. 
+
+Debemos ser capaces de:
+1. crear base de datos usando SQLite
+2. Construir consultas básicas en el lenguaje SQL: buscar, modificar datos
+3. usar base en el programa
+
+
+CREACIÓN DE BASE DE DATOS
+SQLite: sistema de gestión contenido en librería C --> libreria proporciona gestor compatible con el lenguaje SQL (no necesita servidor ni configuración, base de datos basada en fichero de texto de hasta 2TB)
+	-- Se trata de un proyecto de código libre
+	-- base de datos ideal para pequeñas apps
+	-- no sigue modelo cliente-servidor
+	-- necesitamos programa que nos permita gestionar la base de datos: utilizar el ejecutable de línea de comandos: sqlite3
+		-- solo hace falta copiarlo en el disco duro
+
+
+* El comando SELECT es al igual que CREATE, una función con la que formamos una sentencia SQL
+	-- Al escribir una sentencia, esta debe acabar siempre con ; 
+	-- los comandos que empiezan con . son propios del gestor y no terminan con ;
+
+	lista de comandos:
+
+	- .\(ejecutable) (nombre fichero a crear) -- este comando crea un fichero que contiene la base de datos en determinada carpeta previamente indicada
+	- .schema (nombre tabla) -- comando para ver la descripcion de la tabla creada
+	- .quit -- comando para abandonar lenguaje sqlite
+	- .tables -- comando que muestra todas las tablas de la base de datos
+	- .restore DB_FILE -- comando que carga la base de datos especificada por el fichero DB_FILE
+	- .backup DB_FILE -- comando que guarda la base con la que estamos trabajando en un fichero de nombre DB_FILE
+	- .help -- permite consultar comandos
+	lista sentencias
+	- CREATE TABLE (nombre) (nombre1 tipado)
+		-- para el tipado: 
+			varchar para texto
+			primarkey indica al gestor que la columna es la clave (valores unicados, indexa)
+	- INSERT INTO (nombre tabla) VALUES (' ');
+	- SELECT * FROM (nombre tabla);		-- consultar datos de tabla
+
+
+	Structured Query Languange SQL
+	Lenguaje de programación de alto nivel para acceder a los datos almacenados
+	
+	
+	Lenguaje de Manimulación de Datos DML
+	3 instrucciones:
+	- INSERT -- añade nuevos registros a una tabla
+	- UPDATE -- modifica valores de los atributos de los registros ya almacenados
+	- DELETE -- elimina registros
+	
+	Lenguaje de definición de datos DDL
+	Parte de SQL que se utiliza para crear una base de datos y modifica la estructura. 
+	3 declaraciones:
+	- CREATE -- crea una nueva tabla
+	- ALTER -- modifica la estructura de la tabla existente
+	- DROP -- borra una tabla existente
+
+
+	COMANDOS
+	- SELECT: Realiza búsquedas y recuperaciones. Devuelve todos los datos almacenados.
+		-- para acceder a ciertos campos de entrada:
+		SELECT (nombre1, nombre2) FROM (nombre tabla);
+			-- para limitar a un subconunto de entradas para que sean coincidentes: WHERE
+			-- para ordenar los resultados devueltos: ORDER BY (ASC si ascendiente, DESC si descendiente)
+			SELECT * FROM (nombre tabla) WHERE (nombre 1 condicion 1) AND (nombre 1 condicion 2) ORDER BY (nombre1) ASC;
+			-- para retornar la cantidad de elementos en la tabla:
+			SELECT count(*) FROM (nombre tabla);
+			-- para retornar el maximo valor de un campo:
+			SELECT max(nombre1) FROM (nombre tabla);
+
+Para poder utilizar una base de datos desde un lenguaje de programacion necesitamos un driver. 
+Función del driver: ofrece interfaz de comunicación común entre las clases del lenguaje de programación ppara el acceso y los diferentes gestores 
+	- con la misma API (interfaz de programación de apps) el programa pueda utilizar cualquier base de datos. 
+	- el driver no viene por defecto con la interfaz .net
+
+	PREPARAR UNA CLASE PARA OPERAR CON LA BASE DE DATOS
+	El programa debe tener una clase en la que programar las consultas
+		-- cada consulta será un método
+		-- debemos añadir a la clase 2 nuevos 'using': using System.Data y System.Data.SQLite
+		-- añadir conector cnx 
+		-- necesitamos un método que será el ejecutado para abrir la base de datos
+
+
+		La sentencia int (nombre)=(nombre command).ExecuteNonQuery() nos devuelve el nombre de filas modificadas
