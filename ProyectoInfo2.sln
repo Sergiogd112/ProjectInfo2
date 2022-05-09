@@ -17,28 +17,64 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flight_Forms", "Flight_Form
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionUsuarios", "GestionClientes\GestionUsuarios.csproj", "{BDC2844D-E46C-4958-A95D-EEF5D235A7C4}"
 EndProject
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "sqlite3", "..\..\..\Downloads\ProjectInfo2\ProjectInfo2\proyectoDB\sqlite3.exe", "{9E5CD1E2-6833-4BC2-8156-C4103D6572BD}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = C:\Users\sergi\Downloads\ProjectInfo2\ProjectInfo2\proyectoDB\sqlite3.exe
+		RemoteMachine = DESKTOP-C11QVDA
+		StartingDirectory = C:\Users\sergi\Downloads\ProjectInfo2\ProjectInfo2\proyectoDB
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+		IORedirection = Auto
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{37A767AE-15C1-4587-B8DB-59BEEC004D4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{37A767AE-15C1-4587-B8DB-59BEEC004D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37A767AE-15C1-4587-B8DB-59BEEC004D4A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{37A767AE-15C1-4587-B8DB-59BEEC004D4A}.Debug|x86.Build.0 = Debug|Any CPU
 		{37A767AE-15C1-4587-B8DB-59BEEC004D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37A767AE-15C1-4587-B8DB-59BEEC004D4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37A767AE-15C1-4587-B8DB-59BEEC004D4A}.Release|x86.ActiveCfg = Release|Any CPU
+		{37A767AE-15C1-4587-B8DB-59BEEC004D4A}.Release|x86.Build.0 = Release|Any CPU
 		{1523F3DF-2B89-474F-99A5-64BB03FE99AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1523F3DF-2B89-474F-99A5-64BB03FE99AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1523F3DF-2B89-474F-99A5-64BB03FE99AE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1523F3DF-2B89-474F-99A5-64BB03FE99AE}.Debug|x86.Build.0 = Debug|Any CPU
 		{1523F3DF-2B89-474F-99A5-64BB03FE99AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1523F3DF-2B89-474F-99A5-64BB03FE99AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1523F3DF-2B89-474F-99A5-64BB03FE99AE}.Release|x86.ActiveCfg = Release|Any CPU
+		{1523F3DF-2B89-474F-99A5-64BB03FE99AE}.Release|x86.Build.0 = Release|Any CPU
 		{1929DD9C-548B-49C9-852C-B3BA8ECEE78E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1929DD9C-548B-49C9-852C-B3BA8ECEE78E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1929DD9C-548B-49C9-852C-B3BA8ECEE78E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1929DD9C-548B-49C9-852C-B3BA8ECEE78E}.Debug|x86.Build.0 = Debug|Any CPU
 		{1929DD9C-548B-49C9-852C-B3BA8ECEE78E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1929DD9C-548B-49C9-852C-B3BA8ECEE78E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1929DD9C-548B-49C9-852C-B3BA8ECEE78E}.Release|x86.ActiveCfg = Release|Any CPU
+		{1929DD9C-548B-49C9-852C-B3BA8ECEE78E}.Release|x86.Build.0 = Release|Any CPU
 		{BDC2844D-E46C-4958-A95D-EEF5D235A7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BDC2844D-E46C-4958-A95D-EEF5D235A7C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC2844D-E46C-4958-A95D-EEF5D235A7C4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BDC2844D-E46C-4958-A95D-EEF5D235A7C4}.Debug|x86.Build.0 = Debug|Any CPU
 		{BDC2844D-E46C-4958-A95D-EEF5D235A7C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDC2844D-E46C-4958-A95D-EEF5D235A7C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC2844D-E46C-4958-A95D-EEF5D235A7C4}.Release|x86.ActiveCfg = Release|Any CPU
+		{BDC2844D-E46C-4958-A95D-EEF5D235A7C4}.Release|x86.Build.0 = Release|Any CPU
+		{9E5CD1E2-6833-4BC2-8156-C4103D6572BD}.Debug|Any CPU.ActiveCfg = Release|x86
+		{9E5CD1E2-6833-4BC2-8156-C4103D6572BD}.Debug|x86.ActiveCfg = Release|x86
+		{9E5CD1E2-6833-4BC2-8156-C4103D6572BD}.Release|Any CPU.ActiveCfg = Release|x86
+		{9E5CD1E2-6833-4BC2-8156-C4103D6572BD}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

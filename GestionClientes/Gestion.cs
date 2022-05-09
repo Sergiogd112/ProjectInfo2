@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 //para trabajar con la base de datos
 using System.Data;
 using System.Data.SQLite;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace GestionUsuarios
 {
@@ -17,16 +17,16 @@ namespace GestionUsuarios
         public void Iniciar()
         {
             //abrimos la base de datos
-            string dataSource = "Data Source=proyecto.db";
+            string dataSource = "Data Source=C:\\Users\\sergi\\Documents\\GitHub\\ProjectInfo2\\proyectoDB\\proyecto.db";
             this.cnx = new SQLiteConnection(dataSource);
             this.cnx.Open();
-
         }
 
         //método para obtener todos los datos de la base de datos
-            //retorna objeto de la clase DataTable
-            //nos retrona todos los datos almacenados en la tabla 
-                //se guardan en 'dt'
+        //retorna objeto de la clase DataTable
+        //nos retrona todos los datos almacenados en la tabla
+
+        //se guardan en 'dt'
         public DataTable ShowUsers()
         {
             DataTable dt = new DataTable();
@@ -34,37 +34,36 @@ namespace GestionUsuarios
             SQLiteDataAdapter adp = new SQLiteDataAdapter(sql, cnx);
             adp.Fill(dt);
             return dt;
-
         }
 
         public DataTable ShowUser(string name)
         {
             DataTable dt = new DataTable();
-            string sql = "SELECT * FROM  usuarios WHERE username='"+name+"';";
+            string sql =
+                "SELECT * FROM  usuarios WHERE username='" + name + "';";
             SQLiteDataAdapter adp = new SQLiteDataAdapter(sql, cnx);
             adp.Fill(dt);
             return dt;
-
         }
 
         public void fillTable(string name, string pass)
         {
             //rellenamos tabla con los datos de los usuarios
-            string s = "INSERT INTO usuarios values ('" + name + "','" + pass + "');";
+            string s =
+                "INSERT INTO usuarios values ('" + name + "','" + pass + "');";
             SQLiteCommand cmd = new SQLiteCommand(s, cnx);
             cmd.ExecuteNonQuery();
         }
-
-
 
         //método para verificar la existencia de usuario con username introducido por parametro
         public int ExistsUser(string name)
         {
             DataTable dt = new DataTable();
-            string user = "SELECT * FROM usuarios WHERE username='" + name + "';";
-            SQLiteDataAdapter command = new SQLiteDataAdapter(user, cnx);
+            string user =
+                "SELECT * FROM usuarios WHERE username='" + name + "';";
+            SQLiteDataAdapter command = new SQLiteDataAdapter(user, this.cnx);
             command.Fill(dt);
-            if (dt.Rows.Count==1)
+            if (dt.Rows.Count == 1)
             {
                 //si se ha encontrado el usuario
                 return 1;
@@ -81,21 +80,28 @@ namespace GestionUsuarios
         {
             //tabla que contiene el nombre de usuario, si encontrado
             DataTable dt1 = new DataTable();
+
             //tabla que contiene contraseña y nombre de usuario ingresados, si encontrados
             DataTable dt2 = new DataTable();
 
-            string user = "SELECT * FROM usuarios WHERE username='" + name + "';";
-            string ok = "SELECT * FROM usuarios WHERE password='" + password + "'AND usuario='"+name+"';";
+            string user =
+                "SELECT * FROM usuarios WHERE username='" + name + "';";
+            string ok =
+                "SELECT * FROM usuarios WHERE password='" +
+                password +
+                "'AND username='" +
+                name +
+                "';";
 
             SQLiteDataAdapter command1 = new SQLiteDataAdapter(user, cnx);
-            SQLiteDataAdapter command2= new SQLiteDataAdapter(ok, cnx);
+            SQLiteDataAdapter command2 = new SQLiteDataAdapter(ok, cnx);
 
             //rellenamos
             command1.Fill(dt1);
             command2.Fill(dt2);
 
             //comprobamos
-            if (dt1.Rows.Count==1 && dt2.Rows.Count==1)
+            if (dt1.Rows.Count == 1 && dt2.Rows.Count == 1)
             {
                 //si se ha encontrado no solo el usuario, sino que tambien su contraseña que es la introducida por parametro
                 return 1;
@@ -103,7 +109,7 @@ namespace GestionUsuarios
             }
             else
             {
-                if (dt1.Rows.Count==1)
+                if (dt1.Rows.Count == 1)
                 {
                     //si tan solo se ha encontrado el nombre de usuario, pero no su contraseña
                     return 0;
@@ -116,18 +122,21 @@ namespace GestionUsuarios
             }
         }
 
-
-
         //método para actualizar los datos de un usuario
         public int updateUser(string name, string pass)
         {
             //nueva contraseña
             try
             {
-                string sql = "UPDATE usuarios SET password ='" + pass + "'WHERE username='" + name + "';";
+                string sql =
+                    "UPDATE usuarios SET password ='" +
+                    pass +
+                    "'WHERE username='" +
+                    name +
+                    "';";
                 SQLiteCommand command = new SQLiteCommand(sql, cnx);
                 int changes = command.ExecuteNonQuery();
-                if (changes ==1)
+                if (changes == 1)
                 {
                     //exito
                     return 1;
@@ -141,15 +150,12 @@ namespace GestionUsuarios
             {
                 return -1;
             }
-
-
         }
+
         //método para cerrar la base de datos
         public void Cerrar()
         {
             this.cnx.Close();
-
         }
-
     }
 }
