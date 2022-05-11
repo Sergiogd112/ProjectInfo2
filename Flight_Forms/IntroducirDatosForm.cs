@@ -11,16 +11,15 @@ using FlightLib;
 
 namespace Flight_Forms
 {
-    
     public partial class IntroducirDatosForm : Form
     {
-        
         public IntroducirDatosForm()
         {
             InitializeComponent();
         }
 
         private FlightPlanList lista = new FlightPlanList();
+
         int butt = 1;
 
         private void aceptarButton_Click(object sender, EventArgs e)
@@ -34,28 +33,35 @@ namespace Flight_Forms
                 double yFin = Convert.ToDouble(yFinBox.Text);
                 double vel = Convert.ToDouble(velocidadBox.Text);
 
-                FlightPlan flight = new FlightPlan(id, xIn, yIn, xFin, yFin, vel);
+                FlightPlan flight =
+                    new FlightPlan(id, xIn, yIn, xFin, yFin, vel);
                 this.ResetParametros();
 
-                
-                if (this.lista.GetAmountFlights()<2)
+                if (this.lista.GetAmountFlights() < 2)
                 {
                     //la lista todavía no se ha llenado con 2 planes de vuelo
                     this.lista.AddFlightPlan(flight);
                 }
-                if (this.lista.GetAmountFlights()==2)
+                if (this.lista.GetAmountFlights() == 2)
                 {
                     Close();
-                    MessageBox.Show("Los 2 vuelos fueron guardados.","Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox
+                        .Show("Los 2 vuelos fueron guardados.",
+                        "Completado",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
-                
             }
             catch (FormatException)
             {
-                MessageBox.Show("Error en el formato introducido de los datos. Intente de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+                MessageBox
+                    .Show("Error en el formato introducido de los datos. Intente de nuevo.",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
+
         public void ResetParametros()
         {
             idBox.Text = " ";
@@ -65,6 +71,7 @@ namespace Flight_Forms
             xFinBox.Text = " ";
             yFinBox.Text = " ";
         }
+
         public FlightPlanList DameLista()
         {
             return this.lista;
@@ -72,7 +79,6 @@ namespace Flight_Forms
 
         private void IntroducirDatosForm_Load(object sender, EventArgs e)
         {
-
         }
 
         private void rellenoButton_Click(object sender, EventArgs e)
@@ -87,7 +93,6 @@ namespace Flight_Forms
                 yFinBox.Text = "300";
 
                 this.butt = 0;
-                    
             }
             else
             {
@@ -100,11 +105,6 @@ namespace Flight_Forms
 
                 this.butt = 1;
             }
-
-               
-            
-            
-
         }
     }
 }

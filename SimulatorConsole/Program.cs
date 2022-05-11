@@ -1,23 +1,20 @@
-﻿using FlightLib;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FlightLib;
 
 namespace SimulatorConsole
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             // instanciar la FligthPlanList
             FlightPlanList fligthList = new FlightPlanList();
 
-
             // Determinar el numero de iteraciones en la simulación
-
             Console.WriteLine("Escribe el numero de ciclos");
             int ciclos;
             try
@@ -32,7 +29,6 @@ namespace SimulatorConsole
             }
 
             // Determinar la distancia
-
             Console.WriteLine("Escribe la distancia de seguridad");
             double distanciaSeguridad;
             try
@@ -46,7 +42,8 @@ namespace SimulatorConsole
                 distanciaSeguridad = Convert.ToDouble(Console.ReadLine());
             }
 
-            fligthList.SetDistanciaSeguridad(distanciaSeguridad);
+            fligthList.SetDistanciaSeguridad (distanciaSeguridad);
+
             // leer el numero de aviones a añadir
             /*            Console.WriteLine("Escribe el numero de aviones");
                         int nAviones;
@@ -64,12 +61,13 @@ namespace SimulatorConsole
                         fligthList.AddNConsole(nAviones);
             */
             // Añadiendo desde fichero
-            string filename = @"C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\data.txt";
-            fligthList.AddFromFile(filename);
+            string filename =
+                @"C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\data.txt";
+            fligthList.AddFromFile (filename);
 
             // bucle de simulación
-
             int ciclo = 0;
+
             /*            int i;
                         int j;*/
             Console.WriteLine("Start");
@@ -102,8 +100,6 @@ namespace SimulatorConsole
             Console.WriteLine("Hoa");
 
             Console.ReadLine();
-
-
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
+using System.Text;
 
 namespace FlightLib
 {
@@ -32,9 +32,12 @@ namespace FlightLib
         {
             return history.Count;
         }
-        public void SetCurrent(FlightPlanList current){
+
+        public void SetCurrent(FlightPlanList current)
+        {
             this.current = current;
         }
+
         public void AddState(FlightPlanList list)
         {
             if (history.Count == 0 && current.GetLen() == 0)
@@ -43,14 +46,9 @@ namespace FlightLib
             }
             else
             {
-
                 history.Push(this.current.Copy());
                 this.current = list;
             }
-
-
-
-
         }
 
         public void Move(int cicles)
@@ -73,6 +71,7 @@ namespace FlightLib
                 return true;
             }
         }
+
         public void Restart()
         {
             while (1 < this.history.Count)
@@ -81,6 +80,7 @@ namespace FlightLib
             }
             this.current = this.history.Pop();
         }
+
         public String DumpString()
         {
             String data = this.current.DumpString() + "\n";
@@ -90,11 +90,13 @@ namespace FlightLib
             }
             return data;
         }
+
         public void Dump(string nombre)
         {
             StreamWriter W = new StreamWriter(nombre);
             W.WriteLine(this.DumpString());
         }
+
         public static State Load(string file)
         {
             StreamReader R = new StreamReader(file);

@@ -35,23 +35,28 @@ namespace Flight_Forms
             if (resultado == 1)
             {
                 //se ha encontrado: operacion exito
-                MessageBox.Show("Bienvenid@, {0}. Disfrute de su experiencia en Flight Simulator.", userBox.Text);
+                MessageBox
+                    .Show("Bienvenid@, {0}. Disfrute de su experiencia en Flight Simulator.",
+                    userBox.Text);
+
                 //abrimos el siguiente formulario de opciones
                 this.Visible = false;
                 PrincipalForm form = new PrincipalForm();
                 form.ShowDialog();
 
                 form.Visible = true;
+
                 //cerramos este formulario
                 this.Close();
-
             }
 
             if (resultado == 0)
             {
                 //se ha encontrado el usuario pero no la contraseña
                 //no se ha introducido correctamente la contraseña
-                MessageBox.Show("Contraseña incorrecta, por favor, intente de nuevo.");
+                MessageBox
+                    .Show("Contraseña incorrecta, por favor, intente de nuevo.");
+
                 //limpiamos contenido
                 passBox.Clear();
             }
@@ -59,7 +64,8 @@ namespace Flight_Forms
             if (resultado == -1)
             {
                 //no se ha encontrado ni usuario ni contraseña
-                MessageBox.Show("No se ha encontrado ni usuario ni contraseña. Si no tiene cuenta, puede registrarse.");
+                MessageBox
+                    .Show("No se ha encontrado ni usuario ni contraseña. Si no tiene cuenta, puede registrarse.");
                 passBox.Clear();
                 userBox.Clear();
             }
@@ -68,13 +74,14 @@ namespace Flight_Forms
         private void chechBox_CheckedChanged(object sender, EventArgs e)
         {
             //mostramos el valor de la contraseña en caso de estar marcada la casilla (checked)
-            if (chechBox.Checked == true) //marcada
+            if (
+                chechBox.Checked == true //marcada
+            )
             {
                 if (passBox.PasswordChar == '*')
                 {
                     //pasamos de incógnito a mostrar su valor
                     passBox.PasswordChar = '\0';
-
                 }
                 else
                 {
@@ -83,7 +90,10 @@ namespace Flight_Forms
             }
         }
 
-        private void regístrateToolStripMenuItem_Click(object sender, EventArgs e)
+        private void regístrateToolStripMenuItem_Click(
+            object sender,
+            EventArgs e
+        )
         {
             RegistroForm reg = new RegistroForm();
             reg.ShowDialog();
@@ -91,7 +101,10 @@ namespace Flight_Forms
             this.users = reg.DameBaseDatos();
         }
 
-        private void constraseñaOlvidadaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void constraseñaOlvidadaToolStripMenuItem_Click(
+            object sender,
+            EventArgs e
+        )
         {
             CambiarContrseñaForm cambio = new CambiarContrseñaForm(this.users);
             cambio.ShowDialog();

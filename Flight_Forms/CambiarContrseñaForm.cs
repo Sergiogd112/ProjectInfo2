@@ -21,7 +21,6 @@ namespace Flight_Forms
             InitializeComponent();
         }
 
-
         private void cambiarButton_Click(object sender, EventArgs e)
         {
             string username = userBox.Text;
@@ -29,11 +28,11 @@ namespace Flight_Forms
             string passwordRep = Convert.ToString(repPass.Text);
             if (username == "" || password == "" || passwordRep == "")
             {
-                MessageBox.Show("No se ha actualizado la contraseña porque hay campos vacíos.");
+                MessageBox
+                    .Show("No se ha actualizado la contraseña porque hay campos vacíos.");
                 userBox.Text = "";
                 passBx.Text = "";
                 repPass.Text = "";
-
             }
             else
             {
@@ -49,15 +48,19 @@ namespace Flight_Forms
                     }
                     else
                     {
-                        int update = this.gestion.updateUser(username, password);
+                        int update =
+                            this.gestion.updateUser(username, password);
                         if (update == 1)
                         {
-                            MessageBox.Show("La contraseña ha sido actualizada, {0}.", username);
+                            MessageBox
+                                .Show("La contraseña ha sido actualizada, {0}.",
+                                username);
                             this.Close();
                         }
                         else
                         {
-                            MessageBox.Show("No se ha podido actualizar la contraseña. Pruebe de nuevo.");
+                            MessageBox
+                                .Show("No se ha podido actualizar la contraseña. Pruebe de nuevo.");
                             passBx.Text = "";
                             repPass.Text = "";
                         }

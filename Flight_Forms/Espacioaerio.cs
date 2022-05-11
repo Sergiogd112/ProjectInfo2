@@ -92,7 +92,8 @@ namespace Flight_Forms
             }
         }
 
-        private void UpdatePlanes(){
+        private void UpdatePlanes()
+        {
             FlightPlanList current = state.GetCurrentList();
 
             for (
@@ -129,7 +130,7 @@ namespace Flight_Forms
                 }
             }
         }
-        
+
         /// <summary>
         /// Al pulsar sobre un avion abre un form con la informacion del fligthplan
         /// </summary>
@@ -144,19 +145,13 @@ namespace Flight_Forms
             info.Visible = true;
         }
 
-        
         /// <summary>
         /// Muestra el recorrido del avión
         /// </summary>
         /// <param name="flight"></param>
         /// <param name="isEnter"></param>
         /// <param name="sender"></param>
-        void showRecorrido(
-            FlightPlan flight,
-            bool isEnter,
-            object sender
-        )//Cuando el cursor pasa sobre un avión, se observa una línea que indica la trayectoria
-
+        void showRecorrido(FlightPlan flight, bool isEnter, object sender) //Cuando el cursor pasa sobre un avión, se observa una línea que indica la trayectoria
         {
             //el booleano isEnter nos indica si estamos posicionados sobre un picturebox
             if (isEnter)
@@ -299,10 +294,8 @@ namespace Flight_Forms
         {
             //qué queremos que suceda cada intervalo de tiempo?
             //mover los puntos y la localización de los picturebox
-            
-
             this.state.Move(Convert.ToInt32(this.ciclo));
-            FlightPlanList current= state.GetCurrentList();
+            FlightPlanList current = state.GetCurrentList();
             this.UpdatePlanes();
             if (distanciaInferior()) this.Close();
         }
@@ -313,7 +306,7 @@ namespace Flight_Forms
         /// <returns><see langword="true"/>si la distancia es menor a la de seguridad</returns>
         private bool distanciaInferior()
         {
-            FlightPlanList current= state.GetCurrentList();
+            FlightPlanList current = state.GetCurrentList();
             plane0 = current.GetFlightAtIndex(0).GetCurrentPosition();
             plane1 = current.GetFlightAtIndex(1).GetCurrentPosition();
             dist = current.GetDistanciaSeguridad();
@@ -332,7 +325,7 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            FlightPlanList current= state.GetCurrentList();
+            FlightPlanList current = state.GetCurrentList();
             current.CheckConflicts(true); // Comprueva si hay conflictos
             List<List<double>> conflicts = current.GetConflictd(); // Devuleve conflictos
             for (
@@ -366,7 +359,7 @@ namespace Flight_Forms
         private void reiniciarButton_Click(object sender, EventArgs e)
         {
             this.state.Restart();
-            FlightPlanList current= state.GetCurrentList();
+            FlightPlanList current = state.GetCurrentList();
             UpdatePlanes();
         }
 

@@ -16,7 +16,6 @@ namespace Flight_Forms
         //creamos un vector que contenga los parámetros de simulación (atributo)
         double[] parametros = new double[2];
 
-
         public IntroducirParametrosForm()
         {
             InitializeComponent();
@@ -24,27 +23,29 @@ namespace Flight_Forms
 
         private void IntroducirParametrosForm_Load(object sender, EventArgs e)
         {
-
         }
 
         //lo que pasa cuando se clica el boton aceptar
-        private void aceptarButton_Click(object sender, EventArgs e) 
+        private void aceptarButton_Click(object sender, EventArgs e)
         {
             try
             {
                 double distSeg = Convert.ToDouble(distanciaSeguridadBox.Text);
                 double ciclo = Convert.ToDouble(cicloBox.Text);
-                if (this.parametros.Length == 0) //this hace referencia al objeto
+                if (
+                    this.parametros.Length == 0 //this hace referencia al objeto
+                )
                 {
                     this.parametros[this.parametros.Length] = distSeg;
                     this.parametros[this.parametros.Length] = ciclo;
-                    
-                    MessageBox.Show("Los parámetros de simulación ya han sido introducidos.");
-                    
+
+                    MessageBox
+                        .Show("Los parámetros de simulación ya han sido introducidos.");
                 }
                 else
                 {
-                    MessageBox.Show("Los parámetros de simulación ya han sido introducidos.");
+                    MessageBox
+                        .Show("Los parámetros de simulación ya han sido introducidos.");
                 }
 
                 Close();
@@ -52,12 +53,15 @@ namespace Flight_Forms
             }
             catch (FormatException)
             {
-                MessageBox.Show("El formato de los parámetros no es correcto. Intente de nuevo.");
+                MessageBox
+                    .Show("El formato de los parámetros no es correcto. Intente de nuevo.");
+
                 //reseteamos cuadros de texto
                 distanciaSeguridadBox.Text = " ";
                 cicloBox.Text = " ";
             }
         }
+
         public double[] DameParametros()
         {
             return this.parametros;

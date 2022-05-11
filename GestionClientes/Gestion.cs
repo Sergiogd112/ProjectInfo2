@@ -26,14 +26,13 @@ namespace GestionUsuarios
         //método para obtener todos los datos de la base de datos
         //retorna objeto de la clase DataTable
         //nos retrona todos los datos almacenados en la tabla
-
         //se guardan en 'dt'
         public DataTable ShowUsers()
         {
             DataTable dt = new DataTable();
             string sql = "SELECT * FROM  usuarios";
             SQLiteDataAdapter adp = new SQLiteDataAdapter(sql, cnx);
-            adp.Fill(dt);
+            adp.Fill (dt);
             return dt;
         }
 
@@ -43,7 +42,7 @@ namespace GestionUsuarios
             string sql =
                 "SELECT * FROM  usuarios WHERE username='" + name + "';";
             SQLiteDataAdapter adp = new SQLiteDataAdapter(sql, cnx);
-            adp.Fill(dt);
+            adp.Fill (dt);
             return dt;
         }
 
@@ -51,7 +50,11 @@ namespace GestionUsuarios
         {
             //rellenamos tabla con los datos de los usuarios
             string s =
-                "INSERT INTO usuarios values ('" + name + "','" + FlightLib.Utils.sha256_hash(pass) + "');";
+                "INSERT INTO usuarios values ('" +
+                name +
+                "','" +
+                FlightLib.Utils.sha256_hash(pass) +
+                "');";
             SQLiteCommand cmd = new SQLiteCommand(s, cnx);
             cmd.ExecuteNonQuery();
         }
@@ -63,7 +66,7 @@ namespace GestionUsuarios
             string user =
                 "SELECT * FROM usuarios WHERE username='" + name + "';";
             SQLiteDataAdapter command = new SQLiteDataAdapter(user, this.cnx);
-            command.Fill(dt);
+            command.Fill (dt);
             if (dt.Rows.Count == 1)
             {
                 //si se ha encontrado el usuario
@@ -98,8 +101,8 @@ namespace GestionUsuarios
             SQLiteDataAdapter command2 = new SQLiteDataAdapter(ok, cnx);
 
             //rellenamos
-            command1.Fill(dt1);
-            command2.Fill(dt2);
+            command1.Fill (dt1);
+            command2.Fill (dt2);
 
             //comprobamos
             if (dt1.Rows.Count == 1 && dt2.Rows.Count == 1)

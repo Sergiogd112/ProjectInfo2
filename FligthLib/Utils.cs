@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace FlightLib
 {
@@ -16,8 +16,7 @@ namespace FlightLib
                 Encoding enc = Encoding.UTF8;
                 Byte[] result = hash.ComputeHash(enc.GetBytes(value));
 
-                foreach (Byte b in result)
-                    Sb.Append(b.ToString("x2"));
+                foreach (Byte b in result) Sb.Append(b.ToString("x2"));
             }
 
             return Sb.ToString();

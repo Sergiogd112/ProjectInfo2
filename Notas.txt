@@ -1,8 +1,8 @@
 -------------------------
 DEBUGAR
-- Paso a paso por instrucciones (F11). Entramos dentro de una parte del código. 
-* podemos ver cómo funciona el código de una función del mismo. Podemos acceder a otras partes.
-* podemos ir línea a línea una vez accedido al código. 
+- Paso a paso por instrucciones (F11). Entramos dentro de una parte del cï¿½digo. 
+* podemos ver cï¿½mo funciona el cï¿½digo de una funciï¿½n del mismo. Podemos acceder a otras partes.
+* podemos ir lï¿½nea a lï¿½nea una vez accedido al cï¿½digo. 
 	
 
 - Paso a paso por procedimientos (F10). Ejecutamos linea a linea.
@@ -10,18 +10,18 @@ DEBUGAR
 	2. nos ejecuta linea a linea todo lo que ocurre
 	*podemos ver el valor de cualquier variable en todo momento en la caja de info inferior
 
-En el caso de estar interesadx en una parte del código concreta, en una linea, utilizamos 'breakpoint'.
+En el caso de estar interesadx en una parte del cï¿½digo concreta, en una linea, utilizamos 'breakpoint'.
 	1. Click derecho sobre linea
 	2. punto de interrupcion
 	3. sin ir paso a paso: clicamos a 'iniciar'. Ejecuta directamente hasta ese punto
-		3.1. ahora decidimos cómo queremos debugar hasta ese punto sin tener que ejecturar lentamente el codigo superior
+		3.1. ahora decidimos cï¿½mo queremos debugar hasta ese punto sin tener que ejecturar lentamente el codigo superior
 
 ERRORES EN LOS DATOS DE ENTRADA
-* cuando es en tiempo de ejecución: el programa está bien escrito, debe haber otro error 
+* cuando es en tiempo de ejecuciï¿½n: el programa estï¿½ bien escrito, debe haber otro error 
 * cuando hay error de tipado y no queremos que pete el programa:
-	- SOLUCIÓN: TRY-CATCH
-	1. Try: código a analizar
-	2. Qué hay que hacer si se detecta un error de excepción
+	- SOLUCIï¿½N: TRY-CATCH
+	1. Try: cï¿½digo a analizar
+	2. Quï¿½ hay que hacer si se detecta un error de excepciï¿½n
 
 	try
 	{
@@ -33,23 +33,23 @@ ERRORES EN LOS DATOS DE ENTRADA
 
 
 BUCLE DE SIMULACION. Ciclos y tiempo
-* queremos hacer un bucle que ejecute una función reiteradas veces. 
+* queremos hacer un bucle que ejecute una funciï¿½n reiteradas veces. 
 - while 
 
 
 FORMATEO DEL TEXTO. Facilitar legibilidad de texto. 
-* magnitudes resultantes pueden tener decimales infinitos. Esto en la vida real no es práctico. Damos decimales finitos
+* magnitudes resultantes pueden tener decimales infinitos. Esto en la vida real no es prï¿½ctico. Damos decimales finitos
 Console.WriteLine("...{0:(type)(cantindad)}",(...));
 pe: Console.WriteLine("Velocidad {0:F2}, a.GetVelocidad()");
 
 Es decir, entre corchetes indicamos con la primera cifra un argumento indicada en esa misma posicion, siguiendo el orden marcado, y tras los dos puntos, indicamos con una letra el tipado del argumento y con el valor posteriori la cantidad de decimales deseados
 
-==> cuando queremos implementar un nuevo método a un programa, debemos preguntarnos en qué clase añadirlo
+==> cuando queremos implementar un nuevo mï¿½todo a un programa, debemos preguntarnos en quï¿½ clase aï¿½adirlo
 
 
 CUANDO CREAMOS UN OBJETO DEL TIPO LISTA DESDE CONSOLA, DONDE ASIGNAMOS UNA VARIABLE (introducida por consola) A CADA PARAMETRO DEL CONSTRUCTOR, ESTA VARIABLE DEJA DE SER ACCESIBLE. 
 *PARA ACCEDER A LA INFORMACION, LO HACEMOS MEDIANTE LA POSICION DEL VECTOR
-*PARA CREAR UN NUEVO OBJETO, PODEMOS SERGUIR UTILIZANDO LA VARIABLE SIN QUE SE ACTUALICE EL ANTERIOR OBJETO PORQUE SU PARAMETRIZACIÓN YA HA SIDO ASIGNADA.
+*PARA CREAR UN NUEVO OBJETO, PODEMOS SERGUIR UTILIZANDO LA VARIABLE SIN QUE SE ACTUALICE EL ANTERIOR OBJETO PORQUE SU PARAMETRIZACIï¿½N YA HA SIDO ASIGNADA.
 
 
 
@@ -58,67 +58,67 @@ PROYECTO 0 - PARTE 1
 -----------------------------
 
 ******
-Fase 1: Añadir los siguientes métodos a la clase FlightPlan
+Fase 1: Aï¿½adir los siguientes mï¿½todos a la clase FlightPlan
 
-	1. Realiza un cambio en los nombres de los proyectos y de la solución de forma que sean
+	1. Realiza un cambio en los nombres de los proyectos y de la soluciï¿½n de forma que sean
 	auto explicativos.
-	2. Añade un Constructor para inicializar todos los atributos de la clase FlightPlan
-	3. Añade todos los Gets y Sets para leer valores de los atributos y modificar los valores de
+	2. Aï¿½ade un Constructor para inicializar todos los atributos de la clase FlightPlan
+	3. Aï¿½ade todos los Gets y Sets para leer valores de los atributos y modificar los valores de
 	los atributos.
-	4. Añade el método public Boolean HasArrived(): Este método devuelve true si el avión ha
+	4. Aï¿½ade el mï¿½todo public Boolean HasArrived(): Este mï¿½todo devuelve true si el aviï¿½n ha
 	llegado a su destino y false en caso contrario.
-	5. Para realizar el método anterior necesitamos añadir la posición actual, por tanto,
-	necesitas modifica el método public void Move (double time)
-	6. Añade el método public void Restart(): Este método mueve el avión a las posición inicial.
-	7. public double Distance (FlightPlan plan): Este método devuelve la distancia con el plan
+	5. Para realizar el mï¿½todo anterior necesitamos aï¿½adir la posiciï¿½n actual, por tanto,
+	necesitas modifica el mï¿½todo public void Move (double time)
+	6. Aï¿½ade el mï¿½todo public void Restart(): Este mï¿½todo mueve el aviï¿½n a las posiciï¿½n inicial.
+	7. public double Distance (FlightPlan plan): Este mï¿½todo devuelve la distancia con el plan
 	de vuelo recibido como argumento.
 ******
 
 ******
-Fase 2: Crear un proyecto Windows Forms y añadir una opción para introducir
+Fase 2: Crear un proyecto Windows Forms y aï¿½adir una opciï¿½n para introducir
 datos
-	1. Crear un proyecto Windows Forms y añadir un menú de opciones.
-	2. Incorporar una primera opción que abra un nuevo formulario en el que introducir los
+	1. Crear un proyecto Windows Forms y aï¿½adir un menï¿½ de opciones.
+	2. Incorporar una primera opciï¿½n que abra un nuevo formulario en el que introducir los
 	datos de los dos planes de vuelo implicados, verificando que no hay errores en los datos
-	de entrada. Naturalmente, los datos se cargarán en dos objetos de la clase FlightPlan.
-	3. Incorporar una segunda opción al menu que abra un nuevo formulario para introducir
+	de entrada. Naturalmente, los datos se cargarï¿½n en dos objetos de la clase FlightPlan.
+	3. Incorporar una segunda opciï¿½n al menu que abra un nuevo formulario para introducir
 	la distancia de seguridad y el tiempo de ciclo, verificando que no hay errores en los datos
 	de entrada.
 ******
 
 
 ******
-Fase 3: Añadir una opción para iniciar la simulación
-	1. Añadir una tercera opción al menú que abra un formulario en el que se muestre
-	el espacio aéreo y la ubicación inicial de los dos vuelos.
+Fase 3: Aï¿½adir una opciï¿½n para iniciar la simulaciï¿½n
+	1. Aï¿½adir una tercera opciï¿½n al menï¿½ que abra un formulario en el que se muestre
+	el espacio aï¿½reo y la ubicaciï¿½n inicial de los dos vuelos.
 ******
 
 
 ******
 Fase 4: Mover los aviones
-1. Añadir al formulario de simulación un botón que hace que los dos aviones se muevan
+1. Aï¿½adir al formulario de simulaciï¿½n un botï¿½n que hace que los dos aviones se muevan
 un ciclo.
 ******
 
 
 ******
-Fase 5: Ver información de los aviones
-	1. Añadir el código necesario para que al clicar el usuario sobre uno de los aviones se
-	abra un formulario que muestre la información de ese avión.
+Fase 5: Ver informaciï¿½n de los aviones
+	1. Aï¿½adir el cï¿½digo necesario para que al clicar el usuario sobre uno de los aviones se
+	abra un formulario que muestre la informaciï¿½n de ese aviï¿½n.
 ******
 
 
 ******
-Fase 6: Añadir una línea para mostrar la trayectoria
-	1. Añadir el código necesario para mostrar una línea del origen al destino del plan de
-	vuelo y comprueba que los aviones se mueves a través de dicha trayectoria
+Fase 6: Aï¿½adir una lï¿½nea para mostrar la trayectoria
+	1. Aï¿½adir el cï¿½digo necesario para mostrar una lï¿½nea del origen al destino del plan de
+	vuelo y comprueba que los aviones se mueves a travï¿½s de dicha trayectoria
 ******
 
 
 ******
-Fase 7: Mostrar la distancia de seguridad de cada avión
-	1. Añadir el código necesario para dibujar una elipse alrededor de cada avión mostrando
-	el tamaño de la distancia de seguridad. El avión se debe situar en el centro de la elipse
+Fase 7: Mostrar la distancia de seguridad de cada aviï¿½n
+	1. Aï¿½adir el cï¿½digo necesario para dibujar una elipse alrededor de cada aviï¿½n mostrando
+	el tamaï¿½o de la distancia de seguridad. El aviï¿½n se debe situar en el centro de la elipse
 	cuando realizamos el movimiento a lo largo de la trayectoria.
 ******
 
@@ -128,13 +128,13 @@ Nota importante: Para realizar estas fases puede ser de utilidad volver a ver lo
 del curso titulados: Windows Forms Videos.
 
 ******
-Videos de Soporte de otros años
+Videos de Soporte de otros aï¿½os
 ******
-Nota importante: Hace unos años que este ejercicio recibía el nombre de ejercicio de integración y tenía una serie
+Nota importante: Hace unos aï¿½os que este ejercicio recibï¿½a el nombre de ejercicio de integraciï¿½n y tenï¿½a una serie
 de video de soporte. En ese ejercicio se trabajaban conceptos diferentes y por tanto ya no aplican a las versiones
 actuales del proyecto. Para alguna de las fases de ese proyecto se aportaba un video de apoyo en el que se realizaba
 una tarea similar, pero para un proyecto diferente. Era necesario extraer lo relevante del video y adaptarlo al caso
-del proyecto que nos ocupa. Os dejamos lo links a dichos video por si queréis echar una ojeada, pero tal y como
+del proyecto que nos ocupa. Os dejamos lo links a dichos video por si querï¿½is echar una ojeada, pero tal y como
 hemos comentado son video obsoletos y que se deben tener en cuenta para el proyecto actual.
 
 										Videos de apoyo Fase 2:
@@ -152,55 +152,55 @@ hemos comentado son video obsoletos y que se deben tener en cuenta para el proye
 
 
 FASE 1
-Fase 8: Añadir un botón para realizar la simulación automática
-1. Incorporar al formulario de simulación los botones y código necesarios para poder realizar una simulación automática (iniciar y detener simulación automática).
+Fase 8: Aï¿½adir un botï¿½n para realizar la simulaciï¿½n automï¿½tica
+1. Incorporar al formulario de simulaciï¿½n los botones y cï¿½digo necesarios para poder realizar una simulaciï¿½n automï¿½tica (iniciar y detener simulaciï¿½n automï¿½tica).
 
 Fase 9: Mostrar datos y distancias de los vuelos
-1. Incorporar al formulario de simulación un nuevo botón que al ser clicado muestra un formulario con un DataGridView que muestra los datos de los dos vuelos.
-2. Añadir el código necesario para que al clicar sobre la fila correspondiente a un vuelo se abra un nuevo formulario que muestre la distancia entre ese vuelo y el otro.
+1. Incorporar al formulario de simulaciï¿½n un nuevo botï¿½n que al ser clicado muestra un formulario con un DataGridView que muestra los datos de los dos vuelos.
+2. Aï¿½adir el cï¿½digo necesario para que al clicar sobre la fila correspondiente a un vuelo se abra un nuevo formulario que muestre la distancia entre ese vuelo y el otro.
 
 
-		ATENCIÓN: Puesto que de momento sólo se trabaja con dos vuelos, esta fase podría implementarse sin utilizar un DataGridView, 
-		de forma incluso más simple que la indicada. Sin embargo, en el momento en que pasemos a la versión 2 (con múltiples planes de vuelo) 
-		será necesario usar un DataGridView.
+		ATENCIï¿½N: Puesto que de momento sï¿½lo se trabaja con dos vuelos, esta fase podrï¿½a implementarse sin utilizar un DataGridView, 
+		de forma incluso mï¿½s simple que la indicada. Sin embargo, en el momento en que pasemos a la versiï¿½n 2 (con mï¿½ltiples planes de vuelo) 
+		serï¿½ necesario usar un DataGridView.
 
 
-Fase 10: Alarma de perdida de separación entre vuelos
-1. Añadir el código necesario para informar al usuario, durante la simulación, del momento en el que los vuelos están a una distancia inferior a la de seguridad.
-2. Añadir al formulario un botón que al clicar en él se informará al usuario de si los vuelos entrarán en conflicto o no.
+Fase 10: Alarma de perdida de separaciï¿½n entre vuelos
+1. Aï¿½adir el cï¿½digo necesario para informar al usuario, durante la simulaciï¿½n, del momento en el que los vuelos estï¿½n a una distancia inferior a la de seguridad.
+2. Aï¿½adir al formulario un botï¿½n que al clicar en ï¿½l se informarï¿½ al usuario de si los vuelos entrarï¿½n en conflicto o no.
 
 
-Fase 11: Resolución automática de conflicto
-1. Añadir el código necesario para que, antes de iniciar la simulación, compruebe si los vuelos entrarán en conflicto y 
+Fase 11: Resoluciï¿½n automï¿½tica de conflicto
+1. Aï¿½adir el cï¿½digo necesario para que, antes de iniciar la simulaciï¿½n, compruebe si los vuelos entrarï¿½n en conflicto y 
 pregunte al usuario si quieres resolver el conflicto. En el caso que el usuario responda de forma afirmativa el programa debe 
-cambiar automáticamente la velocidad de uno de los vuelos para evitar el conflicto, y proceder a simular con la nueva velocidad. 
-En el caso que el usuario responda de forma negativa la simulación continuará de forma habitual.
+cambiar automï¿½ticamente la velocidad de uno de los vuelos para evitar el conflicto, y proceder a simular con la nueva velocidad. 
+En el caso que el usuario responda de forma negativa la simulaciï¿½n continuarï¿½ de forma habitual.
 
 
 
 ----------
 BLO4. BASE DE DTOS
-El programa debe salvar en el fichero de texto los datos como han quedado tras la sesión de trabajo. 
+El programa debe salvar en el fichero de texto los datos como han quedado tras la sesiï¿½n de trabajo. 
 Las bases de datos facilitan el trabajo con datos externos (sobretodo cuando son muchos y variados).
-BASE DE DATOS: Fichero con datos + sistema de gestión que permite realizar operaciones
-Las operaciones ya están implementadas en la base de datos: solo deben especificarse. 
+BASE DE DATOS: Fichero con datos + sistema de gestiï¿½n que permite realizar operaciones
+Las operaciones ya estï¿½n implementadas en la base de datos: solo deben especificarse. 
 
 Debemos ser capaces de:
 1. crear base de datos usando SQLite
-2. Construir consultas básicas en el lenguaje SQL: buscar, modificar datos
+2. Construir consultas bï¿½sicas en el lenguaje SQL: buscar, modificar datos
 3. usar base en el programa
 
 
-CREACIÓN DE BASE DE DATOS
-SQLite: sistema de gestión contenido en librería C --> libreria proporciona gestor compatible con el lenguaje SQL (no necesita servidor ni configuración, base de datos basada en fichero de texto de hasta 2TB)
-	-- Se trata de un proyecto de código libre
-	-- base de datos ideal para pequeñas apps
+CREACIï¿½N DE BASE DE DATOS
+SQLite: sistema de gestiï¿½n contenido en librerï¿½a C --> libreria proporciona gestor compatible con el lenguaje SQL (no necesita servidor ni configuraciï¿½n, base de datos basada en fichero de texto de hasta 2TB)
+	-- Se trata de un proyecto de cï¿½digo libre
+	-- base de datos ideal para pequeï¿½as apps
 	-- no sigue modelo cliente-servidor
-	-- necesitamos programa que nos permita gestionar la base de datos: utilizar el ejecutable de línea de comandos: sqlite3
+	-- necesitamos programa que nos permita gestionar la base de datos: utilizar el ejecutable de lï¿½nea de comandos: sqlite3
 		-- solo hace falta copiarlo en el disco duro
 
 
-* El comando SELECT es al igual que CREATE, una función con la que formamos una sentencia SQL
+* El comando SELECT es al igual que CREATE, una funciï¿½n con la que formamos una sentencia SQL
 	-- Al escribir una sentencia, esta debe acabar siempre con ; 
 	-- los comandos que empiezan con . son propios del gestor y no terminan con ;
 
@@ -223,16 +223,16 @@ SQLite: sistema de gestión contenido en librería C --> libreria proporciona gest
 
 
 	Structured Query Languange SQL
-	Lenguaje de programación de alto nivel para acceder a los datos almacenados
+	Lenguaje de programaciï¿½n de alto nivel para acceder a los datos almacenados
 	
 	
-	Lenguaje de Manimulación de Datos DML
+	Lenguaje de Manimulaciï¿½n de Datos DML
 	3 instrucciones:
-	- INSERT -- añade nuevos registros a una tabla
+	- INSERT -- aï¿½ade nuevos registros a una tabla
 	- UPDATE -- modifica valores de los atributos de los registros ya almacenados
 	- DELETE -- elimina registros
 	
-	Lenguaje de definición de datos DDL
+	Lenguaje de definiciï¿½n de datos DDL
 	Parte de SQL que se utiliza para crear una base de datos y modifica la estructura. 
 	3 declaraciones:
 	- CREATE -- crea una nueva tabla
@@ -241,7 +241,7 @@ SQLite: sistema de gestión contenido en librería C --> libreria proporciona gest
 
 
 	COMANDOS
-	- SELECT: Realiza búsquedas y recuperaciones. Devuelve todos los datos almacenados.
+	- SELECT: Realiza bï¿½squedas y recuperaciones. Devuelve todos los datos almacenados.
 		-- para acceder a ciertos campos de entrada:
 		SELECT (nombre1, nombre2) FROM (nombre tabla);
 			-- para limitar a un subconunto de entradas para que sean coincidentes: WHERE
@@ -253,16 +253,16 @@ SQLite: sistema de gestión contenido en librería C --> libreria proporciona gest
 			SELECT max(nombre1) FROM (nombre tabla);
 
 Para poder utilizar una base de datos desde un lenguaje de programacion necesitamos un driver. 
-Función del driver: ofrece interfaz de comunicación común entre las clases del lenguaje de programación ppara el acceso y los diferentes gestores 
-	- con la misma API (interfaz de programación de apps) el programa pueda utilizar cualquier base de datos. 
+Funciï¿½n del driver: ofrece interfaz de comunicaciï¿½n comï¿½n entre las clases del lenguaje de programaciï¿½n ppara el acceso y los diferentes gestores 
+	- con la misma API (interfaz de programaciï¿½n de apps) el programa pueda utilizar cualquier base de datos. 
 	- el driver no viene por defecto con la interfaz .net
 
 	PREPARAR UNA CLASE PARA OPERAR CON LA BASE DE DATOS
 	El programa debe tener una clase en la que programar las consultas
-		-- cada consulta será un método
-		-- debemos añadir a la clase 2 nuevos 'using': using System.Data y System.Data.SQLite
-		-- añadir conector cnx 
-		-- necesitamos un método que será el ejecutado para abrir la base de datos
+		-- cada consulta serï¿½ un mï¿½todo
+		-- debemos aï¿½adir a la clase 2 nuevos 'using': using System.Data y System.Data.SQLite
+		-- aï¿½adir conector cnx 
+		-- necesitamos un mï¿½todo que serï¿½ el ejecutado para abrir la base de datos
 
 
 		La sentencia int (nombre)=(nombre command).ExecuteNonQuery() nos devuelve el nombre de filas modificadas
