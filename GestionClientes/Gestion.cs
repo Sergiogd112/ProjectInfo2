@@ -6,6 +6,7 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FlightLib;
 
 namespace GestionUsuarios
 {
@@ -17,7 +18,7 @@ namespace GestionUsuarios
         public void Iniciar()
         {
             //abrimos la base de datos
-            string dataSource = "Data Source=C:\\Users\\sergi\\Documents\\GitHub\\ProjectInfo2\\proyectoDB\\proyecto.db";
+            string dataSource = "Data Source=proyecto.db";
             this.cnx = new SQLiteConnection(dataSource);
             this.cnx.Open();
         }
@@ -50,7 +51,7 @@ namespace GestionUsuarios
         {
             //rellenamos tabla con los datos de los usuarios
             string s =
-                "INSERT INTO usuarios values ('" + name + "','" + pass + "');";
+                "INSERT INTO usuarios values ('" + name + "','" + FlightLib.Utils.sha256_hash(pass) + "');";
             SQLiteCommand cmd = new SQLiteCommand(s, cnx);
             cmd.ExecuteNonQuery();
         }
@@ -76,7 +77,7 @@ namespace GestionUsuarios
         }
 
         //método para encontrar usuario con cierto nombre y contraseña
-        public int findUser(string name, string password)
+        public int findUser(string name, string pass)
         {
             //tabla que contiene el nombre de usuario, si encontrado
             DataTable dt1 = new DataTable();
@@ -88,7 +89,7 @@ namespace GestionUsuarios
                 "SELECT * FROM usuarios WHERE username='" + name + "';";
             string ok =
                 "SELECT * FROM usuarios WHERE password='" +
-                password +
+                FlightLib.Utils.sha256_hash(pass) +
                 "'AND username='" +
                 name +
                 "';";
@@ -130,7 +131,7 @@ namespace GestionUsuarios
             {
                 string sql =
                     "UPDATE usuarios SET password ='" +
-                    pass +
+                    FlightLib.Utils.sha256_hash(pass) +
                     "'WHERE username='" +
                     name +
                     "';";

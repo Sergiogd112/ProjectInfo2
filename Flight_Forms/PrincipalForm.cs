@@ -15,12 +15,13 @@ namespace Flight_Forms
     {
         //double distSeg;
         double ciclo;
-        FlightPlanList lista;
+        State state;
 
         public PrincipalForm()
         {
             InitializeComponent();
-            lista = new FlightPlanList();
+            this.state=new State();
+
         }
 
         private void introducirParametrosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -30,7 +31,7 @@ namespace Flight_Forms
             form2.Visible = true;
 
             double[] parametros = form2.DameParametros();
-            this.lista.SetDistanciaSeguridad(parametros[0]); //la distància que escriu la persona
+            this.state.GetCurrentList().SetDistanciaSeguridad(parametros[0]); //la distància que escriu la persona
             this.ciclo = parametros[1];
             form2.Visible = false;
         }
@@ -46,7 +47,7 @@ namespace Flight_Forms
             form1.ShowDialog();
             form1.Visible = true;
 
-            this.lista = form1.DameLista();
+            this.state.SetCurrent(form1.DameLista());
             form1.Visible = false;
         }
         /*
@@ -66,7 +67,7 @@ namespace Flight_Forms
             string defaultpath = @"..\..\..\SimulatorConsole\data.txt";
             try
             {
-                lista.AddFromFile(defaultpath);
+                this.state.GetCurrentList().AddFromFile(defaultpath);
             }
             catch (Exception)
             {

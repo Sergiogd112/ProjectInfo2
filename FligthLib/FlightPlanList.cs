@@ -419,6 +419,16 @@ namespace FlightLib
             return total;
         }
 
+        public FlightPlanList Copy()
+        {
+            FlightPlanList copy = new FlightPlanList();
+            foreach (FlightPlan plan in this.flights)
+            {
+                copy.flights.Add(plan.Copy());
+            }
+            return copy;
+        }
+
         // CONSOLE
         /// <summary>
         /// Escribe todos los FligthPlans por consola
