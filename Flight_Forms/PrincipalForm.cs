@@ -15,19 +15,22 @@ namespace Flight_Forms
     {
         //double distSeg;
         double ciclo;
+
         State state;
 
         public PrincipalForm()
         {
             InitializeComponent();
-            this.state=new State();
-
+            this.state = new State();
         }
 
-        private void introducirParametrosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void introducirParametrosToolStripMenuItem_Click(
+            object sender,
+            EventArgs e
+        )
         {
             IntroducirParametrosForm form2 = new IntroducirParametrosForm();
-            form2.ShowDialog(); 
+            form2.ShowDialog();
             form2.Visible = true;
 
             double[] parametros = form2.DameParametros();
@@ -36,12 +39,17 @@ namespace Flight_Forms
             form2.Visible = false;
         }
 
-        private void oPCIONESToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void oPCIONESToolStripMenuItem1_Click(
+            object sender,
+            EventArgs e
+        )
         {
-
         }
 
-        private void introducirDatosDeVueloToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void introducirDatosDeVueloToolStripMenuItem1_Click(
+            object sender,
+            EventArgs e
+        )
         {
             IntroducirDatosForm form1 = new IntroducirDatosForm();
             form1.ShowDialog();
@@ -50,6 +58,7 @@ namespace Flight_Forms
             this.state.SetCurrent(form1.DameLista());
             form1.Visible = false;
         }
+
         /*
         private void ClickInformacionVuelo(object sender, EventArgs e) 
         {
@@ -62,7 +71,10 @@ namespace Flight_Forms
         }
 
         */
-        private void leerDeFicheroToolStripMenuItem_Click(object sender, EventArgs e)
+        private void leerDeFicheroToolStripMenuItem_Click(
+            object sender,
+            EventArgs e
+        )
         {
             string defaultpath = @"..\..\..\SimulatorConsole\data.txt";
             try
@@ -71,35 +83,44 @@ namespace Flight_Forms
             }
             catch (Exception)
             {
-                lista = new FlightPlanList();
-                lista.AddFromFile(defaultpath);
+                FlightPlanList lista = this.state.GetCurrentList();
+
+                lista.AddFromFile (defaultpath);
             }
         }
 
-        private void iniciarSimulacionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void iniciarSimulacionToolStripMenuItem_Click(
+            object sender,
+            EventArgs e
+        )
         {
-            Espacioaerio espacioaerio = new Espacioaerio(lista, ciclo);
+            Espacioaerio espacioaerio = new Espacioaerio(this.state, ciclo);
             espacioaerio.ShowDialog();
         }
-       
-        private void listaDeVuelosToolStripMenuItem_Click_1(object sender, EventArgs e)
+
+        private void listaDeVuelosToolStripMenuItem_Click_1(
+            object sender,
+            EventArgs e
+        )
         {
             TablaAviones aparece = new TablaAviones();
-            aparece.SetListFlights(this.lista); 
+            aparece.SetListFlights(this.state.GetCurrentList());
             aparece.ShowDialog();
         }
 
         private void PrincipalForm_Load(object sender, EventArgs e)
         {
-
         }
 
-        private void cargarFicheroToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cargarFicheroToolStripMenuItem_Click(
+            object sender,
+            EventArgs e
+        )
         {
             if (cargar.ShowDialog() == DialogResult.OK)
             {
                 int error = 0;
-                lista.AddFromFile(cargar.FileName);
+                this.state.GetCurrentList().AddFromFile(cargar.FileName);
                 if (error == -1)
                     MessageBox.Show("No se encontró el fichero de los vuelos");
                 else if (error == -2)
@@ -107,21 +128,22 @@ namespace Flight_Forms
             }
         }
 
-        private void guardarFicheroToolStripMenuItem_Click(object sender, EventArgs e)
+        private void guardarFicheroToolStripMenuItem_Click(
+            object sender,
+            EventArgs e
+        )
         {
-
-            if (lista.GetAmountFlights() != 0)
+            if (this.state.GetCurrentList().GetAmountFlights() != 0)
             {
                 if (guardar.ShowDialog() == DialogResult.OK)
                 {
-                    lista.Dump(guardar.FileName);
+                    this.state.Dump(guardar.FileName);
                 }
             }
             else
             {
                 MessageBox.Show("No hay datos para guardar");
             }
-
         }
     }
 }
