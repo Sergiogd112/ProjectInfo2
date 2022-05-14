@@ -158,7 +158,6 @@ namespace Flight_Forms
             GenerarVuelos generar = new GenerarVuelos();
             this.Visible = false;
             generar.ShowDialog();
-            generar.Visible = true;
             this.Visible = true;
             int n = generar.N;
             double[] rangoDistancia = generar.RangoDistancia;
