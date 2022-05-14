@@ -492,8 +492,9 @@ namespace FlightLib
             FlightPlanList copy = new FlightPlanList();
             foreach (FlightPlan plan in this.flights)
             {
-                copy.flights.Add(plan.Copy());
+                copy.AddFlightPlan(plan.Copy());
             }
+            copy.SetDistanciaSeguridad(distanciaSeguridad);
             return copy;
         }
 
@@ -541,8 +542,8 @@ namespace FlightLib
                     }
                     separator += "+-";
                 }
-                Console.WriteLine (row);
-                Console.WriteLine (separator);
+                Console.WriteLine(row);
+                Console.WriteLine(separator);
             }
         }
 
@@ -578,8 +579,8 @@ namespace FlightLib
                     }
                     separator += "+-";
                 }
-                Console.WriteLine (row);
-                Console.WriteLine (separator);
+                Console.WriteLine(row);
+                Console.WriteLine(separator);
             }
         }
 

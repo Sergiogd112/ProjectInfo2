@@ -21,7 +21,7 @@
         }
 
 
-#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -46,6 +46,9 @@
             this.reiniciarButton = new System.Windows.Forms.Button();
             this.retroButt = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.planeImg = new System.Windows.Forms.PictureBox();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.planeImg)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -96,7 +99,7 @@
             // 
             this.coordenadas.BackColor = System.Drawing.Color.LavenderBlush;
             this.coordenadas.Location = new System.Drawing.Point(505, 52);
-            this.coordenadas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.coordenadas.Margin = new System.Windows.Forms.Padding(2);
             this.coordenadas.Name = "coordenadas";
             this.coordenadas.Size = new System.Drawing.Size(219, 22);
             this.coordenadas.TabIndex = 7;
@@ -130,7 +133,7 @@
             this.manualButton.FlatAppearance.BorderSize = 3;
             this.manualButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manualButton.Location = new System.Drawing.Point(103, 116);
-            this.manualButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.manualButton.Margin = new System.Windows.Forms.Padding(2);
             this.manualButton.Name = "manualButton";
             this.manualButton.Size = new System.Drawing.Size(116, 31);
             this.manualButton.TabIndex = 10;
@@ -145,7 +148,7 @@
             this.autoButton.FlatAppearance.BorderSize = 3;
             this.autoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autoButton.Location = new System.Drawing.Point(103, 226);
-            this.autoButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.autoButton.Margin = new System.Windows.Forms.Padding(2);
             this.autoButton.Name = "autoButton";
             this.autoButton.Size = new System.Drawing.Size(116, 38);
             this.autoButton.TabIndex = 11;
@@ -183,7 +186,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(103, 344);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 38);
             this.button1.TabIndex = 14;
@@ -207,7 +210,7 @@
             this.reiniciarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reiniciarButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.reiniciarButton.Location = new System.Drawing.Point(103, 436);
-            this.reiniciarButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reiniciarButton.Margin = new System.Windows.Forms.Padding(2);
             this.reiniciarButton.Name = "reiniciarButton";
             this.reiniciarButton.Size = new System.Drawing.Size(116, 35);
             this.reiniciarButton.TabIndex = 17;
@@ -220,7 +223,7 @@
             this.retroButt.BackColor = System.Drawing.Color.LightSteelBlue;
             this.retroButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.retroButt.Location = new System.Drawing.Point(103, 150);
-            this.retroButt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.retroButt.Margin = new System.Windows.Forms.Padding(2);
             this.retroButt.Name = "retroButt";
             this.retroButt.Size = new System.Drawing.Size(116, 30);
             this.retroButt.TabIndex = 18;
@@ -231,12 +234,26 @@
             // panel2
             // 
             this.panel2.BackgroundImage = global::Flight_Forms.Properties.Resources.contour_7093447;
+            this.panel2.Controls.Add(this.planeImg);
             this.panel2.Location = new System.Drawing.Point(337, 76);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 700);
             this.panel2.TabIndex = 1;
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            // 
+            // planeImg
+            // 
+            this.planeImg.BackColor = System.Drawing.Color.Transparent;
+            this.planeImg.BackgroundImage = global::Flight_Forms.Properties.Resources.avion;
+            this.planeImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.planeImg.Image = global::Flight_Forms.Properties.Resources.avion;
+            this.planeImg.Location = new System.Drawing.Point(72, 71);
+            this.planeImg.Name = "planeImg";
+            this.planeImg.Size = new System.Drawing.Size(79, 33);
+            this.planeImg.TabIndex = 0;
+            this.planeImg.TabStop = false;
+            this.planeImg.Visible = false;
             // 
             // Espacioaerio
             // 
@@ -260,17 +277,19 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Espacioaerio";
             this.Text = "Espacioaerio";
             this.Load += new System.EventHandler(this.Espacioaerio_Load);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.planeImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
 
-#endregion
+        #endregion
 
 
         private System.Windows.Forms.Panel panel2;
@@ -306,5 +325,6 @@
         private System.Windows.Forms.Button reiniciarButton;
 
         private System.Windows.Forms.Button retroButt;
+        private System.Windows.Forms.PictureBox planeImg;
     }
 }

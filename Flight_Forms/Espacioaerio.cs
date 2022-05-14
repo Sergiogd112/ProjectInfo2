@@ -20,10 +20,6 @@ namespace Flight_Forms
 
         double ciclo;
 
-        Position plane0;
-
-        Position plane1;
-
         double dist;
 
         private PictureBox[] plane;
@@ -52,6 +48,7 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void Espacioaerio_Load(object sender, EventArgs e)
         {
+            planeImg.Visible = false;
             FlightPlan avion = new FlightPlan();
             plane = new PictureBox[this.state.GetCurrentList().GetLen()];
             FlightPlanList current = state.GetCurrentList();
@@ -63,17 +60,19 @@ namespace Flight_Forms
                     new Point(Convert
                             .ToInt32(avion.GetInitialPosition().GetX()),
                         Convert.ToInt32(avion.GetInitialPosition().GetY()));
-                pic.ClientSize = new Size(40, 40);
+                pic.Size = planeImg.Size;
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
-                pic.BackColor = Color.Transparent;
-                pic.Image = new Bitmap(@"..\..\Properties\avion.gif");
+                pic.BackColor = planeImg.BackColor;
+                pic.Image = planeImg.Image;
+                pic.BackgroundImage = planeImg.BackgroundImage;
+                pic.BackgroundImageLayout = planeImg.BackgroundImageLayout;
                 this.panel2.Controls.Add(pic);
 
                 //agregamos método en clicar sobre el flightplan
                 pic.DoubleClick +=
                     delegate (object s, EventArgs events)
                     {
-                        ClickFlight (avion);
+                        ClickFlight(avion);
                     };
 
                 plane[i] = pic;
@@ -140,7 +139,7 @@ namespace Flight_Forms
             //en hacer click sobre el plan de vuelo del panel de simulacion, mostramos un formulario con la info del mismo
             Informaciónvuelo info = new Informaciónvuelo();
 
-            info.SetFlight (flight);
+            info.SetFlight(flight);
             info.ShowDialog();
             info.Visible = true;
         }
@@ -168,7 +167,7 @@ namespace Flight_Forms
                 label.ForeColor = System.Drawing.Color.Black;
                 this.panel2.Controls.Add(label);
 
-                PictureBox p = (PictureBox) sender;
+                PictureBox p = (PictureBox)sender;
 
                 using (Graphics g = this.panel2.CreateGraphics())
                 {
@@ -176,21 +175,21 @@ namespace Flight_Forms
                     SolidBrush B = new SolidBrush(Color.MidnightBlue);
 
                     Point PuntoDestino =
-                        new Point((int) flight.GetFinalPosition().GetX() +
+                        new Point((int)flight.GetFinalPosition().GetX() +
                             p.Width / 2,
-                            (int) flight.GetFinalPosition().GetY() +
+                            (int)flight.GetFinalPosition().GetY() +
                             p.Height / 2);
                     Point PuntoOrigen =
-                        new Point((int) flight.GetInitialPosition().GetX() +
+                        new Point((int)flight.GetInitialPosition().GetX() +
                             p.Width / 2,
-                            (int) flight.GetInitialPosition().GetY() +
+                            (int)flight.GetInitialPosition().GetY() +
                             p.Height / 2);
 
                     g.DrawLines(P, new Point[] { PuntoOrigen, PuntoDestino });
                     g
                         .FillEllipse(B,
-                        (int) flight.GetFinalPosition().GetX() + 5,
-                        (int) flight.GetFinalPosition().GetY() + 5,
+                        (int)flight.GetFinalPosition().GetX() + 5,
+                        (int)flight.GetFinalPosition().GetY() + 5,
                         10,
                         10);
                 }
@@ -307,15 +306,19 @@ namespace Flight_Forms
         private bool distanciaInferior()
         {
             FlightPlanList current = state.GetCurrentList();
-            plane0 = current.GetFlightAtIndex(0).GetCurrentPosition();
-            plane1 = current.GetFlightAtIndex(1).GetCurrentPosition();
-            dist = current.GetDistanciaSeguridad();
-            if (plane0.Distancia(plane1) <= dist)
+            for (int i = 0; i < current.GetLen(); i++)
             {
-                MessageBox.Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
-                return true;
+                for (int j = i + 1; j < current.GetLen(); j++)
+                {
+                    if (current.GetFlightAtIndex(i).Distanciaentrevuelos(current.GetFlightAtIndex(i), current.GetFlightAtIndex(j)) <= dist)
+                    {
+                        MessageBox.Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
+                        return true;
+                    }
+                }
             }
             return false;
+
         }
 
         /// <summary>
@@ -373,5 +376,7 @@ namespace Flight_Forms
             this.state.Deshacer();
             UpdatePlanes();
         }
+
+
     }
 }
