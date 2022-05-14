@@ -61,6 +61,12 @@
     <Compile Include="Espacioaerio.Designer.cs">
       <DependentUpon>Espacioaerio.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenerarVuelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarVuelos.Designer.cs">
+      <DependentUpon>GenerarVuelos.cs</DependentUpon>
+    </Compile>
     <Compile Include="IniciarSesionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Espacioaerio.resx">
       <DependentUpon>Espacioaerio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarVuelos.resx">
+      <DependentUpon>GenerarVuelos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informaciónvuelo.resx">
       <DependentUpon>Informaciónvuelo.cs</DependentUpon>
@@ -187,6 +196,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\plane-4972663.png" />
     <None Include="Properties\avion.gif" />
     <None Include="Properties\earth.jpg" />
     <None Include="Properties\fondo.jpg" />

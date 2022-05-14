@@ -145,5 +145,37 @@ namespace Flight_Forms
                 MessageBox.Show("No hay datos para guardar");
             }
         }
+
+        private void PrincipalForm_Load_1(object sender, EventArgs e)
+        {
+        }
+
+        private void generarVariosPlanesToolStripMenuItem_Click(
+            object sender,
+            EventArgs e
+        )
+        {
+            GenerarVuelos generar = new GenerarVuelos();
+            this.Visible = false;
+            generar.ShowDialog();
+            generar.Visible = true;
+            int n = generar.N;
+            double[] rangoDistancia = generar.RangoDistancia;
+            double[] rangoVelocidad = generar.RangoVelocidad;
+            int reintentos = generar.Reintentos;
+            int[,] tamMapa = new int[2, 2];
+            tamMapa[0, 0] = 0;
+            tamMapa[0, 1] = 0;
+            tamMapa[1, 0] = 500;
+            tamMapa[1, 1] = 500;
+            this
+                .state
+                .GetCurrentList()
+                .GenerateN(n,
+                rangoDistancia,
+                rangoVelocidad,
+                tamMapa,
+                reintentos);
+        }
     }
 }
