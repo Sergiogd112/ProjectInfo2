@@ -19,9 +19,6 @@ namespace Flight_Forms
         }
 
         private FlightPlanList lista = new FlightPlanList();
-
-        int butt = 1;
-
         private void aceptarButton_Click(object sender, EventArgs e)
         {
             try
@@ -41,15 +38,6 @@ namespace Flight_Forms
                 {
                     //la lista todavía no se ha llenado con 2 planes de vuelo
                     this.lista.AddFlightPlan(flight);
-                }
-                if (this.lista.GetAmountFlights() == 2)
-                {
-                    Close();
-                    MessageBox
-                        .Show("Los 2 vuelos fueron guardados.",
-                        "Completado",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
                 }
             }
             catch (FormatException)
@@ -81,30 +69,9 @@ namespace Flight_Forms
         {
         }
 
-        private void rellenoButton_Click(object sender, EventArgs e)
+        private void Cerrar_Click(object sender, EventArgs e)
         {
-            if (this.butt == 1)
-            {
-                idBox.Text = "IB123";
-                velocidadBox.Text = "150";
-                xInBox.Text = "15";
-                yInBox.Text = "33";
-                xFinBox.Text = "201";
-                yFinBox.Text = "300";
-
-                this.butt = 0;
-            }
-            else
-            {
-                idBox.Text = "NW550";
-                velocidadBox.Text = "90";
-                xInBox.Text = "100";
-                yInBox.Text = "20";
-                xFinBox.Text = "350";
-                yFinBox.Text = "144";
-
-                this.butt = 1;
-            }
+            this.Close();
         }
     }
 }
