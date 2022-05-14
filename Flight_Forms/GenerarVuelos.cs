@@ -31,7 +31,8 @@ namespace Flight_Forms
             n = Convert.ToInt32(NumeroIn.Value);
             rangoDistancia[0] = Convert.ToDouble(DistMinIn.Value);
             rangoDistancia[1] = Convert.ToDouble(DistMaxIn.Value);
-            rangoVelocidad[0] = Convert.ToDouble(VelocidadMinIn);
+            rangoVelocidad[0] = Convert.ToDouble(VelocidadMinIn.Value);
+            rangoVelocidad[1] = Convert.ToDouble(VelocidadMaxIn.Value);
             reintentos = Convert.ToInt32(ReintentosIn.Value);
             if (rangoDistancia[0] >= rangoDistancia[1] || rangoVelocidad[0] >= rangoVelocidad[1])
             {

@@ -77,7 +77,7 @@
             this.NumeroIn.Size = new System.Drawing.Size(205, 22);
             this.NumeroIn.TabIndex = 2;
             this.NumeroIn.Value = new decimal(new int[] {
-            1,
+            5,
             0,
             0,
             0});
@@ -86,7 +86,7 @@
             // 
             this.ReintentosIn.Location = new System.Drawing.Point(89, 206);
             this.ReintentosIn.Maximum = new decimal(new int[] {
-            20,
+            2000,
             0,
             0,
             0});
@@ -99,7 +99,7 @@
             this.ReintentosIn.Size = new System.Drawing.Size(205, 22);
             this.ReintentosIn.TabIndex = 4;
             this.ReintentosIn.Value = new decimal(new int[] {
-            1,
+            100,
             0,
             0,
             0});
@@ -167,7 +167,7 @@
             this.VelocidadMinIn.Size = new System.Drawing.Size(205, 22);
             this.VelocidadMinIn.TabIndex = 6;
             this.VelocidadMinIn.Value = new decimal(new int[] {
-            1,
+            30,
             0,
             0,
             0});
@@ -235,7 +235,7 @@
             this.DistMinIn.Size = new System.Drawing.Size(205, 22);
             this.DistMinIn.TabIndex = 10;
             this.DistMinIn.Value = new decimal(new int[] {
-            1,
+            30,
             0,
             0,
             0});

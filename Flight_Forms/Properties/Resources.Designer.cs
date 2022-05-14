@@ -73,6 +73,16 @@ namespace Flight_Forms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap contour_7093447 {
+            get {
+                object obj = ResourceManager.GetObject("contour-7093447", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap earth {
             get {
                 object obj = ResourceManager.GetObject("earth", resourceCulture);

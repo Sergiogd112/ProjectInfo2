@@ -30,23 +30,14 @@ namespace Flight_Forms
         {
             try
             {
-                double distSeg = Convert.ToDouble(distanciaSeguridadBox.Text);
-                double ciclo = Convert.ToDouble(cicloBox.Text);
-                if (
-                    this.parametros.Length == 0 //this hace referencia al objeto
-                )
-                {
-                    this.parametros[this.parametros.Length] = distSeg;
-                    this.parametros[this.parametros.Length] = ciclo;
+                double distSeg = Convert.ToDouble(distanciaSeguridadBox.Value);
+                double ciclo = Convert.ToDouble(cicloBox.Value);
 
-                    MessageBox
-                        .Show("Los parámetros de simulación ya han sido introducidos.");
-                }
-                else
-                {
-                    MessageBox
-                        .Show("Los parámetros de simulación ya han sido introducidos.");
-                }
+                this.parametros[0] = distSeg;
+                this.parametros[1] = ciclo;
+
+                MessageBox
+                    .Show("Los parámetros de simulación ya han sido introducidos.");
 
                 Close();
                 this.Visible = false;
@@ -65,12 +56,6 @@ namespace Flight_Forms
         public double[] DameParametros()
         {
             return this.parametros;
-        }
-
-        private void rellenarButton_Click(object sender, EventArgs e)
-        {
-            cicloBox.Text = "2";
-            distanciaSeguridadBox.Text = "50";
         }
     }
 }

@@ -111,5 +111,14 @@ namespace Flight_Forms
             cambio.Visible = true;
             this.users = cambio.GetDB();
         }
+
+        private void passBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == (char)13)
+            {
+                this.iniciarButton_Click(sender, e);
+            }
+        }
     }
 }

@@ -196,6 +196,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\contour-7093447.jpg" />
     <None Include="Resources\plane-4972663.png" />
     <None Include="Properties\avion.gif" />
     <None Include="Properties\earth.jpg" />

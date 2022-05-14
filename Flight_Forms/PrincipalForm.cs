@@ -85,7 +85,7 @@ namespace Flight_Forms
             {
                 FlightPlanList lista = this.state.GetCurrentList();
 
-                lista.AddFromFile (defaultpath);
+                lista.AddFromFile(defaultpath);
             }
         }
 
@@ -159,6 +159,7 @@ namespace Flight_Forms
             this.Visible = false;
             generar.ShowDialog();
             generar.Visible = true;
+            this.Visible = true;
             int n = generar.N;
             double[] rangoDistancia = generar.RangoDistancia;
             double[] rangoVelocidad = generar.RangoVelocidad;
