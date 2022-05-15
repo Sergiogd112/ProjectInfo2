@@ -94,7 +94,8 @@ namespace FlightLib
         public void Dump(string nombre)
         {
             StreamWriter W = new StreamWriter(nombre);
-            W.WriteLine(this.DumpString());
+            W.Write(this.DumpString());
+            W.Close();
         }
 
         public static State Load(string file)

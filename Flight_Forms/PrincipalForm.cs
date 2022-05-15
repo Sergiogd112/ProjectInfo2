@@ -120,7 +120,7 @@ namespace Flight_Forms
             if (cargar.ShowDialog() == DialogResult.OK)
             {
                 int error = 0;
-                this.state.GetCurrentList().AddFromFile(cargar.FileName);
+                this.state = State.Load(cargar.FileName);
                 if (error == -1)
                     MessageBox.Show("No se encontró el fichero de los vuelos");
                 else if (error == -2)
