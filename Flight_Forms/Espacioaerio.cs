@@ -66,13 +66,14 @@ namespace Flight_Forms
                 plane[i].Image = planeImg.Image;
                 plane[i].BackgroundImage = planeImg.BackgroundImage;
                 plane[i].BackgroundImageLayout = planeImg.BackgroundImageLayout;
+                plane[i].Name = avion.GetId();
                 this.panel2.Controls.Add(plane[i]);
-
+                //showRecorrido(avion, true, sender);
                 //agregamos método en clicar sobre el flightplan
                 plane[i].DoubleClick +=
                     delegate (object s, EventArgs events)
                     {
-                        ClickFlight(avion);
+                        ClickFlight(s);
                     };
 
 
@@ -80,13 +81,13 @@ namespace Flight_Forms
                     delegate (object s, EventArgs events)
                     {
                         //si estamos sobre el avión:
-                        showRecorrido(avion, true, s, i);
+                        showRecorrido(true, s);
                     };
                 plane[i].MouseLeave +=
                     delegate (object s, EventArgs events)
                     {
                         //si estamos sobre el avión:
-                        showRecorrido(avion, false, s, i);
+                        showRecorrido(false, s);
                     };
             }
         }
@@ -134,8 +135,10 @@ namespace Flight_Forms
         /// Al pulsar sobre un avion abre un form con la informacion del fligthplan
         /// </summary>
         /// <param name="flight">objeto de tipo FligthPlan</param>
-        private void ClickFlight(FlightPlan flight)
+        private void ClickFlight(object sender)
         {
+            PictureBox p = (PictureBox)sender;
+            FlightPlan flight = state.GetCurrentList().GetFligthWithID(p.Name);
             //en hacer click sobre el plan de vuelo del panel de simulacion, mostramos un formulario con la info del mismo
             Informaciónvuelo info = new Informaciónvuelo(flight);
 
@@ -149,13 +152,14 @@ namespace Flight_Forms
         /// <param name="flight"></param>
         /// <param name="isEnter"></param>
         /// <param name="sender"></param>
-        void showRecorrido(FlightPlan flight, bool isEnter, object sender, int idx) //Cuando el cursor pasa sobre un avión, se observa una línea que indica la trayectoria
+        void showRecorrido(bool isEnter, object sender) //Cuando el cursor pasa sobre un avión, se observa una línea que indica la trayectoria
         {
             //el booleano isEnter nos indica si estamos posicionados sobre un picturebox
             if (isEnter)
             {
                 Label label = new Label();
-                flight = this.state.GetCurrentList().GetFlightAtIndex(idx);
+                PictureBox p = (PictureBox)sender;
+                FlightPlan flight = state.GetCurrentList().GetFligthWithID(p.Name);
                 label.Text = flight.GetId();
                 label.Location =
                     new Point(Convert
@@ -167,7 +171,6 @@ namespace Flight_Forms
                 label.ForeColor = System.Drawing.Color.Black;
                 this.panel2.Controls.Add(label);
 
-                PictureBox p = (PictureBox)sender;
 
                 using (Graphics g = this.panel2.CreateGraphics())
                 {

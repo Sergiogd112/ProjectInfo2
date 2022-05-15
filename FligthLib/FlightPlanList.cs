@@ -74,7 +74,6 @@ namespace FlightLib
             return confd;
         }
 
-        //SETTERS
         /// <summary>
         /// Leer el FligthPlan en un indice
         /// </summary>
@@ -85,6 +84,17 @@ namespace FlightLib
             return flights[index];
         }
 
+        public FlightPlan GetFligthWithID(string id)
+        {
+            for (int i = 0; i < flights.Count; i++)
+            {
+                if (flights[i].GetId().Equals(id))
+                {
+                    return flights[i];
+                }
+            }
+            return null;
+        }
         // Generate
         public void GenerateN(
             int n,
