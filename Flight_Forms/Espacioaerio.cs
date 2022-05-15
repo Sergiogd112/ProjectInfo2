@@ -261,7 +261,7 @@ namespace Flight_Forms
                 //cuando picamos al botón automático, la funcion debe iniciar el reloj
                 //lo que tiene que hacer debe hacerlo periódicamente
                 //definimos el intervalo de tiempo en el que va a trabajar
-                reloj.Interval = 100; //unidades en ms
+                reloj.Interval = Convert.ToInt32(this.ciclo); //unidades en ms
 
                 //inicio
                 reloj.Start();
