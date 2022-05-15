@@ -40,6 +40,7 @@ namespace Flight_Forms
 
             InitializeComponent();
         }
+        
 
         /// <summary>
         /// Prepara el panel para la simulación
@@ -56,10 +57,8 @@ namespace Flight_Forms
             {
                 avion = current.GetFlightAtIndex(i);
                 plane[i] = new PictureBox();
-                plane[i].Location =
-                    new Point(Convert
-                            .ToInt32(avion.GetInitialPosition().GetX()),
-                        Convert.ToInt32(avion.GetInitialPosition().GetY()));
+                plane[i].Location = new Point((int)avion.GetCurrentPosition().GetX() - 15, (int)avion.GetCurrentPosition().GetY() - 15);
+                    
                 plane[i].Size = planeImg.Size;
                 plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
                 plane[i].BackColor = planeImg.BackColor;
@@ -103,16 +102,10 @@ namespace Flight_Forms
             )
             {
                 plane[i].Location =
-                    new Point(Convert
-                            .ToInt32(current
-                                .GetFlightAtIndex(i)
-                                .GetCurrentPosition()
-                                .GetX()),
-                        Convert
-                            .ToInt32(current
-                                .GetFlightAtIndex(i)
-                                .GetCurrentPosition()
-                                .GetY()));
+                    new Point((int)current
+                                .GetFlightAtIndex(i).GetCurrentPosition().GetX() - 15,
+                        (int)current
+                                .GetFlightAtIndex(i).GetCurrentPosition().GetY() - 15);
                 Position position =
                     current.GetFlightAtIndex(i).GetCurrentPosition();
                 Label label;
@@ -248,9 +241,7 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void manualButton_Click(object sender, EventArgs e)
         {
-            this.state.Move(Convert.ToInt32(ciclo)); //he mogut la posició dels avions però no del PictureBox
-            FlightPlanList current = state.GetCurrentList();
-
+            this.state.Move(Convert.ToInt32(ciclo)); //he mogut la posició dels avions però no del PictureBox          
             this.UpdatePlanes();
             if (distanciaInferior()) this.Close();
         }
@@ -264,12 +255,13 @@ namespace Flight_Forms
         {
             //queremos que en picar automatico se empiecen a mover los vuelos pero que el propio botón cambie su funcionalidad a 'parar'
             //si muestra automatico: butt=0; si se pica automatico (butt=1)
+            
             if (butt == 1)
             {
                 //cuando picamos al botón automático, la funcion debe iniciar el reloj
                 //lo que tiene que hacer debe hacerlo periódicamente
                 //definimos el intervalo de tiempo en el que va a trabajar
-                reloj.Interval = 100; //unidades en ms
+                reloj.Interval = Convert.ToInt32(this.ciclo); //unidades en ms
 
                 //inicio
                 reloj.Start();
@@ -278,7 +270,7 @@ namespace Flight_Forms
                 //mostrar 'parar'
                 autoButton.Text = "Parar";
                 autoButton.BackColor = Color.Red;
-                autoButton.ForeColor = Color.Black;
+                autoButton.ForeColor = Color.Black;                            
                 butt = 0;
             }
             else if (butt == 0)
@@ -290,7 +282,7 @@ namespace Flight_Forms
                 butt = 1;
                 autoButton.Text = "Automático";
                 autoButton.BackColor = Color.Blue;
-                autoButton.ForeColor = Color.White;
+                autoButton.ForeColor = Color.White;                                            
                 reloj.Stop();
             }
         }
@@ -304,8 +296,7 @@ namespace Flight_Forms
         {
             //qué queremos que suceda cada intervalo de tiempo?
             //mover los puntos y la localización de los picturebox
-            this.state.Move(Convert.ToInt32(this.ciclo));
-            FlightPlanList current = state.GetCurrentList();
+            this.state.Move(Convert.ToInt32(this.ciclo));            
             this.UpdatePlanes();
             if (distanciaInferior()) this.Close();
         }
