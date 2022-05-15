@@ -74,7 +74,7 @@
             0,
             0});
             this.NumeroIn.Name = "NumeroIn";
-            this.NumeroIn.Size = new System.Drawing.Size(205, 22);
+            this.NumeroIn.Size = new System.Drawing.Size(205, 20);
             this.NumeroIn.TabIndex = 2;
             this.NumeroIn.Value = new decimal(new int[] {
             5,
@@ -96,7 +96,7 @@
             0,
             0});
             this.ReintentosIn.Name = "ReintentosIn";
-            this.ReintentosIn.Size = new System.Drawing.Size(205, 22);
+            this.ReintentosIn.Size = new System.Drawing.Size(205, 20);
             this.ReintentosIn.TabIndex = 4;
             this.ReintentosIn.Value = new decimal(new int[] {
             100,
@@ -130,10 +130,10 @@
             0,
             0});
             this.VelocidadMaxIn.Name = "VelocidadMaxIn";
-            this.VelocidadMaxIn.Size = new System.Drawing.Size(205, 22);
+            this.VelocidadMaxIn.Size = new System.Drawing.Size(205, 20);
             this.VelocidadMaxIn.TabIndex = 8;
             this.VelocidadMaxIn.Value = new decimal(new int[] {
-            100,
+            150,
             0,
             0,
             0});
@@ -164,10 +164,10 @@
             0,
             0});
             this.VelocidadMinIn.Name = "VelocidadMinIn";
-            this.VelocidadMinIn.Size = new System.Drawing.Size(205, 22);
+            this.VelocidadMinIn.Size = new System.Drawing.Size(205, 20);
             this.VelocidadMinIn.TabIndex = 6;
             this.VelocidadMinIn.Value = new decimal(new int[] {
-            30,
+            50,
             0,
             0,
             0});
@@ -198,10 +198,10 @@
             0,
             0});
             this.DistMaxIn.Name = "DistMaxIn";
-            this.DistMaxIn.Size = new System.Drawing.Size(205, 22);
+            this.DistMaxIn.Size = new System.Drawing.Size(205, 20);
             this.DistMaxIn.TabIndex = 12;
             this.DistMaxIn.Value = new decimal(new int[] {
-            100,
+            350,
             0,
             0,
             0});
@@ -232,10 +232,10 @@
             0,
             0});
             this.DistMinIn.Name = "DistMinIn";
-            this.DistMinIn.Size = new System.Drawing.Size(205, 22);
+            this.DistMinIn.Size = new System.Drawing.Size(205, 20);
             this.DistMinIn.TabIndex = 10;
             this.DistMinIn.Value = new decimal(new int[] {
-            30,
+            200,
             0,
             0,
             0});
