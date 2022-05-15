@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.oPCIONESToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.introducirDatosDeVueloToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,13 +62,13 @@
             // 
             this.oPCIONESToolStripMenuItem1.BackColor = System.Drawing.Color.Thistle;
             this.oPCIONESToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cargarFicheroToolStripMenuItem,
+            this.generarVariosPlanesToolStripMenuItem,
             this.introducirDatosDeVueloToolStripMenuItem1,
+            this.listaDeVuelosToolStripMenuItem,
             this.introducirParametrosToolStripMenuItem,
             this.iniciarSimulacionToolStripMenuItem,
-            this.listaDeVuelosToolStripMenuItem,
-            this.cargarFicheroToolStripMenuItem,
-            this.guardarFicheroToolStripMenuItem,
-            this.generarVariosPlanesToolStripMenuItem});
+            this.guardarFicheroToolStripMenuItem});
             this.oPCIONESToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oPCIONESToolStripMenuItem1.Name = "oPCIONESToolStripMenuItem1";
             this.oPCIONESToolStripMenuItem1.Size = new System.Drawing.Size(96, 24);
@@ -160,12 +161,12 @@
             this.Instructions.AutoSize = true;
             this.Instructions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.Instructions.ForeColor = System.Drawing.Color.DimGray;
-            this.Instructions.Location = new System.Drawing.Point(795, 301);
-            this.Instructions.MaximumSize = new System.Drawing.Size(200, 0);
+            this.Instructions.Location = new System.Drawing.Point(643, 195);
+            this.Instructions.MaximumSize = new System.Drawing.Size(400, 0);
             this.Instructions.Name = "Instructions";
-            this.Instructions.Size = new System.Drawing.Size(191, 32);
+            this.Instructions.Size = new System.Drawing.Size(384, 272);
             this.Instructions.TabIndex = 1;
-            this.Instructions.Text = "Primero debe preparar los valores de los planes de vuelo";
+            this.Instructions.Text = resources.GetString("Instructions.Text");
             // 
             // PrincipalForm
             // 
