@@ -57,7 +57,10 @@ namespace Flight_Forms
 
             this.state.SetCurrent(form1.DameLista());
             form1.Visible = false;
+            
         }
+        
+        
 
         /*
         private void ClickInformacionVuelo(object sender, EventArgs e) 

@@ -19,6 +19,7 @@ namespace Flight_Forms
         }
 
         private FlightPlanList lista = new FlightPlanList();
+        
         private void aceptarButton_Click(object sender, EventArgs e)
         {
             try
@@ -39,6 +40,8 @@ namespace Flight_Forms
                     //la lista todavía no se ha llenado con 2 planes de vuelo
                     this.lista.AddFlightPlan(flight);
                 }
+                
+
             }
             catch (FormatException)
             {
