@@ -44,7 +44,7 @@
             this.aceptarButton.FlatAppearance.BorderSize = 3;
             this.aceptarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aceptarButton.Location = new System.Drawing.Point(337, 210);
-            this.aceptarButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.aceptarButton.Margin = new System.Windows.Forms.Padding(2);
             this.aceptarButton.Name = "aceptarButton";
             this.aceptarButton.Size = new System.Drawing.Size(103, 33);
             this.aceptarButton.TabIndex = 9;
@@ -82,16 +82,21 @@
             // 
             this.distanciaSeguridadBox.DecimalPlaces = 1;
             this.distanciaSeguridadBox.Location = new System.Drawing.Point(337, 54);
+            this.distanciaSeguridadBox.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.distanciaSeguridadBox.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.distanciaSeguridadBox.Name = "distanciaSeguridadBox";
-            this.distanciaSeguridadBox.Size = new System.Drawing.Size(120, 22);
+            this.distanciaSeguridadBox.Size = new System.Drawing.Size(120, 20);
             this.distanciaSeguridadBox.TabIndex = 22;
             this.distanciaSeguridadBox.Value = new decimal(new int[] {
-            20,
+            200,
             0,
             0,
             0});
@@ -105,7 +110,7 @@
             0,
             0});
             this.cicloBox.Name = "cicloBox";
-            this.cicloBox.Size = new System.Drawing.Size(120, 22);
+            this.cicloBox.Size = new System.Drawing.Size(120, 20);
             this.cicloBox.TabIndex = 23;
             this.cicloBox.Value = new decimal(new int[] {
             2,
@@ -125,7 +130,7 @@
             this.Controls.Add(this.aceptarButton);
             this.Controls.Add(this.cicloLabel);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "IntroducirParametrosForm";
             this.Text = "Introducir Parámetros de Simulación";
             this.Load += new System.EventHandler(this.IntroducirParametrosForm_Load);

@@ -191,10 +191,18 @@ namespace Flight_Forms
                     g.DrawLines(P, new Point[] { PuntoOrigen, PuntoDestino });
                     g
                         .FillEllipse(B,
-                        (int)flight.GetFinalPosition().GetX() + 5,
-                        (int)flight.GetFinalPosition().GetY() + 5,
+                        (int)flight.GetFinalPosition().GetX() +
+                            p.Width / 2 - 5,
+                        (int)flight.GetFinalPosition().GetY() +
+                            p.Height / 2 - 5,
                         10,
                         10);
+                    SolidBrush dist = new SolidBrush(Color.FromArgb(200, 200, 20, 20));
+                    int d = (int)state.GetCurrentList().GetDistanciaSeguridad();
+                    g.FillEllipse(dist, (int)flight.GetInitialPosition().GetX() +
+                            p.Width / 2 - d / 2,
+                            (int)flight.GetInitialPosition().GetY() +
+                            p.Height / 2 - d / 2, d, d);
                 }
             }
             else
