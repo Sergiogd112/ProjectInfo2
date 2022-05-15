@@ -354,3 +354,7 @@ MigrationBackup/
 .vs/ProyectoInfo2/DesignTimeBuild/.dtbcache.v2
 .vs/ProyectoInfo2/v17/.suo
 .vs/ProyectoInfo2/v17/.suo
+
+# Keep this files
+!*/[Bb]in/[Dd]ebug/project.db
+!*/[Bb]in/[Dd]ebug/names.txt
