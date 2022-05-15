@@ -358,3 +358,15 @@ MigrationBackup/
 # Keep this files
 !*/[Bb]in/[Dd]ebug/project.db
 !*/[Bb]in/[Dd]ebug/names.txt
+/Flight_Forms/bin/Debug/GestionClientes.dll
+/Flight_Forms/bin/Debug/Flight_Forms.exe.config
+/Flight_Forms/bin/Debug/Flight_Forms.exe
+/Flight_Forms/bin/Debug/FlightLib.dll
+/Flight_Forms/bin/Debug/System.Data.SQLite.xml
+/Flight_Forms/bin/Debug/System.Data.SQLite.dll
+/FligthLib/bin/Debug/netstandard2.0/FlightLib.dll
+/FligthLib/bin/Debug/netstandard2.0/FlightLib.deps.json
+/GestionClientes/bin/Debug/System.Data.SQLite.xml
+/GestionClientes/bin/Debug/System.Data.SQLite.dll
+/GestionClientes/bin/Debug/GestionClientes.dll
+/GestionClientes/bin/Debug/FlightLib.dll
