@@ -55,38 +55,38 @@ namespace Flight_Forms
             for (int i = 0; i < current.GetLen(); i++)
             {
                 avion = current.GetFlightAtIndex(i);
-                PictureBox pic = new PictureBox();
-                pic.Location =
+                plane[i] = new PictureBox();
+                plane[i].Location =
                     new Point(Convert
                             .ToInt32(avion.GetInitialPosition().GetX()),
                         Convert.ToInt32(avion.GetInitialPosition().GetY()));
-                pic.Size = planeImg.Size;
-                pic.SizeMode = PictureBoxSizeMode.StretchImage;
-                pic.BackColor = planeImg.BackColor;
-                pic.Image = planeImg.Image;
-                pic.BackgroundImage = planeImg.BackgroundImage;
-                pic.BackgroundImageLayout = planeImg.BackgroundImageLayout;
-                this.panel2.Controls.Add(pic);
+                plane[i].Size = planeImg.Size;
+                plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                plane[i].BackColor = planeImg.BackColor;
+                plane[i].Image = planeImg.Image;
+                plane[i].BackgroundImage = planeImg.BackgroundImage;
+                plane[i].BackgroundImageLayout = planeImg.BackgroundImageLayout;
+                this.panel2.Controls.Add(plane[i]);
 
                 //agregamos método en clicar sobre el flightplan
-                pic.DoubleClick +=
+                plane[i].DoubleClick +=
                     delegate (object s, EventArgs events)
                     {
                         ClickFlight(avion);
                     };
 
-                plane[i] = pic;
-                pic.MouseEnter +=
+
+                plane[i].MouseEnter +=
                     delegate (object s, EventArgs events)
                     {
                         //si estamos sobre el avión:
-                        showRecorrido(avion, true, s);
+                        showRecorrido(avion, true, s, i);
                     };
-                pic.MouseLeave +=
+                plane[i].MouseLeave +=
                     delegate (object s, EventArgs events)
                     {
                         //si estamos sobre el avión:
-                        showRecorrido(avion, false, s);
+                        showRecorrido(avion, false, s, i);
                     };
             }
         }
@@ -137,9 +137,8 @@ namespace Flight_Forms
         private void ClickFlight(FlightPlan flight)
         {
             //en hacer click sobre el plan de vuelo del panel de simulacion, mostramos un formulario con la info del mismo
-            Informaciónvuelo info = new Informaciónvuelo();
+            Informaciónvuelo info = new Informaciónvuelo(flight);
 
-            info.SetFlight(flight);
             info.ShowDialog();
             info.Visible = true;
         }
@@ -150,12 +149,13 @@ namespace Flight_Forms
         /// <param name="flight"></param>
         /// <param name="isEnter"></param>
         /// <param name="sender"></param>
-        void showRecorrido(FlightPlan flight, bool isEnter, object sender) //Cuando el cursor pasa sobre un avión, se observa una línea que indica la trayectoria
+        void showRecorrido(FlightPlan flight, bool isEnter, object sender, int idx) //Cuando el cursor pasa sobre un avión, se observa una línea que indica la trayectoria
         {
             //el booleano isEnter nos indica si estamos posicionados sobre un picturebox
             if (isEnter)
             {
                 Label label = new Label();
+                flight = this.state.GetCurrentList().GetFlightAtIndex(idx);
                 label.Text = flight.GetId();
                 label.Location =
                     new Point(Convert
@@ -329,8 +329,11 @@ namespace Flight_Forms
         private void button1_Click(object sender, EventArgs e)
         {
             FlightPlanList current = state.GetCurrentList();
+            Console.WriteLine("Comprovando Conflictos");
             current.CheckConflicts(true); // Comprueva si hay conflictos
+            current.WriteAll();
             List<List<double>> conflicts = current.GetConflictd(); // Devuleve conflictos
+            Console.WriteLine("Analyzing results");
             for (
                 int i = 0;
                 i < current.GetLen();

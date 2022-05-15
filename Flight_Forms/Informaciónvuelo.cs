@@ -15,8 +15,9 @@ namespace Flight_Forms
     {
         FlightPlan vuelo;
 
-        public Informaciónvuelo()
+        public Informaciónvuelo(FlightPlan vuelo)
         {
+            this.vuelo = vuelo;
             InitializeComponent();
         }
 
