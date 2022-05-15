@@ -339,33 +339,46 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            FlightPlanList current = state.GetCurrentList();
-            Console.WriteLine("Comprovando Conflictos");
-            current.CheckConflicts(true); // Comprueva si hay conflictos
-            current.WriteAll();
-            List<List<double>> conflicts = current.GetConflictd(); // Devuleve conflictos
-            Console.WriteLine("Analyzing results");
-            for (
-                int i = 0;
-                i < current.GetLen();
-                i++ // Miro el primer avió i amb el següent for el comprovaré amb tots els avions
-            )
+            if (button1.Text != "Calculand")
             {
+
+
+                button1.Text = "Calculando";
+                button1.BackColor = Color.Red;
+                FlightPlanList current = state.GetCurrentList();
+                Console.WriteLine("Comprovando Conflictos");
+                current.CheckConflicts(true); // Comprueva si hay conflictos
+                current.WriteAll();
+                List<List<double>> conflicts = current.GetConflictd(); // Devuleve conflictos
+                Console.WriteLine("Analyzing results");
                 for (
-                    int j = i + 1;
-                    j < current.GetLen();
-                    j++ //Tots els altres avions
+                    int i = 0;
+                    i < current.GetLen();
+                    i++ // Miro el primer avió i amb el següent for el comprovaré amb tots els avions
                 )
                 {
-                    if (conflicts[i][j] <= this.dist && conflicts[i][j] != -1)
+                    for (
+                        int j = i + 1;
+                        j < current.GetLen();
+                        j++ //Tots els altres avions
+                    )
                     {
-                        MessageBox
-                            .Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
-                        return;
+                        if (conflicts[i][j] <= this.dist && conflicts[i][j] != -1)
+                        {
+                            MessageBox
+                                .Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
+                            button1.BackColor = Color.LightSteelBlue;
+                            button1.Text = "Comprovar";
+
+                            return;
+                        }
                     }
                 }
+                MessageBox.Show("LOS AVIONES NO VAN A COLISIONAR");
+                button1.BackColor = Color.LightSteelBlue;
+                button1.Text = "Comprovar";
+
             }
-            MessageBox.Show("LOS AVIONES NO VAN A COLISIONAR");
         }
 
         /// <summary>
