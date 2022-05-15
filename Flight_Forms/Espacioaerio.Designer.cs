@@ -47,6 +47,7 @@
             this.retroButt = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.planeImg = new System.Windows.Forms.PictureBox();
+            this.ResolverConf = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.planeImg)).BeginInit();
             this.SuspendLayout();
@@ -255,12 +256,27 @@
             this.planeImg.TabStop = false;
             this.planeImg.Visible = false;
             // 
+            // ResolverConf
+            // 
+            this.ResolverConf.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ResolverConf.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResolverConf.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ResolverConf.Location = new System.Drawing.Point(103, 386);
+            this.ResolverConf.Margin = new System.Windows.Forms.Padding(2);
+            this.ResolverConf.Name = "ResolverConf";
+            this.ResolverConf.Size = new System.Drawing.Size(116, 38);
+            this.ResolverConf.TabIndex = 19;
+            this.ResolverConf.Text = "Resolver";
+            this.ResolverConf.UseVisualStyleBackColor = false;
+            this.ResolverConf.Click += new System.EventHandler(this.ResolverConf_Click);
+            // 
             // Espacioaerio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1138, 773);
+            this.Controls.Add(this.ResolverConf);
             this.Controls.Add(this.retroButt);
             this.Controls.Add(this.reiniciarButton);
             this.Controls.Add(this.label9);
@@ -326,5 +342,6 @@
 
         private System.Windows.Forms.Button retroButt;
         private System.Windows.Forms.PictureBox planeImg;
+        private System.Windows.Forms.Button ResolverConf;
     }
 }

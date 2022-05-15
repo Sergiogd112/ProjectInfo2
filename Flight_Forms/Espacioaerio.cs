@@ -40,7 +40,7 @@ namespace Flight_Forms
 
             InitializeComponent();
         }
-        
+
 
         /// <summary>
         /// Prepara el panel para la simulación
@@ -58,7 +58,7 @@ namespace Flight_Forms
                 avion = current.GetFlightAtIndex(i);
                 plane[i] = new PictureBox();
                 plane[i].Location = new Point((int)avion.GetCurrentPosition().GetX() - 15, (int)avion.GetCurrentPosition().GetY() - 15);
-                    
+
                 plane[i].Size = planeImg.Size;
                 plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
                 plane[i].BackColor = planeImg.BackColor;
@@ -241,9 +241,16 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void manualButton_Click(object sender, EventArgs e)
         {
-            this.state.Move(Convert.ToInt32(ciclo)); //he mogut la posició dels avions però no del PictureBox          
-            this.UpdatePlanes();
-            if (distanciaInferior()) this.Close();
+            if (manualButton.Text != "Calculando")
+            {
+                manualButton.Text = "Calculando";
+                manualButton.BackColor = Color.Red;
+                this.state.Move(Convert.ToInt32(ciclo)); //he mogut la posició dels avions però no del PictureBox          
+                this.UpdatePlanes();
+                if (distanciaInferior()) this.Close();
+                BackColor = Color.LightSteelBlue;
+                button1.Text = "Manual";
+            }
         }
 
         /// <summary>
@@ -255,7 +262,7 @@ namespace Flight_Forms
         {
             //queremos que en picar automatico se empiecen a mover los vuelos pero que el propio botón cambie su funcionalidad a 'parar'
             //si muestra automatico: butt=0; si se pica automatico (butt=1)
-            
+
             if (butt == 1)
             {
                 //cuando picamos al botón automático, la funcion debe iniciar el reloj
@@ -270,7 +277,7 @@ namespace Flight_Forms
                 //mostrar 'parar'
                 autoButton.Text = "Parar";
                 autoButton.BackColor = Color.Red;
-                autoButton.ForeColor = Color.Black;                            
+                autoButton.ForeColor = Color.Black;
                 butt = 0;
             }
             else if (butt == 0)
@@ -282,7 +289,7 @@ namespace Flight_Forms
                 butt = 1;
                 autoButton.Text = "Automático";
                 autoButton.BackColor = Color.Blue;
-                autoButton.ForeColor = Color.White;                                            
+                autoButton.ForeColor = Color.White;
                 reloj.Stop();
             }
         }
@@ -296,7 +303,7 @@ namespace Flight_Forms
         {
             //qué queremos que suceda cada intervalo de tiempo?
             //mover los puntos y la localización de los picturebox
-            this.state.Move(Convert.ToInt32(this.ciclo));            
+            this.state.Move(Convert.ToInt32(this.ciclo));
             this.UpdatePlanes();
             if (distanciaInferior()) this.Close();
         }
@@ -330,7 +337,7 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            if (button1.Text != "Calculand")
+            if (button1.Text != "Calculando")
             {
 
 
@@ -354,6 +361,7 @@ namespace Flight_Forms
                         j++ //Tots els altres avions
                     )
                     {
+                        Console.WriteLine("{0}, {1}", i, j);
                         if (conflicts[i][j] <= this.dist && conflicts[i][j] != -1)
                         {
                             MessageBox
@@ -365,6 +373,7 @@ namespace Flight_Forms
                         }
                     }
                 }
+                button1.Text = "Finalizado";
                 MessageBox.Show("LOS AVIONES NO VAN A COLISIONAR");
                 button1.BackColor = Color.LightSteelBlue;
                 button1.Text = "Comprovar";
@@ -395,6 +404,21 @@ namespace Flight_Forms
             UpdatePlanes();
         }
 
+        private void ResolverConf_Click(object sender, EventArgs e)
+        {
+            if (ResolverConf.Text == "Resolver")
+            {
+                ResolverConf.Text = "Processando";
+                ResolverConf.BackColor = Color.Red;
+                Console.WriteLine("Resolviendo");
+                this.state.GetCurrentList().SolveConflicts();
+                Console.WriteLine("hecho");
+                ResolverConf.Text = "Finalizado";
+                MessageBox.Show("Resuelto");
+                ResolverConf.Text = "Resolver";
+                ResolverConf.BackColor = Color.LightSteelBlue;
+            }
 
+        }
     }
 }

@@ -433,7 +433,7 @@ namespace FlightLib
             {
                 for (int j = i; j < this.flights.Count; j++)
                 {
-                    if (this.conflicts[i][j] || checkAll)
+                    if (this.interactions[i][j] || checkAll)
                     {
                         data =
                             this
@@ -461,6 +461,7 @@ namespace FlightLib
         }
 
         // METHODS
+
         /// <summary>
         /// Mueve todos los aviones n moves
         /// </summary>
@@ -508,6 +509,33 @@ namespace FlightLib
             return copy;
         }
 
+
+        public void SolveConflicts()
+        {
+            bool conf = true;
+            int retry = 0;
+            for (int i = 1; i < this.flights.Count; i++)
+            {
+                conf = true;
+                Console.WriteLine(flights[i].GetId());
+                while (conf)
+                {
+                    for (int j = 0; j < i; j++)
+                    {
+                        if (interactions[i][j] && flights[i].Conflicto(flights[j], distanciaSeguridad)[0] <= distanciaSeguridad * distanciaSeguridad)
+                        {
+                            Console.WriteLine("{0} vel: {1}", flights[i].GetId(), flights[i].GetVelocidad());
+                            flights[i].SetVelocidad(flights[i].GetVelocidad() - 1);
+
+                        }
+                        else
+                        {
+                            conf = false;
+                        }
+                    }
+                }
+            }
+        }
         // CONSOLE
         /// <summary>
         /// Escribe todos los FligthPlans por consola
