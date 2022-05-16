@@ -192,9 +192,9 @@ namespace Flight_Forms
                         10);
                     SolidBrush dist = new SolidBrush(Color.FromArgb(200, 200, 20, 20));
                     int d = (int)state.GetCurrentList().GetDistanciaSeguridad();
-                    g.FillEllipse(dist, (int)flight.GetInitialPosition().GetX() +
+                    g.FillEllipse(dist, (int)flight.GetCurrentPosition().GetX() +
                             p.Width / 2 - d / 2,
-                            (int)flight.GetInitialPosition().GetY() +
+                            (int)flight.GetCurrentPosition().GetY() +
                             p.Height / 2 - d / 2, d, d);
                 }
             }
@@ -250,7 +250,6 @@ namespace Flight_Forms
                 if (distanciaInferior())
                 {
                     Console.WriteLine("distancia inferior");
-                    this.Close();
                 }
                 manualButton.BackColor = Color.LightSteelBlue;
                 manualButton.Text = "Manual";
