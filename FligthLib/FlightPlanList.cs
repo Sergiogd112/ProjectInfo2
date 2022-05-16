@@ -431,7 +431,7 @@ namespace FlightLib
             double[] data = new double[2];
             for (int i = 0; i < this.flights.Count; i++)
             {
-                for (int j = i; j < this.flights.Count; j++)
+                for (int j = i + 1; j < this.flights.Count; j++)
                 {
                     if (this.interactions[i][j] || checkAll)
                     {

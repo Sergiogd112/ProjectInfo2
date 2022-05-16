@@ -352,6 +352,7 @@ namespace Flight_Forms
                 current.WriteAll();
                 List<List<double>> conflicts = current.GetConflictd(); // Devuleve conflictos
                 Console.WriteLine("Analyzing results");
+                dist = this.state.GetCurrentList().GetDistanciaSeguridad();
                 for (
                     int i = 0;
                     i < current.GetLen();
@@ -365,7 +366,7 @@ namespace Flight_Forms
                     )
                     {
                         Console.WriteLine("{0}, {1}", i, j);
-                        if (conflicts[i][j] <= this.dist && conflicts[i][j] != -1)
+                        if (conflicts[i][j] <= dist * dist && conflicts[i][j] != -1)
                         {
                             label9.Text = "WARNING!!! LOS AVIONES VAN A COLISIONAR";
                             button1.BackColor = Color.LightSteelBlue;
@@ -414,9 +415,12 @@ namespace Flight_Forms
                 ResolverConf.BackColor = Color.Red;
                 Console.WriteLine("Resolviendo");
                 this.state.GetCurrentList().SolveConflicts();
+                this.state.GetCurrentList().CheckConflicts();
                 Console.WriteLine("hecho");
+                this.state.GetCurrentList().WriteConflicts();
+                button1_Click(sender, new EventArgs());
                 ResolverConf.Text = "Finalizado";
-                resLab.Text="Resuelto";
+                resLab.Text = "Resuelto";
                 ResolverConf.Text = "Resolver";
                 ResolverConf.BackColor = Color.LightSteelBlue;
             }
