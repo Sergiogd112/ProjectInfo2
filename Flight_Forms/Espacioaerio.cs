@@ -192,9 +192,9 @@ namespace Flight_Forms
                         10);
                     SolidBrush dist = new SolidBrush(Color.FromArgb(200, 200, 20, 20));
                     int d = (int)state.GetCurrentList().GetDistanciaSeguridad();
-                    g.FillEllipse(dist, (int)flight.GetInitialPosition().GetX() +
+                    g.FillEllipse(dist, (int)flight.GetCurrentPosition().GetX() +
                             p.Width / 2 - d / 2,
-                            (int)flight.GetInitialPosition().GetY() +
+                            (int)flight.GetCurrentPosition().GetY() +
                             p.Height / 2 - d / 2, d, d);
                 }
             }
@@ -250,7 +250,6 @@ namespace Flight_Forms
                 if (distanciaInferior())
                 {
                     Console.WriteLine("distancia inferior");
-                    this.Close();
                 }
                 manualButton.BackColor = Color.LightSteelBlue;
                 manualButton.Text = "Manual";
@@ -353,6 +352,7 @@ namespace Flight_Forms
                 current.WriteAll();
                 List<List<double>> conflicts = current.GetConflictd(); // Devuleve conflictos
                 Console.WriteLine("Analyzing results");
+                dist = this.state.GetCurrentList().GetDistanciaSeguridad();
                 for (
                     int i = 0;
                     i < current.GetLen();
@@ -366,10 +366,9 @@ namespace Flight_Forms
                     )
                     {
                         Console.WriteLine("{0}, {1}", i, j);
-                        if (conflicts[i][j] <= this.dist && conflicts[i][j] != -1)
+                        if (conflicts[i][j] <= dist * dist && conflicts[i][j] != -1)
                         {
-                            MessageBox
-                                .Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
+                            label9.Text = "WARNING!!! LOS AVIONES VAN A COLISIONAR";
                             button1.BackColor = Color.LightSteelBlue;
                             button1.Text = "Comprovar";
 
@@ -378,7 +377,7 @@ namespace Flight_Forms
                     }
                 }
                 button1.Text = "Finalizado";
-                MessageBox.Show("LOS AVIONES NO VAN A COLISIONAR");
+                label9.Text = "LOS AVIONES NO VAN A COLISIONAR";
                 button1.BackColor = Color.LightSteelBlue;
                 button1.Text = "Comprovar";
 
@@ -416,9 +415,12 @@ namespace Flight_Forms
                 ResolverConf.BackColor = Color.Red;
                 Console.WriteLine("Resolviendo");
                 this.state.GetCurrentList().SolveConflicts();
+                this.state.GetCurrentList().CheckConflicts();
                 Console.WriteLine("hecho");
+                this.state.GetCurrentList().WriteConflicts();
+                button1_Click(sender, new EventArgs());
                 ResolverConf.Text = "Finalizado";
-                MessageBox.Show("Resuelto");
+                resLab.Text = "Resuelto";
                 ResolverConf.Text = "Resolver";
                 ResolverConf.BackColor = Color.LightSteelBlue;
             }
