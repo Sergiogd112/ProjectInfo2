@@ -367,8 +367,7 @@ namespace Flight_Forms
                         Console.WriteLine("{0}, {1}", i, j);
                         if (conflicts[i][j] <= this.dist && conflicts[i][j] != -1)
                         {
-                            MessageBox
-                                .Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
+                            label9.Text = "WARNING!!! LOS AVIONES VAN A COLISIONAR";
                             button1.BackColor = Color.LightSteelBlue;
                             button1.Text = "Comprovar";
 
@@ -377,7 +376,7 @@ namespace Flight_Forms
                     }
                 }
                 button1.Text = "Finalizado";
-                MessageBox.Show("LOS AVIONES NO VAN A COLISIONAR");
+                label9.Text = "LOS AVIONES NO VAN A COLISIONAR";
                 button1.BackColor = Color.LightSteelBlue;
                 button1.Text = "Comprovar";
 
@@ -417,7 +416,7 @@ namespace Flight_Forms
                 this.state.GetCurrentList().SolveConflicts();
                 Console.WriteLine("hecho");
                 ResolverConf.Text = "Finalizado";
-                MessageBox.Show("Resuelto");
+                resLab.Text="Resuelto";
                 ResolverConf.Text = "Resolver";
                 ResolverConf.BackColor = Color.LightSteelBlue;
             }
