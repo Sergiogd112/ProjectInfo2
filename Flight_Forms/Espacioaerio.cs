@@ -247,9 +247,13 @@ namespace Flight_Forms
                 manualButton.BackColor = Color.Red;
                 this.state.Move(Convert.ToInt32(ciclo)); //he mogut la posició dels avions però no del PictureBox          
                 this.UpdatePlanes();
-                if (distanciaInferior()) this.Close();
-                BackColor = Color.LightSteelBlue;
-                button1.Text = "Manual";
+                if (distanciaInferior())
+                {
+                    Console.WriteLine("distancia inferior");
+                    this.Close();
+                }
+                manualButton.BackColor = Color.LightSteelBlue;
+                manualButton.Text = "Manual";
             }
         }
 
