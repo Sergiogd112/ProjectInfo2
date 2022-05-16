@@ -36,8 +36,7 @@ namespace Flight_Forms
             {
                 //se ha encontrado: operacion exito
                 MessageBox
-                    .Show("Bienvenid@, {0}. Disfrute de su experiencia en Flight Simulator.",
-                    userBox.Text);
+                    .Show("Bienvenid@ " + Convert.ToString(userBox.Text) + ", disfrute de su experiencia en Flight Simulator");
 
                 //abrimos el siguiente formulario de opciones
                 this.Visible = false;
