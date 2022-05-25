@@ -19,37 +19,19 @@ namespace Flight_Forms
         }
 
         private FlightPlanList lista = new FlightPlanList();
+        FlightPlan flight;
         
         private void aceptarButton_Click(object sender, EventArgs e)
         {
             try
             {
-                string id = idBox.Text;
-                double xIn = Convert.ToDouble(xInBox.Text);
-                double yIn = Convert.ToDouble(yInBox.Text);
-                double xFin = Convert.ToDouble(xFinBox.Text);
-                double yFin = Convert.ToDouble(yFinBox.Text);
-                double vel = Convert.ToDouble(velocidadBox.Text);
+                flight = new FlightPlan(idBox.Text, Compañia.Text, Convert.ToDouble(xInBox.Text), Convert.ToDouble(yInBox.Text), Convert.ToDouble(xInBox.Text), Convert.ToDouble(yInBox.Text), Convert.ToDouble(xFinBox.Text), Convert.ToDouble(yFinBox.Text), Convert.ToDouble(velocidadBox.Text));
 
-                FlightPlan flight =
-                    new FlightPlan(id, xIn, yIn, xFin, yFin, vel);
-                this.ResetParametros();
-
-                if (this.lista.GetAmountFlights() < 2)
-                {
-                    //la lista todavía no se ha llenado con 2 planes de vuelo
-                    this.lista.AddFlightPlan(flight);
-                }
-                
-
+                Close();
             }
-            catch (FormatException)
+            catch (FormatException) //Control de errores de formato al introducir datos 
             {
-                MessageBox
-                    .Show("Error en el formato introducido de los datos. Intente de nuevo.",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Error de formato al introducir datos");
             }
         }
 
@@ -61,8 +43,12 @@ namespace Flight_Forms
             yInBox.Text = " ";
             xFinBox.Text = " ";
             yFinBox.Text = " ";
+            Compañia.Text = " ";
         }
-
+        public FlightPlan GetPlan()
+        {
+            return this.flight;
+        }
         public FlightPlanList DameLista()
         {
             return this.lista;

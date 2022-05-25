@@ -15,6 +15,8 @@ namespace Flight_Forms
     {
         //creamos un vector que contenga los parámetros de simulación (atributo)
         double[] parametros = new double[2];
+        int tiempociclo;
+        double distanciaseguridad;
 
         public IntroducirParametrosForm()
         {
@@ -30,11 +32,11 @@ namespace Flight_Forms
         {
             try
             {
-                double distSeg = Convert.ToDouble(distanciaSeguridadBox.Value);
-                double ciclo = Convert.ToDouble(cicloBox.Value);
+                distanciaseguridad = Convert.ToDouble(distanciaSeguridadBox.Value);
+                tiempociclo = Convert.ToInt32(cicloBox.Value);
 
-                this.parametros[0] = distSeg;
-                this.parametros[1] = ciclo;
+                this.parametros[0] = distanciaseguridad;
+                this.parametros[1] = tiempociclo;
 
                 MessageBox
                     .Show("Los parámetros de simulación ya han sido introducidos.");
@@ -52,7 +54,15 @@ namespace Flight_Forms
                 cicloBox.Text = " ";
             }
         }
+        public double GetDistanciaSeguridad()
+        {
+            return distanciaseguridad;
+        }
 
+        public int GetTiempoCiclo()
+        {
+            return tiempociclo;
+        }
         public double[] DameParametros()
         {
             return this.parametros;

@@ -83,6 +83,51 @@ namespace FlightLib
         {
             return flights[index];
         }
+        public bool EstaDestinoLista()
+        {
+            bool finalpositon = false;
+            int numerodevuelosdestino = 0;
+
+            for (int i = 0; i < flights.Count; i++)
+            {
+                if (flights[i].HasArrived())
+                {
+                    numerodevuelosdestino++;
+                }
+            }
+
+            if (numerodevuelosdestino == flights.Count)
+            {
+                finalpositon = true;
+                return finalpositon;
+            }
+
+            else
+            {
+                return finalpositon;
+            }
+        }
+
+        public bool ConflictoF(double distanciaSeguridad)
+        {
+            int i = 1;
+            bool VuelosConflictivos = false;
+            while (i < flights.Count)
+            {
+                for (int n = 0; n < flights.Count; n++)
+                {
+                    VuelosConflictivos = flights[i].ConflictoTotal(flights[n], distanciaSeguridad);
+                    if (VuelosConflictivos == true)
+                    {
+                        i = flights.Count;
+                        return VuelosConflictivos;
+                    }
+                }
+                i++;
+            }
+            return VuelosConflictivos;
+        }
+
 
         public FlightPlan GetFligthWithID(string id)
         {
@@ -96,71 +141,8 @@ namespace FlightLib
             return null;
         }
         // Generate
-        public void GenerateN(
-            int n,
-            double[] lenRange,
-            double[] speedRange,
-            int[,] mapRange,
-            int retry = 100
-        )
-        {
-            Random random = new Random();
-            StreamReader R = new StreamReader("names.txt");
-            string text = R.ReadToEnd();
-            string[] names = text.Split('\n');
-            if (
-                lenRange[0] * lenRange[0] >=
-                (mapRange[0, 0] - mapRange[1, 0]) *
-                (mapRange[0, 0] - mapRange[1, 0]) +
-                (mapRange[0, 1] - mapRange[1, 1]) *
-                (mapRange[0, 1] - mapRange[1, 1])
-            )
-            {
-                retry = 1;
-            }
-            for (int i = 0; i < n; i++)
-            {
-                int idx = random.Next(0, names.Length - 1);
-                int idn = random.Next(0, 999);
-                double speed =
-                    random.NextDouble() * (speedRange[1] - speedRange[0]) +
-                    speedRange[0];
-                double x0 =
-                    Convert
-                        .ToDouble(random.Next(mapRange[0, 0], mapRange[1, 0]));
-                double y0 =
-                    Convert
-                        .ToDouble(random.Next(mapRange[0, 1], mapRange[1, 1]));
-                double x = 0.0;
-                double y = 0.0;
-                for (int j = 0; j < retry; j++)
-                {
-                    double len =
-                        random.NextDouble() * (lenRange[1] - lenRange[0]) +
-                        lenRange[0];
-                    double angle = random.NextDouble() * Math.PI;
-                    x = x0 + len * Math.Cos(angle);
-                    y = y0 + len * Math.Sin(angle);
-                    if (
-                        mapRange[0, 0] <= x &&
-                        x <= mapRange[1, 0] &&
-                        mapRange[0, 1] <= y &&
-                        y <= mapRange[1, 1]
-                    )
-                    {
-                        break;
-                    }
-                }
-                this
-                    .AddFlightPlan(new FlightPlan(names[idx] +
-                        Convert.ToString(idn),
-                        x0,
-                        y0,
-                        x,
-                        y,
-                        speed));
-            }
-        }
+        
+        
 
         // Load an save files
         /// <summary>
@@ -202,141 +184,13 @@ namespace FlightLib
             return 0;
         }
 
-        /// <summary>
-        /// Añadir un FlightPlan desde consola
-        /// </summary>
-        /// <param name="checkInteractions"></param>
-        /// <returns></returns>
-        public FlightPlan AddFromConsole(bool checkInteractions = true)
-        {
-            string identificador;
-            string linea;
-            string[] trozos;
-            double velocidad;
-            double
-                ix,
-                iy;
-            double
-                fx,
-                fy;
-            Console.WriteLine("Escribe el identificador");
-
-            //   string nombre = Console.ReadLine();
-            identificador = Console.ReadLine();
-
-            Console.WriteLine("Escribe la velocidad");
-            try
-            {
-                velocidad = Convert.ToDouble(Console.ReadLine());
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Error de formato");
-
-                velocidad = Convert.ToDouble(Console.ReadLine());
-            }
-
-            Console
-                .WriteLine("Escribe las coordenadas de la posición inicial, separadas por un blanco");
-            linea = Console.ReadLine();
-            trozos = linea.Split(' ');
-            try
-            {
-                ix = Convert.ToDouble(trozos[0]);
-                iy = Convert.ToDouble(trozos[1]);
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Error de formato");
-
-                linea = Console.ReadLine();
-                trozos = linea.Split(' ');
-                ix = Convert.ToDouble(trozos[0]);
-                iy = Convert.ToDouble(trozos[1]);
-            }
-
-            Console
-                .WriteLine("Escribe las coordenadas de la posición final, separadas por un blanco");
-            try
-            {
-                linea = Console.ReadLine();
-                trozos = linea.Split(' ');
-                fx = Convert.ToDouble(trozos[0]);
-                fy = Convert.ToDouble(trozos[1]);
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Error de formato");
-
-                linea = Console.ReadLine();
-                trozos = linea.Split(' ');
-                fx = Convert.ToDouble(trozos[0]);
-                fy = Convert.ToDouble(trozos[1]);
-            }
-            FlightPlan fligth =
-                new FlightPlan(identificador, ix, iy, fx, fy, velocidad);
-            this.AddFlightPlan(fligth, checkInteractions);
-            return fligth;
-        }
-
-        /// <summary>
-        /// Añade n FligthPlans desde consola
-        /// </summary>
-        /// <param name="nAviones"></param>
-        public void AddNConsole(int nAviones)
-        {
-            for (int i = 0; i < this.number; i++)
-            {
-                this.AddFromConsole(false);
-            }
-            this.CheckInteractions();
-            this.CheckConflicts();
-        }
+     
 
         /// <summary>
         /// Lee los planes en del fichero txt
         /// </summary>
         /// <param name="filename">Path del fichero</param>
-        public int AddFromFile(string filename)
-        {
-            string[] lines;
-            try
-            {
-                lines = System.IO.File.ReadAllLines(filename);
-            }
-            catch (FileNotFoundException)
-            {
-                return -1;
-            }
-            string[] data = new string[6];
-            double[] coordsAndSpeed = new double[5];
-            try
-            {
-                foreach (string line in lines)
-                {
-                    data = line.Split(' ');
-                    for (int j = 1; j < data.Length; j++)
-                    {
-                        coordsAndSpeed[j - 1] = Convert.ToDouble(data[j]);
-                    }
-                    this
-                        .AddFlightPlan(new FlightPlan(data[0],
-                            Convert.ToDouble(coordsAndSpeed[0]),
-                            Convert.ToDouble(coordsAndSpeed[1]),
-                            Convert.ToDouble(coordsAndSpeed[2]),
-                            Convert.ToDouble(coordsAndSpeed[3]),
-                            Convert.ToDouble(coordsAndSpeed[4])));
-                }
-            }
-            catch (FormatException)
-            {
-                return -2;
-            }
-            this.CheckInteractions();
-            this.CheckConflicts();
-            return 1;
-        }
-
+        
         /// <summary>
         /// Guarda el fichero con un nombre
         /// </summary>
@@ -363,6 +217,8 @@ namespace FlightLib
             string text = R.ReadToEnd();
             return FlightPlanList.Load(text);
         }
+
+
 
         public static FlightPlanList LoadString(string s)
         {

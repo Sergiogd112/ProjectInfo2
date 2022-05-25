@@ -17,18 +17,17 @@ namespace FlightLib
 
         double velocidad;
 
+        string company;
+
         // Constructures
-        public FlightPlan()
-        {
-            this.id = "";
-            this.initialPosition = new Position(0, 0);
-            this.currentPosition = new Position(0, 0);
-            this.finalPosition = new Position(0, 0);
-            this.velocidad = 0;
-        }
+
+
+
 
         public FlightPlan(
             string id,
+            double ipx,
+            double ipy,
             double cpx,
             double cpy,
             double fpx,
@@ -37,25 +36,17 @@ namespace FlightLib
         )
         {
             this.id = id;
-            this.initialPosition = new Position(cpx, cpy);
+            this.initialPosition = new Position(ipx, ipy);
             this.currentPosition = new Position(cpx, cpy);
             this.finalPosition = new Position(fpx, fpy);
             this.velocidad = velocidad;
         }
 
-        public FlightPlan(
-            string id,
-            double spx,
-            double spy,
-            double cpx,
-            double cpy,
-            double fpx,
-            double fpy,
-            double velocidad
-        )
+        public FlightPlan(string id, string c,double ipx,double ipy, double cpx, double cpy, double fpx, double fpy, double velocidad)
         {
             this.id = id;
-            this.initialPosition = new Position(spx, spy);
+            this.company = c;
+            this.initialPosition = new Position(ipx, ipy);
             this.currentPosition = new Position(cpx, cpy);
             this.finalPosition = new Position(fpx, fpy);
             this.velocidad = velocidad;
@@ -93,6 +84,44 @@ namespace FlightLib
         public Position GetFinalPosition()
         {
             return this.finalPosition;
+        }
+        public string GetCompany() 
+        {
+            return this.company;
+        }
+
+        public bool ConflictoTotal(FlightPlan b, double distanciaSeguridad)
+        {
+            double Time;
+            double DistanciaMenor;
+
+            double Velocidad1 = velocidad / 60;
+            double Velocidad2 = b.GetVelocidad() / 60;
+
+            double hipotenusa1 = Math.Sqrt((finalPosition.GetX() - currentPosition.GetX()) * (finalPosition.GetX() - currentPosition.GetX()) + (finalPosition.GetY() - currentPosition.GetY()) * (finalPosition.GetY() - currentPosition.GetY()));
+            double hipotenusa2 = Math.Sqrt((b.GetFinalPosition().GetX() - b.GetCurrentPosition().GetX()) * (b.GetFinalPosition().GetX() - b.GetCurrentPosition().GetX()) + (b.GetFinalPosition().GetY() - b.GetCurrentPosition().GetY()) * (b.GetFinalPosition().GetY() - b.GetCurrentPosition().GetY()));
+
+            double C = (finalPosition.GetX() - currentPosition.GetX()) / hipotenusa1;
+            double C2 = (b.GetFinalPosition().GetX() - b.GetCurrentPosition().GetX()) / hipotenusa2;
+
+            double S = (finalPosition.GetY() - currentPosition.GetY()) / hipotenusa1;
+            double S2 = (b.GetFinalPosition().GetY() - b.GetCurrentPosition().GetY()) / hipotenusa2;
+
+            Time = -((Velocidad1 * C - Velocidad2 * C2) * (currentPosition.GetX() - b.GetCurrentPosition().GetX()) + (Velocidad1 * S - Velocidad2 * S2) * (currentPosition.GetY() - b.GetCurrentPosition().GetY())) / ((Velocidad1 * S - Velocidad2 * S2) * (Velocidad1 * S - Velocidad2 * S2) + (Velocidad1 * C - Velocidad2 * C2) * (Velocidad1 * C - Velocidad2 * C2));
+            double X1 = currentPosition.GetX() + Velocidad1 * Time * C;
+            double Y1 = currentPosition.GetY() + Velocidad1 * Time * S;
+            double X2 = b.GetCurrentPosition().GetX() + Velocidad2 * Time * C2;
+            double Y2 = b.GetCurrentPosition().GetY() + Velocidad2 * Time * S2;
+
+            DistanciaMenor = Math.Sqrt(((X1 - X2) * (X1 - X2)) + (Y1 - Y2) * (Y1 - Y2));
+            if (DistanciaMenor < distanciaSeguridad)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>

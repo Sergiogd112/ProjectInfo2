@@ -93,10 +93,10 @@
             0,
             0});
             this.distanciaSeguridadBox.Name = "distanciaSeguridadBox";
-            this.distanciaSeguridadBox.Size = new System.Drawing.Size(120, 20);
+            this.distanciaSeguridadBox.Size = new System.Drawing.Size(120, 22);
             this.distanciaSeguridadBox.TabIndex = 22;
             this.distanciaSeguridadBox.Value = new decimal(new int[] {
-            200,
+            50,
             0,
             0,
             0});
@@ -110,7 +110,7 @@
             0,
             0});
             this.cicloBox.Name = "cicloBox";
-            this.cicloBox.Size = new System.Drawing.Size(120, 20);
+            this.cicloBox.Size = new System.Drawing.Size(120, 22);
             this.cicloBox.TabIndex = 23;
             this.cicloBox.Value = new decimal(new int[] {
             2,

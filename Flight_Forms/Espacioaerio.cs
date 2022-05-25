@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FlightLib;
+using GestionUsuarios;
+using System.IO;
 
 namespace Flight_Forms
 {
@@ -16,127 +18,128 @@ namespace Flight_Forms
     /// </summary>
     public partial class Espacioaerio : Form
     {
-        public State state;
+        
 
-        double ciclo;
+        int ciclo;
 
         double dist;
+        
+        int numAviones = 0;
 
-        private PictureBox[] plane;
+        Gestion G = new Gestion();
+       
+        Stack<List<int[]>> PilaAnteriores = new Stack<List<int[]>>();
 
-        int butt = 1;
+        FlightPlanList Vuelos = new FlightPlanList(); //Crea objeto flightplanlist        
+        List<PictureBox> misAviones = new List<PictureBox>();
 
-        /// <summary>
-        /// Constructor del espacio aereo donde se instancia la lista de imagenes de aviones.
-        /// </summary>
-        /// <param name="l">objeto FligthPlanList</param>
-        /// <param name="c">numero de doble precison que indica la duración del ciclo</param>
-        public Espacioaerio(State state, double c)
+        Pen lapizConflicto = new Pen(Color.Red, 8);
+        Pen lapiz = new Pen(Color.NavajoWhite, 8); // El lapiz para poder dibujar las lineas
+
+        TextWriter GuardarAviones; //Fichero para guardar
+        TextReader CargarAviones;
+
+
+        public Espacioaerio()
         {
-            this.state = state;
-            this.plane = new PictureBox[state.GetCurrentList().GetLen()];
-            this.ciclo = c;
-            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-
             InitializeComponent();
         }
 
-
-        /// <summary>
-        /// Prepara el panel para la simulación
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void Espacioaerio_Load(object sender, EventArgs e)
         {
-            planeImg.Visible = false;
-            FlightPlan avion = new FlightPlan();
-            plane = new PictureBox[this.state.GetCurrentList().GetLen()];
-            FlightPlanList current = state.GetCurrentList();
-            for (int i = 0; i < current.GetLen(); i++)
-            {
-                avion = current.GetFlightAtIndex(i);
-                plane[i] = new PictureBox();
-                plane[i].Location = new Point((int)avion.GetCurrentPosition().GetX() - 15, (int)avion.GetCurrentPosition().GetY() - 15);
-
-                plane[i].Size = planeImg.Size;
-                plane[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                plane[i].BackColor = planeImg.BackColor;
-                plane[i].Image = planeImg.Image;
-                plane[i].BackgroundImage = planeImg.BackgroundImage;
-                plane[i].BackgroundImageLayout = planeImg.BackgroundImageLayout;
-                plane[i].Name = avion.GetId();
-                this.panel2.Controls.Add(plane[i]);
-                //showRecorrido(avion, true, sender);
-                //agregamos método en clicar sobre el flightplan
-                plane[i].DoubleClick +=
-                    delegate (object s, EventArgs events)
-                    {
-                        ClickFlight(s);
-                    };
-
-
-                plane[i].MouseEnter +=
-                    delegate (object s, EventArgs events)
-                    {
-                        //si estamos sobre el avión:
-                        showRecorrido(true, s);
-                    };
-                plane[i].MouseLeave +=
-                    delegate (object s, EventArgs events)
-                    {
-                        //si estamos sobre el avión:
-                        showRecorrido(false, s);
-                    };
-            }
+            G.Iniciar();
+            IntroducirParametrosForm parametros = new IntroducirParametrosForm();
+            parametros.ShowDialog();
+            ciclo = parametros.GetTiempoCiclo();
+            dist = parametros.GetDistanciaSeguridad();
+            AVISO.Size = new Size(0, 0);
+            LabelConflicto.Text = " ";
         }
-
-        private void UpdatePlanes()
+        private void nuevoAvionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FlightPlanList current = state.GetCurrentList();
+            //Iniciamos Form de NuevoAvion 
+            IntroducirDatosForm aparece = new IntroducirDatosForm();
+            aparece.ShowDialog();
+            FlightPlan vuelos = aparece.GetPlan(); // Obtenemos el nuevo avion 
 
-            for (
-                int i = 0;
-                i < current.GetLen();
-                i++ //aquí moc el PictureBox
-            )
+            Graphics g = panel2.CreateGraphics();
+
+            if (vuelos != null)
             {
-                plane[i].Location =
-                    new Point((int)current
-                                .GetFlightAtIndex(i).GetCurrentPosition().GetX() - 15,
-                        (int)current
-                                .GetFlightAtIndex(i).GetCurrentPosition().GetY() - 15);
-                Position position =
-                    current.GetFlightAtIndex(i).GetCurrentPosition();
-                Label label;
-                if ((position.GetX() >= panel2.Width) || (position.GetX() <= 0))
+                Vuelos.AddFlightPlan(vuelos);  // Añadimos a la lista 
+
+                // Pintamos avion 
+                PictureBox avion = new PictureBox();
+                avion.ImageLocation = @"Avion.gif";
+                avion.SizeMode = PictureBoxSizeMode.StretchImage;
+                avion.Size = new Size(30, 30);
+                avion.Location = new Point((int)vuelos.GetCurrentPosition().GetX() - 15, (int)vuelos.GetCurrentPosition().GetY() - 15);
+                avion.Tag = Vuelos.GetLen();
+                avion.BackColor = Color.DarkSlateGray;
+
+                //Sirve para que al clickar nos de la informacion de este avion en cualquier momento
+                avion.Click += new System.EventHandler(this.ClickFlight);
+
+                g.DrawLine(lapiz, (float)vuelos.GetInitialPosition().GetX(), (float)vuelos.GetInitialPosition().GetY(), (float)vuelos.GetFinalPosition().GetX(), (float)vuelos.GetFinalPosition().GetY());
+                g.DrawEllipse(lapiz, new RectangleF((float)vuelos.GetFinalPosition().GetX(), (float)vuelos.GetFinalPosition().GetY(), 12, 12));
+
+                panel2.Controls.Add(avion);
+                misAviones.Add(avion);
+                numAviones++;
+            }
+
+            if (Vuelos.GetLen() > 1) //Vemos si va a haber conflictos
+            {
+                bool Conflicto = false;
+                while (Conflicto != true)
                 {
-                    label = new Label();
-                    label.Text = "El avión no aparece en el panel";
-                }
-                else if (
-                    (position.GetY() >= panel2.Height) || (position.GetY() <= 0)
-                )
-                {
-                    label = new Label();
-                    label.Text = "El avión no aparece en el panel";
+                    Vuelos.MoveAll(1);
+                    if (Vuelos.ConflictoF(dist) == true)
+                    {
+                        Conflicto = true;
+                        AVISO.BackColor = Color.Red;
+                        AVISO.Size = new Size(100, 50);
+                        for (int m = 0; m < Vuelos.GetLen(); m++)
+                        {
+                            for (int n = m + 1; n < Vuelos.GetLen(); n++)
+                            {
+                                if (Vuelos.GetFlightAtIndex(m).ConflictoTotal(Vuelos.GetFlightAtIndex(n), dist) == true)
+                                {
+                                    g.DrawLine(lapizConflicto, (float)Vuelos.GetFlightAtIndex(m).GetInitialPosition().GetX(), (float)Vuelos.GetFlightAtIndex(m).GetInitialPosition().GetY(), (float)Vuelos.GetFlightAtIndex(m).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(m).GetFinalPosition().GetY());
+                                    g.DrawLine(lapizConflicto, (float)Vuelos.GetFlightAtIndex(n).GetInitialPosition().GetX(), (float)Vuelos.GetFlightAtIndex(n).GetInitialPosition().GetY(), (float)Vuelos.GetFlightAtIndex(n).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(n).GetFinalPosition().GetY());
+                                }
+                            }
+
+                        }
+
+                    }
+                    if (Vuelos.EstaDestinoLista() == true)
+                    {
+                        Conflicto = true;
+                    }
                 }
             }
+
         }
+
+
+      
+        
+       
+        
 
         /// <summary>
         /// Al pulsar sobre un avion abre un form con la informacion del fligthplan
         /// </summary>
         /// <param name="flight">objeto de tipo FligthPlan</param>
-        private void ClickFlight(object sender)
+        private void ClickFlight(object sender, EventArgs e)
         {
-            PictureBox p = (PictureBox)sender;
-            FlightPlan flight = state.GetCurrentList().GetFligthWithID(p.Name);
-            //en hacer click sobre el plan de vuelo del panel de simulacion, mostramos un formulario con la info del mismo
-            Informaciónvuelo info = new Informaciónvuelo(flight);
-
-            info.ShowDialog();
-            info.Visible = true;
+            PictureBox avion = (PictureBox)sender;
+            int i = (int)avion.Tag - 1; //intervalo de tags 
+            Informaciónvuelo formulario = new Informaciónvuelo();
+            formulario.ClickedFlight(Vuelos.GetFlightAtIndex(i)); //Obtenemos la informacion del FlightPlan
+            formulario.ShowDialog();
+            formulario.Visible = true;//Abre el forms ClickInformacionVuelo 
         }
 
         /// <summary>
@@ -151,8 +154,9 @@ namespace Flight_Forms
             if (isEnter)
             {
                 Label label = new Label();
-                PictureBox p = (PictureBox)sender;
-                FlightPlan flight = state.GetCurrentList().GetFligthWithID(p.Name);
+                PictureBox avion = (PictureBox)sender;
+                
+                FlightPlan flight = Vuelos.GetFligthWithID(avion.Name);
                 label.Text = flight.GetId();
                 label.Location =
                     new Point(Convert
@@ -172,30 +176,30 @@ namespace Flight_Forms
 
                     Point PuntoDestino =
                         new Point((int)flight.GetFinalPosition().GetX() +
-                            p.Width / 2,
+                            avion.Width / 2,
                             (int)flight.GetFinalPosition().GetY() +
-                            p.Height / 2);
+                            avion.Height / 2);
                     Point PuntoOrigen =
                         new Point((int)flight.GetInitialPosition().GetX() +
-                            p.Width / 2,
+                            avion.Width / 2,
                             (int)flight.GetInitialPosition().GetY() +
-                            p.Height / 2);
+                            avion.Height / 2);
 
                     g.DrawLines(P, new Point[] { PuntoOrigen, PuntoDestino });
                     g
                         .FillEllipse(B,
                         (int)flight.GetFinalPosition().GetX() +
-                            p.Width / 2 - 5,
+                            avion.Width / 2 - 5,
                         (int)flight.GetFinalPosition().GetY() +
-                            p.Height / 2 - 5,
+                            avion.Height / 2 - 5,
                         10,
                         10);
                     SolidBrush dist = new SolidBrush(Color.FromArgb(200, 200, 20, 20));
-                    int d = (int)state.GetCurrentList().GetDistanciaSeguridad();
+                    int d = (int)Vuelos.GetDistanciaSeguridad();
                     g.FillEllipse(dist, (int)flight.GetCurrentPosition().GetX() +
-                            p.Width / 2 - d / 2,
+                            avion.Width / 2 - d / 2,
                             (int)flight.GetCurrentPosition().GetY() +
-                            p.Height / 2 - d / 2, d, d);
+                            avion.Height / 2 - d / 2, d, d);
                 }
             }
             else
@@ -241,18 +245,41 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void manualButton_Click(object sender, EventArgs e)
         {
-            if (manualButton.Text != "Calculando")
+            Graphics g = panel2.CreateGraphics();
+
+            Vuelos.MoveAll(1);
+
+            for (int i = 0; i < numAviones; i++) // Bucle para poder mover la simulacion
             {
-                manualButton.Text = "Calculando";
-                manualButton.BackColor = Color.Red;
-                this.state.Move(Convert.ToInt32(ciclo)); //he mogut la posició dels avions però no del PictureBox          
-                this.UpdatePlanes();
-                if (distanciaInferior())
+                if (Vuelos.GetLen() > 1)  // Para mas de 1 vuelo
                 {
-                    Console.WriteLine("distancia inferior");
+                    int n = 1;
+
+                    if (Vuelos.GetFlightAtIndex(n - 1).ConflictoTotal(Vuelos.GetFlightAtIndex(n), dist) == false) // Miramos conflictos
+                    {
+                        misAviones[i].Location = new Point((int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetX() - 15, (int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetY() - 15);
+                        LabelConflicto.Text = " ";
+                        g.DrawLine(lapiz, (float)Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetY(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY());
+                        g.DrawEllipse(lapiz, new RectangleF((float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY(), 10, 10));
+                    }
+
+                    // Si tiene conflictos nos lo dira en un label.
+                    else
+                    {
+                        misAviones[i].Location = new Point((int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetX() - 15, (int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetY() - 15);
+                        LabelConflicto.Text = "Conflicto";
+                        g.DrawLine(lapizConflicto, (float)Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetY(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY());
+                        g.DrawEllipse(lapiz, new RectangleF((float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY(), 10, 10));
+                    }
                 }
-                manualButton.BackColor = Color.LightSteelBlue;
-                manualButton.Text = "Manual";
+
+                else // Para solo 1 vuelo
+                {
+                    // Pintamos la simulacion en su nueva posicion.
+                    misAviones[i].Location = new Point((int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetX() - 15, (int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetY() - 15);
+                    g.DrawLine(lapiz, (float)Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetY(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY());
+                    g.DrawEllipse(lapiz, new RectangleF((float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY(), 10, 10));
+                }
             }
         }
 
@@ -263,38 +290,9 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void autoButton_Click(object sender, EventArgs e)
         {
-            //queremos que en picar automatico se empiecen a mover los vuelos pero que el propio botón cambie su funcionalidad a 'parar'
-            //si muestra automatico: butt=0; si se pica automatico (butt=1)
-
-            if (butt == 1)
-            {
-                //cuando picamos al botón automático, la funcion debe iniciar el reloj
-                //lo que tiene que hacer debe hacerlo periódicamente
-                //definimos el intervalo de tiempo en el que va a trabajar
-                reloj.Interval = Convert.ToInt32(this.ciclo); //unidades en ms
-
-                //inicio
-                reloj.Start();
-
-                //como hemos picado sobre el botón, debemos cambiar el estado de 1 a 0
-                //mostrar 'parar'
-                autoButton.Text = "Parar";
-                autoButton.BackColor = Color.Red;
-                autoButton.ForeColor = Color.Black;
-                butt = 0;
-            }
-            else if (butt == 0)
-            {
-                //hemos picado a parar
-                //mostramos 'automatico'
-                //dejamos de mover la lista
-                //cambiamos estado
-                butt = 1;
-                autoButton.Text = "Automático";
-                autoButton.BackColor = Color.Blue;
-                autoButton.ForeColor = Color.White;
-                reloj.Stop();
-            }
+            
+            reloj.Interval = Convert.ToInt32(ciclo);
+            reloj.Start();
         }
 
         /// <summary>
@@ -304,11 +302,68 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void reloj_Tick(object sender, EventArgs e)
         {
-            //qué queremos que suceda cada intervalo de tiempo?
-            //mover los puntos y la localización de los picturebox
-            this.state.Move(Convert.ToInt32(this.ciclo));
-            this.UpdatePlanes();
-            if (distanciaInferior()) this.Close();
+            
+            Vuelos.MoveAll(Convert.ToInt32(ciclo)); // Movera la simulacion
+            List<int[]> A_Guardar = new List<int[]>();
+            Graphics g = panel2.CreateGraphics();
+            
+            for (int i = 0; i < Vuelos.GetLen(); i++)
+            {
+                int[] Vectores = new int[2];
+                if (Vuelos.GetLen() > 1)
+                {
+                    
+                    // Al estar destino timerAutomatica se para 
+                    if (Vuelos.EstaDestinoLista() == true)
+                    {
+                        reloj.Stop();
+                    }
+                    else
+                    {
+                        // Miramos posibles conflictos 
+                        int n = 1;
+                        if (Vuelos.GetFlightAtIndex(n - 1).ConflictoTotal(Vuelos.GetFlightAtIndex(n), dist) == false)
+                        {
+                            Vectores[0] = (int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetX() - 15;
+                            Vectores[1] = (int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetY() - 15;
+                            A_Guardar.Add(Vectores);
+                            misAviones[i].Location = new Point(Vectores[0], Vectores[1]);
+                            g.DrawLine(lapiz, (float)Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetY(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY());
+                            g.DrawEllipse(lapiz, new RectangleF((float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY(), 10, 10));
+                            LabelConflicto.Text = " ";
+                        }
+
+                        else
+                        {
+                            // Al haber conflicto timerAutomatica se para 
+                            Vectores[0] = (int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetX() - 15;
+                            Vectores[1] = (int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetY() - 15;
+                            A_Guardar.Add(Vectores);
+                            misAviones[i].Location = new Point(Vectores[0], Vectores[1]);
+                            
+                            g.DrawEllipse(lapiz, new RectangleF((float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY(), 10, 10));
+                            LabelConflicto.Text = "Conflicto";
+                        }
+                    }
+                }
+
+                else
+                {
+                    // Pintamos nuevas posiciones de simulacion 
+                    Vectores[0] = (int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetX() - 15;
+                    Vectores[1] = (int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetY() - 15;
+                    A_Guardar.Add(Vectores);
+                    misAviones[i].Location = new Point(Vectores[0], Vectores[1]);
+                    
+                    if (Vuelos.GetFlightAtIndex(0).EstaDestino())
+                    {
+                        reloj.Stop();
+                    }
+                }
+            }
+            PilaAnteriores.Push(A_Guardar);
+
+
         }
 
         /// <summary>
@@ -317,12 +372,12 @@ namespace Flight_Forms
         /// <returns><see langword="true"/>si la distancia es menor a la de seguridad</returns>
         private bool distanciaInferior()
         {
-            FlightPlanList current = state.GetCurrentList();
-            for (int i = 0; i < current.GetLen(); i++)
+            
+            for (int i = 0; i < Vuelos.GetLen(); i++)
             {
-                for (int j = i + 1; j < current.GetLen(); j++)
+                for (int j = i + 1; j < Vuelos.GetLen(); j++)
                 {
-                    if (current.GetFlightAtIndex(i).Distanciaentrevuelos(current.GetFlightAtIndex(i), current.GetFlightAtIndex(j)) <= dist)
+                    if (Vuelos.GetFlightAtIndex(i).Distanciaentrevuelos(Vuelos.GetFlightAtIndex(i), Vuelos.GetFlightAtIndex(j)) <= dist)
                     {
                         MessageBox.Show("WARNING!!! LOS AVIONES VAN A COLISIONAR");
                         return true;
@@ -333,56 +388,7 @@ namespace Flight_Forms
 
         }
 
-        /// <summary>
-        /// Al pulsar el boton comprueva los conflictos de forma continua
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (button1.Text != "Calculando")
-            {
-
-
-                button1.Text = "Calculando";
-                button1.BackColor = Color.Red;
-                FlightPlanList current = state.GetCurrentList();
-                Console.WriteLine("Comprovando Conflictos");
-                current.CheckConflicts(true); // Comprueva si hay conflictos
-                current.WriteAll();
-                List<List<double>> conflicts = current.GetConflictd(); // Devuleve conflictos
-                Console.WriteLine("Analyzing results");
-                dist = this.state.GetCurrentList().GetDistanciaSeguridad();
-                for (
-                    int i = 0;
-                    i < current.GetLen();
-                    i++ // Miro el primer avió i amb el següent for el comprovaré amb tots els avions
-                )
-                {
-                    for (
-                        int j = i + 1;
-                        j < current.GetLen();
-                        j++ //Tots els altres avions
-                    )
-                    {
-                        Console.WriteLine("{0}, {1}", i, j);
-                        if (conflicts[i][j] <= dist * dist && conflicts[i][j] != -1)
-                        {
-                            label9.Text = "WARNING!!! LOS AVIONES VAN A COLISIONAR";
-                            button1.BackColor = Color.LightSteelBlue;
-                            button1.Text = "Comprovar";
-
-                            return;
-                        }
-                    }
-                }
-                button1.Text = "Finalizado";
-                label9.Text = "LOS AVIONES NO VAN A COLISIONAR";
-                button1.BackColor = Color.LightSteelBlue;
-                button1.Text = "Comprovar";
-
-            }
-        }
+       
 
         /// <summary>
         /// Reiniciar la simulación
@@ -391,9 +397,12 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void reiniciarButton_Click(object sender, EventArgs e)
         {
-            this.state.Restart();
-            FlightPlanList current = state.GetCurrentList();
-            UpdatePlanes();
+            Graphics l = panel2.CreateGraphics();
+            for (int i = 0; i < Vuelos.GetLen(); i++)
+            {
+                misAviones[i].Location = new Point((int)Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetX() - 15, (int)Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetY() - 15);
+                Vuelos.GetFlightAtIndex(i).Restart();
+            }   
         }
 
         /// <summary>
@@ -403,28 +412,340 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void retroButt_Click(object sender, EventArgs e)
         {
-            this.state.Deshacer();
-            UpdatePlanes();
+            reloj.Stop(); // Paramos timerAutomatica
+            Graphics g = panel2.CreateGraphics();
+
+            if (PilaAnteriores.Count() > 0)
+            {
+                List<int[]> Vectores = PilaAnteriores.Pop(); // Obtemos vectores 
+
+                int i = 0;
+                foreach (int[] vect in Vectores)
+                {
+                    Vuelos.GetFlightAtIndex(i).GetCurrentPosition().SetGetX((double)vect[0]);
+                    Vuelos.GetFlightAtIndex(i).GetCurrentPosition().SetGetY((double)vect[1]);
+                    misAviones[i].Location = new Point(vect[0], vect[1]);
+                    g.DrawLine(lapiz, (float)Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetY(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY());
+                    g.DrawEllipse(lapiz, new RectangleF((float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY(), 10, 10));
+
+                    i++;
+                }
+            }
         }
 
-        private void ResolverConf_Click(object sender, EventArgs e)
+
+        private void Conflicto_Click(object sender, EventArgs e)
         {
-            if (ResolverConf.Text == "Resolver")
+            if (Vuelos.GetLen() == 0)
             {
-                ResolverConf.Text = "Processando";
-                ResolverConf.BackColor = Color.Red;
-                Console.WriteLine("Resolviendo");
-                this.state.GetCurrentList().SolveConflicts();
-                this.state.GetCurrentList().CheckConflicts();
-                Console.WriteLine("hecho");
-                this.state.GetCurrentList().WriteConflicts();
-                button1_Click(sender, new EventArgs());
-                ResolverConf.Text = "Finalizado";
-                resLab.Text = "Resuelto";
-                ResolverConf.Text = "Resolver";
-                ResolverConf.BackColor = Color.LightSteelBlue;
+                MessageBox.Show("Introduzco dos aviones para poder utilizar esta funcion");
+            }
+            if (Vuelos.GetLen() == 1)
+            {
+                MessageBox.Show("No habra conflicto porque solo hay un avion");
+            }
+            else
+            {
+                // Iniciamos timer para buscar conflictos 
+                timerconflictos.Interval = 1;
+                timerconflictos.Start();
             }
 
+        }
+        private void timerconflictos_Tick(object sender, EventArgs e)
+        {
+            bool Prueba = false;
+            int tiempociclos = 1;
+
+            Graphics g = panel2.CreateGraphics();
+
+
+            Vuelos.MoveAll(tiempociclos); 
+
+            // Vemos si habra conflcitos por cada uno de los aviones 
+            for (int i = 0; i < Vuelos.GetLen(); i++)
+            {
+                for (int n = i + 1; n < Vuelos.GetLen(); n++)
+                {
+                    if (Vuelos.GetFlightAtIndex(i).ConflictoTotal(Vuelos.GetFlightAtIndex(n), dist) == true)
+                    {
+                        // Al haber confclitos el timer se para 
+                        timerconflictos.Stop();
+                        Prueba = true;
+                    }
+                }
+
+                // Si no hay conflictos 
+                if (Vuelos.GetFlightAtIndex(i).EstaDestino() != false)
+                {
+                    timerconflictos.Stop();
+                    MessageBox.Show("No hay conflicto");
+                    for (int p = 0; p < Vuelos.GetLen(); p++)
+                    {
+                        Vuelos.GetFlightAtIndex(p).Restart();
+                    }
+
+                }
+            }
+
+            // Al haber conflicto se abrira el form de ConflictoResolver 
+            if (Prueba == true)
+            {
+                ResolverConflicto aparece = new ResolverConflicto();
+                aparece.GetDistanciaSeguridad(dist);
+                aparece.GetListFlights(Vuelos);
+                
+                aparece.ShowDialog();
+                bool Resuelto = aparece.VerSiEstaResuelto(); // Para ver si el conflicto esta resuelto
+
+                if (Resuelto != false)
+                {
+                    AVISO.Size = new Size(0, 0);
+
+                    for (int m = 0; m < Vuelos.GetLen(); m++)
+                    {
+                        for (int n = m + 1; n < Vuelos.GetLen(); n++)
+                        {
+                            g.DrawLine(lapiz, (float)Vuelos.GetFlightAtIndex(m).GetInitialPosition().GetX(), (float)Vuelos.GetFlightAtIndex(m).GetInitialPosition().GetY(), (float)Vuelos.GetFlightAtIndex(m).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(m).GetFinalPosition().GetY());
+                            g.DrawLine(lapiz, (float)Vuelos.GetFlightAtIndex(n).GetInitialPosition().GetX(), (float)Vuelos.GetFlightAtIndex(n).GetInitialPosition().GetY(), (float)Vuelos.GetFlightAtIndex(n).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(n).GetFinalPosition().GetY());
+
+                        }
+
+                    }
+                }
+
+                // Reiniciaremos la simulacion al acabar
+                for (int i = 0; i < Vuelos.GetLen(); i++)
+                {
+                    Vuelos.GetFlightAtIndex(i).Restart();
+                }
+            }
+        }
+
+        private void Parar_Click(object sender, EventArgs e)
+        {
+            reloj.Stop();
+        }
+
+        private void listaDeVuelosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TablaAviones aparece = new TablaAviones();
+            aparece.SetListFlights(Vuelos);
+            aparece.ShowDialog();
+        }
+
+        private void parametrosDelVueloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IntroducirParametrosForm parametros = new IntroducirParametrosForm();
+            parametros.ShowDialog();
+            ciclo = parametros.GetTiempoCiclo();
+            dist = parametros.GetDistanciaSeguridad();
+        }
+
+        private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string[] trozos;
+            string LineaDevVueloCargado;
+
+            Graphics g = panel2.CreateGraphics();
+
+            CargarAviones = new StreamReader("archivoguardar.txt"); // Fichero prederminado del programa 
+
+            LineaDevVueloCargado = CargarAviones.ReadLine();
+            int i = 0;
+            while (LineaDevVueloCargado != null)
+            {
+                trozos = LineaDevVueloCargado.Split();
+                FlightPlan vuelos = new FlightPlan(trozos[0], trozos[1], Convert.ToDouble(trozos[2]), Convert.ToDouble(trozos[3]), Convert.ToDouble(trozos[4]), Convert.ToDouble(trozos[5]), Convert.ToDouble(trozos[6]), Convert.ToDouble(trozos[7]), Convert.ToDouble(trozos[8]));
+                Vuelos.AddFlightPlan(vuelos);
+
+                PictureBox avion = new PictureBox();
+                avion.ImageLocation = @"Avion.gif";
+                avion.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                avion.Size = new Size(30, 30);
+                avion.Location = new Point((int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetX() - 15, (int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetY() - 15);
+                panel2.Controls.Add(avion); //Pinta otro avion
+                misAviones.Add(avion);
+                avion.BackColor = Color.Red;
+                avion.Tag = Vuelos.GetLen();
+                avion.Click += new System.EventHandler(this.ClickFlight);
+                g.DrawLine(lapiz, (float)vuelos.GetInitialPosition().GetX(), (float)vuelos.GetInitialPosition().GetY(), (float)vuelos.GetFinalPosition().GetX(), (float)vuelos.GetFinalPosition().GetY());
+                g.DrawEllipse(lapiz, new RectangleF((float)vuelos.GetFinalPosition().GetX(), (float)vuelos.GetFinalPosition().GetY(), 10, 10));
+
+                numAviones++;
+                i++;
+
+                LineaDevVueloCargado = CargarAviones.ReadLine();
+            }
+            CargarAviones.Close();
+
+            bool Conflicto = false;
+            while (Conflicto != true)
+            {
+                Vuelos.MoveAll(1);
+                if (Vuelos.ConflictoF(dist) == true)
+                {
+                    Conflicto = true;
+                    AVISO.BackColor = Color.Red;
+                    AVISO.Size = new Size(100, 50);
+                    for (int m = 0; m < Vuelos.GetLen(); m++)
+                    {
+                        for (int n = m + 1; n < Vuelos.GetLen(); n++)
+                        {
+                            if (Vuelos.GetFlightAtIndex(m).ConflictoTotal(Vuelos.GetFlightAtIndex(n), dist) == true)
+                            {
+                                g.DrawLine(lapizConflicto, (float)Vuelos.GetFlightAtIndex(m).GetInitialPosition().GetX(), (float)Vuelos.GetFlightAtIndex(m).GetInitialPosition().GetY(), (float)Vuelos.GetFlightAtIndex(m).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(m).GetFinalPosition().GetY());
+                                g.DrawLine(lapizConflicto, (float)Vuelos.GetFlightAtIndex(n).GetInitialPosition().GetX(), (float)Vuelos.GetFlightAtIndex(n).GetInitialPosition().GetY(), (float)Vuelos.GetFlightAtIndex(n).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(n).GetFinalPosition().GetY());
+                            }
+                        }
+
+                    }
+
+                }
+                if (Vuelos.EstaDestinoLista() == true)
+                {
+                    Conflicto = true;
+                }
+            }
+        }
+
+        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GuardarAviones = new StreamWriter("archivoguardar.txt"); //Nombre del archivo
+
+            for (int i = 0; i < Vuelos.GetLen(); i++)
+            {
+                GuardarAviones.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} ", Vuelos.GetFlightAtIndex(i).GetId(), Vuelos.GetFlightAtIndex(i).GetCompany(), Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetX(), Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetY(), Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetX(), Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetY(), Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY(), Vuelos.GetFlightAtIndex(i).GetVelocidad());
+            }
+
+            GuardarAviones.Close();
+        }
+
+        private void guardarComoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GuardarComo aparece = new GuardarComo(); // Form de GuardarComo aparece 
+            aparece.ShowDialog();
+            string Nombre = aparece.GetNombreFichero();
+
+            GuardarAviones = new StreamWriter(Nombre + ".txt"); // Fichero con nombre del usuario deseado 
+
+            for (int i = 0; i < Vuelos.GetLen(); i++)
+            {
+                GuardarAviones.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} ", Vuelos.GetFlightAtIndex(i).GetId(), Vuelos.GetFlightAtIndex(i).GetCompany(), Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetX(), Vuelos.GetFlightAtIndex(i).GetInitialPosition().GetY(), Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetX(), Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetY(), Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY(), Vuelos.GetFlightAtIndex(i).GetVelocidad());
+            }
+
+            GuardarAviones.Close();
+        }
+
+        private void cargarComoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CargarComo aparece = new CargarComo();
+            aparece.ShowDialog();
+            string NombreFichero = aparece.GetNombreFichero();
+            Graphics g = panel2.CreateGraphics();
+
+            string[] trozos;
+            string LineaDevVueloCargado;
+
+            try
+            {
+                CargarAviones = new StreamReader(NombreFichero + ".txt"); // Fichero del usuario deseado 
+
+                LineaDevVueloCargado = CargarAviones.ReadLine();
+                int i = 0;
+                bool FalloDatosFicheros = false; // Para ver si algunos datos del fichero estan bien o mal 
+
+                while (LineaDevVueloCargado != null & FalloDatosFicheros == false)
+                {
+                    trozos = LineaDevVueloCargado.Split();
+                    try
+                    {
+                        FlightPlan vuelos = new FlightPlan(trozos[0], trozos[1], Convert.ToDouble(trozos[2]), Convert.ToDouble(trozos[3]), Convert.ToDouble(trozos[4]), Convert.ToDouble(trozos[5]), Convert.ToDouble(trozos[6]), Convert.ToDouble(trozos[7]), Convert.ToDouble(trozos[8]));
+                        Vuelos.AddFlightPlan(vuelos);
+
+                        PictureBox avion = new PictureBox();
+                        avion.ImageLocation = @"Avion.gif";
+                        avion.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                        avion.Size = new Size(30, 30);
+                        avion.Location = new Point((int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetX() - 15, (int)Vuelos.GetFlightAtIndex(i).GetCurrentPosition().GetY() - 15);
+                        avion.BackColor = Color.Red;
+
+                        panel2.Controls.Add(avion); //Pinta otro avion
+                        misAviones.Add(avion);
+
+                        g.DrawLine(lapiz, (float)vuelos.GetInitialPosition().GetX(), (float)vuelos.GetInitialPosition().GetY(), (float)vuelos.GetFinalPosition().GetX(), (float)vuelos.GetFinalPosition().GetY());
+                        g.DrawEllipse(lapiz, new RectangleF((float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(i).GetFinalPosition().GetY(), 10, 10));
+
+                        avion.Tag = Vuelos.GetLen();
+                        avion.Click += new System.EventHandler(this.ClickFlight); //Esto no va al dar click solo da un avion.
+                        numAviones++;
+                        i++;
+                    }
+
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Fallo en los datos del fichero, si se a cargado algun avion reinicie el programa");
+                        FalloDatosFicheros = true;
+                    }
+
+                    LineaDevVueloCargado = CargarAviones.ReadLine();
+                }
+
+                CargarAviones.Close();
+
+                bool Conflictom = false;
+                while (Conflictom != true)
+                {
+                    Vuelos.MoveAll(1);
+                    if (Vuelos.ConflictoF(dist) == true)
+                    {
+                        Conflictom = true;
+                        AVISO.BackColor = Color.Red;
+                        AVISO.Size = new Size(100, 50);
+                        for (int m = 0; m < Vuelos.GetLen(); m++)
+                        {
+                            for (int n = m + 1; n < Vuelos.GetLen(); n++)
+                            {
+                                if (Vuelos.GetFlightAtIndex(m).ConflictoTotal(Vuelos.GetFlightAtIndex(n), dist) == true)
+                                {
+                                    g.DrawLine(lapizConflicto, (float)Vuelos.GetFlightAtIndex(m).GetInitialPosition().GetX(), (float)Vuelos.GetFlightAtIndex(m).GetInitialPosition().GetY(), (float)Vuelos.GetFlightAtIndex(m).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(m).GetFinalPosition().GetY());
+                                    g.DrawLine(lapizConflicto, (float)Vuelos.GetFlightAtIndex(n).GetInitialPosition().GetX(), (float)Vuelos.GetFlightAtIndex(n).GetInitialPosition().GetY(), (float)Vuelos.GetFlightAtIndex(n).GetFinalPosition().GetX(), (float)Vuelos.GetFlightAtIndex(n).GetFinalPosition().GetY());
+
+                                }
+                            }
+
+                        }
+
+                    }
+                    if (Vuelos.EstaDestinoLista() == true)
+                    {
+                        Conflictom = true;
+                    }
+                }
+            }
+
+            catch (FileNotFoundException) //Fichero no encontrado o mal cargado
+            {
+                MessageBox.Show("Error al cargar fichero");
+            }
+
+            bool Conflicto = false;
+            while (Conflicto != true)
+            {
+                Vuelos.MoveAll(1);
+                if (Vuelos.ConflictoF(dist) == true)
+                {
+                    Conflicto = true;
+                    AVISO.BackColor = Color.Red;
+                    AVISO.Size = new Size(100, 50);
+                }
+                if (Vuelos.EstaDestinoLista() == true)
+                {
+                    Conflicto = true;
+                }
+            }
         }
     }
 }

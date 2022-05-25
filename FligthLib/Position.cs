@@ -29,6 +29,15 @@ namespace FlightLib
             return y;
         }
 
+        public void SetGetX(double p)//set del atributo x
+        {
+            this.x = p;
+        }
+
+        public void SetGetY(double p)//set del atributo y
+        {
+            this.y = p;
+        }
         public double
         Distancia(Position b)// retorna la distancia entre los dos Postion
 

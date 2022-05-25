@@ -61,6 +61,24 @@
     <Compile Include="Espacioaerio.Designer.cs">
       <DependentUpon>Espacioaerio.cs</DependentUpon>
     </Compile>
+    <Compile Include="CargarComo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargarComo.Designer.cs">
+      <DependentUpon>CargarComo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuardarComo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuardarComo.Designer.cs">
+      <DependentUpon>GuardarComo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResolverConflicto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResolverConflicto.Designer.cs">
+      <DependentUpon>ResolverConflicto.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenerarVuelos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,19 +121,22 @@
     <Compile Include="IntroducirDatosForm.Designer.cs">
       <DependentUpon>IntroducirDatosForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrincipalForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PrincipalForm.Designer.cs">
-      <DependentUpon>PrincipalForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CambiarContrseñaForm.resx">
       <DependentUpon>CambiarContrseñaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CargarComo.resx">
+      <DependentUpon>CargarComo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Espacioaerio.resx">
       <DependentUpon>Espacioaerio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuardarComo.resx">
+      <DependentUpon>GuardarComo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResolverConflicto.resx">
+      <DependentUpon>ResolverConflicto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenerarVuelos.resx">
       <DependentUpon>GenerarVuelos.cs</DependentUpon>
@@ -131,9 +152,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IntroducirParametrosForm.resx">
       <DependentUpon>IntroducirParametrosForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PrincipalForm.resx">
-      <DependentUpon>PrincipalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

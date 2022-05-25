@@ -15,15 +15,19 @@ namespace Flight_Forms
     {
         FlightPlan vuelo;
 
-        public Informaciónvuelo(FlightPlan vuelo)
+        public Informaciónvuelo()
         {
-            this.vuelo = vuelo;
+            
             InitializeComponent();
         }
 
-        public void SetFlight(FlightPlan flight)
+        public void SetFlight(FlightPlan v)
         {
-            this.vuelo = flight;
+            this.vuelo = v;
+        }
+        public void ClickedFlight(FlightPlan f) //Constructor
+        {
+            this.vuelo = f;
         }
 
         //Muestra en las labels los atributos del flightplan clicado mediante los gets

@@ -47,6 +47,8 @@
             this.comentario = new System.Windows.Forms.Label();
             this.idLabel = new System.Windows.Forms.Label();
             this.Cerrar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Compañia = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // aceptarButton
@@ -56,7 +58,7 @@
             this.aceptarButton.FlatAppearance.BorderSize = 3;
             this.aceptarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aceptarButton.Location = new System.Drawing.Point(445, 280);
-            this.aceptarButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.aceptarButton.Margin = new System.Windows.Forms.Padding(2);
             this.aceptarButton.Name = "aceptarButton";
             this.aceptarButton.Size = new System.Drawing.Size(99, 31);
             this.aceptarButton.TabIndex = 19;
@@ -80,8 +82,8 @@
             // velocidadBox
             // 
             this.velocidadBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.velocidadBox.Location = new System.Drawing.Point(79, 202);
-            this.velocidadBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.velocidadBox.Location = new System.Drawing.Point(54, 278);
+            this.velocidadBox.Margin = new System.Windows.Forms.Padding(2);
             this.velocidadBox.Name = "velocidadBox";
             this.velocidadBox.Size = new System.Drawing.Size(103, 22);
             this.velocidadBox.TabIndex = 21;
@@ -92,7 +94,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label3.Location = new System.Drawing.Point(86, 181);
+            this.label3.Location = new System.Drawing.Point(66, 235);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 18);
@@ -103,7 +105,7 @@
             // 
             this.xInBox.BackColor = System.Drawing.Color.AliceBlue;
             this.xInBox.Location = new System.Drawing.Point(258, 78);
-            this.xInBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.xInBox.Margin = new System.Windows.Forms.Padding(2);
             this.xInBox.Name = "xInBox";
             this.xInBox.Size = new System.Drawing.Size(115, 22);
             this.xInBox.TabIndex = 36;
@@ -112,7 +114,7 @@
             // 
             this.yInBox.BackColor = System.Drawing.Color.AliceBlue;
             this.yInBox.Location = new System.Drawing.Point(430, 78);
-            this.yInBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.yInBox.Margin = new System.Windows.Forms.Padding(2);
             this.yInBox.Name = "yInBox";
             this.yInBox.Size = new System.Drawing.Size(115, 22);
             this.yInBox.TabIndex = 35;
@@ -121,7 +123,7 @@
             // 
             this.yFinBox.BackColor = System.Drawing.Color.AliceBlue;
             this.yFinBox.Location = new System.Drawing.Point(430, 211);
-            this.yFinBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.yFinBox.Margin = new System.Windows.Forms.Padding(2);
             this.yFinBox.Name = "yFinBox";
             this.yFinBox.Size = new System.Drawing.Size(115, 22);
             this.yFinBox.TabIndex = 34;
@@ -130,7 +132,7 @@
             // 
             this.xFinBox.BackColor = System.Drawing.Color.AliceBlue;
             this.xFinBox.Location = new System.Drawing.Point(258, 211);
-            this.xFinBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.xFinBox.Margin = new System.Windows.Forms.Padding(2);
             this.xFinBox.Name = "xFinBox";
             this.xFinBox.Size = new System.Drawing.Size(115, 22);
             this.xFinBox.TabIndex = 33;
@@ -138,8 +140,8 @@
             // idBox
             // 
             this.idBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.idBox.Location = new System.Drawing.Point(79, 78);
-            this.idBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idBox.Location = new System.Drawing.Point(54, 78);
+            this.idBox.Margin = new System.Windows.Forms.Padding(2);
             this.idBox.Name = "idBox";
             this.idBox.Size = new System.Drawing.Size(103, 22);
             this.idBox.TabIndex = 32;
@@ -254,7 +256,7 @@
             this.idLabel.BackColor = System.Drawing.Color.Transparent;
             this.idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idLabel.ForeColor = System.Drawing.Color.AliceBlue;
-            this.idLabel.Location = new System.Drawing.Point(75, 58);
+            this.idLabel.Location = new System.Drawing.Point(57, 39);
             this.idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(100, 18);
@@ -276,6 +278,25 @@
             this.Cerrar.UseVisualStyleBackColor = false;
             this.Cerrar.Click += new System.EventHandler(this.Cerrar_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(54, 186);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(109, 22);
+            this.textBox1.TabIndex = 40;
+            // 
+            // Compañia
+            // 
+            this.Compañia.AutoSize = true;
+            this.Compañia.BackColor = System.Drawing.Color.Transparent;
+            this.Compañia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Compañia.ForeColor = System.Drawing.Color.AliceBlue;
+            this.Compañia.Location = new System.Drawing.Point(63, 152);
+            this.Compañia.Name = "Compañia";
+            this.Compañia.Size = new System.Drawing.Size(84, 18);
+            this.Compañia.TabIndex = 41;
+            this.Compañia.Text = "Compañia";
+            // 
             // IntroducirDatosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -283,6 +304,8 @@
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.BackgroundImage = global::Flight_Forms.Properties.Resources.estrellas;
             this.ClientSize = new System.Drawing.Size(627, 356);
+            this.Controls.Add(this.Compañia);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Cerrar);
             this.Controls.Add(this.xInBox);
             this.Controls.Add(this.yInBox);
@@ -302,7 +325,7 @@
             this.Controls.Add(this.velocidadBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.aceptarButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "IntroducirDatosForm";
             this.Text = "Introducir los Datos de Vuelo";
             this.Load += new System.EventHandler(this.IntroducirDatosForm_Load);
@@ -351,5 +374,7 @@
 
         private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Button Cerrar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label Compañia;
     }
 }

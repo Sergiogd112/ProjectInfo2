@@ -40,7 +40,7 @@ namespace Flight_Forms
 
                 //abrimos el siguiente formulario de opciones
                 this.Visible = false;
-                PrincipalForm form = new PrincipalForm();
+                Espacioaerio form = new Espacioaerio();
                 form.ShowDialog();
 
                 form.Visible = true;
