@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestionUsuarios;
+using System.Media;
 
 namespace Flight_Forms
 {
     public partial class CambiarContrseñaForm : Form
     {
         Gestion gestion;
+        SoundPlayer musica;
+        
+
 
         public CambiarContrseñaForm(Gestion gestion)
         {
@@ -110,6 +114,17 @@ namespace Flight_Forms
         public Gestion GetDB()
         {
             return this.gestion;
+        }
+
+        private void CambiarContrseñaForm_Load(object sender, EventArgs e)
+        {
+            musica = new SoundPlayer(@"c:BoogieWonderland.wav");
+            musica.Play();
+        }
+
+        public void PararMusica()
+        {
+            musica.Stop();
         }
     }
 }

@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Flight_Forms
 {
     public partial class GenerarVuelos : Form
     {
+        SoundPlayer musica;
         int n;
         double[] rangoDistancia = new double[2];
         double[] rangoVelocidad = new double[2];
@@ -43,6 +45,22 @@ namespace Flight_Forms
                 this.Close();
             }
 
+        }
+
+        private void GenerarVuelos_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                musica = new SoundPlayer(@"c:TongueTied.wav");
+                musica.Play();
+            }
+            catch (Exception ex)
+            { }
+        }
+
+        public void PararMusica()
+        {
+            musica.Stop();
         }
     }
 }

@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Flight_Forms
 {
     public partial class CargarComo : Form
     {
+        SoundPlayer musica;
         string Fichero;
         public CargarComo()
         {
@@ -31,6 +33,22 @@ namespace Flight_Forms
         public string GetNombreFichero()
         {
             return Fichero;
+        }
+
+        private void CargarComo_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                musica = new SoundPlayer(@"c:MerryGoRoundOfLife.wav");
+                musica.Play();
+            }
+            catch (Exception ex)
+            { }
+        }
+
+        public void PararMusica()
+        {
+            musica.Stop();
         }
     }
 }

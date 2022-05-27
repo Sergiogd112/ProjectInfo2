@@ -38,17 +38,19 @@ namespace Flight_Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 88);
+            this.label1.Location = new System.Drawing.Point(39, 138);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 18);
+            this.label1.Size = new System.Drawing.Size(510, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre que desee para guardar el fichero";
             // 
             // Aceptar
             // 
-            this.Aceptar.Location = new System.Drawing.Point(116, 198);
+            this.Aceptar.Location = new System.Drawing.Point(174, 309);
+            this.Aceptar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Aceptar.Name = "Aceptar";
-            this.Aceptar.Size = new System.Drawing.Size(140, 55);
+            this.Aceptar.Size = new System.Drawing.Size(210, 86);
             this.Aceptar.TabIndex = 2;
             this.Aceptar.Text = "Aceptar";
             this.Aceptar.UseVisualStyleBackColor = true;
@@ -56,22 +58,25 @@ namespace Flight_Forms
             // 
             // Nombre
             // 
-            this.Nombre.Location = new System.Drawing.Point(76, 123);
+            this.Nombre.Location = new System.Drawing.Point(114, 192);
+            this.Nombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(220, 22);
+            this.Nombre.Size = new System.Drawing.Size(328, 31);
             this.Nombre.TabIndex = 3;
             // 
             // GuardarComo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(378, 327);
+            this.ClientSize = new System.Drawing.Size(567, 511);
             this.Controls.Add(this.Nombre);
             this.Controls.Add(this.Aceptar);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GuardarComo";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.GuardarComo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FlightLib;
+using System.Media;
 
 namespace Flight_Forms
 {
@@ -17,6 +18,7 @@ namespace Flight_Forms
         double[] parametros = new double[2];
         int tiempociclo;
         double distanciaseguridad;
+        SoundPlayer musica;
 
         public IntroducirParametrosForm()
         {
@@ -25,6 +27,18 @@ namespace Flight_Forms
 
         private void IntroducirParametrosForm_Load(object sender, EventArgs e)
         {
+            try
+            {
+                musica = new SoundPlayer(@"c:LoveMeLikeThere’sNoTomorrow.wav");
+                musica.Play();
+            }
+            catch (Exception ex)
+            {}
+        }
+
+        public void PararMusica()
+        {
+            musica.Stop();
         }
 
         //lo que pasa cuando se clica el boton aceptar

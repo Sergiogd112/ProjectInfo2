@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Flight_Forms
 {
     public partial class GuardarComo : Form
     {
+        SoundPlayer musica;
         string NombreFichero;
         public GuardarComo()
         {
@@ -34,6 +36,22 @@ namespace Flight_Forms
         private void Nombrefichero_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void GuardarComo_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                musica = new SoundPlayer(@"c:Africa.wav");
+                musica.Play();
+            }
+            catch (Exception ex)
+            { }
+        }
+
+        public void PararMusica()
+        {
+            musica.Stop();
         }
     }
 }
