@@ -609,45 +609,19 @@ namespace Flight_Forms
 
             Graphics g = panel2.CreateGraphics();
 
-            state.GetCurrentList().MoveAll(tiempociclos);
-
-            // Vemos si habra conflcitos por cada uno de los aviones
-            for (int i = 0; i < state.GetCurrentList().GetLen(); i++)
+            state.GetCurrentList().MoveAll(Convert.ToInt32(tiempociclos)); // Movera la simulacion
+            if (state.GetCurrentList().EstaDestinoLista())
             {
-                for (int n = i + 1; n < state.GetCurrentList().GetLen(); n++)
-                {
-                    if (
-                        state
-                            .GetCurrentList()
-                            .GetFlightAtIndex(i)
-                            .ConflictoTotal(state
-                                .GetCurrentList()
-                                .GetFlightAtIndex(n),
-                            dist) ==
-                        true
-                    )
-                    {
-                        // Al haber confclitos el timer se para
-                        timerconflictos.Stop();
-                        Prueba = true;
-                    }
-                }
-
-                // Si no hay conflictos
-                if (
-                    state.GetCurrentList().GetFlightAtIndex(i).EstaDestino() !=
-                    false
-                )
-                {
-                    timerconflictos.Stop();
-                    MessageBox.Show("No hay conflicto");
-                    for (int p = 0; p < state.GetCurrentList().GetLen(); p++)
-                    {
-                        state.GetCurrentList().GetFlightAtIndex(p).Restart();
-                    }
-                }
+                reloj.Stop();
             }
-
+            state.GetCurrentList().CheckDistanciaActual();
+            bool conflicto = state.GetCurrentList().ChechConflicActual();
+            if (conflicto)
+            {
+                timerconflictos.Stop();
+                Prueba = true;
+                Console.WriteLine("conflicto");
+            }
             // Al haber conflicto se abrira el form de ConflictoResolver
             if (Prueba == true)
             {
@@ -727,10 +701,7 @@ namespace Flight_Forms
                 }
 
                 // Reiniciaremos la simulacion al acabar
-                for (int i = 0; i < state.GetCurrentList().GetLen(); i++)
-                {
-                    state.GetCurrentList().GetFlightAtIndex(i).Restart();
-                }
+                state.Restart();
             }
         }
 
@@ -904,7 +875,7 @@ namespace Flight_Forms
                 numAviones++;
             }
             UpdatePlanes(sender, e);
-            }
+        }
 
         // private void guardarComoToolStripMenuItem_Click(
         //     object sender,

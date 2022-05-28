@@ -42,7 +42,7 @@ namespace FlightLib
             this.velocidad = velocidad;
         }
 
-        public FlightPlan(string id, string c,double ipx,double ipy, double cpx, double cpy, double fpx, double fpy, double velocidad)
+        public FlightPlan(string id, string c, double ipx, double ipy, double cpx, double cpy, double fpx, double fpy, double velocidad)
         {
             this.id = id;
             this.company = c;
@@ -110,7 +110,7 @@ namespace FlightLib
         {
             return this.finalPosition;
         }
-        public string GetCompany() 
+        public string GetCompany()
         {
             return this.company;
         }
@@ -212,7 +212,7 @@ namespace FlightLib
                     hyp;
                 double x = currentPosition.GetX() - d * cos;
                 double y = currentPosition.GetY() - d * sin;
-                SetCurrentPosition (x, y);
+                SetCurrentPosition(x, y);
             }
             return;
         }
@@ -827,8 +827,7 @@ namespace FlightLib
                     Convert.ToDouble(data[3]),
                     Convert.ToDouble(data[4]),
                     Convert.ToDouble(data[5]),
-                    Convert.ToDouble(data[6]),
-                    Convert.ToDouble(data[7]));
+                    Convert.ToDouble(data[6]),);
             return plan;
         }
 

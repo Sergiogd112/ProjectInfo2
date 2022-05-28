@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightLib", "FligthLib\Flig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flight_Forms", "Flight_Forms\Flight_Forms.csproj", "{1929DD9C-548B-49C9-852C-B3BA8ECEE78E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionUsuarios", "GestionClientes\GestionUsuarios.csproj", "{BDC2844D-E46C-4958-A95D-EEF5D235A7C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseDatos", "GestionClientes\BaseDatos.csproj", "{BDC2844D-E46C-4958-A95D-EEF5D235A7C4}"
 	ProjectSection(ProjectDependencies) = postProject
 		{1523F3DF-2B89-474F-99A5-64BB03FE99AE} = {1523F3DF-2B89-474F-99A5-64BB03FE99AE}
 	EndProjectSection

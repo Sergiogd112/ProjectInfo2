@@ -208,9 +208,9 @@
       <Project>{1523f3df-2b89-474f-99a5-64bb03fe99ae}</Project>
       <Name>FlightLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GestionClientes\GestionUsuarios.csproj">
+    <ProjectReference Include="..\GestionClientes\BaseDatos.csproj">
       <Project>{bdc2844d-e46c-4958-a95d-eef5d235a7c4}</Project>
-      <Name>GestionUsuarios</Name>
+      <Name>BaseDatos</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
