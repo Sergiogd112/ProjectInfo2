@@ -827,7 +827,8 @@ namespace FlightLib
                     Convert.ToDouble(data[3]),
                     Convert.ToDouble(data[4]),
                     Convert.ToDouble(data[5]),
-                    Convert.ToDouble(data[6]),);
+                    Convert.ToDouble(data[6]),
+                    Convert.ToDouble(data[7]));
             return plan;
         }
 
