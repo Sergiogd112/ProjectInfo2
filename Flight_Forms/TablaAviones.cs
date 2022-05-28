@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FlightLib;
+using System.Media;
 
 namespace Flight_Forms
 {
     public partial class TablaAviones : Form
     {
+        SoundPlayer musica;
         public TablaAviones()
         {
             InitializeComponent();
@@ -27,6 +29,18 @@ namespace Flight_Forms
 
         private void MostrarPuntos_Load(object sender, EventArgs e)
         {
+            try
+            {
+                musica = new SoundPlayer(@"c:Conga.wav");
+                musica.Play();
+            }
+            catch (Exception ex)
+            { }
+        }
+
+        public void PararMusica()
+        {
+            musica.Stop();
         }
 
         private void Cerrar_Click_1(object sender, EventArgs e)

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using FlightLib;
 using GestionUsuarios;
 using System.IO;
+using System.Media;
 
 namespace Flight_Forms
 {
@@ -18,7 +19,7 @@ namespace Flight_Forms
     /// </summary>
     public partial class Espacioaerio : Form
     {
-        
+        SoundPlayer musica;
 
         int ciclo;
 
@@ -52,11 +53,20 @@ namespace Flight_Forms
             parametros.ShowDialog();
             ciclo = parametros.GetTiempoCiclo();
             dist = parametros.GetDistanciaSeguridad();
+            parametros.PararMusica();
             AVISO.Size = new Size(0, 0);
             LabelConflicto.Text = " ";
+            try
+            {
+                musica = new SoundPlayer(@"c:ComeFlyWithMe.wav");
+                musica.Play();
+            }
+            catch (Exception ex)
+            { }
         }
         private void nuevoAvionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            musica.Stop();
             //Iniciamos Form de NuevoAvion 
             IntroducirDatosForm aparece = new IntroducirDatosForm();
             aparece.ShowDialog();
@@ -134,6 +144,7 @@ namespace Flight_Forms
         /// <param name="flight">objeto de tipo FligthPlan</param>
         private void ClickFlight(object sender, EventArgs e)
         {
+            musica.Stop();
             PictureBox avion = (PictureBox)sender;
             int i = (int)avion.Tag - 1; //intervalo de tags 
             Informaciónvuelo formulario = new Informaciónvuelo();
@@ -529,17 +540,23 @@ namespace Flight_Forms
 
         private void listaDeVuelosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            musica.Stop();
             TablaAviones aparece = new TablaAviones();
             aparece.SetListFlights(Vuelos);
             aparece.ShowDialog();
+            aparece.PararMusica();
+            musica.Play();
         }
 
         private void parametrosDelVueloToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            musica.Stop();
             IntroducirParametrosForm parametros = new IntroducirParametrosForm();
             parametros.ShowDialog();
             ciclo = parametros.GetTiempoCiclo();
             dist = parametros.GetDistanciaSeguridad();
+            parametros.PararMusica();
+            musica.Play();
         }
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -624,9 +641,12 @@ namespace Flight_Forms
 
         private void guardarComoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            musica.Stop();
             GuardarComo aparece = new GuardarComo(); // Form de GuardarComo aparece 
             aparece.ShowDialog();
             string Nombre = aparece.GetNombreFichero();
+            aparece.PararMusica();
+            musica.Play();
 
             GuardarAviones = new StreamWriter(Nombre + ".txt"); // Fichero con nombre del usuario deseado 
 
@@ -640,9 +660,12 @@ namespace Flight_Forms
 
         private void cargarComoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            musica.Stop();
             CargarComo aparece = new CargarComo();
             aparece.ShowDialog();
             string NombreFichero = aparece.GetNombreFichero();
+            aparece.PararMusica();
+            musica.Play();
             Graphics g = panel2.CreateGraphics();
 
             string[] trozos;

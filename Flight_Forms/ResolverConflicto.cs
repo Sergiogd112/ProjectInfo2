@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FlightLib;
 using GestionUsuarios;
+using System.Media;
 
 
 namespace Flight_Forms
 {
     public partial class ResolverConflicto : Form
     {
+        SoundPlayer musica;
         FlightPlanList ListaVuelos = new FlightPlanList();//Crea una objeto de clase flightplanslist
         double distanciadeseguridad;
         bool Resuelto = false;
@@ -117,5 +119,20 @@ namespace Flight_Forms
             return Resuelto;
         }
 
+        private void ResolverConflicto_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                musica = new SoundPlayer(@"c:Unstoppable.wav");
+                musica.Play();
+            }
+            catch (Exception ex)
+            { }
+        }
+
+        public void PararMusica()
+        {
+            musica.Stop();
+        }
     }
 }

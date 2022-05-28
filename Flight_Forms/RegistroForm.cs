@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestionUsuarios;
+using System.Media;
 
 namespace Flight_Forms
 {
     public partial class RegistroForm : Form
     {
+        SoundPlayer musica;
         public RegistroForm()
         {
             InitializeComponent();
@@ -32,6 +34,20 @@ namespace Flight_Forms
         {
             //abrimos base de datos
             this.users.Iniciar();
+            try 
+            {
+                musica = new SoundPlayer(@"c:120.wav");
+                musica.Play();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        public void PararMusica()
+        {
+            musica.Stop();
         }
 
         private void regButton_Click(object sender, EventArgs e)

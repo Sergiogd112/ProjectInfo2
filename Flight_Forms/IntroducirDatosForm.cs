@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FlightLib;
+using System.Media;
 
 namespace Flight_Forms
 {
     public partial class IntroducirDatosForm : Form
     {
+        SoundPlayer musica;
         public IntroducirDatosForm()
         {
             InitializeComponent();
@@ -56,6 +58,18 @@ namespace Flight_Forms
 
         private void IntroducirDatosForm_Load(object sender, EventArgs e)
         {
+            try
+            {
+                musica = new SoundPlayer(@"c:VientoyArena.wav");
+                musica.Play();
+            }
+            catch (Exception ex)
+            { }
+        }
+
+        public void PararMusica()
+        {
+            musica.Stop();
         }
 
         private void Cerrar_Click(object sender, EventArgs e)

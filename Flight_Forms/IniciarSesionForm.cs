@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestionUsuarios;
+using System.Media;
 
 namespace Flight_Forms
 {
     public partial class IniciarSesionForm : Form
     {
+        SoundPlayer musica;
         public IniciarSesionForm()
         {
             InitializeComponent();
@@ -25,10 +27,20 @@ namespace Flight_Forms
         {
             //abrimos base de datos
             this.users.Iniciar();
+            try
+            {
+                musica = new SoundPlayer(@"c:Casanova.wav");
+                musica.Play();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void iniciarButton_Click(object sender, EventArgs e)
         {
+            musica.Stop();
             //debemos verificar que los datos introducidos son correctos:
             //el usuario existe y,además, la contraseña corresponde al nombre de usuario
             int resultado = this.users.findUser(userBox.Text, passBox.Text);
@@ -98,6 +110,8 @@ namespace Flight_Forms
             reg.ShowDialog();
             reg.Visible = true;
             this.users = reg.DameBaseDatos();
+            reg.PararMusica();
+            musica.Play();
         }
 
         private void constraseñaOlvidadaToolStripMenuItem_Click(
@@ -109,6 +123,8 @@ namespace Flight_Forms
             cambio.ShowDialog();
             cambio.Visible = true;
             this.users = cambio.GetDB();
+            cambio.PararMusica();
+            musica.Play();
         }
 
         private void passBox_KeyPress(object sender, KeyPressEventArgs e)
