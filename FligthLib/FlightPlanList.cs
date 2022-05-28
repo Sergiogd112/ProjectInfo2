@@ -152,6 +152,72 @@ namespace FlightLib
         }
 
         // Generate
+        public void GenerateN(
+            int n,
+            double[] lenRange,
+            double[] speedRange,
+            int[,] mapRange,
+            int retry = 100
+        )
+        {
+            Random random = new Random();
+            StreamReader R = new StreamReader("names.txt");
+            string text = R.ReadToEnd();
+            string[] names = text.Split('\n');
+            if (
+                lenRange[0] * lenRange[0] >=
+                (mapRange[0, 0] - mapRange[1, 0]) *
+                (mapRange[0, 0] - mapRange[1, 0]) +
+                (mapRange[0, 1] - mapRange[1, 1]) *
+                (mapRange[0, 1] - mapRange[1, 1])
+            )
+            {
+                retry = 1;
+            }
+            for (int i = 0; i < n; i++)
+            {
+                int idx = random.Next(0, names.Length - 1);
+                int idn = random.Next(0, 999);
+                double speed =
+                    random.NextDouble() * (speedRange[1] - speedRange[0]) +
+                    speedRange[0];
+                double x0 =
+                    Convert
+                        .ToDouble(random.Next(mapRange[0, 0], mapRange[1, 0]));
+                double y0 =
+                    Convert
+                        .ToDouble(random.Next(mapRange[0, 1], mapRange[1, 1]));
+                double x = 0.0;
+                double y = 0.0;
+                for (int j = 0; j < retry; j++)
+                {
+                    double len =
+                        random.NextDouble() * (lenRange[1] - lenRange[0]) +
+                        lenRange[0];
+                    double angle = random.NextDouble() * Math.PI;
+                    x = x0 + len * Math.Cos(angle);
+                    y = y0 + len * Math.Sin(angle);
+                    if (
+                        mapRange[0, 0] <= x &&
+                        x <= mapRange[1, 0] &&
+                        mapRange[0, 1] <= y &&
+                        y <= mapRange[1, 1]
+                    )
+                    {
+                        break;
+                    }
+                }
+                this
+                    .AddFlightPlan(new FlightPlan(names[idx] +
+                        Convert.ToString(idn),
+                        x0,
+                        y0,
+                        x,
+                        y,
+                        speed));
+            }
+        }
+
         // Load an save files
         /// <summary>
         /// Añadir un FligthPlan
@@ -362,18 +428,23 @@ namespace FlightLib
 
         public bool ChechConflicActual()
         {
-            bool conflict= false;
-            bool inconf=false;
+            bool conflict = false;
+            bool inconf = false;
             for (int i = 0; i < this.flights.Count - 1; i++)
             {
                 confActual[i][i] = false;
                 for (int j = i + 1; j < this.flights.Count; j++)
                 {
-                    inconf=this.distActual[i][j]<distanciaSeguridad ||this.distActual[j][i]<distanciaSeguridad;
-                    confActual[i][j] =this.distActual[i][j]<distanciaSeguridad;
-                    confActual[j][i] =this.distActual[j][i]<distanciaSeguridad;
-                    if(inconf){
-                        conflict=true;
+                    inconf =
+                        this.distActual[i][j] < distanciaSeguridad ||
+                        this.distActual[j][i] < distanciaSeguridad;
+                    confActual[i][j] =
+                        this.distActual[i][j] < distanciaSeguridad;
+                    confActual[j][i] =
+                        this.distActual[j][i] < distanciaSeguridad;
+                    if (inconf)
+                    {
+                        conflict = true;
                     }
                 }
             }

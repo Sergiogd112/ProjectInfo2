@@ -51,6 +51,31 @@ namespace FlightLib
             this.finalPosition = new Position(fpx, fpy);
             this.velocidad = velocidad;
         }
+        // Constructures
+        public FlightPlan()
+        {
+            this.id = "";
+            this.initialPosition = new Position(0, 0);
+            this.currentPosition = new Position(0, 0);
+            this.finalPosition = new Position(0, 0);
+            this.velocidad = 0;
+        }
+
+        public FlightPlan(
+            string id,
+            double cpx,
+            double cpy,
+            double fpx,
+            double fpy,
+            double velocidad
+        )
+        {
+            this.id = id;
+            this.initialPosition = new Position(cpx, cpy);
+            this.currentPosition = new Position(cpx, cpy);
+            this.finalPosition = new Position(fpx, fpy);
+            this.velocidad = velocidad;
+        }
 
         // GETTER
         /// <summary>
