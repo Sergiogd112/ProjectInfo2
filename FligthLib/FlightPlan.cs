@@ -805,7 +805,7 @@ namespace FlightLib
         {
             string dump =
                 string
-                    .Format("{0},{1},{2},{3},{4},{5},{6},{7}",
+                    .Format("{0},{1},{2},{3},{4},{5},{6},{7}.{8}",
                     this.id,
                     this.initialPosition.GetX(),
                     this.initialPosition.GetY(),
@@ -813,7 +813,8 @@ namespace FlightLib
                     this.currentPosition.GetY(),
                     this.finalPosition.GetX(),
                     this.currentPosition.GetY(),
-                    this.velocidad);
+                    this.velocidad,
+                    this.company);
             return dump;
         }
 
@@ -822,6 +823,7 @@ namespace FlightLib
             string[] data = s.Split(',');
             FlightPlan plan =
                 new FlightPlan(data[0],
+                    data[8],
                     Convert.ToDouble(data[1]),
                     Convert.ToDouble(data[2]),
                     Convert.ToDouble(data[3]),
