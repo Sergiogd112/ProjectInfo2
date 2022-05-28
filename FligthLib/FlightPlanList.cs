@@ -22,6 +22,10 @@ namespace FlightLib
 
         private List<List<double>> confd = new List<List<double>>();
 
+        private List<List<double>> distActual = new List<List<double>>();
+
+        private List<List<bool>> confActual = new List<List<bool>>();
+
         private double distanciaSeguridad;
 
         int count;
@@ -83,6 +87,7 @@ namespace FlightLib
         {
             return flights[index];
         }
+
         public bool EstaDestinoLista()
         {
             bool finalpositon = false;
@@ -101,7 +106,6 @@ namespace FlightLib
                 finalpositon = true;
                 return finalpositon;
             }
-
             else
             {
                 return finalpositon;
@@ -116,7 +120,9 @@ namespace FlightLib
             {
                 for (int n = 0; n < flights.Count; n++)
                 {
-                    VuelosConflictivos = flights[i].ConflictoTotal(flights[n], distanciaSeguridad);
+                    VuelosConflictivos =
+                        flights[i]
+                            .ConflictoTotal(flights[n], distanciaSeguridad);
                     if (VuelosConflictivos == true)
                     {
                         i = flights.Count;
@@ -127,7 +133,6 @@ namespace FlightLib
             }
             return VuelosConflictivos;
         }
-
 
         public FlightPlan GetFligthWithID(string id)
         {
@@ -140,10 +145,13 @@ namespace FlightLib
             }
             return null;
         }
-        // Generate
-        
-        
 
+        public List<List<double>> GetDistanciaActual()
+        {
+            return distActual;
+        }
+
+        // Generate
         // Load an save files
         /// <summary>
         /// Añadir un FligthPlan
@@ -157,26 +165,36 @@ namespace FlightLib
             List<bool> tmpb1 = new List<bool>();
             List<double> tmpd2 = new List<double>();
             List<bool> tmpb2 = new List<bool>();
+            List<double> tmpd3 = new List<double>();
+            List<bool> tmpb3 = new List<bool>();
             for (int i = 0; i < flights.Count; i++)
             {
                 tmpd1.Add(-1);
                 tmpb1.Add(false);
                 tmpd2.Add(-1);
                 tmpb2.Add(false);
+                tmpd3.Add(-1);
+                tmpb3.Add(false);
                 this.interactions[i].Add(false);
                 this.mind[i].Add(-1);
                 this.conflicts[i].Add(false);
+                this.confActual[i].Add(false);
                 this.confd[i].Add(-1);
+                this.distActual[i].Add(-1);
             }
             tmpd1.Add(-1);
             tmpb1.Add(false);
             tmpd2.Add(-1);
             tmpb2.Add(false);
+            tmpd3.Add(-1);
+            tmpb3.Add(false);
             this.flights.Add(fligth);
             this.interactions.Add(tmpb1);
             this.mind.Add(tmpd1);
             this.conflicts.Add(tmpb2);
+            this.confActual.Add(tmpb3);
             this.confd.Add(tmpd2);
+            this.distActual.Add(tmpd3);
             if (checkinteracions)
             {
                 this.CheckInteractions();
@@ -184,13 +202,10 @@ namespace FlightLib
             return 0;
         }
 
-     
-
         /// <summary>
         /// Lee los planes en del fichero txt
         /// </summary>
         /// <param name="filename">Path del fichero</param>
-        
         /// <summary>
         /// Guarda el fichero con un nombre
         /// </summary>
@@ -217,8 +232,6 @@ namespace FlightLib
             string text = R.ReadToEnd();
             return FlightPlanList.Load(text);
         }
-
-
 
         public static FlightPlanList LoadString(string s)
         {
@@ -316,12 +329,57 @@ namespace FlightLib
             }
         }
 
-        // METHODS
+        public bool AnyConflict()
+        {
+            foreach (var row in this.confd)
+            {
+                foreach (double d in row)
+                {
+                    if (d <= this.distanciaSeguridad)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
 
-        /// <summary>
-        /// Mueve todos los aviones n moves
-        /// </summary>
-        /// <param name="moves"></param>
+        public void CheckDistanciaActual()
+        {
+            for (int i = 0; i < this.flights.Count - 1; i++)
+            {
+                distActual[i][i] = 0.0;
+                for (int j = i + 1; j < this.flights.Count; j++)
+                {
+                    distActual[i][j] =
+                        this
+                            .flights[i]
+                            .GetCurrentPosition()
+                            .Distancia(this.flights[j].GetCurrentPosition());
+                }
+            }
+        }
+
+        public bool ChechConflicActual()
+        {
+            bool conflict= false;
+            bool inconf=false;
+            for (int i = 0; i < this.flights.Count - 1; i++)
+            {
+                confActual[i][i] = false;
+                for (int j = i + 1; j < this.flights.Count; j++)
+                {
+                    inconf=this.distActual[i][j]<distanciaSeguridad ||this.distActual[j][i]<distanciaSeguridad;
+                    confActual[i][j] =this.distActual[i][j]<distanciaSeguridad;
+                    confActual[j][i] =this.distActual[j][i]<distanciaSeguridad;
+                    if(inconf){
+                        conflict=true;
+                    }
+                }
+            }
+            return conflict;
+        }
+
         public void MoveAll(int moves)
         {
             for (int i = 0; i < this.flights.Count; i++)
@@ -361,15 +419,13 @@ namespace FlightLib
             {
                 copy.AddFlightPlan(plan.Copy());
             }
-            copy.SetDistanciaSeguridad(distanciaSeguridad);
+            copy.SetDistanciaSeguridad (distanciaSeguridad);
             return copy;
         }
-
 
         public void SolveConflicts()
         {
             bool conf = true;
-            int retry = 0;
             for (int i = 1; i < this.flights.Count; i++)
             {
                 conf = true;
@@ -378,11 +434,19 @@ namespace FlightLib
                 {
                     for (int j = 0; j < i; j++)
                     {
-                        if (interactions[i][j] && flights[i].Conflicto(flights[j], distanciaSeguridad)[0] <= distanciaSeguridad * distanciaSeguridad)
+                        if (
+                            interactions[i][j] &&
+                            flights[i]
+                                .Conflicto(flights[j], distanciaSeguridad)[0] <=
+                            distanciaSeguridad * distanciaSeguridad
+                        )
                         {
-                            Console.WriteLine("{0} vel: {1}", flights[i].GetId(), flights[i].GetVelocidad());
-                            flights[i].SetVelocidad(flights[i].GetVelocidad() - 1);
-
+                            Console
+                                .WriteLine("{0} vel: {1}",
+                                flights[i].GetId(),
+                                flights[i].GetVelocidad());
+                            flights[i]
+                                .SetVelocidad(flights[i].GetVelocidad() - 1);
                         }
                         else
                         {
@@ -392,6 +456,7 @@ namespace FlightLib
                 }
             }
         }
+
         // CONSOLE
         /// <summary>
         /// Escribe todos los FligthPlans por consola
@@ -436,8 +501,8 @@ namespace FlightLib
                     }
                     separator += "+-";
                 }
-                Console.WriteLine(row);
-                Console.WriteLine(separator);
+                Console.WriteLine (row);
+                Console.WriteLine (separator);
             }
         }
 
@@ -473,8 +538,8 @@ namespace FlightLib
                     }
                     separator += "+-";
                 }
-                Console.WriteLine(row);
-                Console.WriteLine(separator);
+                Console.WriteLine (row);
+                Console.WriteLine (separator);
             }
         }
 

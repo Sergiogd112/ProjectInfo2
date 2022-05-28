@@ -54,7 +54,7 @@ namespace Flight_Forms
                 musica = new SoundPlayer(@"c:TongueTied.wav");
                 musica.Play();
             }
-            catch (Exception ex)
+            catch
             { }
         }
 

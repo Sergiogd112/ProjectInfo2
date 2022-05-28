@@ -126,7 +126,7 @@ namespace Flight_Forms
                 musica = new SoundPlayer(@"c:Unstoppable.wav");
                 musica.Play();
             }
-            catch (Exception ex)
+            catch
             { }
         }
 

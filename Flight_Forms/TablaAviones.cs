@@ -34,7 +34,7 @@ namespace Flight_Forms
                 musica = new SoundPlayer(@"c:Conga.wav");
                 musica.Play();
             }
-            catch (Exception ex)
+            catch
             { }
         }
 

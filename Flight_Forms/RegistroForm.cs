@@ -39,7 +39,7 @@ namespace Flight_Forms
                 musica = new SoundPlayer(@"c:120.wav");
                 musica.Play();
             }
-            catch (Exception ex)
+            catch
             {
 
             }

@@ -45,7 +45,7 @@ namespace Flight_Forms
                 musica = new SoundPlayer(@"c:Africa.wav");
                 musica.Play();
             }
-            catch (Exception ex)
+            catch 
             { }
         }
 

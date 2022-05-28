@@ -61,9 +61,9 @@ namespace SimulatorConsole
                         fligthList.AddNConsole(nAviones);
             */
             // Añadiendo desde fichero
-            string filename =
-                @"C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\data.txt";
-            fligthList.AddFromFile (filename);
+            // string filename =
+            //     @"C:\Users\sergi\Documents\GitHub\ApuntesUni\Q2A\I2\TEMA1\Your first project in C#-20220220\1.- PrimerProyectoBefore\PrimerProyectoSergio\SimulatorConsole\data.txt";
+            // fligthList.AddFromFile (filename);
 
             // bucle de simulación
             int ciclo = 0;

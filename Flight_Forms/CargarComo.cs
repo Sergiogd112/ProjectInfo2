@@ -4,17 +4,19 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Media;
 
 namespace Flight_Forms
 {
     public partial class CargarComo : Form
     {
         SoundPlayer musica;
+
         string Fichero;
+
         public CargarComo()
         {
             InitializeComponent();
@@ -22,7 +24,6 @@ namespace Flight_Forms
 
         private void NombreFichero_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void Cargarfichero_Click(object sender, EventArgs e)
@@ -30,6 +31,7 @@ namespace Flight_Forms
             Fichero = NombreFichero.Text;
             Close();
         }
+
         public string GetNombreFichero()
         {
             return Fichero;
@@ -42,8 +44,9 @@ namespace Flight_Forms
                 musica = new SoundPlayer(@"c:MerryGoRoundOfLife.wav");
                 musica.Play();
             }
-            catch (Exception ex)
-            { }
+            catch
+            {
+            }
         }
 
         public void PararMusica()

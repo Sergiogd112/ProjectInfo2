@@ -63,7 +63,7 @@ namespace Flight_Forms
                 musica = new SoundPlayer(@"c:VientoyArena.wav");
                 musica.Play();
             }
-            catch (Exception ex)
+            catch
             { }
         }
 
