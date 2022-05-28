@@ -904,7 +904,7 @@ namespace Flight_Forms
                 numAviones++;
             }
             UpdatePlanes(sender, e);
-        }
+            }
 
         // private void guardarComoToolStripMenuItem_Click(
         //     object sender,
