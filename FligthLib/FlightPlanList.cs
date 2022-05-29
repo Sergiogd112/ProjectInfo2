@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Linq;
+
 
 namespace FlightLib
 {
@@ -290,6 +292,8 @@ namespace FlightLib
             {
                 dump += fligth.DumpString() + ";";
             }
+            dump = dump.Remove(dump.Length - 1);
+
             return dump;
         }
 

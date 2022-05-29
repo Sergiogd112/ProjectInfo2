@@ -89,6 +89,7 @@ namespace FlightLib
             {
                 data += list.DumpString() + "\n";
             }
+            data = data.Remove(data.Length - 1);
             return data;
         }
 
