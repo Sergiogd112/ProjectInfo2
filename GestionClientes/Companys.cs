@@ -11,7 +11,7 @@ using FlightLib;
 
 namespace GestionUsuarios
 {
-    internal class Companys
+    public class Companys
     {
         //conector para acceder a la base de datos
         private SQLiteConnection cnx;
@@ -76,12 +76,12 @@ namespace GestionUsuarios
             cmd.ExecuteNonQuery();
         }
 
-        public void fillTable(Company company)
+        /*public void fillTable(Company company)
         {
             //rellenamos tabla con los datos de los company
             string s =
                 "INSERT INTO company values ('" +
-                company.Nombre +
+                company.Nombre() +
                 "','" +
                 company.Email +
                 "','" +
@@ -91,7 +91,7 @@ namespace GestionUsuarios
                 ");";
             SQLiteCommand cmd = new SQLiteCommand(s, cnx);
             cmd.ExecuteNonQuery();
-        }
+        }*/
 
         //método para verificar la existencia de usuario con username introducido por parametro
         public int ExistsICAO(string name)
@@ -113,7 +113,7 @@ namespace GestionUsuarios
         }
 
         //método para actualizar los datos de un usuario
-        public int updateCompany(string icao, Company company)
+        /*public int updateCompany(string icao, Company company)
         {
             //nueva contraseña
             try
@@ -144,7 +144,7 @@ namespace GestionUsuarios
             {
                 return -1;
             }
-        }
+        }*/
 
         public int GenerarTabla(string filename)
         {

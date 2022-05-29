@@ -805,6 +805,7 @@ namespace FlightLib
         {
             FlightPlan copy =
                 new FlightPlan(this.id,
+                    this.company,
                     this.initialPosition.GetX(),
                     this.initialPosition.GetY(),
                     this.currentPosition.GetX(),

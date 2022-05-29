@@ -23,8 +23,10 @@ namespace FlightLib
         {
             this.fromEmail = fromEmail;
             this.fromPass = fromPass;
+            this.fromAddr = new MailAddress(fromEmail, fromName);
+
             this.fromName = fromName;
-            this.toAddr = new MailAddress(fromEmail, fromName);
+            this.toAddr = new MailAddress(toEmail, toName);
             this.toEmail = toEmail;
             this.toName = toName;
             this.smtp = new SmtpClient
@@ -52,7 +54,8 @@ namespace FlightLib
             using (var message = new MailMessage(fromAddr, toAddr)
             {
                 Subject = subject,
-                Body = body
+                Body = body,
+                IsBodyHtml = true
             })
             {
                 smtp.Send(message);

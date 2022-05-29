@@ -24,9 +24,11 @@ namespace Flight_Forms
         Gestion G;
         DataTable compañias;
 
-        public ResolverConflicto()
+        public ResolverConflicto(double dist ,FlightPlanList lista)
         {
             InitializeComponent();
+            this.ListaVuelos =lista;
+            this.distanciadeseguridad=dist;
         }
        
         private void No_Click(object sender, EventArgs e)

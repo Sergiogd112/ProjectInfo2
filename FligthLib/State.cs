@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Text;
-using System.Data;
 
 namespace FlightLib
 {
@@ -117,23 +117,79 @@ namespace FlightLib
             return state;
         }
 
-        public string GenerateFligthReport(string filename, string id,double pV, double nV)
+        public string
+        GenerateFligthReport(string filename, string id, double pV, double nV)
         {
-            return "";
+            StreamReader R = new StreamReader(filename);
+            string text = R.ReadToEnd();
+            R.Close();
+            text = text.Replace("[[FN]]", id);
+            text = text.Replace("[[PV]]", Convert.ToString(pV));
+            text = text.Replace("[[NV]]", Convert.ToString(nV));
+
+            return text;
         }
 
-        public string GenerateCompanyReport(string filename,string icao,FlightPlanList list)
+        public string
+        GenerateCompanyReport(string filename, string icao, string flreport, DataRow company)
         {
-            return "";
+            StreamReader R = new StreamReader(filename);
+            string text = R.ReadToEnd();
+            R.Close();
+            text = text.Replace("[[Nombre]]", Convert.ToString(company["nombre"]));
+            text = text.Replace("[[email]]", Convert.ToString(company["email"]));
+            text = text.Replace("[[phone]]", Convert.ToString(company["telefono"]));
+            text = text.Replace("[[vuelos]]", flreport);
+            return text;
         }
 
         public string GenerateReport(DataTable data)
         {
-
-            for(int i = 0; i < current.GetLen();i++){
-                FlightPlan pfligth=history.Peek()
+            Dictionary<string, string> repdict =
+                new Dictionary<string, string>();
+            for (int i = 0; i < current.GetLen(); i++)
+            {
+                FlightPlan pfligth = history.Peek().GetFlightAtIndex(i);
+                FlightPlan cfligth = current.GetFlightAtIndex(i);
+                if (pfligth.GetVelocidad() != cfligth.GetVelocidad())
+                {
+                    if (repdict.ContainsKey(cfligth.GetCompany()))
+                    {
+                        repdict[cfligth.GetCompany()] +=
+                            GenerateFligthReport("templates\\vuelos.html",
+                            cfligth.GetId(),
+                            pfligth.GetVelocidad(),
+                            cfligth.GetVelocidad());
+                    }
+                    else
+                    {
+                        repdict[cfligth.GetCompany()] =
+                            GenerateFligthReport("templates\\vuelos.html",
+                            cfligth.GetId(),
+                            pfligth.GetVelocidad(),
+                            cfligth.GetVelocidad());
+                    }
+                }
             }
-            return "";
+            string crtext = "";
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                string key = Convert.ToString(data.Rows[i]["icao"]);
+                if (repdict.ContainsKey(key))
+                {
+                    crtext += GenerateCompanyReport("templates\\compañia.html", key, repdict[key], data.Rows[i]);
+                }
+            }
+            StreamReader R = new StreamReader("templates\\main.html");
+            string text = R.ReadToEnd();
+            R.Close();
+            text = text.Replace("[[CompRep]]", crtext);
+            return text;
+        }
+        public void SaveState()
+        {
+            this.history.Push(current.Copy());
+            this.current = this.current.Copy();
         }
     }
 }

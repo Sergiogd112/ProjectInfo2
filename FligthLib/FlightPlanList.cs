@@ -207,9 +207,10 @@ namespace FlightLib
                         break;
                     }
                 }
+                string fname = names[idx];
                 this
-                    .AddFlightPlan(new FlightPlan(names[idx] +
-                        Convert.ToString(idn), names[idx],
+                    .AddFlightPlan(new FlightPlan(fname +
+                        Convert.ToString(idn), fname,
                         x0,
                         y0,
                         x,

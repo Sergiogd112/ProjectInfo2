@@ -597,9 +597,30 @@ namespace Flight_Forms
             }
             else
             {
-                // Iniciamos timer para buscar conflictos
-                timerconflictos.Interval = 1;
-                timerconflictos.Start();
+                if (state.GetCurrentList().EstaDestinoLista())
+                {
+                    reloj.Stop();
+                }
+                state.SaveState();
+                ResolverConflicto aparece =
+                    new ResolverConflicto(dist, state.GetCurrentList());
+                aparece.ShowDialog();
+                bool Resuelto = aparece.VerSiEstaResuelto();
+                if (Resuelto)
+                {
+                    Companys companys = new Companys();
+                    companys.Iniciar();
+                    DataTable dt = companys.ShowCompanys();
+                    string report = state.GenerateReport(dt);
+                    companys.Cerrar();
+                    Email mail = new Email("m2.i2.2b.2022@gmail.com", "espacioaereo", "Simulador", "sergio.gomez.damas@estudiantat.upc.edu", "Sergio");
+                    mail.Body = report;
+                    mail.Subject = "Report Simulador";
+                    mail.Send();
+                    StreamWriter w = new StreamWriter("report.html");
+                    w.Write(mail.Body);
+                    w.Close();
+                }
             }
         }
 
@@ -623,18 +644,20 @@ namespace Flight_Forms
                 Prueba = true;
                 Console.WriteLine("conflicto");
             }
+
             // Al haber conflicto se abrira el form de ConflictoResolver
             if (Prueba == true)
             {
-                ResolverConflicto aparece = new ResolverConflicto();
-                aparece.GetDistanciaSeguridad(dist);
-                aparece.GetListFlights(state.GetCurrentList());
+                state.SaveState();
+                ResolverConflicto aparece =
+                    new ResolverConflicto(dist, state.GetCurrentList());
 
                 aparece.ShowDialog();
                 bool Resuelto = aparece.VerSiEstaResuelto(); // Para ver si el conflicto esta resuelto
 
                 if (Resuelto != false)
                 {
+
                     AVISO.Size = new Size(0, 0);
 
                     for (int m = 0; m < state.GetCurrentList().GetLen(); m++)
