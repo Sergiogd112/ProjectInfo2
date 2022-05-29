@@ -473,7 +473,7 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void manualButton_Click(object sender, EventArgs e)
         {
-            state.GetCurrentList().MoveAll(1);
+            state.Move(1);
             UpdatePlanes(sender, e);
         }
 
@@ -495,17 +495,18 @@ namespace Flight_Forms
         /// <param name="e"></param>
         private void reloj_Tick(object sender, EventArgs e)
         {
-            state.GetCurrentList().MoveAll(Convert.ToInt32(ciclo)); // Movera la simulacion
+            state.Move(Convert.ToInt32(ciclo)); // Movera la simulacion
             if (state.GetCurrentList().EstaDestinoLista())
             {
                 reloj.Stop();
             }
             state.GetCurrentList().CheckDistanciaActual();
-            bool conflicto = state.GetCurrentList().ChechConflicActual();
+            bool conflicto = state.GetCurrentList().CheckConflicActual();
             if (conflicto)
             {
                 Console.WriteLine("conflicto");
             }
+            UpdatePlanes(sender, e);
         }
 
         /// <summary>
@@ -609,13 +610,13 @@ namespace Flight_Forms
 
             Graphics g = panel2.CreateGraphics();
 
-            state.GetCurrentList().MoveAll(Convert.ToInt32(tiempociclos)); // Movera la simulacion
+            state.Move(Convert.ToInt32(tiempociclos)); // Movera la simulacion
             if (state.GetCurrentList().EstaDestinoLista())
             {
                 reloj.Stop();
             }
             state.GetCurrentList().CheckDistanciaActual();
-            bool conflicto = state.GetCurrentList().ChechConflicActual();
+            bool conflicto = state.GetCurrentList().CheckConflicActual();
             if (conflicto)
             {
                 timerconflictos.Stop();

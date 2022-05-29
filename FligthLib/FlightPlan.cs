@@ -76,6 +76,24 @@ namespace FlightLib
             this.finalPosition = new Position(fpx, fpy);
             this.velocidad = velocidad;
         }
+        public FlightPlan(
+            string id,
+            string c,
+            double cpx,
+            double cpy,
+            double fpx,
+            double fpy,
+            double velocidad
+        )
+        {
+            this.id = id;
+            this.company = c;
+            this.initialPosition = new Position(cpx, cpy);
+            this.currentPosition = new Position(cpx, cpy);
+            this.finalPosition = new Position(fpx, fpy);
+            this.velocidad = velocidad;
+        }
+
 
         // GETTER
         /// <summary>
@@ -792,7 +810,7 @@ namespace FlightLib
                     this.currentPosition.GetX(),
                     this.currentPosition.GetY(),
                     this.finalPosition.GetX(),
-                    this.currentPosition.GetY(),
+                    this.finalPosition.GetY(),
                     this.velocidad);
             return copy;
         }
@@ -805,14 +823,14 @@ namespace FlightLib
         {
             string dump =
                 string
-                    .Format("{0},{1},{2},{3},{4},{5},{6},{7}.{8}",
+                    .Format("{0},{1},{2},{3},{4},{5},{6},{7},{8}",
                     this.id,
                     this.initialPosition.GetX(),
                     this.initialPosition.GetY(),
                     this.currentPosition.GetX(),
                     this.currentPosition.GetY(),
                     this.finalPosition.GetX(),
-                    this.currentPosition.GetY(),
+                    this.finalPosition.GetY(),
                     this.velocidad,
                     this.company);
             return dump;

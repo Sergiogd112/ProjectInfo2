@@ -209,7 +209,7 @@ namespace FlightLib
                 }
                 this
                     .AddFlightPlan(new FlightPlan(names[idx] +
-                        Convert.ToString(idn),
+                        Convert.ToString(idn), names[idx],
                         x0,
                         y0,
                         x,
@@ -426,7 +426,7 @@ namespace FlightLib
             }
         }
 
-        public bool ChechConflicActual()
+        public bool CheckConflicActual()
         {
             bool conflict = false;
             bool inconf = false;
@@ -490,7 +490,7 @@ namespace FlightLib
             {
                 copy.AddFlightPlan(plan.Copy());
             }
-            copy.SetDistanciaSeguridad (distanciaSeguridad);
+            copy.SetDistanciaSeguridad(distanciaSeguridad);
             return copy;
         }
 
@@ -572,8 +572,8 @@ namespace FlightLib
                     }
                     separator += "+-";
                 }
-                Console.WriteLine (row);
-                Console.WriteLine (separator);
+                Console.WriteLine(row);
+                Console.WriteLine(separator);
             }
         }
 
@@ -609,8 +609,8 @@ namespace FlightLib
                     }
                     separator += "+-";
                 }
-                Console.WriteLine (row);
-                Console.WriteLine (separator);
+                Console.WriteLine(row);
+                Console.WriteLine(separator);
             }
         }
 
