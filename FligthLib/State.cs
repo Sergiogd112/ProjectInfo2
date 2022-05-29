@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Data;
 
 namespace FlightLib
 {
@@ -114,6 +115,25 @@ namespace FlightLib
                 state.AddState(FlightPlanList.LoadString(listString));
             }
             return state;
+        }
+
+        public string GenerateFligthReport(string filename, string id,double pV, double nV)
+        {
+            return "";
+        }
+
+        public string GenerateCompanyReport(string filename,string icao,FlightPlanList list)
+        {
+            return "";
+        }
+
+        public string GenerateReport(DataTable data)
+        {
+
+            for(int i = 0; i < current.GetLen();i++){
+                FlightPlan pfligth=history.Peek()
+            }
+            return "";
         }
     }
 }
