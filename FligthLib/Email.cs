@@ -61,5 +61,22 @@ namespace FlightLib
                 smtp.Send(message);
             }
         }
+        public static bool IsValidEmail(string eMail)
+        {
+            bool Result = false;
+
+            try
+            {
+                var eMailValidator = new MailAddress(eMail);
+
+                Result = (eMail.LastIndexOf(".") > eMail.LastIndexOf("@"));
+            }
+            catch
+            {
+                Result = false;
+            };
+
+            return Result;
+        }
     }
 }

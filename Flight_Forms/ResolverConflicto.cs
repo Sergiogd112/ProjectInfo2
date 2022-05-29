@@ -23,14 +23,15 @@ namespace Flight_Forms
         //StreamWriter fichero = new StreamWriter("Cambiosdevelocidad.txt");
         Gestion G;
         DataTable compañias;
+        string email;
 
-        public ResolverConflicto(double dist ,FlightPlanList lista)
+        public ResolverConflicto(double dist, FlightPlanList lista)
         {
             InitializeComponent();
-            this.ListaVuelos =lista;
-            this.distanciadeseguridad=dist;
+            this.ListaVuelos = lista;
+            this.distanciadeseguridad = dist;
         }
-       
+
         private void No_Click(object sender, EventArgs e)
         {
             Close();
@@ -56,63 +57,70 @@ namespace Flight_Forms
             bool Reinicio = false;
             int TiempoCiclo = 1;
             List<double> Listavelocidades = new List<double>();
-
-            for (int k = 0; k < ListaVuelos.GetLen(); k++)
+            email = emailIn.Text;
+            if (Email.IsValidEmail(email))
             {
-                Listavelocidades.Add(ListaVuelos.GetFlightAtIndex(k).GetVelocidad());
-            }
-
-
-
-            // Bucle para ver de anticipada si va a haber conflictos 
-            while (Resuelto == false)
-            {
-                ListaVuelos.MoveAll(TiempoCiclo); // Movemos la simulacion 
-
-                for (int i = 0; i < ListaVuelos.GetLen(); i++)
+                for (int k = 0; k < ListaVuelos.GetLen(); k++)
                 {
-                    for (int n = i + 1; n < ListaVuelos.GetLen(); n++)
-                    {
-                        // Si hay conflicto la velocidad de avion n dismunuye 
-                        if (ListaVuelos.GetFlightAtIndex(i).ConflictoTotal(ListaVuelos.GetFlightAtIndex(n), distanciadeseguridad) == true)
-                        {
-                            double VelocidadNueva = ListaVuelos.GetFlightAtIndex(n).GetVelocidad() - 1;
-                            Reinicio = true;
-                            if (VelocidadNueva < 1) // Cuando no haya solucion 
-                            {
-                                Resuelto = true;
-                                MessageBox.Show("No se puede resolver el conflicto");
-                            }
-                            else
-                            {
-                                ListaVuelos.GetFlightAtIndex(n).SetVelocidad(VelocidadNueva); // Posible velocidad que soluciona el conflicto
-                            }
+                    Listavelocidades.Add(ListaVuelos.GetFlightAtIndex(k).GetVelocidad());
+                }
 
+
+
+                // Bucle para ver de anticipada si va a haber conflictos 
+                while (Resuelto == false)
+                {
+                    ListaVuelos.MoveAll(TiempoCiclo); // Movemos la simulacion 
+
+                    for (int i = 0; i < ListaVuelos.GetLen(); i++)
+                    {
+                        for (int n = i + 1; n < ListaVuelos.GetLen(); n++)
+                        {
+                            // Si hay conflicto la velocidad de avion n dismunuye 
+                            if (ListaVuelos.GetFlightAtIndex(i).ConflictoTotal(ListaVuelos.GetFlightAtIndex(n), distanciadeseguridad) == true)
+                            {
+                                double VelocidadNueva = ListaVuelos.GetFlightAtIndex(n).GetVelocidad() - 1;
+                                Reinicio = true;
+                                if (VelocidadNueva < 1) // Cuando no haya solucion 
+                                {
+                                    Resuelto = true;
+                                    MessageBox.Show("No se puede resolver el conflicto");
+                                }
+                                else
+                                {
+                                    ListaVuelos.GetFlightAtIndex(n).SetVelocidad(VelocidadNueva); // Posible velocidad que soluciona el conflicto
+                                }
+
+                            }
                         }
                     }
-                }
 
-                if (Reinicio == true) // Si ha habido un cambio de velocidad se reinicia el bucle 
-                {
-                    for (int m = 0; m < ListaVuelos.GetLen(); m++)
+                    if (Reinicio == true) // Si ha habido un cambio de velocidad se reinicia el bucle 
                     {
-                        ListaVuelos.GetFlightAtIndex(m).Restart();
+                        for (int m = 0; m < ListaVuelos.GetLen(); m++)
+                        {
+                            ListaVuelos.GetFlightAtIndex(m).Restart();
+                        }
+
+                        Reinicio = false;
                     }
 
-                    Reinicio = false;
+                    // Cuando todos los aviones esten en la posicion final el bucle acaba
+                    if (ListaVuelos.EstaDestinoLista() == true)
+                    {
+
+                        Resuelto = true;
+
+                        MessageBox.Show("Conflicto resuleto, documento Cambiosdevelocidad.txt creado.");
+
+
+                    }
+                    Close();
                 }
-
-                // Cuando todos los aviones esten en la posicion final el bucle acaba
-                if (ListaVuelos.EstaDestinoLista() == true)
-                {
-
-                    Resuelto = true; 
-                  
-                    MessageBox.Show("Conflicto resuleto, documento Cambiosdevelocidad.txt creado.");
-
-
-                }
-                Close();
+            }
+            else
+            {
+                emailerr.Visible = true;
             }
 
         }
@@ -135,6 +143,10 @@ namespace Flight_Forms
         public void PararMusica()
         {
             musica.Stop();
+        }
+        public string GetEmail()
+        {
+            return email;
         }
     }
 }

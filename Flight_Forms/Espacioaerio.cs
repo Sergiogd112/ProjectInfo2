@@ -606,6 +606,7 @@ namespace Flight_Forms
                     new ResolverConflicto(dist, state.GetCurrentList());
                 aparece.ShowDialog();
                 bool Resuelto = aparece.VerSiEstaResuelto();
+                string email = aparece.GetEmail();
                 if (Resuelto)
                 {
                     Companys companys = new Companys();
@@ -613,7 +614,7 @@ namespace Flight_Forms
                     DataTable dt = companys.ShowCompanys();
                     string report = state.GenerateReport(dt);
                     companys.Cerrar();
-                    Email mail = new Email("m2.i2.2b.2022@gmail.com", "espacioaereo", "Simulador", "sergio.gomez.damas@estudiantat.upc.edu", "Sergio");
+                    Email mail = new Email("m2.i2.2b.2022@gmail.com", "espacioaereo", "Simulador", email, "");
                     mail.Body = report;
                     mail.Subject = "Report Simulador";
                     mail.Send();
