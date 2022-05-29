@@ -60,10 +60,13 @@
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Parar = new System.Windows.Forms.Button();
             this.Conflicto = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.planeImg = new System.Windows.Forms.PictureBox();
             this.cargar = new System.Windows.Forms.OpenFileDialog();
             this.guardar = new System.Windows.Forms.SaveFileDialog();
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarUnAvionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarlosTodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.planeImg = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.planeImg)).BeginInit();
@@ -173,7 +176,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(44, 109);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(248, 19);
+            this.label7.Size = new System.Drawing.Size(270, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "Mover manualmente los vuelos 1 ciclo:";
             // 
@@ -182,7 +185,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(53, 239);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(228, 19);
+            this.label8.Size = new System.Drawing.Size(248, 20);
             this.label8.TabIndex = 13;
             this.label8.Text = "Mover automáticamente los vuelos:";
             // 
@@ -195,7 +198,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(16, 429);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(291, 19);
+            this.label9.Size = new System.Drawing.Size(315, 20);
             this.label9.TabIndex = 15;
             this.label9.Text = "Comprovar si los vuelos entraran en conflicto:";
             // 
@@ -232,7 +235,7 @@
             this.resolverLab.Location = new System.Drawing.Point(25, 449);
             this.resolverLab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.resolverLab.Name = "resolverLab";
-            this.resolverLab.Size = new System.Drawing.Size(0, 19);
+            this.resolverLab.Size = new System.Drawing.Size(0, 20);
             this.resolverLab.TabIndex = 20;
             // 
             // timerconflictos
@@ -266,10 +269,11 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opcionesToolStripMenuItem,
-            this.archivosToolStripMenuItem});
+            this.archivosToolStripMenuItem,
+            this.eliminarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1243, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1243, 30);
             this.menuStrip1.TabIndex = 24;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -282,7 +286,7 @@
             this.generarVuelosToolStrip});
             this.opcionesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(92, 26);
             this.opcionesToolStripMenuItem.Text = "Opciones";
             // 
             // nuevoAvionToolStripMenuItem
@@ -319,20 +323,20 @@
             this.cargarToolStripMenuItem,
             this.guardarToolStripMenuItem});
             this.archivosToolStripMenuItem.Name = "archivosToolStripMenuItem";
-            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(79, 26);
             this.archivosToolStripMenuItem.Text = "Archivos";
             // 
             // cargarToolStripMenuItem
             // 
             this.cargarToolStripMenuItem.Name = "cargarToolStripMenuItem";
-            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.cargarToolStripMenuItem.Text = "Cargar";
             this.cargarToolStripMenuItem.Click += new System.EventHandler(this.cargarToolStripMenuItem_Click);
             // 
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.guardarToolStripMenuItem.Text = "Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
@@ -360,6 +364,34 @@
             this.Conflicto.UseVisualStyleBackColor = false;
             this.Conflicto.Click += new System.EventHandler(this.Conflicto_Click);
             // 
+            // cargar
+            // 
+            this.cargar.FileName = "openFileDialog1";
+            this.cargar.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            this.eliminarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eliminarUnAvionToolStripMenuItem,
+            this.eliminarlosTodosToolStripMenuItem});
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
+            this.eliminarToolStripMenuItem.Text = "Eliminar";
+            // 
+            // eliminarUnAvionToolStripMenuItem
+            // 
+            this.eliminarUnAvionToolStripMenuItem.Name = "eliminarUnAvionToolStripMenuItem";
+            this.eliminarUnAvionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eliminarUnAvionToolStripMenuItem.Text = "Eliminar un avion";
+            this.eliminarUnAvionToolStripMenuItem.Click += new System.EventHandler(this.eliminarUnAvionToolStripMenuItem_Click);
+            // 
+            // eliminarlosTodosToolStripMenuItem
+            // 
+            this.eliminarlosTodosToolStripMenuItem.Name = "eliminarlosTodosToolStripMenuItem";
+            this.eliminarlosTodosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eliminarlosTodosToolStripMenuItem.Text = "Eliminarlos todos";
+            this.eliminarlosTodosToolStripMenuItem.Click += new System.EventHandler(this.eliminarlosTodosToolStripMenuItem_Click);
+            // 
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
@@ -384,11 +416,6 @@
             this.planeImg.TabIndex = 0;
             this.planeImg.TabStop = false;
             this.planeImg.Visible = false;
-            // 
-            // cargar
-            // 
-            this.cargar.FileName = "openFileDialog1";
-            this.cargar.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // Espacioaerio
             // 
@@ -484,5 +511,8 @@
         private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog cargar;
         private System.Windows.Forms.SaveFileDialog guardar;
+        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarUnAvionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarlosTodosToolStripMenuItem;
     }
 }

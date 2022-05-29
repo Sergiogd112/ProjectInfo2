@@ -134,6 +134,7 @@ namespace Flight_Forms
             {
                 this.iniciarButton_Click(sender, e);
             }
-        }
+        }              
+
     }
 }

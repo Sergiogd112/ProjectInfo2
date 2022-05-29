@@ -72,6 +72,60 @@ namespace Flight_Forms
             musica.Stop();
         }
 
+        //Pasar de un textbox al siguiente al clicar Enter en el teclado
+        private void idBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                NombreCompañia.Focus();
+            }
+        }
+
+        //Pasar de un textbox al siguiente al clicar Enter en el teclado
+        private void NombreCompañia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                xInBox.Focus();
+            }
+        }
+
+        //Pasar de un textbox al siguiente al clicar Enter en el teclado
+        private void xInBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                yInBox.Focus();
+            }
+        }
+
+        //Pasar de un textbox al siguiente al clicar Enter en el teclado
+        private void yInBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                xFinBox.Focus();
+            }
+        }
+
+        //Pasar de un textbox al siguiente al clicar Enter en el teclado
+        private void xFinBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                yFinBox.Focus();
+            }
+        }
+
+        //Pasar de un textbox al siguiente al clicar Enter en el teclado
+        private void yFinBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                velocidadBox.Focus();
+            }
+        }
+
         private void Cerrar_Click(object sender, EventArgs e)
         {
             this.Close();

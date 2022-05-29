@@ -50,6 +50,8 @@
             this.passBx.Size = new System.Drawing.Size(212, 31);
             this.passBx.SkipLiterals = false;
             this.passBx.TabIndex = 4;
+            this.passBx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passBx_KeyPress);
+            
             // 
             // cambiarButton
             // 
@@ -82,6 +84,7 @@
             this.userBox.Name = "userBox";
             this.userBox.Size = new System.Drawing.Size(212, 31);
             this.userBox.TabIndex = 11;
+            this.userBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userBox_KeyPress);
             // 
             // checkRepPass
             // 

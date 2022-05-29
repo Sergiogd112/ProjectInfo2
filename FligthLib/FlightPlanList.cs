@@ -221,6 +221,20 @@ namespace FlightLib
             }
         }
 
+        public int EliminirVueloParticular(int i)
+        {
+            flights.RemoveAt(i);
+            return 1;
+        }
+
+        public int EliminarTodoVuelo() // MIRAR ESO PK ESTO NO VA 
+        {
+            for (int i = flights.Count() - 1; i > -1; i--)
+            {
+                flights.RemoveAt(i);
+            }
+            return 1;
+        }
         // Load an save files
         /// <summary>
         /// Añadir un FligthPlan

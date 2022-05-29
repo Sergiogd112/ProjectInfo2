@@ -98,5 +98,21 @@ namespace Flight_Forms
                 }
             }
         }
+        private void userBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                passBox.Focus();
+            }
+        }
+
+        //Pasar de un textbox al siguiente al clicar Enter en el teclado
+        private void passBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                repPassBox.Focus();
+            }
+        }
     }
 }

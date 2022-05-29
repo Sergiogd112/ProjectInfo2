@@ -902,6 +902,47 @@ namespace Flight_Forms
             UpdatePlanes(sender, e);
         }
 
+        private void eliminarUnAvionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Graphics g = panel2.CreateGraphics();
+            FlightPlanList ListaVuelos = state.GetCurrentList();
+            
+            EliminarAvion aparece = new EliminarAvion();
+            aparece.SetListaVuelos(ListaVuelos);
+            aparece.ShowDialog();
+            aparece.GetListaVuelos();
+            if (ListaVuelos.GetLen() != numAviones)
+            {
+                
+                int i = aparece.GetNumeroVuelo();
+                misAviones.RemoveAt(i);
+                panel2.Controls.RemoveAt(i);
+                numAviones = numAviones - 1;
+
+                for (int m = 0; m < ListaVuelos.GetLen(); m++)
+                {
+                    g.DrawLine(lapiz, (float)ListaVuelos.GetFlightAtIndex(m).GetInitialPosition().GetX(), (float)ListaVuelos.GetFlightAtIndex(m).GetInitialPosition().GetY(), (float)ListaVuelos.GetFlightAtIndex(m).GetFinalPosition().GetX(), (float)ListaVuelos.GetFlightAtIndex(m).GetFinalPosition().GetY());
+                    g.DrawEllipse(lapiz, (float)ListaVuelos.GetFlightAtIndex(m).GetFinalPosition().GetX(), (float)ListaVuelos.GetFlightAtIndex(m).GetFinalPosition().GetY(), 10, 10);
+                }
+            }
+        }
+
+        private void eliminarlosTodosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FlightPlanList ListaVuelos = state.GetCurrentList();
+            ListaVuelos.EliminarTodoVuelo();
+            
+            for (int i = numAviones - 1; i > -1; i = i - 1)
+            {
+                misAviones.RemoveAt(i);
+                panel2.Controls.RemoveAt(i);
+            }
+
+            AVISO.Size = new Size(0, 0);
+            
+            numAviones = 0;
+        }
+
         // private void guardarComoToolStripMenuItem_Click(
         //     object sender,
         //     EventArgs e

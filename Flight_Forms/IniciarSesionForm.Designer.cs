@@ -118,6 +118,7 @@
             this.passBox.Size = new System.Drawing.Size(147, 22);
             this.passBox.TabIndex = 6;
             this.passBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passBox_KeyPress);
+            
             // 
             // label3
             // 

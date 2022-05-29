@@ -130,6 +130,7 @@
             this.passBox.Size = new System.Drawing.Size(212, 31);
             this.passBox.SkipLiterals = false;
             this.passBox.TabIndex = 3;
+            this.passBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passBox_KeyPress);
 
             //
 
@@ -174,6 +175,7 @@
             this.userBox.Name = "userBox";
             this.userBox.Size = new System.Drawing.Size(212, 31);
             this.userBox.TabIndex = 7;
+            this.userBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userBox_KeyPress);
 
             //
 

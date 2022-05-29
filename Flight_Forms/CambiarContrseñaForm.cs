@@ -126,5 +126,23 @@ namespace Flight_Forms
         {
             musica.Stop();
         }
+        private void userBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                passBx.Focus();
+            }
+        }
+
+        //Pasar de un textbox al siguiente al clicar Enter en el teclado
+        private void passBx_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                repPass.Focus();
+            }
+        }
+        
+
     }
 }

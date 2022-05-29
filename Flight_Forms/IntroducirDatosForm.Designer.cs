@@ -47,7 +47,7 @@
             this.comentario = new System.Windows.Forms.Label();
             this.idLabel = new System.Windows.Forms.Label();
             this.Cerrar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NombreCompañia = new System.Windows.Forms.TextBox();
             this.Compañia = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -109,6 +109,8 @@
             this.xInBox.Name = "xInBox";
             this.xInBox.Size = new System.Drawing.Size(115, 22);
             this.xInBox.TabIndex = 36;
+            this.xInBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.xInBox_KeyPress);
+            // 
             // 
             // yInBox
             // 
@@ -118,6 +120,7 @@
             this.yInBox.Name = "yInBox";
             this.yInBox.Size = new System.Drawing.Size(115, 22);
             this.yInBox.TabIndex = 35;
+            this.yInBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.yInBox_KeyPress);
             // 
             // yFinBox
             // 
@@ -126,7 +129,8 @@
             this.yFinBox.Margin = new System.Windows.Forms.Padding(2);
             this.yFinBox.Name = "yFinBox";
             this.yFinBox.Size = new System.Drawing.Size(115, 22);
-            this.yFinBox.TabIndex = 34;
+            this.yFinBox.TabIndex = 20;
+            this.yFinBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.yFinBox_KeyPress);
             // 
             // xFinBox
             // 
@@ -136,6 +140,7 @@
             this.xFinBox.Name = "xFinBox";
             this.xFinBox.Size = new System.Drawing.Size(115, 22);
             this.xFinBox.TabIndex = 33;
+            this.xFinBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.xFinBox_KeyPress);
             // 
             // idBox
             // 
@@ -145,7 +150,7 @@
             this.idBox.Name = "idBox";
             this.idBox.Size = new System.Drawing.Size(103, 22);
             this.idBox.TabIndex = 32;
-            // 
+            this.idBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.idBox_KeyPress);
             // label4
             // 
             this.label4.AutoSize = true;
@@ -278,12 +283,13 @@
             this.Cerrar.UseVisualStyleBackColor = false;
             this.Cerrar.Click += new System.EventHandler(this.Cerrar_Click);
             // 
-            // textBox1
+            // NombreCompañia
             // 
-            this.textBox1.Location = new System.Drawing.Point(54, 186);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(109, 22);
-            this.textBox1.TabIndex = 40;
+            this.NombreCompañia.Location = new System.Drawing.Point(54, 186);
+            this.NombreCompañia.Name = "NombreCompañia";
+            this.NombreCompañia.Size = new System.Drawing.Size(109, 22);
+            this.NombreCompañia.TabIndex = 40;
+            this.NombreCompañia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreCompañia_KeyPress);
             // 
             // Compañia
             // 
@@ -305,7 +311,7 @@
             this.BackgroundImage = global::Flight_Forms.Properties.Resources.estrellas;
             this.ClientSize = new System.Drawing.Size(627, 356);
             this.Controls.Add(this.Compañia);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NombreCompañia);
             this.Controls.Add(this.Cerrar);
             this.Controls.Add(this.xInBox);
             this.Controls.Add(this.yInBox);
@@ -374,7 +380,7 @@
 
         private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Button Cerrar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NombreCompañia;
         private System.Windows.Forms.Label Compañia;
     }
 }
