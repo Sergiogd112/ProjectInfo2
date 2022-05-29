@@ -7,7 +7,7 @@ CHD,223 Flight Unit State Airline,223flightunitstateairline@email.com,1004
 TTF,224th Flight Unit,224thflightunit@email.com,1005
 TWF,247 Jet Ltd,247jetltd@email.com,1006
 SEC,3D Aviation,3daviation@email.com,1007
-MLA,40-Mile Air,40-mileair@email.com,1008
+MLA,40-Mile Air,40.mileair@email.com,1008
 QRT,4D Air,4dair@email.com,1009
 THD,611897 Alberta Limited,611897albertalimited@email.com,1010
 AAA,Ansett Australia,ansettaustralia@email.com,1011
@@ -34,12 +34,12 @@ AFU,Afrinat International Airlines,afrinatinternationalairlines@email.com,1031
 AAX,Afric'air Express,afric'airexpress@email.com,1032
 AAY,Allegiant Air,allegiantair@email.com,1033
 AAZ,Angus Aviation,angusaviation@email.com,1034
-ABA,Artem-Avia,artem-avia@email.com,1035
+ABA,Artem-Avia,artem.avia@email.com,1035
 ABB,African Business and Transportations,africanbusinessandtransportations@email.com,1036
 ABE,Aban Air,abanair@email.com,1037
 ABF,Aerial Oy,aerialoy@email.com,1038
-ABG,Abakan-Avia,abakan-avia@email.com,1039
-TUS,ABSA - Aerolinhas Brasileiras,absa-aerolinhasbrasileiras@email.com,1040
+ABG,Abakan-Avia,abakan.avia@email.com,1039
+TUS,ABSA - Aerolinhas Brasileiras,absa.aerolinhasbrasileiras@email.com,1040
 ABJ,Abaet,abaet@email.com,1041
 ABK,Alberta Citylink,albertacitylink@email.com,1042
 ABO,APSA Colombia,apsacolombia@email.com,1043
@@ -144,7 +144,7 @@ AFS,Air Data,airdata@email.com,1141
 AFV,Air Afrique Vacancies,airafriquevacancies@email.com,1142
 MVM,Air Cargo America,aircargoamerica@email.com,1143
 ,Air Salone,airsalone@email.com,1144
-NGO,Air-Angol,air-angol@email.com,1145
+NGO,Air-Angol,air.angol@email.com,1145
 NGP,Air Nigeria,airnigeria@email.com,1146
 SNC,Air Cargo Carriers,aircargocarriers@email.com,1147
 SND,Air Samarkand,airsamarkand@email.com,1148
@@ -180,7 +180,7 @@ PLI,Aeroper,aeroper@email.com,1177
 BMM,Atlas Blue,atlasblue@email.com,1178
 BNB,Aero Banobras,aerobanobras@email.com,1179
 AGY,Aero Flight Service,aeroflightservice@email.com,1180
-AGZ,Agrolet-Mci,agrolet-mci@email.com,1181
+AGZ,Agrolet-Mci,agrolet.mci@email.com,1181
 AHA,Air Alpha Greenland,airalphagreenland@email.com,1182
 AHC,Azal Avia Cargo,azalaviacargo@email.com,1183
 AHE,Airport Helicopter Basel,airporthelicopterbasel@email.com,1184
@@ -193,7 +193,7 @@ AHP,Aerochiapas,aerochiapas@email.com,1190
 AHR,Air Adriatic,airadriatic@email.com,1191
 AHS,Air Viggi San Raffaele,airviggisanraffaele@email.com,1192
 AHU,ABC Air Hungary,abcairhungary@email.com,1193
-AHW,Aeromist-Kharkiv,aeromist-kharkiv@email.com,1194
+AHW,Aeromist-Kharkiv,aeromist.kharkiv@email.com,1194
 AHY,Azerbaijan Airlines,azerbaijanairlines@email.com,1195
 AIA,Avies,avies@email.com,1196
 AIB,Airbus Industrie,airbusindustrie@email.com,1197
@@ -338,7 +338,7 @@ ANM,Antares Airtransport,antaresairtransport@email.com,1335
 ANO,Airnorth,airnorth@email.com,1336
 ANQ,Aerol,aerol@email.com,1337
 ANS,Andes Lineas Aereas,andeslineasaereas@email.com,1338
-ANT,Air North Charter - Canada,airnorthcharter-canada@email.com,1339
+ANT,Air North Charter - Canada,airnorthcharter.canada@email.com,1339
 ANV,Air Nevada,airnevada@email.com,1340
 AOM,AOM French Airlines,aomfrenchairlines@email.com,1341
 ANW,Aviacion Del Noroeste,aviaciondelnoroeste@email.com,1342
@@ -355,7 +355,7 @@ MUN,Aeromundo Ejecutivo,aeromundoejecutivo@email.com,1352
 MUR,Aerolinea Muri,aerolineamuri@email.com,1353
 AOI,Astoria,astoria@email.com,1354
 NRO,Aero Rent JSC,aerorentjsc@email.com,1355
-NRP,Aeronord-Grup,aeronord-grup@email.com,1356
+NRP,Aeronord-Grup,aeronord.grup@email.com,1356
 AOK,Aeroatlantico Colombia,aeroatlanticocolombia@email.com,1357
 AOL,Angkor Airlines,angkorairlines@email.com,1358
 AON,Aero Entreprise,aeroentreprise@email.com,1359
@@ -417,10 +417,10 @@ SUN,Antillana De Navegacion Aerea,antillanadenavegacionaerea@email.com,1414
 SUO,Aeroservicios De San Luis,aeroserviciosdesanluis@email.com,1415
 SUP,Aerosuper,aerosuper@email.com,1416
 ARK,Aero Link Air Services S.L.,aerolinkairservicess.l.@email.com,1417
-ARL,Airlec - Air Aquitaine Transport,airlec-airaquitainetransport@email.com,1418
+ARL,Airlec - Air Aquitaine Transport,airlec.airaquitainetransport@email.com,1418
 ARM,Aeromarket Express,aeromarketexpress@email.com,1419
 ARO,Arrow Aviation Ltd.,arrowaviationltd.@email.com,1420
-ARP,RPA-Aviataxi Ltd.,rpa-aviataxiltd.@email.com,1421
+ARP,RPA-Aviataxi Ltd.,rpa.aviataxiltd.@email.com,1421
 KLD,Air Klaipeda,airklaipeda@email.com,1422
 ARQ,Armstrong Air,armstrongair@email.com,1423
 ARR,Air Armenia,airarmenia@email.com,1424
@@ -437,7 +437,7 @@ HUY,Aero Transportes Del Humaya,aerotransportesdelhumaya@email.com,1434
 ARY,Argosy Airways,argosyairways@email.com,1435
 ARZ,Air Resorts,airresorts@email.com,1436
 ASA,Alaska Airlines,alaskaairlines@email.com,1437
-ASB,Air-Spray 1967 Ltd.,air-spray1967ltd.@email.com,1438
+ASB,Air-Spray 1967 Ltd.,air.spray1967ltd.@email.com,1438
 ASC,Air Star Corporation,airstarcorporation@email.com,1439
 ASD,Air Sinai,airsinai@email.com,1440
 ASE,Airstars,airstars@email.com,1441
@@ -458,7 +458,7 @@ NPL,Air Nepal International,airnepalinternational@email.com,1455
 NPR,Air Napier,airnapier@email.com,1456
 WAM,Air Taxi & Cargo,airtaxi&cargo@email.com,1457
 WAP,Arrow Panama,arrowpanama@email.com,1458
-ASV,Astravia-Bissau Air Transports Ltd.,astravia-bissauairtransportsltd.@email.com,1459
+ASV,Astravia-Bissau Air Transports Ltd.,astravia.bissauairtransportsltd.@email.com,1459
 ASZ,Astrakhan Airlines,astrakhanairlines@email.com,1460
 ATA,Air Transport Association,airtransportassociation@email.com,1461
 ATB,Atlantair Ltd.,atlantairltd.@email.com,1462
@@ -469,14 +469,14 @@ ATG,Aerotrans Airline,aerotransairline@email.com,1466
 XAC,Air Charter World,aircharterworld@email.com,1467
 VBW,Air Burkina,airburkina@email.com,1468
 ATH,Air Travel Corp.,airtravelcorp.@email.com,1469
-ATI,Aero-Tropics Air Services,aero-tropicsairservices@email.com,1470
+ATI,Aero-Tropics Air Services,aero.tropicsairservices@email.com,1470
 ATJ,Air Traffic GmbH,airtrafficgmbh@email.com,1471
 ATK,AeroTACA,aerotaca@email.com,1472
 ATL,Aerocentral,aerocentral@email.com,1473
 ATM,Airlines Of Tasmania,airlinesoftasmania@email.com,1474
 SPM,Air Saint Pierre,airsaintpierre@email.com,1475
 ATN,Air Transport International,airtransportinternational@email.com,1476
-ATP,ASTRAL Colombia - Aerotransportes Especiales Ltda.,astralcolombia-aerotransportesespecialesltda.@email.com,1477
+ATP,ASTRAL Colombia - Aerotransportes Especiales Ltda.,astralcolombia.aerotransportesespecialesltda.@email.com,1477
 ATQ,Air Transport Schiphol,airtransportschiphol@email.com,1478
 FEO,Aeroferinco,aeroferinco@email.com,1479
 FES,Aero Taxis Y Servicios Alfe,aerotaxisyserviciosalfe@email.com,1480
@@ -492,7 +492,7 @@ AUA,Austrian Airlines,austrianairlines@email.com,1489
 WOW,Air Southwest,airsouthwest@email.com,1490
 AUB,Augsburg Airways,augsburgairways@email.com,1491
 CPV,Air Corporate,aircorporate@email.com,1492
-TUP,Aviastar-Tu,aviastar-tu@email.com,1493
+TUP,Aviastar-Tu,aviastar.tu@email.com,1493
 ABW,AirBridge Cargo,airbridgecargo@email.com,1494
 TUR,ATUR,atur@email.com,1495
 TXU,ATESA Aerotaxis Ecuatorianos,atesaaerotaxisecuatorianos@email.com,1496
@@ -500,19 +500,19 @@ TXX,Austin Express,austinexpress@email.com,1497
 AUD,Audi Air,audiair@email.com,1498
 AUF,Augusta Air Luftfahrtunternehmen,augustaairluftfahrtunternehmen@email.com,1499
 AUH,Abu Dhabi Amiri Flight,abudhabiamiriflight@email.com,1500
-AUL,Aeroflot-Nord,aeroflot-nord@email.com,1501
+AUL,Aeroflot-Nord,aeroflot.nord@email.com,1501
 AUM,Air Atlantic Uruguay,airatlanticuruguay@email.com,1502
 AUN,Aviones Unidos,avionesunidos@email.com,1503
 AUP,Avia Business Group,aviabusinessgroup@email.com,1504
 SVE,Aero Servicios Expecializados,aeroserviciosexpecializados@email.com,1505
 AUR,Aurigny Air Services,aurignyairservices@email.com,1506
-AUS,Aus-Air,aus-air@email.com,1507
+AUS,Aus-Air,aus.air@email.com,1507
 AUT,Austral Lineas Aereas,australlineasaereas@email.com,1508
 AUU,Aurora Aviation,auroraaviation@email.com,1509
 AUX,Air Uganda International Ltd.,airugandainternationalltd.@email.com,1510
 AUY,Aerolineas Uruguayas,aerolineasuruguayas@email.com,1511
 AUZ,Australian Airlines,australianairlines@email.com,1512
-AVA,Avianca - Aerovias Nacionales de Colombia,avianca-aeroviasnacionalesdecolombia@email.com,1513
+AVA,Avianca - Aerovias Nacionales de Colombia,avianca.aeroviasnacionalesdecolombia@email.com,1513
 AVB,Aviation Beaufort,aviationbeaufort@email.com,1514
 AVD,Alamo Aviacion,alamoaviacion@email.com,1515
 AVF,Aviair Aviation Ltd.,aviairaviationltd.@email.com,1516
@@ -529,7 +529,7 @@ LFR,Atlantic Airfreight Aviation,atlanticairfreightaviation@email.com,1526
 LFT,Aerolift Company,aeroliftcompany@email.com,1527
 AVQ,Aviation Services,aviationservices@email.com,1528
 AVR,Active Aero Charter,activeaerocharter@email.com,1529
-AVS,Avialsa T-35,avialsat-35@email.com,1530
+AVS,Avialsa T-35,avialsat.35@email.com,1530
 AVT,Asia Avia Airlines,asiaaviaairlines@email.com,1531
 AVU,Avia Sud A,aviasuda@email.com,1532
 AVV,Airvantage Incorporated,airvantageincorporated@email.com,1533
@@ -541,7 +541,7 @@ ZAK,Airlink Zambia,airlinkzambia@email.com,1538
 ZZM,Agence Nationale des Aerodromes et de la Meteorologie,agencenationaledesaerodromesetdelameteorologie@email.com,1539
 BGA,Airbus Transport International,airbustransportinternational@email.com,1540
 BGD,Air Bangladesh,airbangladesh@email.com,1541
-BGF,Aviodetachment-28,aviodetachment-28@email.com,1542
+BGF,Aviodetachment-28,aviodetachment.28@email.com,1542
 BGG,Aero BG,aerobg@email.com,1543
 BHC,Aerotaxis De La Bahia,aerotaxisdelabahia@email.com,1544
 BIE,Air Mediterranee,airmediterranee@email.com,1545
@@ -557,7 +557,7 @@ AWL,Australian Wetleasing,australianwetleasing@email.com,1554
 AWN,Air Niamey,airniamey@email.com,1555
 AWO,Awood Air Ltd.,awoodairltd.@email.com,1556
 AWR,Arctic Wings And Rotors Ltd.,arcticwingsandrotorsltd.@email.com,1557
-ISM,Auo Airclub AIST-M,auoairclubaist-m@email.com,1558
+ISM,Auo Airclub AIST-M,auoairclubaist.m@email.com,1558
 AWS,Arab Wings,arabwings@email.com,1559
 AWT,Air West,airwest@email.com,1560
 AWU,Aeroline GmbH,aerolinegmbh@email.com,1561
@@ -592,10 +592,10 @@ AYM,Airman,airman@email.com,1589
 AYN,Atlantic Airlines,atlanticairlines@email.com,1590
 AYS,Awsaj Aviation Services,awsajaviationservices@email.com,1591
 AYT,Ayeet Aviation & Tourism,ayeetaviation&tourism@email.com,1592
-AYZ,Atlant-Soyuz Airlines,atlant-soyuzairlines@email.com,1593
+AYZ,Atlant-Soyuz Airlines,atlant.soyuzairlines@email.com,1593
 AZA,Alitalia,alitalia@email.com,1594
 AZB,Azamat,azamat@email.com,1595
-AZE,Arcus-Air Logistic,arcus-airlogistic@email.com,1596
+AZE,Arcus-Air Logistic,arcus.airlogistic@email.com,1596
 AZF,Air Zermatt AG,airzermattag@email.com,1597
 AZK,Azalhelikopter,azalhelikopter@email.com,1598
 AZL,Africa One,africaone@email.com,1599
@@ -614,7 +614,7 @@ AZX,Air Max Africa,airmaxafrica@email.com,1611
 AZY,Arizona Airways,arizonaairways@email.com,1612
 AZZ,Azza Transport,azzatransport@email.com,1613
 NAR,Air Continental Inc,aircontinentalinc@email.com,1614
-NAU,Antanik-Air,antanik-air@email.com,1615
+NAU,Antanik-Air,antanik.air@email.com,1615
 NER,Air Newark,airnewark@email.com,1616
 NFF,Aircraft Support and Services,aircraftsupportandservices@email.com,1617
 OBA,Aerobanana,aerobanana@email.com,1618
@@ -638,7 +638,7 @@ OVE,Aeromover,aeromover@email.com,1635
 OVI,Aerovias Ejecutivas,aeroviasejecutivas@email.com,1636
 PTD,Aero Servicio Pity,aeroserviciopity@email.com,1637
 PTE,Aero Copter,aerocopter@email.com,1638
-SDM,Rossiya-Russian Airlines,rossiya-russianairlines@email.com,1639
+SDM,Rossiya-Russian Airlines,rossiya.russianairlines@email.com,1639
 PLL,Air Pal,airpal@email.com,1640
 PLM,Air Pullmantur,airpullmantur@email.com,1641
 AEH,Aviaexpress,aviaexpress@email.com,1642
@@ -681,7 +681,7 @@ VUO,Aerovuelox,aerovuelox@email.com,1678
 VTM,Aeronaves TSM,aeronavestsm@email.com,1679
 VUN,Air Ivoire,airivoire@email.com,1680
 BOT,Air Botswana,airbotswana@email.com,1681
-XPR,Air-Rep,air-rep@email.com,1682
+XPR,Air-Rep,air.rep@email.com,1682
 XLL,Air Excel,airexcel@email.com,1683
 VAE,Air Evans,airevans@email.com,1684
 WHY,Air Sorel,airsorel@email.com,1685
@@ -701,7 +701,7 @@ XFX,Airways Corporation of New Zealand,airwayscorporationofnewzealand@email.com,
 WAY,Airways,airways@email.com,1699
 WGS,Airwings oy,airwingsoy@email.com,1700
 XAK,Airkenya,airkenya@email.com,1701
-WPK,Air-Lift Associates,air-liftassociates@email.com,1702
+WPK,Air-Lift Associates,air.liftassociates@email.com,1702
 VAB,Airtrans Ltd,airtransltd@email.com,1703
 URP,ARP 410 Airlines,arp410airlines@email.com,1704
 WPR,Auckland Regional Rescue Helicopter Trust,aucklandregionalrescuehelicoptertrust@email.com,1705
@@ -724,7 +724,7 @@ VAZ,Airlines 400,airlines400@email.com,1721
 VAS,ATRAN Cargo Airlines,atrancargoairlines@email.com,1722
 VAM,Ameravia,ameravia@email.com,1723
 VAV,Angkor Air,angkorair@email.com,1724
-VBC,AVB-2004 Ltd,avb-2004ltd@email.com,1725
+VBC,AVB-2004 Ltd,avb.2004ltd@email.com,1725
 XKX,ASECNA,asecna@email.com,1726
 XAT,AT and T Aviation Division,atandtaviationdivision@email.com,1727
 VAI,Avalair,avalair@email.com,1728
@@ -813,7 +813,7 @@ DML,Aerotaxis Dosmil,aerotaxisdosmil@email.com,1810
 DNA,Aerodespachos De El Salvador,aerodespachosdeelsalvador@email.com,1811
 DNC,Aeroynamics Malaga,aeroynamicsmalaga@email.com,1812
 DNJ,Aerodynamics Incorporated,aerodynamicsincorporated@email.com,1813
-DNV,Aeroflot-Don,aeroflot-don@email.com,1814
+DNV,Aeroflot-Don,aeroflot.don@email.com,1814
 DRD,Air Madrid,airmadrid@email.com,1815
 DRM,Airways Flight Training,airwaysflighttraining@email.com,1816
 DRO,Aeronaves Del Noreste,aeronavesdelnoreste@email.com,1817
@@ -823,7 +823,7 @@ DST,Aex Air,aexair@email.com,1820
 DVI,Aero Davinci International,aerodavinciinternational@email.com,1821
 DYN,Aero Dynamics,aerodynamics@email.com,1822
 EAE,Aeroservicios Ecuatorianos,aeroserviciosecuatorianos@email.com,1823
-EAP,Aero-Pyrenees,aero-pyrenees@email.com,1824
+EAP,Aero-Pyrenees,aero.pyrenees@email.com,1824
 EAT,Air Transport,airtransport@email.com,1825
 EAY,Aero Airlines,aeroairlines@email.com,1826
 EBC,Aero Ejecutivo De Baja California,aeroejecutivodebajacalifornia@email.com,1827
@@ -864,7 +864,7 @@ EXG,Air Exchange,airexchange@email.com,1861
 FAC,Atlantic Helicopters,atlantichelicopters@email.com,1862
 FAG,Argentine Air Force,argentineairforce@email.com,1863
 FAJ,Air Fiji,airfiji@email.com,1864
-FAN,AF-Air International,af-airinternational@email.com,1865
+FAN,AF-Air International,af.airinternational@email.com,1865
 FBW,Aviation Data Systems,aviationdatasystems@email.com,1866
 FCI,Air Carriers,aircarriers@email.com,1867
 FCO,Aerofrisco,aerofrisco@email.com,1868
@@ -920,10 +920,10 @@ GRG,Air Georgia,airgeorgia@email.com,1917
 GRI,Air Cargo Center,aircargocenter@email.com,1918
 GRL,Air Greenland,airgreenland@email.com,1919
 GRO,Allegro,allegro@email.com,1920
-GRR,Agroar - Trabalhos Aereos,agroar-trabalhosaereos@email.com,1921
+GRR,Agroar - Trabalhos Aereos,agroar.trabalhosaereos@email.com,1921
 GRX,Aircompany Grodno,aircompanygrodno@email.com,1922
 GSP,Airlift Alaska,airliftalaska@email.com,1923
-GSV,Agrocentr-Avia,agrocentr-avia@email.com,1924
+GSV,Agrocentr-Avia,agrocentr.avia@email.com,1924
 GTC,Altin Havayolu Tasimaciligi Turizm Ve Ticaret,altinhavayolutasimaciligiturizmveticaret@email.com,1925
 GTI,Atlas Air,atlasair@email.com,1926
 GTP,Aerotaxi Grupo Tampico,aerotaxigrupotampico@email.com,1927
@@ -939,7 +939,7 @@ HHA,Atlantic Airlines de Honduras,atlanticairlinesdehonduras@email.com,1936
 HID,Aviacion Ejecutiva De Hildago,aviacionejecutivadehildago@email.com,1937
 HJA,Air Haiti,airhaiti@email.com,1938
 HJT,Al Rais Cargo,alraiscargo@email.com,1939
-HKH,Air-Invest,air-invest@email.com,1940
+HKH,Air-Invest,air.invest@email.com,1940
 HMA,Air Tahoma,airtahoma@email.com,1941
 HMT,Air Nova,airnova@email.com,1942
 HOM,Aero Homex,aerohomex@email.com,1943
@@ -947,7 +947,7 @@ HPO,Almiron Aviation,almironaviation@email.com,1944
 HQO,Avinor,avinor@email.com,1945
 HYR,Airlink Airways,airlinkairways@email.com,1946
 HZT,Air Horizon,airhorizon@email.com,1947
-IAE,AC Insat-Aero,acinsat-aero@email.com,1948
+IAE,AC Insat-Aero,acinsat.aero@email.com,1948
 ICM,Air Inter Cameroun,airintercameroun@email.com,1949
 IFI,Air Lift,airlift@email.com,1950
 IKM,Aero Survey,aerosurvey@email.com,1951
@@ -963,7 +963,7 @@ IRH,Atlas Aviation Group,atlasaviationgroup@email.com,1960
 IRW,Aram Airline,aramairline@email.com,1961
 IRX,Aria Tour,ariatour@email.com,1962
 ITE,Aerotaxi,aerotaxi@email.com,1963
-ITF,Avita-Servicos Aereos,avita-servicosaereos@email.com,1964
+ITF,Avita-Servicos Aereos,avita.servicosaereos@email.com,1964
 ITO,Aero Citro,aerocitro@email.com,1965
 IVE,Air Executive,airexecutive@email.com,1966
 IWS,Aviainvest,aviainvest@email.com,1967
@@ -1010,7 +1010,7 @@ LBI,Albisa,albisa@email.com,2007
 LBW,Albatros Airways,albatrosairways@email.com,2008
 LDG,Aerolineas Aereas Ejecutivas De Durango,aerolineasaereasejecutivasdedurango@email.com,2009
 LDL,Aerologic,aerologic@email.com,2010
-LDN,Al-Donas Airlines,al-donasairlines@email.com,2011
+LDN,Al-Donas Airlines,al.donasairlines@email.com,2011
 LDR,Aero Lider,aerolider@email.com,2012
 LEM,Aleem,aleem@email.com,2013
 LET,Aerolineas Ejecutivas,aerolineasejecutivas@email.com,2014
@@ -1019,7 +1019,7 @@ LFC,Aero Control Air,aerocontrolair@email.com,2016
 LGN,Aerolaguna,aerolaguna@email.com,2017
 LHR,Al Ahram Aviation,alahramaviation@email.com,2018
 LID,Alidaunia,alidaunia@email.com,2019
-LIE,Al-Dawood Air,al-dawoodair@email.com,2020
+LIE,Al-Dawood Air,al.dawoodair@email.com,2020
 LKP,American Aviation,americanaviation@email.com,2021
 LKS,Airlink Solutions,airlinksolutions@email.com,2022
 LKY,Air Solutions,airsolutions@email.com,2023
@@ -1038,7 +1038,7 @@ LOK,Alok Air,alokair@email.com,2035
 LOU,Air Saint Louis,airsaintlouis@email.com,2036
 LPC,Alpine Aviation,alpineaviation@email.com,2037
 LPV,Air Alps Aviation,airalpsaviation@email.com,2038
-LRO,Alrosa-Avia,alrosa-avia@email.com,2039
+LRO,Alrosa-Avia,alrosa.avia@email.com,2039
 LRW,Al Rida Airways,alridaairways@email.com,2040
 LSK,Aurela,aurela@email.com,2041
 LSM,Aerobusinessservice,aerobusinessservice@email.com,2042
@@ -1058,11 +1058,11 @@ MAU,Air Mauritius,airmauritius@email.com,2055
 MBA,Avag Air,avagair@email.com,2056
 MBB,Air Manas,airmanas@email.com,2057
 MBC,Airjet Exploracao Aerea De Carga,airjetexploracaoaereadecarga@email.com,2058
-MBV,Aeriantur-M,aeriantur-m@email.com,2059
+MBV,Aeriantur-M,aeriantur.m@email.com,2059
 MCB,Air Mercia,airmercia@email.com,2060
 MCD,Air Medical,airmedical@email.com,2061
 MCO,Aerolineas Marcos,aerolineasmarcos@email.com,2062
-MDC,Atlantic Aero and Mid-Atlantic Freight,atlanticaeroandmid-atlanticfreight@email.com,2063
+MDC,Atlantic Aero and Mid-Atlantic Freight,atlanticaeroandmid.atlanticfreight@email.com,2063
 MDG,Air Madagascar,airmadagascar@email.com,2064
 MDX,Aerosud Charter,aerosudcharter@email.com,2065
 MEF,Air Meridan,airmeridan@email.com,2066
@@ -1095,7 +1095,7 @@ MSC,Air Cairo,aircairo@email.com,2092
 MSK,Air Sport,airsport@email.com,2093
 MSM,Aeromas,aeromas@email.com,2094
 MSO,Aerol,aerol@email.com,2095
-MSV,Aero-Kamov,aero-kamov@email.com,2096
+MSV,Aero-Kamov,aero.kamov@email.com,2096
 MTB,Aerotaxis Metropolitanos,aerotaxismetropolitanos@email.com,2097
 MTE,Aeromet Linea Aerea,aerometlineaaerea@email.com,2098
 MTK,Air Metack,airmetack@email.com,2099
@@ -1107,7 +1107,7 @@ MZL,Aerovias Montes Azules,aeroviasmontesazules@email.com,2104
 ,Aeroland Airways,aerolandairways@email.com,2105
 ,Astair,astair@email.com,2106
 NBK,Albarka Air,albarkaair@email.com,2107
-NCL,ACA-Ancargo Air Sociedade de Transporte de Carga Lda,aca-ancargoairsociedadedetransportedecargalda@email.com,2108
+NCL,ACA-Ancargo Air Sociedade de Transporte de Carga Lda,aca.ancargoairsociedadedetransportedecargalda@email.com,2108
 NEL,Aero Servicios de Nuevo Laredo,aeroserviciosdenuevolaredo@email.com,2109
 NGV,Angoavia,angoavia@email.com,2110
 NID,Aeroni,aeroni@email.com,2111
@@ -1165,7 +1165,7 @@ QLA,Aviation Quebec Labrador,aviationquebeclabrador@email.com,2162
 QSC,African Safari Airways,africansafariairways@email.com,2163
 QUI,Aero Quimmco,aeroquimmco@email.com,2164
 RAD,Alada,alada@email.com,2165
-RAI,Aerotur-Air,aerotur-air@email.com,2166
+RAI,Aerotur-Air,aerotur.air@email.com,2166
 RAP,Air Center Helicopters,aircenterhelicopters@email.com,2167
 RBE,Aur Rum Benin,aurrumbenin@email.com,2168
 RBJ,Aeroserivios Del Bajio,aeroseriviosdelbajio@email.com,2169
@@ -1174,7 +1174,7 @@ RBV,Air Roberval,airroberval@email.com,2171
 RBX,Arubaexel,arubaexel@email.com,2172
 RCC,Air Charters Eelde,aircharterseelde@email.com,2173
 RCE,Aerocer,aerocer@email.com,2174
-RCF,Aeroflot-Cargo,aeroflot-cargo@email.com,2175
+RCF,Aeroflot-Cargo,aeroflot.cargo@email.com,2175
 RCH,Air Mobility Command,airmobilitycommand@email.com,2176
 RCI,Air Cassai,aircassai@email.com,2177
 RCO,Aero Renta De Coahuila,aerorentadecoahuila@email.com,2178
@@ -1185,10 +1185,10 @@ RCX,Air Service Center,airservicecenter@email.com,2182
 RDD,Adygeya Airlines,adygeyaairlines@email.com,2183
 RDM,Air Ada,airada@email.com,2184
 REA,Aer Arann,aerarann@email.com,2185
-REN,Aero-Rent,aero-rent@email.com,2186
+REN,Aero-Rent,aero.rent@email.com,2186
 RES,Australian Maritime Safety Authority,australianmaritimesafetyauthority@email.com,2187
 REU,Air Austral,airaustral@email.com,2188
-REY,Aero-Rey,aero-rey@email.com,2189
+REY,Aero-Rey,aero.rey@email.com,2189
 RFC,Aero Africa,aeroafrica@email.com,2190
 RFD,Aerotransportes Rafilher,aerotransportesrafilher@email.com,2191
 RGO,Argo,argo@email.com,2192
@@ -1207,7 +1207,7 @@ RLZ,Air Alize,airalize@email.com,2204
 RMD,Air Amder,airamder@email.com,2205
 RME,Armenian Airlines,armenianairlines@email.com,2206
 RML,Armenian International Airways,armenianinternationalairways@email.com,2207
-RMO,Arm-Aero,arm-aero@email.com,2208
+RMO,Arm-Aero,arm.aero@email.com,2208
 RMX,Air Max,airmax@email.com,2209
 RNE,Air Salone,airsalone@email.com,2210
 RNM,Aeronem Air Cargo,aeronemaircargo@email.com,2211
@@ -1224,9 +1224,9 @@ RPB,AeroRep,aerorep@email.com,2221
 RPC,Aerolineas Del Pacifico,aerolineasdelpacifico@email.com,2222
 RRC,Aero Roca,aeroroca@email.com,2223
 RRE,Aerotransportes Internacionales De Torreon,aerotransportesinternacionalesdetorreon@email.com,2224
-RRM,Acvila Air-Romanian Carrier,acvilaair-romaniancarrier@email.com,2225
+RRM,Acvila Air-Romanian Carrier,acvilaair.romaniancarrier@email.com,2225
 RSC,Aerolineas Ejecutivas Tarascas,aerolineasejecutivastarascas@email.com,2226
-RSR,Aero-Service,aero-service@email.com,2227
+RSR,Aero-Service,aero.service@email.com,2227
 RSU,Aerosur,aerosur@email.com,2228
 RTE,Aeronorte,aeronorte@email.com,2229
 RTH,Artis,artis@email.com,2230
@@ -1254,13 +1254,13 @@ SDO,Air Santo Domingo,airsantodomingo@email.com,2251
 SDP,Aero Sudpacifico,aerosudpacifico@email.com,2252
 SEF,Aero Servicios Ejecutivas Del Pacifico,aeroserviciosejecutivasdelpacifico@email.com,2253
 SER,Aero California,aerocalifornia@email.com,2254
-SFM,A-Safar Air Services,a-safarairservices@email.com,2255
+SFM,A-Safar Air Services,a.safarairservices@email.com,2255
 SGV,Aerosegovia,aerosegovia@email.com,2256
 SHH,Airshare Holdings,airshareholdings@email.com,2257
 SIY,Aerosiyusa,aerosiyusa@email.com,2258
 SIZ,Aero Silza,aerosilza@email.com,2259
 SJN,Air San Juan,airsanjuan@email.com,2260
-SKP,Aero-North Aviation Services,aero-northaviationservices@email.com,2261
+SKP,Aero-North Aviation Services,aero.northaviationservices@email.com,2261
 SMI,Aero Sami,aerosami@email.com,2262
 SMJ,Avient Aviation,avientaviation@email.com,2263
 SOD,Aerolineas Sol,aerolineassol@email.com,2264
@@ -1275,7 +1275,7 @@ SQR,Alsaqer Aviation,alsaqeraviation@email.com,2272
 SRI,Air Safaris and Services,airsafarisandservices@email.com,2273
 SRV,Aero Servicio Corporativo,aeroserviciocorporativo@email.com,2274
 SSL,Air Sultan,airsultan@email.com,2275
-SSM,Aero 1 Pro-Jet,aero1pro-jet@email.com,2276
+SSM,Aero 1 Pro-Jet,aero1pro.jet@email.com,2276
 SSN,Airquarius Air Charter,airquariusaircharter@email.com,2277
 STK,Aeropac,aeropac@email.com,2278
 STT,Air St. Thomas,airst.thomas@email.com,2279
@@ -1328,7 +1328,7 @@ TZT,Air Zambezi,airzambezi@email.com,2325
 UAG,Afra Airlines,afraairlines@email.com,2326
 UAR,Aerostar Airlines,aerostarairlines@email.com,2327
 UCK,Air Division of the Eastern Kazakhstan Region,airdivisionoftheeasternkazakhstanregion@email.com,2328
-UCR,Aero-Charter Ukraine,aero-charterukraine@email.com,2329
+UCR,Aero-Charter Ukraine,aero.charterukraine@email.com,2329
 UED,Air LA,airla@email.com,2330
 UKR,Air Ukraine,airukraine@email.com,2331
 UMB,Air Umbria,airumbria@email.com,2332
@@ -1377,7 +1377,7 @@ AJC,Bar Harbor Airlines,barharborairlines@email.com,2374
 BEF,Balear Express,balearexpress@email.com,2375
 BEH,Bel Air Helicopters,belairhelicopters@email.com,2376
 BEK,Berkut Air,berkutair@email.com,2377
-BET,BETA - Brazilian Express Transportes Aereos,beta-brazilianexpresstransportesaereos@email.com,2378
+BET,BETA - Brazilian Express Transportes Aereos,beta.brazilianexpresstransportesaereos@email.com,2378
 BFC,Basler Flight Service,baslerflightservice@email.com,2379
 BFG,Bear Flight,bearflight@email.com,2380
 BFL,Buffalo Airways,buffaloairways@email.com,2381
@@ -1387,7 +1387,7 @@ BFS,Business Flight Sweden,businessflightsweden@email.com,2384
 BFW,Bahrain Defence Force,bahraindefenceforce@email.com,2385
 BGH,BH Air,bhair@email.com,2386
 BGI,British Gulf International,britishgulfinternational@email.com,2387
-BGK,British Gulf International-Fez,britishgulfinternational-fez@email.com,2388
+BGK,British Gulf International-Fez,britishgulfinternational.fez@email.com,2388
 BGL,Benin Golf Air,beningolfair@email.com,2389
 BGM,Bugulma Air Enterprise,bugulmaairenterprise@email.com,2390
 BGR,Budget Air Bangladesh,budgetairbangladesh@email.com,2391
@@ -1416,7 +1416,7 @@ BJA,Baja Air,bajaair@email.com,2413
 BJC,Baltic Jet Aircompany,balticjetaircompany@email.com,2414
 BJS,Business Jet Solutions,businessjetsolutions@email.com,2415
 BKA,Bankair,bankair@email.com,2416
-BKF,BF-Lento OY,bf-lentooy@email.com,2417
+BKF,BF-Lento OY,bf.lentooy@email.com,2417
 BKJ,Barken International,barkeninternational@email.com,2418
 BKP,Bangkok Airways,bangkokairways@email.com,2419
 BKV,Bukovyna,bukovyna@email.com,2420
@@ -1449,7 +1449,7 @@ BNE,Benina Air,beninaair@email.com,2446
 BNG,BN Group Limited,bngrouplimited@email.com,2447
 BNL,Blue Nile Ethiopia Trading,bluenileethiopiatrading@email.com,2448
 BNR,Bonair Aviation,bonairaviation@email.com,2449
-BNS,Bancstar - Valley National Corporation,bancstar-valleynationalcorporation@email.com,2450
+BNS,Bancstar - Valley National Corporation,bancstar.valleynationalcorporation@email.com,2450
 BNT,Bentiu Air Transport,bentiuairtransport@email.com,2451
 BNV,Benane Aviation Corporation,benaneaviationcorporation@email.com,2452
 BNW,British North West Airlines,britishnorthwestairlines@email.com,2453
@@ -1461,11 +1461,11 @@ BOO,Bookajet Limited,bookajetlimited@email.com,2458
 BOU,Bouraq Indonesia Airlines,bouraqindonesiaairlines@email.com,2459
 BPA,Blue Panorama Airlines,bluepanoramaairlines@email.com,2460
 BPK,Berkhut ZK,berkhutzk@email.com,2461
-BPO,Bundepolizei-Fliegertruppe,bundepolizei-fliegertruppe@email.com,2462
+BPO,Bundepolizei-Fliegertruppe,bundepolizei.fliegertruppe@email.com,2462
 BPS,Budapest Aircraft Services/Manx2,budapestaircraftservices/manx2@email.com,2463
 BPT,Bonus Aviation,bonusaviation@email.com,2464
 BPX,British Petroleum Exploration,britishpetroleumexploration@email.com,2465
-BRB,BRA-Transportes Aereos,bra-transportesaereos@email.com,2466
+BRB,BRA-Transportes Aereos,bra.transportesaereos@email.com,2466
 BRD,Brock Air Services,brockairservices@email.com,2467
 BRE,Breeze Ltd,breezeltd@email.com,2468
 BRG,Bering Air,beringair@email.com,2469
@@ -1480,7 +1480,7 @@ BRW,Bright Aviation Services,brightaviationservices@email.com,2477
 BNF,Braniff International Airways,braniffinternationalairways@email.com,2478
 BRX,Buffalo Express Airlines,buffaloexpressairlines@email.com,2479
 BRY,Burundayavia,burundayavia@email.com,2480
-BSC,Bistair - Fez,bistair-fez@email.com,2481
+BSC,Bistair - Fez,bistair.fez@email.com,2481
 BSD,Blue Star Airlines,bluestarairlines@email.com,2482
 BSI,Brasair Transportes Aereos,brasairtransportesaereos@email.com,2483
 BSJ,Blue Swann Aviation,blueswannaviation@email.com,2484
@@ -1493,9 +1493,9 @@ BTC,BAL Bashkirian Airlines,balbashkirianairlines@email.com,2490
 BTH,Baltijas Helicopters,baltijashelicopters@email.com,2491
 BTK,Baltyka,baltyka@email.com,2492
 BTL,Baltia Air Lines,baltiaairlines@email.com,2493
-BTR,Botir-Avia,botir-avia@email.com,2494
+BTR,Botir-Avia,botir.avia@email.com,2494
 GAA,Business Express,businessexpress@email.com,2495
-BTT,BT-Slavuta,bt-slavuta@email.com,2496
+BTT,BT-Slavuta,bt.slavuta@email.com,2496
 BTV,Metro Batavia,metrobatavia@email.com,2497
 BUC,Bulgarian Air Charter,bulgarianaircharter@email.com,2498
 BUL,Blue Airlines,blueairlines@email.com,2499
@@ -1515,7 +1515,7 @@ BXI,Brussels International Airlines,brusselsinternationalairlines@email.com,2512
 ,BAX Global,baxglobal@email.com,2513
 BXR,Redding Aero Enterprises,reddingaeroenterprises@email.com,2514
 BYA,Berry Aviation,berryaviation@email.com,2515
-BYL,Bylina Joint-Stock Company,bylinajoint-stockcompany@email.com,2516
+BYL,Bylina Joint-Stock Company,bylinajoint.stockcompany@email.com,2516
 BYR,Berytos Airlines,berytosairlines@email.com,2517
 BYE,Bayu Indonesia Air,bayuindonesiaair@email.com,2518
 BZA,Bizair Fluggesellschaft,bizairfluggesellschaft@email.com,2519
@@ -1526,7 +1526,7 @@ CKM,BKS Air (Rivaflecha),bksair(rivaflecha)@email.com,2523
 CLF,Bristol Flying Centre,bristolflyingcentre@email.com,2524
 CLN,Barnes Olsen Aeroleasing,barnesolsenaeroleasing@email.com,2525
 CPJ,Baltimore Air Transport,baltimoreairtransport@email.com,2526
-CXS,Boston-Maine Airways,boston-maineairways@email.com,2527
+CXS,Boston-Maine Airways,boston.maineairways@email.com,2527
 DAT,Brussels Airlines,brusselsairlines@email.com,2528
 EAH,Baltimore Airways,baltimoreairways@email.com,2529
 EBA,Bond Aviation,bondaviation@email.com,2530
@@ -1586,7 +1586,7 @@ HBI,CHC Denmark,chcdenmark@email.com,2583
 HEM,CHC Helicopters,chchelicopters@email.com,2584
 SCH,CHC Airways,chcairways@email.com,2585
 HKS,CHC Helikopter Service,chchelikopterservice@email.com,2586
-VCI,CI-Tours,ci-tours@email.com,2587
+VCI,CI-Tours,ci.tours@email.com,2587
 CKC,CKC Services,ckcservices@email.com,2588
 CMZ,CM Stair,cmstair@email.com,2589
 CNT,CNET,cnet@email.com,2590
@@ -1601,7 +1601,7 @@ CVE,Cabo Verde Express,caboverdeexpress@email.com,2598
 CWD,Caernarfon Airworld,caernarfonairworld@email.com,2599
 CCE,Cairo Air Transport Company,cairoairtransportcompany@email.com,2600
 CGC,Cal Gulf Aviation,calgulfaviation@email.com,2601
-REZ,Cal-West Aviation,cal-westaviation@email.com,2602
+REZ,Cal-West Aviation,cal.westaviation@email.com,2602
 CSL,California Air Shuttle,californiaairshuttle@email.com,2603
 CLI,Calima Aviacion,calimaaviacion@email.com,2604
 CAV,Calm Air,calmair@email.com,2605
@@ -1689,7 +1689,7 @@ CEV,Cente D'Essais En Vol,cented'essaisenvol@email.com,2686
 CNL,Centennial Airlines,centennialairlines@email.com,2687
 CNS,Centennial Flight Centre,centennialflightcentre@email.com,2688
 CVO,Center Vol,centervol@email.com,2689
-CTS,Center-South,center-south@email.com,2690
+CTS,Center-South,center.south@email.com,2690
 CET,Centrafrican Airlines,centrafricanairlines@email.com,2691
 CAX,Central Air Express,centralairexpress@email.com,2692
 CTL,Central Airlines,centralairlines@email.com,2693
@@ -1707,7 +1707,7 @@ CSI,Central Skyport,centralskyport@email.com,2704
 CLW,Centralwings,centralwings@email.com,2705
 DTV,Centre Airlines,centreairlines@email.com,2706
 CGS,Centre of Applied Geodynamica,centreofappliedgeodynamica@email.com,2707
-CVC,Centre-Avia,centre-avia@email.com,2708
+CVC,Centre-Avia,centre.avia@email.com,2708
 CCV,Centro De Helicopteros Corporativos,centrodehelicopteroscorporativos@email.com,2709
 ACF,Centro de Formacion Aeronautica de Canarias,centrodeformacionaeronauticadecanarias@email.com,2710
 CWC,Centurion Air Cargo,centurionaircargo@email.com,2711
@@ -1739,7 +1739,7 @@ CHQ,Chautauqua Airlines,chautauquaairlines@email.com,2736
 CBB,Cheboksary Airenterprise JSC,cheboksaryairenterprisejsc@email.com,2737
 CHM,Chemech Aviation,chemechaviation@email.com,2738
 CHZ,Cherline,cherline@email.com,2739
-CMK,Chernomor-Avia,chernomor-avia@email.com,2740
+CMK,Chernomor-Avia,chernomor.avia@email.com,2740
 CBM,Cherokee Express,cherokeeexpress@email.com,2741
 CCY,Cherry Air,cherryair@email.com,2742
 CAB,Chesapeake Air Service,chesapeakeairservice@email.com,2743
@@ -1751,7 +1751,7 @@ RAT,Chief Rat Flight Services,chiefratflightservices@email.com,2748
 CCH,Chilchota Taxi Aereo,chilchotataxiaereo@email.com,2749
 DES,Chilcotin Caribou Aviation,chilcotincaribouaviation@email.com,2750
 CAD,Chilliwack Aviation,chilliwackaviation@email.com,2751
-ETN,Chim-Nir Aviation,chim-niraviation@email.com,2752
+ETN,Chim-Nir Aviation,chim.niraviation@email.com,2752
 CAL,China Airlines,chinaairlines@email.com,2753
 CKK,China Cargo Airlines,chinacargoairlines@email.com,2754
 CES,China Eastern Airlines,chinaeasternairlines@email.com,2755
@@ -1905,7 +1905,7 @@ VHT,Corporate Flight International,corporateflightinternational@email.com,2902
 VTE,Corporate Flight Management,corporateflightmanagement@email.com,2903
 CJI,Corporate Jets,corporatejets@email.com,2904
 CRL,Corsairfly,corsairfly@email.com,2905
-CCM,Corse-Mediterranee,corse-mediterranee@email.com,2906
+CCM,Corse-Mediterranee,corse.mediterranee@email.com,2906
 COZ,Cosmic Air,cosmicair@email.com,2907
 CHI,Cougar Helicopters,cougarhelicopters@email.com,2908
 MGB,Coulson Flying Service,coulsonflyingservice@email.com,2909
@@ -1966,7 +1966,7 @@ DAO,Daallo Airlines,daalloairlines@email.com,2963
 DAG,Dagestan Airlines,dagestanairlines@email.com,2964
 DHA,Dahla Airlines,dahlaairlines@email.com,2965
 DCS,Daimler Chrysler Aviation,daimlerchrysleraviation@email.com,2966
-DCX,Daimler-Chrysler,daimler-chrysler@email.com,2967
+DCX,Daimler-Chrysler,daimler.chrysler@email.com,2967
 DKA,Daka,daka@email.com,2968
 DLR,Dala Air Services,dalaairservices@email.com,2969
 KHB,Dalavia,dalavia@email.com,2970
@@ -2019,7 +2019,7 @@ MIZ,Desarrollo Milaz,desarrollomilaz@email.com,3016
 DTY,Destiny Air Services,destinyairservices@email.com,3017
 ,Deutsche Bahn,deutschebahn@email.com,3018
 AMB,Deutsche Rettungsflugwacht,deutscherettungsflugwacht@email.com,3019
-LFO,Deutsches Zentrum fur Luft-und Raumfahrt EV,deutscheszentrumfurluft-undraumfahrtev@email.com,3020
+LFO,Deutsches Zentrum fur Luft-und Raumfahrt EV,deutscheszentrumfurluft.undraumfahrtev@email.com,3020
 DIS,Di Air,diair@email.com,3021
 SPK,Diamond Aviation,diamondaviation@email.com,3022
 DRB,Didier Rousset Buy,didierroussetbuy@email.com,3023
@@ -2079,9 +2079,9 @@ EHD,E H Darby Aviation,ehdarbyaviation@email.com,3075
 1Y,Electronic Data Systems,electronicdatasystems@email.com,3077
 EAD,EAA Escola De Aviacao Aerocondor,eaaescoladeaviacaoaerocondor@email.com,3078
 EXW,Executive Airlines Services,executiveairlinesservices@email.com,3079
-EFS,EFAOS- Agencia De Viagens e Turismo,efaos-agenciadeviagenseturismo@email.com,3080
+EFS,EFAOS- Agencia De Viagens e Turismo,efaos.agenciadeviagenseturismo@email.com,3080
 EFD,EFD Eisele Flugdienst,efdeiseleflugdienst@email.com,3081
-FSD,EFS-Flugservice,efs-flugservice@email.com,3082
+FSD,EFS-Flugservice,efs.flugservice@email.com,3082
 EIS,EIS Aircraft,eisaircraft@email.com,3083
 IAG,EPAG Groupe Air France,epaggroupeairfrance@email.com,3084
 ESI,ESI Eliservizi Italiani,esieliserviziitaliani@email.com,3085
@@ -2110,7 +2110,7 @@ EHA,East Hampton Aire,easthamptonaire@email.com,3107
 EKC,East Kansas City Aviation,eastkansascityaviation@email.com,3108
 CTK,East Midlands Helicopters,eastmidlandshelicopters@email.com,3109
 DXH,East Star Airlines,eaststarairlines@email.com,3110
-EWA,East-West Airlines,east-westairlines@email.com,3111
+EWA,East-West Airlines,east.westairlines@email.com,3111
 EAZ,Eastern Air,easternair@email.com,3112
 EAX,Eastern Air Executive,easternairexecutive@email.com,3113
 EZE,Eastern Airways,easternairways@email.com,3114
@@ -2151,10 +2151,10 @@ CMX,El Caminante Taxi Aereo,elcaminantetaxiaereo@email.com,3148
 GLQ,El Quilada International Aviation,elquiladainternationalaviation@email.com,3149
 ELS,El Sal Air,elsalair@email.com,3150
 ESC,El Sol De America,elsoldeamerica@email.com,3151
-BRQ,El-Buraq Air Transport,el-buraqairtransport@email.com,3152
+BRQ,El-Buraq Air Transport,el.buraqairtransport@email.com,3152
 ELX,Elan Express,elanexpress@email.com,3153
 LBR,Elbe Air Transport,elbeairtransport@email.com,3154
-NLK,Elbrus-Avia Air Enterprise,elbrus-aviaairenterprise@email.com,3155
+NLK,Elbrus-Avia Air Enterprise,elbrus.aviaairenterprise@email.com,3155
 DND,Eldinder Aviation,eldinderaviation@email.com,3156
 PDV,Elicar,elicar@email.com,3157
 EDO,Elidolomiti,elidolomiti@email.com,3158
@@ -2175,7 +2175,7 @@ ELR,Elrom Aviation and Investments,elromaviationandinvestments@email.com,3172
 EAM,Embassy Airlines,embassyairlines@email.com,3173
 EFT,Embassy Freight Company,embassyfreightcompany@email.com,3174
 EMB,Empresa Brasileira De Aeronautica,empresabrasileiradeaeronautica@email.com,3175
-XSL,Embry-Riddle Aeronautical University,embry-riddleaeronauticaluniversity@email.com,3176
+XSL,Embry-Riddle Aeronautical University,embry.riddleaeronauticaluniversity@email.com,3176
 JEM,Emerald Airways,emeraldairways@email.com,3177
 EWW,Emery Worldwide Airlines,emeryworldwideairlines@email.com,3178
 EMT,Emetebe,emetebe@email.com,3179
@@ -2186,14 +2186,14 @@ CFS,Empire Airlines,empireairlines@email.com,3183
 MPR,Empire Aviation Services,empireaviationservices@email.com,3184
 ETP,Empire Test Pilots' School,empiretestpilots'school@email.com,3185
 AUO,Empresa (Aero Uruguay),empresa(aerouruguay)@email.com,3186
-PRG,Empresa Aero-Servicios Parrague,empresaaero-serviciosparrague@email.com,3187
+PRG,Empresa Aero-Servicios Parrague,empresaaero.serviciosparrague@email.com,3187
 CRN,Empresa Aerocaribbean,empresaaerocaribbean@email.com,3188
 VNA,Empresa Aviacion Interamericana,empresaaviacioninteramericana@email.com,3189
 EEA,Empresa Ecuatoriana De Aviacion,empresaecuatorianadeaviacion@email.com,3190
 CNI,Empresa Nacional De Servicios Aereos,empresanacionaldeserviciosaereos@email.com,3191
 VNE,Empresa Venezolana,empresavenezolana@email.com,3192
 GTV,Empresa de Aviacion Aerogaviota,empresadeaviacionaerogaviota@email.com,3193
-XLT,Empressa Brasileira de Infra-Estrutura Aeroportuaria-Infraero,empressabrasileiradeinfra-estruturaaeroportuaria-infraero@email.com,3194
+XLT,Empressa Brasileira de Infra-Estrutura Aeroportuaria-Infraero,empressabrasileiradeinfra.estruturaaeroportuaria.infraero@email.com,3194
 ENC,Endecots,endecots@email.com,3195
 ENI,Enimex,enimex@email.com,3196
 ENK,Enkor JSC,enkorjsc@email.com,3197
@@ -2224,8 +2224,8 @@ EVN,Euraviation,euraviation@email.com,3221
 ECN,Euro Continental AIE,eurocontinentalaie@email.com,3222
 ,Euro Exec Express,euroexecexpress@email.com,3223
 ESN,Euro Sun,eurosun@email.com,3224
-EAK,Euro-Asia Air,euro-asiaair@email.com,3225
-KZE,Euro-Asia Air International,euro-asiaairinternational@email.com,3226
+EAK,Euro-Asia Air,euro.asiaair@email.com,3225
+KZE,Euro-Asia Air International,euro.asiaairinternational@email.com,3226
 MMZ,EuroAtlantic Airways,euroatlanticairways@email.com,3227
 GOJ,EuroJet Aviation,eurojetaviation@email.com,3228
 EUP,Euroair,euroair@email.com,3229
@@ -2301,7 +2301,7 @@ FLC,FINFO Flight Inspection Aircraft,finfoflightinspectionaircraft@email.com,329
 FKI,FLM Aviation Mohrdieck,flmaviationmohrdieck@email.com,3299
 DCM,FLTPLAN,fltplan@email.com,3300
 FLW,FLowair Aviation,flowairaviation@email.com,3301
-FMG,FMG Verkehrsfliegerschule Flughafen Paderborn-Lippstadt,fmgverkehrsfliegerschuleflughafenpaderborn-lippstadt@email.com,3302
+FMG,FMG Verkehrsfliegerschule Flughafen Paderborn-Lippstadt,fmgverkehrsfliegerschuleflughafenpaderborn.lippstadt@email.com,3302
 FRA,FR Aviation,fraviation@email.com,3303
 FSB,FSB Flugservice & Development,fsbflugservice&development@email.com,3304
 LEJ,FSH Luftfahrtunternehmen,fshluftfahrtunternehmen@email.com,3305
@@ -2364,7 +2364,7 @@ FSX,Flagship Express Services,flagshipexpressservices@email.com,3361
 FLE,Flair Airlines,flairairlines@email.com,3362
 WAF,Flamenco Airways,flamencoairways@email.com,3363
 FMR,Flamingo Air,flamingoair@email.com,3364
-FLN,Flamingo Air-Line,flamingoair-line@email.com,3365
+FLN,Flamingo Air-Line,flamingoair.line@email.com,3365
 FSH,Flash Airlines,flashairlines@email.com,3366
 BWY,Fleet Requirements Air Direction Unit,fleetrequirementsairdirectionunit@email.com,3367
 FLR,Fleetair,fleetair@email.com,3368
@@ -2388,7 +2388,7 @@ FSU,Flight Support Sweden,flightsupportsweden@email.com,3385
 CCK,Flight Trac,flighttrac@email.com,3386
 AYR,Flight Training Europe,flighttrainingeurope@email.com,3387
 FWQ,Flight West Airlines,flightwestairlines@email.com,3388
-KLO,Flight-Ops International,flight-opsinternational@email.com,3389
+KLO,Flight-Ops International,flight.opsinternational@email.com,3389
 CSK,Flightcraft,flightcraft@email.com,3390
 FEX,Flightexec,flightexec@email.com,3391
 FLT,Flightline,flightline@email.com,3392
@@ -2428,7 +2428,7 @@ INU,Flyguppdraget Backamo,flyguppdragetbackamo@email.com,3425
 FYH,Flyhy Cargo Airlines,flyhycargoairlines@email.com,3426
 FCR,Flying Carpet Company,flyingcarpetcompany@email.com,3427
 FYG,Flying Service,flyingservice@email.com,3428
-FGP,Flying-Research Aerogeophysical Center,flying-researchaerogeophysicalcenter@email.com,3429
+FGP,Flying-Research Aerogeophysical Center,flying.researchaerogeophysicalcenter@email.com,3429
 FLK,Flylink Express,flylinkexpress@email.com,3430
 FTM,Flyteam Aviation,flyteamaviation@email.com,3431
 FKS,Focus Air,focusair@email.com,3432
@@ -2493,12 +2493,12 @@ GHI,GH Stansted Limited,ghstanstedlimited@email.com,3490
 GMG,GM Helicopters,gmhelicopters@email.com,3491
 GPE,GP Express Airlines,gpexpressairlines@email.com,3492
 GPR,GPM Aeroservicio,gpmaeroservicio@email.com,3493
-GIB,GR-Avia,gr-avia@email.com,3494
+GIB,GR-Avia,gr.avia@email.com,3494
 BMK,GST Aero Aircompany,gstaeroaircompany@email.com,3495
 GTX,GTA Air,gtaair@email.com,3496
-GAH,Ga-Ma Helicoptere,ga-mahelicoptere@email.com,3497
+GAH,Ga-Ma Helicoptere,ga.mahelicoptere@email.com,3497
 GBE,Gabon Express,gabonexpress@email.com,3498
-GRT,Gabon-Air-Transport,gabon-air-transport@email.com,3499
+GRT,Gabon-Air-Transport,gabon.air.transport@email.com,3499
 GIG,Gacela Air Cargo,gacelaaircargo@email.com,3500
 GFC,Gail Force Express,gailforceexpress@email.com,3501
 GNJ,Gain Jet Aviation,gainjetaviation@email.com,3502
@@ -2575,12 +2575,12 @@ GOW,Go Air,goair@email.com,3572
 ,Go One Airways,gooneairways@email.com,3573
 GJS,GoJet Airlines,gojetairlines@email.com,3574
 GGE,Gobierno De Guinea Ecuatorial,gobiernodeguineaecuatorial@email.com,3575
-GOF,Gof-Air,gof-air@email.com,3576
+GOF,Gof-Air,gof.air@email.com,3576
 GOI,Gofir,gofir@email.com,3577
 GLO,Gol Transportes Aéreos,goltransportesaéreos@email.com,3578
 GBT,Gold Belt Air Transport,goldbeltairtransport@email.com,3579
 GDA,GoldAir,goldair@email.com,3580
-GDK,Goldeck-Flug,goldeck-flug@email.com,3581
+GDK,Goldeck-Flug,goldeck.flug@email.com,3581
 GAO,Golden Air,goldenair@email.com,3582
 GDD,Golden Airlines,goldenairlines@email.com,3583
 GPA,Golden Pacific Airlines,goldenpacificairlines@email.com,3584
@@ -2616,7 +2616,7 @@ GZD,Grizodubova Air Company,grizodubovaaircompany@email.com,3613
 HTG,Grossmann Air Service,grossmannairservice@email.com,3614
 GSJ,Grossmann Jet Service,grossmannjetservice@email.com,3615
 GHV,Ground Handling Service de Mexico,groundhandlingservicedemexico@email.com,3616
-GPM,Grup Air-Med,grupair-med@email.com,3617
+GPM,Grup Air-Med,grupair.med@email.com,3617
 EJC,Grupo De Aviacion Ejecutiva,grupodeaviacionejecutiva@email.com,3618
 TAT,Grupo TACA,grupotaca@email.com,3619
 VMM,Grupo Vuelos Mediterraneo,grupovuelosmediterraneo@email.com,3620
@@ -2632,7 +2632,7 @@ CGH,Guizhou Airlines,guizhouairlines@email.com,3629
 GUS,Guja,guja@email.com,3630
 GUJ,Gujarat Airways,gujaratairways@email.com,3631
 TSU,Gulf & Caribbean Cargo / Contract Air Cargo,gulf&caribbeancargo/contractaircargo@email.com,3632
-GUF,Gulf African Airlines - Gambia,gulfafricanairlines-gambia@email.com,3633
+GUF,Gulf African Airlines - Gambia,gulfafricanairlines.gambia@email.com,3633
 GFA,Gulf Air,gulfair@email.com,3634
 GBA,Gulf Air Bahrain,gulfairbahrain@email.com,3635
 GAT,Gulf Air Inc,gulfairinc@email.com,3636
@@ -2705,14 +2705,14 @@ HLM,Heli Medwest De Mexico,helimedwestdemexico@email.com,3702
 HLI,Heli Securite,helisecurite@email.com,3703
 HTP,Heli Trip,helitrip@email.com,3704
 HLU,Heli Union Heli Prestations,heliunionheliprestations@email.com,3705
-MCM,Heli-Air-Monaco,heli-air-monaco@email.com,3706
-HHE,Heli-Holland,heli-holland@email.com,3707
-HRA,Heli-Iberica,heli-iberica@email.com,3708
-HIF,Heli-Iberica Fotogrametria,heli-ibericafotogrametria@email.com,3709
-HIG,Heli-Inter Guyane,heli-interguyane@email.com,3710
-HLK,Heli-Link,heli-link@email.com,3711
+MCM,Heli-Air-Monaco,heli.air.monaco@email.com,3706
+HHE,Heli-Holland,heli.holland@email.com,3707
+HRA,Heli-Iberica,heli.iberica@email.com,3708
+HIF,Heli-Iberica Fotogrametria,heli.ibericafotogrametria@email.com,3709
+HIG,Heli-Inter Guyane,heli.interguyane@email.com,3710
+HLK,Heli-Link,heli.link@email.com,3711
 HMC,Heliamerica De Mexico,heliamericademexico@email.com,3712
-HEA,Heliavia-Transporte Aereo,heliavia-transporteaereo@email.com,3713
+HEA,Heliavia-Transporte Aereo,heliavia.transporteaereo@email.com,3713
 CDY,Heliaviation Limited,heliaviationlimited@email.com,3714
 HIB,Helibravo Aviacao,helibravoaviacao@email.com,3715
 HLC,Helicap,helicap@email.com,3716
@@ -2753,15 +2753,15 @@ MRX,Herman's Markair Express,herman'smarkairexpress@email.com,3750
 HED,Herritage Aviation Developments,herritageaviationdevelopments@email.com,3751
 ALX,Hewa Bora Airways,hewaboraairways@email.com,3752
 HER,Hex'Air,hex'air@email.com,3753
-HHS,Hi-Jet Helicopter Services,hi-jethelicopterservices@email.com,3754
+HHS,Hi-Jet Helicopter Services,hi.jethelicopterservices@email.com,3754
 HFY,Hi Fly,hifly@email.com,3755
-HLB,High-Line Airways,high-lineairways@email.com,3756
+HLB,High-Line Airways,high.lineairways@email.com,3756
 HWY,Highland Airways,highlandairways@email.com,3757
 HIS,Hispaniola Airways,hispaniolaairways@email.com,3758
 HGA,Hogan Air,hoganair@email.com,3759
 NTH,Hokkaido Air System,hokkaidoairsystem@email.com,3760
 ADO,Hokkaido International Airlines,hokkaidointernationalairlines@email.com,3761
-ABH,Hokuriki-Koukuu Company,hokuriki-koukuucompany@email.com,3762
+ABH,Hokuriki-Koukuu Company,hokuriki.koukuucompany@email.com,3762
 HOA,Hola Airlines,holaairlines@email.com,3763
 HIN,Holding International Group,holdinginternationalgroup@email.com,3764
 HOL,Holiday Airlines,holidayairlines@email.com,3765
@@ -2771,12 +2771,12 @@ HAS,Honduras Airlines,hondurasairlines@email.com,3768
 CRK,Hong Kong Airlines,hongkongairlines@email.com,3769
 HKE,Hong Kong Express Airways,hongkongexpressairways@email.com,3770
 HEX,Honiara Cargo Express,honiaracargoexpress@email.com,3771
-HPJ,Hop-A-Jet,hop-a-jet@email.com,3772
+HPJ,Hop-A-Jet,hop.a.jet@email.com,3772
 ,Hope Air,hopeair@email.com,3773
 QXE,Horizon Air,horizonair@email.com,3774
 KOK,Horizon Air Service,horizonairservice@email.com,3775
 HSM,Horizon Air for Transport and Training,horizonairfortransportandtraining@email.com,3776
-HOR,Horizon Air-Taxi,horizonair-taxi@email.com,3777
+HOR,Horizon Air-Taxi,horizonair.taxi@email.com,3777
 HZA,Horizon Airlines,horizonairlines@email.com,3778
 HPS,Horizon Plus,horizonplus@email.com,3779
 HUD,Horizons Unlimited,horizonsunlimited@email.com,3780
@@ -2784,7 +2784,7 @@ HOZ,Horizontes Aereos,horizontesaereos@email.com,3781
 HDI,Hoteles Dinamicos,hotelesdinamicos@email.com,3782
 HHO,Houston Helicopters,houstonhelicopters@email.com,3783
 GGV,Houston Jet Services,houstonjetservices@email.com,3784
-OZU,Hozu-Avia,hozu-avia@email.com,3785
+OZU,Hozu-Avia,hozu.avia@email.com,3785
 HUB,Hub Airlines,hubairlines@email.com,3786
 HUS,Huessler Air Service,huesslerairservice@email.com,3787
 GMH,Hughes Aircraft Company,hughesaircraftcompany@email.com,3788
@@ -2793,7 +2793,7 @@ HUV,Hunair Hungarian Airlines,hunairhungarianairlines@email.com,3790
 HUF,Hungarian Air Force,hungarianairforce@email.com,3791
 HYA,Hyack Air,hyackair@email.com,3792
 HYC,Hydro Air Flight Operations,hydroairflightoperations@email.com,3793
-HYD,Hydro-Québec,hydro-québec@email.com,3794
+HYD,Hydro-Québec,hydro.québec@email.com,3794
 ,Héli Sécurité Helicopter Airlines,hélisécuritéhelicopterairlines@email.com,3795
 ITC,International Air Carrier Association,internationalaircarrierassociation@email.com,3796
 CSQ,IBC Airways,ibcairways@email.com,3797
@@ -2823,7 +2823,7 @@ IBT,Ibertrans Aerea,ibertransaerea@email.com,3820
 IWD,Iberworld,iberworld@email.com,3821
 IBX,Ibex Airlines,ibexairlines@email.com,3822
 IBC,Ibicenca Air,ibicencaair@email.com,3823
-AKI,Ibk-Petra,ibk-petra@email.com,3824
+AKI,Ibk-Petra,ibk.petra@email.com,3824
 RAC,Icar Air,icarair@email.com,3825
 FRC,Icare Franche Compte,icarefranchecompte@email.com,3826
 ICD,Icaro,icaro@email.com,3827
@@ -2834,11 +2834,11 @@ ICE,Icelandair,icelandair@email.com,3831
 ICG,Icelandic Coast Guard,icelandiccoastguard@email.com,3832
 IKR,Ikaros DK,ikarosdk@email.com,3833
 CIO,Il Ciocco International Travel Service,ilcioccointernationaltravelservice@email.com,3834
-ILV,Il-Avia,il-avia@email.com,3835
+ILV,Il-Avia,il.avia@email.com,3835
 IDL,Ildefonso Redriguez,ildefonsoredriguez@email.com,3836
 IAR,Iliamna Air Taxi,iliamnaairtaxi@email.com,3837
 ILP,Ilpo Aruba Cargo,ilpoarubacargo@email.com,3838
-ILL,Ilyich-Avia,ilyich-avia@email.com,3839
+ILL,Ilyich-Avia,ilyich.avia@email.com,3839
 IMR,Imaer,imaer@email.com,3840
 ITX,Imair Airlines,imairairlines@email.com,3841
 PNX,Imperial Airways,imperialairways@email.com,3842
@@ -2871,11 +2871,11 @@ INX,Inter Express,interexpress@email.com,3868
 IIN,Inter Islands Airlines,interislandsairlines@email.com,3869
 CAR,Inter RCA,interrca@email.com,3870
 NTT,Inter Tropic Airlines,intertropicairlines@email.com,3871
-ITA,Inter-Air,inter-air@email.com,3872
-ICN,Inter-Canadian,inter-canadian@email.com,3873
-UGL,Inter-Island Air,inter-islandair@email.com,3874
-IMA,Inter-Mountain Airways,inter-mountainairways@email.com,3875
-ITS,Inter-State Aviation,inter-stateaviation@email.com,3876
+ITA,Inter-Air,inter.air@email.com,3872
+ICN,Inter-Canadian,inter.canadian@email.com,3873
+UGL,Inter-Island Air,inter.islandair@email.com,3874
+IMA,Inter-Mountain Airways,inter.mountainairways@email.com,3875
+ITS,Inter-State Aviation,inter.stateaviation@email.com,3876
 ILN,Interair South Africa,interairsouthafrica@email.com,3877
 NTE,Interaire,interaire@email.com,3878
 SUW,Interavia Airlines,interaviaairlines@email.com,3879
@@ -2908,7 +2908,7 @@ HSP,International Jet Charter,internationaljetcharter@email.com,3905
 RSQ,International SOS WIndhoek,internationalsoswindhoek@email.com,3906
 ISF,International Sabilisation Assistance Force,internationalsabilisationassistanceforce@email.com,3907
 THN,International Security Assistance Force,internationalsecurityassistanceforce@email.com,3908
-ITH,International Trans-Air,internationaltrans-air@email.com,3909
+ITH,International Trans-Air,internationaltrans.air@email.com,3909
 IPT,Interport Corporation,interportcorporation@email.com,3910
 IKY,Intersky,intersky@email.com,3911
 ISK,Intersky,intersky@email.com,3912
@@ -2963,7 +2963,7 @@ IZM,Izair,izair@email.com,3960
 IZA,Izhavia,izhavia@email.com,3961
 JCB,J C Bamford (Excavators),jcbamford(excavators)@email.com,3962
 RFX,J P Hunt Air Carriers,jphuntaircarriers@email.com,3963
-JLJ,J-Air,j-air@email.com,3964
+JLJ,J-Air,j.air@email.com,3964
 JEX,JAL Express,jalexpress@email.com,3965
 JAZ,JALways,jalways@email.com,3966
 JDA,JDAviation,jdaviation@email.com,3967
@@ -2978,7 +2978,7 @@ JCK,Jackson Air Services,jacksonairservices@email.com,3975
 JAE,Jade Cargo International,jadecargointernational@email.com,3976
 JAW,Jamahiriya Airways,jamahiriyaairways@email.com,3977
 JMB,Jambo Africa Airlines,jamboafricaairlines@email.com,3978
-JAK,Jana-Arka,jana-arka@email.com,3979
+JAK,Jana-Arka,jana.arka@email.com,3979
 JAX,Janair,janair@email.com,3980
 JAC,Japan Air Commuter,japanaircommuter@email.com,3981
 JSV,Japan Aircraft Service,japanaircraftservice@email.com,3982
@@ -3019,8 +3019,8 @@ JDI,Jet Service,jetservice@email.com,4016
 JSA,Jetstar Asia Airways,jetstarasiaairways@email.com,4017
 JSM,Jet Stream,jetstream@email.com,4018
 JTC,Jet Trans Aviation,jettransaviation@email.com,4019
-JTT,Jet-2000,jet-2000@email.com,4020
-OPS,Jet-Ops,jet-ops@email.com,4021
+JTT,Jet-2000,jet.2000@email.com,4020
+OPS,Jet-Ops,jet.ops@email.com,4021
 EXS,Jet2.com,jet2.com@email.com,4022
 JFU,Jet4You,jet4you@email.com,4023
 OSW,JetAfrica Swaziland,jetafricaswaziland@email.com,4024
@@ -3071,7 +3071,7 @@ ODI,Jonsson,jonsson@email.com,4068
 JAV,Jordan Aviation,jordanaviation@email.com,4069
 JCI,Jordan International Air Cargo,jordaninternationalaircargo@email.com,4070
 JVK,Jorvik,jorvik@email.com,4071
-JUR,Ju-Air,ju-air@email.com,4072
+JUR,Ju-Air,ju.air@email.com,4072
 JFS,Juanda Flying School,juandaflyingschool@email.com,4073
 JUC,Juba Cargo Services & Aviation Company,jubacargoservices&aviationcompany@email.com,4074
 JUB,Jubba Airways,jubbaairways@email.com,4075
@@ -3081,7 +3081,7 @@ MEY,Justair Scandinavia,justairscandinavia@email.com,4078
 DOJ,Justice Prisoner and Alien Transportation System,justiceprisonerandalientransportationsystem@email.com,4079
 KDC,K D Air Corporation,kdaircorporation@email.com,4080
 KSA,K S Avia,ksavia@email.com,4081
-KMI,K-Mile Air,k-mileair@email.com,4082
+KMI,K-Mile Air,k.mileair@email.com,4082
 KNI,KD Avia,kdavia@email.com,4083
 KLC,KLM Cityhopper,klmcityhopper@email.com,4084
 KLH,KLM Helicopter,klmhelicopter@email.com,4085
@@ -3094,7 +3094,7 @@ KFS,Kalitta Charters,kalittacharters@email.com,4091
 KES,Kallat El Saker Air Company,kallatelsakeraircompany@email.com,4092
 KMF,Kam Air,kamair@email.com,4093
 KMP,Kampuchea Airlines,kampucheaairlines@email.com,4094
-KIZ,Kanaf-Arkia Airlines,kanaf-arkiaairlines@email.com,4095
+KIZ,Kanaf-Arkia Airlines,kanaf.arkiaairlines@email.com,4095
 KHE,Kanfey Ha'emek Aviation,kanfeyha'emekaviation@email.com,4096
 KSU,Kansas State University,kansasstateuniversity@email.com,4097
 AKT,Karat,karat@email.com,4098
@@ -3113,7 +3113,7 @@ KAO,Kazan Aviation Production Association,kazanaviationproductionassociation@ema
 KPH,Kazan Helicopters,kazanhelicopters@email.com,4111
 KKA,Kazavia,kazavia@email.com,4112
 KZS,Kazaviaspas,kazaviaspas@email.com,4113
-JFK,Keenair Charter -,keenaircharter-@email.com,4114
+JFK,Keenair Charter -,keenaircharter.@email.com,4114
 KLX,Kelix Air,kelixair@email.com,4115
 FKL,Kelner Airways,kelnerairways@email.com,4116
 KFA,Kelowna Flightcraft Air Charter,kelownaflightcraftaircharter@email.com,4117
@@ -3131,7 +3131,7 @@ KZW,Khalifa Airways,khalifaairways@email.com,4128
 WKH,Kharkov Aircraft Manufacturing Company,kharkovaircraftmanufacturingcompany@email.com,4129
 KHR,Khazar,khazar@email.com,4130
 KHP,Khoezestan Photros Air Lines,khoezestanphotrosairlines@email.com,4131
-KRV,Khoriv-Avia,khoriv-avia@email.com,4132
+KRV,Khoriv-Avia,khoriv.avia@email.com,4132
 KHO,Khors Aircompany,khorsaircompany@email.com,4133
 KHY,Khyber Afghan Airlines,khyberafghanairlines@email.com,4134
 UAK,Kiev Aviation Plant,kievaviationplant@email.com,4135
@@ -3156,8 +3156,8 @@ KGL,Kogalymavia Air Company,kogalymaviaaircompany@email.com,4153
 KOM,Kom Activity,komactivity@email.com,4154
 KMA,Komiaviatrans State Air Enterprise,komiaviatransstateairenterprise@email.com,4155
 KMV,Komiinteravia,komiinteravia@email.com,4156
-KNM,Komsomolsk-on-Amur Air Enterprise,komsomolsk-on-amurairenterprise@email.com,4157
-KOB,Koob-Corp - 96 KFT,koob-corp-96kft@email.com,4158
+KNM,Komsomolsk-on-Amur Air Enterprise,komsomolsk.on.amurairenterprise@email.com,4157
+KOB,Koob-Corp - 96 KFT,koob.corp.96kft@email.com,4158
 KAL,Korean Air,koreanair@email.com,4159
 KMG,Kosmas Air,kosmasair@email.com,4160
 KSM,Kosmos,kosmos@email.com,4161
@@ -3190,11 +3190,11 @@ LJY,L J Aviation,ljaviation@email.com,4187
 LRB,L R Airlines,lrairlines@email.com,4188
 PHO,L&L Flygbildteknik,l&lflygbildteknik@email.com,4189
 LEX,L'Express,l'express@email.com,4190
-FNT,L-3 Communications Flight Internation Aviation,l-3communicationsflightinternationaviation@email.com,4191
+FNT,L-3 Communications Flight Internation Aviation,l.3communicationsflightinternationaviation@email.com,4191
 LAB,L.A.B. Flying Service,l.a.b.flyingservice@email.com,4192
 LRC,LACSA,lacsa@email.com,4193
-LDE,LADE - Lineas Aereas Del Estado,lade-lineasaereasdelestado@email.com,4194
-BNX,LAI - Linea Aerea IAACA,lai-lineaaereaiaaca@email.com,4195
+LDE,LADE - Lineas Aereas Del Estado,lade.lineasaereasdelestado@email.com,4194
+BNX,LAI - Linea Aerea IAACA,lai.lineaaereaiaaca@email.com,4195
 LAN,LAN Airlines,lanairlines@email.com,4196
 DSM,LAN Argentina,lanargentina@email.com,4197
 LCO,LAN Cargo,lancargo@email.com,4198
@@ -3202,7 +3202,7 @@ LNC,LAN Dominica,landominica@email.com,4199
 LXP,LAN Express,lanexpress@email.com,4200
 LPE,LAN Peru,lanperu@email.com,4201
 LSA,LANSA,lansa@email.com,4202
-APT,LAP Colombia - Lineas Aereas Petroleras,lapcolombia-lineasaereaspetroleras@email.com,4203
+APT,LAP Colombia - Lineas Aereas Petroleras,lapcolombia.lineasaereaspetroleras@email.com,4203
 OTN,LASTP,lastp@email.com,4204
 LCB,LC Busre,lcbusre@email.com,4205
 LOT,LOT Polish Airlines,lotpolishairlines@email.com,4206
@@ -3210,7 +3210,7 @@ LTE,LTE International Airways,lteinternationalairways@email.com,4207
 LTO,LTU Austria,ltuaustria@email.com,4208
 LTU,LTU International,ltuinternational@email.com,4209
 JFC,LTV Jet Fleet Corporation,ltvjetfleetcorporation@email.com,4210
-LUK,LUKoil-Avia,lukoil-avia@email.com,4211
+LUK,LUKoil-Avia,lukoil.avia@email.com,4211
 ASK,La Ronge Aviation Services,larongeaviationservices@email.com,4212
 LVT,La Valenciana Taxi Aereo,lavalencianataxiaereo@email.com,4213
 SKQ,Labcorp,labcorp@email.com,4214
@@ -3239,8 +3239,8 @@ LDI,Lauda Air Italy,laudaairitaly@email.com,4236
 LEP,Laughlin Express,laughlinexpress@email.com,4237
 LSU,Laus,laus@email.com,4238
 LAR,Lawrence Aviation,lawrenceaviation@email.com,4239
-LAY,Layang-Layang Aerospace,layang-layangaerospace@email.com,4240
-LPL,Lease-a-Plane International,lease-a-planeinternational@email.com,4241
+LAY,Layang-Layang Aerospace,layang.layangaerospace@email.com,4240
+LPL,Lease-a-Plane International,lease.a.planeinternational@email.com,4241
 LAQ,Lebanese Air Transport,lebaneseairtransport@email.com,4242
 LAT,Lebanese Air Transport (Charter),lebaneseairtransport(charter)@email.com,4243
 LAD,Lebanon Airport Development Corporation,lebanonairportdevelopmentcorporation@email.com,4244
@@ -3249,7 +3249,7 @@ LIA,Leeward Islands Air Transport,leewardislandsairtransport@email.com,4246
 LGD,Legend Airlines,legendairlines@email.com,4247
 LWD,Leisure Air,leisureair@email.com,4248
 LEN,Lentini Aviation,lentiniaviation@email.com,4249
-LOR,Leo-Air,leo-air@email.com,4250
+LOR,Leo-Air,leo.air@email.com,4250
 LEL,Leonsa De Aviacion,leonsadeaviacion@email.com,4251
 LYW,Libyan Airlines,libyanairlines@email.com,4252
 LAA,Libyan Arab Airlines,libyanarabairlines@email.com,4253
@@ -3258,7 +3258,7 @@ LIQ,Lid Air,lidair@email.com,4255
 LCG,Lignes Aeriennes Congolaises,lignesaeriennescongolaises@email.com,4256
 LKD,Lignes Aeriennes Du Tchad,lignesaeriennesdutchad@email.com,4257
 LME,Lignes Mauritaniennes Air Express,lignesmauritaniennesairexpress@email.com,4258
-GCB,Lignes Nationales Aeriennes - Linacongo,lignesnationalesaeriennes-linacongo@email.com,4259
+GCB,Lignes Nationales Aeriennes - Linacongo,lignesnationalesaeriennes.linacongo@email.com,4259
 GDQ,Lincoln Air National Guard,lincolnairnationalguard@email.com,4260
 LRT,Lincoln Airlines,lincolnairlines@email.com,4261
 LSY,Lindsay Aviation,lindsayaviation@email.com,4262
@@ -3285,7 +3285,7 @@ LAM,Linhas A,linhasa@email.com,4282
 LAW,Link Airways of Australia,linkairwaysofaustralia@email.com,4283
 WGT,Lion Air Services,lionairservices@email.com,4284
 LNI,Lion Mentari Airlines,lionmentariairlines@email.com,4285
-LEU,Lions-Air,lions-air@email.com,4286
+LEU,Lions-Air,lions.air@email.com,4286
 LYF,Lithuanian Air Force,lithuanianairforce@email.com,4287
 LRA,Little Red Air Service,littleredairservice@email.com,4288
 LVG,Livingston,livingston@email.com,4289
@@ -3312,7 +3312,7 @@ TAS,Lotus Air,lotusair@email.com,4309
 LTW,Luchtvaartmaatschappij Twente,luchtvaartmaatschappijtwente@email.com,4310
 LKE,Lucky Air,luckyair@email.com,4311
 LUT,Luft Carago,luftcarago@email.com,4312
-LVD,Luftfahrt-Vermietungs-Dienst,luftfahrt-vermietungs-dienst@email.com,4313
+LVD,Luftfahrt-Vermietungs-Dienst,luftfahrt.vermietungs.dienst@email.com,4313
 LGW,Luftfahrtgesellschaft Walter,luftfahrtgesellschaftwalter@email.com,4314
 DLH,Lufthansa,lufthansa@email.com,4315
 GEC,Lufthansa Cargo,lufthansacargo@email.com,4316
@@ -3340,7 +3340,7 @@ LAU,L,l@email.com,4337
 JNH,M & N Aviation,m&naviation@email.com,4338
 MCF,MAC Fotografica,macfotografica@email.com,4339
 MRG,MANAG'AIR,manag'air@email.com,4340
-MPJ,MAP-Management and Planung,map-managementandplanung@email.com,4341
+MPJ,MAP-Management and Planung,map.managementandplanung@email.com,4341
 TFG,MAS Airways,masairways@email.com,4342
 MAA,MasAir,masair@email.com,4343
 MAK,MAT Macedonian Airlines,matmacedonianairlines@email.com,4344
@@ -3351,7 +3351,7 @@ MGL,MIAT Mongolian Airlines,miatmongolianairlines@email.com,4348
 MNC,MIT Airlines,mitairlines@email.com,4349
 MKA,MK Airline,mkairline@email.com,4350
 MNB,MNG Airlines,mngairlines@email.com,4351
-EBF,MSR Flug-Charter,msrflug-charter@email.com,4352
+EBF,MSR Flug-Charter,msrflug.charter@email.com,4352
 MCV,MTC Aviacion,mtcaviacion@email.com,4353
 MAQ,Mac Aviation,macaviation@email.com,4354
 MCN,Mac Dan Aviation Corporation,macdanaviationcorporation@email.com,4355
@@ -3403,7 +3403,7 @@ MRW,Mars RK,marsrk@email.com,4400
 MCE,Marshall Aerospace,marshallaerospace@email.com,4401
 MSL,Marsland Aviation,marslandaviation@email.com,4402
 XMA,Martin Aviation Services,martinaviationservices@email.com,4403
-MBE,Martin-Baker,martin-baker@email.com,4404
+MBE,Martin-Baker,martin.baker@email.com,4404
 MPH,Martinair,martinair@email.com,4405
 MRA,Martinaire,martinaire@email.com,4406
 MFA,Martyn Fiddler Associates,martynfiddlerassociates@email.com,4407
@@ -3424,11 +3424,11 @@ MVR,Maverick Airways,maverickairways@email.com,4421
 MVL,Mavial Magadan Airlines,mavialmagadanairlines@email.com,4422
 MAI,Max Avia,maxavia@email.com,4423
 MSF,Max Sea Food,maxseafood@email.com,4424
-MAX,Max-Aviation,max-aviation@email.com,4425
+MAX,Max-Aviation,max.aviation@email.com,4425
 MXL,Maxair,maxair@email.com,4426
 MXU,Maximus Air Cargo,maximusaircargo@email.com,4427
 MXJ,Maxjet Airways,maxjetairways@email.com,4428
-MXS,Maxsus-Avia,maxsus-avia@email.com,4429
+MXS,Maxsus-Avia,maxsus.avia@email.com,4429
 MXP,May Air Xpress,mayairxpress@email.com,4430
 MYD,Maya Island Air,mayaislandair@email.com,4431
 MYI,Mayair,mayair@email.com,4432
@@ -3437,7 +3437,7 @@ MCH,McAlpine Helicopters,mcalpinehelicopters@email.com,4434
 MKL,McCall Aviation,mccallaviation@email.com,4435
 DAC,McDonnell Douglas,mcdonnelldouglas@email.com,4436
 MDS,McNeely Charter Services,mcneelycharterservices@email.com,4437
-MEK,Med-Trans of Florida,med-transofflorida@email.com,4438
+MEK,Med-Trans of Florida,med.transofflorida@email.com,4438
 MDM,Medavia Company,medaviacompany@email.com,4439
 MRZ,Medical Air Rescue Services,medicalairrescueservices@email.com,4440
 MCL,Medical Aviation Services,medicalaviationservices@email.com,4441
@@ -3470,17 +3470,17 @@ MTJ,Metrojet,metrojet@email.com,4467
 PIX,Metropix UK,metropixuk@email.com,4468
 MPS,Metroplis,metroplis@email.com,4469
 MXB,Mex Blue,mexblue@email.com,4470
-MJT,Mex-Jet,mex-jet@email.com,4471
+MJT,Mex-Jet,mex.jet@email.com,4471
 MXA,Mexicana de Aviaci,mexicanadeaviaci@email.com,4472
 MXT,Mexico Transportes Aereos,mexicotransportesaereos@email.com,4473
 HUR,Miami Air Charter,miamiaircharter@email.com,4474
 BSK,Miami Air International,miamiairinternational@email.com,4475
 OWL,Miami Valley Aviation,miamivalleyaviation@email.com,4476
-MPT,Miapet-Avia,miapet-avia@email.com,4477
+MPT,Miapet-Avia,miapet.avia@email.com,4477
 BIB,Michelin Air Services,michelinairservices@email.com,4478
 WIZ,Micromatter Technology Solutions,micromattertechnologysolutions@email.com,4479
 NYL,Mid Airlines,midairlines@email.com,4480
-MPA,Mid-Pacific Airlines,mid-pacificairlines@email.com,4481
+MPA,Mid-Pacific Airlines,mid.pacificairlines@email.com,4481
 MJR,Midamerica Jet,midamericajet@email.com,4482
 MEA,Middle East Airlines,middleeastairlines@email.com,4483
 MID,Midland Airport Services,midlandairportservices@email.com,4484
@@ -3553,7 +3553,7 @@ MOW,Mowhawk Airlines,mowhawkairlines@email.com,4550
 MDN,Mudan Airlines,mudanairlines@email.com,4551
 CMJ,Mudanjiang General Aviation,mudanjianggeneralaviation@email.com,4552
 MTX,Multi Taxi,multitaxi@email.com,4553
-WBR,Multi-Aero,multi-aero@email.com,4554
+WBR,Multi-Aero,multi.aero@email.com,4554
 MFT,Multiflight,multiflight@email.com,4555
 MNZ,Murmansk Aircompany,murmanskaircompany@email.com,4556
 MUA,Murray Air,murrayair@email.com,4557
@@ -3654,7 +3654,7 @@ NGR,Nigerian Air Force,nigerianairforce@email.com,4651
 NGX,Nigerian Global,nigerianglobal@email.com,4652
 EXT,Night Express,nightexpress@email.com,4653
 NLY,Niki,niki@email.com,4654
-NKV,Nikolaev-Air,nikolaev-air@email.com,4655
+NKV,Nikolaev-Air,nikolaev.air@email.com,4655
 NSA,Nile Safaris Aviation,nilesafarisaviation@email.com,4656
 NVA,Nile Valley Aviation Company,nilevalleyaviationcompany@email.com,4657
 NLW,Nile Wings Aviation Services,nilewingsaviationservices@email.com,4658
@@ -3670,7 +3670,7 @@ NOK,Nok Air,nokair@email.com,4667
 NRL,Nolinor Aviation,nolinoraviation@email.com,4668
 NMD,Nomad Aviation,nomadaviation@email.com,4669
 NOC,Norcopter,norcopter@email.com,4670
-NEF,Nord-Flyg,nord-flyg@email.com,4671
+NEF,Nord-Flyg,nord.flyg@email.com,4671
 NES,Nordeste Linhas Aereas Regionais,nordestelinhasaereasregionais@email.com,4672
 NRD,Nordic Regional,nordicregional@email.com,4673
 NVD,Nordic Solutions,nordicsolutions@email.com,4674
@@ -3700,9 +3700,9 @@ SBX,North Star Air Cargo,northstaraircargo@email.com,4697
 NRV,North Vancouver Airlines,northvancouverairlines@email.com,4698
 NWW,North West Airlines,northwestairlines@email.com,4699
 PTO,North West Geomatics,northwestgeomatics@email.com,4700
-NEN,North-East Airlines,north-eastairlines@email.com,4701
-VBG,North-West Air Transport Company - Vyborg,north-westairtransportcompany-vyborg@email.com,4702
-NWL,North-Wright Airways,north-wrightairways@email.com,4703
+NEN,North-East Airlines,north.eastairlines@email.com,4701
+VBG,North-West Air Transport Company - Vyborg,north.westairtransportcompany.vyborg@email.com,4702
+NWL,North-Wright Airways,north.wrightairways@email.com,4703
 NLL,Northafrican Air Transport,northafricanairtransport@email.com,4704
 NFL,Northaire Feight Lines,northairefeightlines@email.com,4705
 NSF,Northamptonshire School of Flying,northamptonshireschoolofflying@email.com,4706
@@ -3743,7 +3743,7 @@ NPO,Novosibirsk Aviation Production Association,novosibirskaviationproductionass
 NOY,Noy Aviation,noyaviation@email.com,4741
 ACQ,Nuevo Continente,nuevocontinente@email.com,4742
 NHR,Nuevo Horizonte Internacional,nuevohorizonteinternacional@email.com,4743
-NUN,Nunasi-Central Airlines,nunasi-centralairlines@email.com,4744
+NUN,Nunasi-Central Airlines,nunasi.centralairlines@email.com,4744
 NIN,Nurman Avia Indopura,nurmanaviaindopura@email.com,4745
 NYS,Nyasa Express,nyasaexpress@email.com,4746
 KNE,Nas Air,nasair@email.com,4747
@@ -3772,7 +3772,7 @@ OAL,Olympic Airlines,olympicairlines@email.com,4769
 OLY,Olympic Aviation,olympicaviation@email.com,4770
 OMA,Oman Air,omanair@email.com,4771
 ORF,Oman Royal Flight,omanroyalflight@email.com,4772
-OAV,Omni - Aviacao e Tecnologia,omni-aviacaoetecnologia@email.com,4773
+OAV,Omni - Aviacao e Tecnologia,omni.aviacaoetecnologia@email.com,4773
 OAE,Omni Air International,omniairinternational@email.com,4774
 OMF,Omniflys,omniflys@email.com,4775
 OMS,Omskavia Airline,omskaviaairline@email.com,4776
@@ -3808,8 +3808,8 @@ NGK,Oriental Air Bridge,orientalairbridge@email.com,4805
 OAC,Oriental Airlines,orientalairlines@email.com,4806
 OGN,Origin Pacific Airways,originpacificairways@email.com,4807
 OED,Orion Air Charter,orionaircharter@email.com,4808
-OIX,Orion-x,orion-x@email.com,4809
-KOV,Orlan-2000,orlan-2000@email.com,4810
+OIX,Orion-x,orion.x@email.com,4809
+KOV,Orlan-2000,orlan.2000@email.com,4810
 RNG,Ornage Aircraft Leasing,ornageaircraftleasing@email.com,4811
 OAD,Orscom Tourist Installations Company,orscomtouristinstallationscompany@email.com,4812
 OSH,Osh Avia,oshavia@email.com,4813
@@ -3881,7 +3881,7 @@ PAA,Pan American World Airways,panamericanworldairways@email.com,4878
 PEA,Pan Europeenne Air Service,paneuropeenneairservice@email.com,4879
 PHT,Pan Havacilik Ve Ticaret,panhavacilikveticaret@email.com,4880
 PMA,Pan Malaysian Air Transport,panmalaysianairtransport@email.com,4881
-PNC,Pan-Air,pan-air@email.com,4882
+PNC,Pan-Air,pan.air@email.com,4882
 PNF,Panafrican Airways,panafricanairways@email.com,4883
 PGI,Panagra Airways,panagraairways@email.com,4884
 PEI,Panamedia,panamedia@email.com,4885
@@ -3924,8 +3924,8 @@ HAK,Pegasus Helicopters,pegasushelicopters@email.com,4921
 PDF,Pelican Air Services,pelicanairservices@email.com,4922
 PEX,Pelican Express,pelicanexpress@email.com,4923
 PAS,Pelita Air Service,pelitaairservice@email.com,4924
-PEM,Pem-Air,pem-air@email.com,4925
-PDY,Pen-Avia,pen-avia@email.com,4926
+PEM,Pem-Air,pem.air@email.com,4925
+PDY,Pen-Avia,pen.avia@email.com,4926
 PEN,Peninsula Airways,peninsulaairways@email.com,4927
 PNE,Peninter Aerea,peninteraerea@email.com,4928
 PCA,Penya De L'Aire,penyadel'aire@email.com,4929
@@ -3939,7 +3939,7 @@ INP,Peruvian Navy,peruviannavy@email.com,4936
 PMX,Petroleos Mexicanos,petroleosmexicanos@email.com,4937
 PHM,Petroleum Helicopters,petroleumhelicopters@email.com,4938
 PHC,Petroleum Helicopters de Colombia,petroleumhelicoptersdecolombia@email.com,4939
-PTK,Petropavlovsk-Kamchatsk Air Enterprise,petropavlovsk-kamchatskairenterprise@email.com,4940
+PTK,Petropavlovsk-Kamchatsk Air Enterprise,petropavlovsk.kamchatskairenterprise@email.com,4940
 PTY,Petty Transport,pettytransport@email.com,4941
 PHV,Phenix Aviation,phenixaviation@email.com,4942
 PMY,Phetchabun Airline,phetchabunairline@email.com,4943
@@ -3960,9 +3960,9 @@ PHY,Phoenix Avia,phoenixavia@email.com,4957
 PHG,Phoenix Aviation,phoenixaviation@email.com,4958
 XPX,Phoenix Flight Operations,phoenixflightoperations@email.com,4959
 VAP,Phuket Air,phuketair@email.com,4960
-PDT,Piedmont Airlines (1948-1989),piedmontairlines(1948-1989)@email.com,4961
+PDT,Piedmont Airlines (1948-1989),piedmontairlines(1948.1989)@email.com,4961
 PCH,Pilatus Flugzeugwerke,pilatusflugzeugwerke@email.com,4962
-PLU,Pilatus PC-12 Center De Mexico,pilatuspc-12centerdemexico@email.com,4963
+PLU,Pilatus PC-12 Center De Mexico,pilatuspc.12centerdemexico@email.com,4963
 MKS,Pimichikamac Air,pimichikamacair@email.com,4964
 PNP,Pineapple Air,pineappleair@email.com,4965
 PIM,Pinframat,pinframat@email.com,4966
@@ -3978,7 +3978,7 @@ PYZ,Players Air,playersair@email.com,4975
 LIB,Ploizeihubschrauberstaffel Hamburg,ploizeihubschrauberstaffelhamburg@email.com,4976
 PSF,Plymouth School of Flying,plymouthschoolofflying@email.com,4977
 POC,Pocono Air Lines,poconoairlines@email.com,4978
-PDA,Podilia-Avia,podilia-avia@email.com,4979
+PDA,Podilia-Avia,podilia.avia@email.com,4979
 PAZ,Point Afrique Niger,pointafriqueniger@email.com,4980
 RMI,Point Airlines,pointairlines@email.com,4981
 PAW,Pointair Burkina,pointairburkina@email.com,4982
@@ -3991,19 +3991,19 @@ POF,Police Aux Frontiers,policeauxfrontiers@email.com,4988
 PLC,Police Aviation Services,policeaviationservices@email.com,4989
 PLF,Polish Air Force,polishairforce@email.com,4990
 PNY,Polish Navy,polishnavy@email.com,4991
-NRW,Polizeifliegerstaffel Nordrhein-Westfalen,polizeifliegerstaffelnordrhein-westfalen@email.com,4992
+NRW,Polizeifliegerstaffel Nordrhein-Westfalen,polizeifliegerstaffelnordrhein.westfalen@email.com,4992
 PPH,Polizeihibschrauberstaffel Neidersachsen,polizeihibschrauberstaffelneidersachsen@email.com,4993
-PIK,Polizeihuberschrauberstaffel Sachsen-Anhalt,polizeihuberschrauberstaffelsachsen-anhalt@email.com,4994
-SRP,Polizeihubschrafterstaffel Rheinland-Pfalz,polizeihubschrafterstaffelrheinland-pfalz@email.com,4995
-PBW,Polizeihubschrauberstaffel Baden-Wurtemberg,polizeihubschrauberstaffelbaden-wurtemberg@email.com,4996
+PIK,Polizeihuberschrauberstaffel Sachsen-Anhalt,polizeihuberschrauberstaffelsachsen.anhalt@email.com,4994
+SRP,Polizeihubschrafterstaffel Rheinland-Pfalz,polizeihubschrafterstaffelrheinland.pfalz@email.com,4995
+PBW,Polizeihubschrauberstaffel Baden-Wurtemberg,polizeihubschrauberstaffelbaden.wurtemberg@email.com,4996
 EDL,Polizeihubschrauberstaffel Bayern,polizeihubschrauberstaffelbayern@email.com,4997
 PBB,Polizeihubschrauberstaffel Brandenburg,polizeihubschrauberstaffelbrandenburg@email.com,4998
 PHH,Polizeihubschrauberstaffel Hessen,polizeihubschrauberstaffelhessen@email.com,4999
-PMV,Polizeihubschrauberstaffel Mecklenburg-Vorpommern,polizeihubschrauberstaffelmecklenburg-vorpommern@email.com,5000
+PMV,Polizeihubschrauberstaffel Mecklenburg-Vorpommern,polizeihubschrauberstaffelmecklenburg.vorpommern@email.com,5000
 PHS,Polizeihubschrauberstaffel Sachsen,polizeihubschrauberstaffelsachsen@email.com,5001
 HBT,Polizeihubschrauberstaffel Thuringen,polizeihubschrauberstaffelthuringen@email.com,5002
 CUK,Polo Aviation,poloaviation@email.com,5003
-PLA,Polynesian Air-Ways,polynesianair-ways@email.com,5004
+PLA,Polynesian Air-Ways,polynesianair.ways@email.com,5004
 PAO,Polynesian Airlines,polynesianairlines@email.com,5005
 PLB,Polynesian Blue,polynesianblue@email.com,5006
 ,Polyot Sirena,polyotsirena@email.com,5007
@@ -4107,7 +4107,7 @@ CWL,Cranwell Flying Training Unit,cranwellflyingtrainingunit@email.com,5104
 KIN,Kinloss Flying Training Unit,kinlossflyingtrainingunit@email.com,5105
 LEE,Leeming Flying Training Unit,leemingflyingtrainingunit@email.com,5106
 LCS,RAF Leuchars,rafleuchars@email.com,5107
-LOP,Linton-on-Ouse Flying Training Unit,linton-on-ouseflyingtrainingunit@email.com,5108
+LOP,Linton-on-Ouse Flying Training Unit,linton.on.ouseflyingtrainingunit@email.com,5108
 LOS,Lossiemouth Flying Training Unit,lossiemouthflyingtrainingunit@email.com,5109
 MRH,Marham Flying Training Unit,marhamflyingtrainingunit@email.com,5110
 NWO,Northwood Headquarters (RAF,northwoodheadquarters(raf@email.com,5111
@@ -4119,10 +4119,10 @@ VYT,RAF Valley Flying Training Unit,rafvalleyflyingtrainingunit@email.com,5116
 VLL,RAF Valley SAR Training Unit,rafvalleysartrainingunit@email.com,5117
 WAD,Waddington FTU,waddingtonftu@email.com,5118
 WIT,Wittering FTU,witteringftu@email.com,5119
-MTL,RAF-Avia,raf-avia@email.com,5120
+MTL,RAF-Avia,raf.avia@email.com,5120
 RKM,RAK Airways,rakairways@email.com,5121
 RWL,RWL Luftfahrtgesellschaft,rwlluftfahrtgesellschaft@email.com,5122
-RBB,Rabbit-Air,rabbit-air@email.com,5123
+RBB,Rabbit-Air,rabbit.air@email.com,5123
 ACE,Race Cargo Airlines,racecargoairlines@email.com,5124
 GBR,Rader Aviation,raderaviation@email.com,5125
 ,Radixx Solutions International,radixxsolutionsinternational@email.com,5126
@@ -4143,7 +4143,7 @@ RTN,Raytheon Aircraft Company,raytheonaircraftcompany@email.com,5140
 RCJ,Raytheon Corporate Jets,raytheoncorporatejets@email.com,5141
 KSS,Raytheon Travel Air,raytheontravelair@email.com,5142
 RCB,Real Aero Club De Baleares,realaeroclubdebaleares@email.com,5143
-CDT,Real Aero Club de Reus-Costa Dorado,realaeroclubdereus-costadorado@email.com,5144
+CDT,Real Aero Club de Reus-Costa Dorado,realaeroclubdereus.costadorado@email.com,5144
 RCD,Real Aeroclub De Ternerife,realaeroclubdeternerife@email.com,5145
 RLV,Real Aviation,realaviation@email.com,5146
 REB,Rebus,rebus@email.com,5147
@@ -4210,15 +4210,15 @@ ROC,Rocky Mountain Airlines,rockymountainairlines@email.com,5207
 RMA,Rocky Mountain Airways,rockymountainairways@email.com,5208
 LIF,Rocky Mountain Holdings,rockymountainholdings@email.com,5209
 RDZ,Rodze Air,rodzeair@email.com,5210
-FAD,Rog-Air,rog-air@email.com,5211
+FAD,Rog-Air,rog.air@email.com,5211
 RRZ,Rollright Aviation,rollrightaviation@email.com,5212
-RRL,Rolls-Royce Limited,rolls-roycelimited@email.com,5213
-BTU,Rolls-Royce plc,rolls-royceplc@email.com,5214
+RRL,Rolls-Royce Limited,rolls.roycelimited@email.com,5213
+BTU,Rolls-Royce plc,rolls.royceplc@email.com,5214
 ROF,Romanian Air Force,romanianairforce@email.com,5215
 RMV,Romavia,romavia@email.com,5216
 RNS,Ronso,ronso@email.com,5217
 ROR,Roraima Airways,roraimaairways@email.com,5218
-RNB,Rosneft-Baltika,rosneft-baltika@email.com,5219
+RNB,Rosneft-Baltika,rosneft.baltika@email.com,5219
 NRG,Ross Aviation,rossaviation@email.com,5220
 RFS,Rossair,rossair@email.com,5221
 RSS,Rossair,rossair@email.com,5222
@@ -4273,9 +4273,9 @@ RMG,Rumugu Air & Space Nigeria,rumuguair&spacenigeria@email.com,5270
 RUR,Rusaero,rusaero@email.com,5271
 KLE,Rusaero,rusaero@email.com,5272
 CGI,Rusair JSAC,rusairjsac@email.com,5273
-RUH,Rusich-T,rusich-t@email.com,5274
+RUH,Rusich-T,rusich.t@email.com,5274
 RLU,Rusline,rusline@email.com,5275
-MIG,Russian Aircraft Corporation-MiG,russianaircraftcorporation-mig@email.com,5276
+MIG,Russian Aircraft Corporation-MiG,russianaircraftcorporation.mig@email.com,5276
 RFF,Russian Federation Air Force,russianfederationairforce@email.com,5277
 ESL,Russian Sky Airlines,russianskyairlines@email.com,5278
 RUZ,Rusuertol,rusuertol@email.com,5279
@@ -4313,8 +4313,8 @@ SAV,Samal Air,samalair@email.com,5310
 SAW,Sham Wing Airlines,shamwingairlines@email.com,5311
 SAX,Sabah Air,sabahair@email.com,5312
 SAY,ScotAirways,scotairways@email.com,5313
-SAZ,Swiss Air-Ambulance,swissair-ambulance@email.com,5314
-SBA,STA-MALI,sta-mali@email.com,5315
+SAZ,Swiss Air-Ambulance,swissair.ambulance@email.com,5314
+SBA,STA-MALI,sta.mali@email.com,5315
 SBB,Steinman Aviation,steinmanaviation@email.com,5316
 SBF,Seven Bar Flying Service,sevenbarflyingservice@email.com,5317
 SBG,Sabre Incorporated,sabreincorporated@email.com,5318
@@ -4341,9 +4341,9 @@ AHI,Servicios Aereos de Chihuahua Aerochisa,serviciosaereosdechihuahuaaerochisa@
 ALK,SriLankan Airlines,srilankanairlines@email.com,5339
 CDL,Sunbird Airlines,sunbirdairlines@email.com,5340
 SCP,Scorpio,scorpio@email.com,5341
-SCR,Si-Chang Flying Service,si-changflyingservice@email.com,5342
+SCR,Si-Chang Flying Service,si.changflyingservice@email.com,5342
 SCS,South African Non Scheduled Airways,southafricannonscheduledairways@email.com,5343
-SCT,SAAB-Aircraft,saab-aircraft@email.com,5344
+SCT,SAAB-Aircraft,saab.aircraft@email.com,5344
 SCV,Servicios Aereos Del Centro,serviciosaereosdelcentro@email.com,5345
 SCX,Sun Country Airlines,suncountryairlines@email.com,5346
 SDA,St. Andrews Airways,st.andrewsairways@email.com,5347
@@ -4352,7 +4352,7 @@ SDC,Sunrise Airlines,sunriseairlines@email.com,5349
 SDD,Skymaster Air Taxi,skymasterairtaxi@email.com,5350
 SDF,Sundorph Aeronautical Corporation,sundorphaeronauticalcorporation@email.com,5351
 SDH,Servicio De Helicopteros,serviciodehelicopteros@email.com,5352
-SDK,SADELCA - Sociedad Aerea Del Caqueta,sadelca-sociedadaereadelcaqueta@email.com,5353
+SDK,SADELCA - Sociedad Aerea Del Caqueta,sadelca.sociedadaereadelcaqueta@email.com,5353
 SDL,Skydrift,skydrift@email.com,5354
 SDN,Spirit of Africa Airlines,spiritofafricaairlines@email.com,5355
 SDU,Sud Airlines,sudairlines@email.com,5356
@@ -4412,7 +4412,7 @@ SHK,Shorouk Air,shoroukair@email.com,5409
 SHL,Samson Aviation,samsonaviation@email.com,5410
 SHM,Sheltam Aviation,sheltamaviation@email.com,5411
 SHN,Shaheen Airport Services,shaheenairportservices@email.com,5412
-SHO,Sheremetyevo-Cargo,sheremetyevo-cargo@email.com,5413
+SHO,Sheremetyevo-Cargo,sheremetyevo.cargo@email.com,5413
 SHP,Service Aerien Francais,serviceaerienfrancais@email.com,5414
 SHQ,Shanghai Airlines Cargo,shanghaiairlinescargo@email.com,5415
 SHR,Shooter Air Courier,shooteraircourier@email.com,5416
@@ -4490,13 +4490,13 @@ SSW,Streamline Aviation,streamlineaviation@email.com,5487
 SSY,Sky Aviation,skyaviation@email.com,5488
 SSZ,Specsavers Aviation,specsaversaviation@email.com,5489
 STA,Star Aviation,staraviation@email.com,5490
-STB,Status-Alpha Airline,status-alphaairline@email.com,5491
+STB,Status-Alpha Airline,status.alphaairline@email.com,5491
 STC,Stadium City Limited,stadiumcitylimited@email.com,5492
 STD,Servicios De Aerotransportacion De Aguascalientes,serviciosdeaerotransportaciondeaguascalientes@email.com,5493
 STE,Semitool Europe,semitooleurope@email.com,5494
-STF,SFT-Sudanese Flight,sft-sudaneseflight@email.com,5495
+STF,SFT-Sudanese Flight,sft.sudaneseflight@email.com,5495
 STG,Sedalia,sedalia@email.com,5496
-STH,South-Airlines,south-airlines@email.com,5497
+STH,South-Airlines,south.airlines@email.com,5497
 STI,Sontair,sontair@email.com,5498
 STJ,Sella Aviation,sellaaviation@email.com,5499
 STL,Stapleford Flight Centre,staplefordflightcentre@email.com,5500
@@ -4530,7 +4530,7 @@ SVH,Sterling Helicopters,sterlinghelicopters@email.com,5527
 SVI,Servicios De Transporte Aereo,serviciosdetransporteaereo@email.com,5528
 APD,Sabre Pacific,sabrepacific@email.com,5529
 SVJ,Silver Air,silverair@email.com,5530
-SVL,Sevastopol-Avia,sevastopol-avia@email.com,5531
+SVL,Sevastopol-Avia,sevastopol.avia@email.com,5531
 SVN,Savanair (Angola),savanair(angola)@email.com,5532
 SVO,Servicios Aeronauticos De Oriente,serviciosaeronauticosdeoriente@email.com,5533
 SVS,Servicios Aereos Saar,serviciosaereossaar@email.com,5534
@@ -4586,14 +4586,14 @@ BHV,Specavia Air Company,specaviaaircompany@email.com,5583
 BLY,Starair,starair@email.com,5584
 BNC,Sundance Air,sundanceair@email.com,5585
 BRZ,Samara Airlines,samaraairlines@email.com,5586
-BVV,Spark+ Joint-Stock Company,spark+joint-stockcompany@email.com,5587
+BVV,Spark+ Joint-Stock Company,spark+joint.stockcompany@email.com,5587
 CBN,Swedish Civil Aviation Administration,swedishcivilaviationadministration@email.com,5588
 CDG,Shandong Airlines,shandongairlines@email.com,5589
 CDS,Spectrem Air,spectremair@email.com,5590
 CEE,Servicios Aereos Centrales,serviciosaereoscentrales@email.com,5591
 CFL,Swedish Airlines,swedishairlines@email.com,5592
 CGL,Seagle Air,seagleair@email.com,5593
-CIG,Sirius-Aero,sirius-aero@email.com,5594
+CIG,Sirius-Aero,sirius.aero@email.com,5594
 CNK,Sunwest Home Aviation,sunwesthomeaviation@email.com,5595
 CNO,SAS Braathens,sasbraathens@email.com,5596
 CQH,Spring Airlines,springairlines@email.com,5597
@@ -4635,7 +4635,7 @@ HSY,Sky Helicopteros,skyhelicopteros@email.com,5632
 IGA,Skytaxi,skytaxi@email.com,5633
 IJS,Silvair,silvair@email.com,5634
 ILS,Servicios Aereos Ilsa,serviciosaereosilsa@email.com,5635
-INK,Sincom-Avia,sincom-avia@email.com,5636
+INK,Sincom-Avia,sincom.avia@email.com,5636
 IRV,Safat Airlines,safatairlines@email.com,5637
 IRZ,Saha Airlines Services,sahaairlinesservices@email.com,5638
 JAM,Sunline Express,sunlineexpress@email.com,5639
@@ -4666,7 +4666,7 @@ MTG,Servicios Aereos MTT,serviciosaereosmtt@email.com,5663
 ,Sabre Pacific,sabrepacific@email.com,5664
 ,Sabre,sabre@email.com,5665
 ,Sierra Nevada Airlines,sierranevadaairlines@email.com,5666
-,Siren-Travel,siren-travel@email.com,5667
+,Siren-Travel,siren.travel@email.com,5667
 ,Sirena,sirena@email.com,5668
 ,Sky Trek International Airlines,skytrekinternationalairlines@email.com,5669
 ,Southern Cross Distribution,southerncrossdistribution@email.com,5670
@@ -4706,7 +4706,7 @@ REJ,SA Airlink Regional,saairlinkregional@email.com,5703
 RER,Servicio Aereo Regional Regair,servicioaereoregionalregair@email.com,5704
 RFT,Scoala Superioara De Aviatie Civila,scoalasuperioaradeaviatiecivila@email.com,5705
 RGC,Servicios Aereos Regiomontanos,serviciosaereosregiomontanos@email.com,5706
-RLS,S-Air,s-air@email.com,5707
+RLS,S-Air,s.air@email.com,5707
 RMP,Servicios De Rampa Y Mostrador,serviciosderampaymostrador@email.com,5708
 RSE,SNAS Aviation,snasaviation@email.com,5709
 SKB,Skybus Airlines,skybusairlines@email.com,5710
@@ -4822,7 +4822,7 @@ TZU,Servicios Aereos Tamazula,serviciosaereostamazula@email.com,5819
 UGP,Shar Ink,sharink@email.com,5820
 UKU,Second Sverdlovsk Air Enterprise,secondsverdlovskairenterprise@email.com,5821
 UNT,Servicios Aereos Universitarios,serviciosaereosuniversitarios@email.com,5822
-USK,Skif-Air,skif-air@email.com,5823
+USK,Skif-Air,skif.air@email.com,5823
 USN,Smarkand Aero Servise,smarkandaeroservise@email.com,5824
 UZS,Samarkand Airways,samarkandairways@email.com,5825
 VDO,Servicios Aereos Avandaro,serviciosaereosavandaro@email.com,5826
@@ -4875,7 +4875,7 @@ TCA,Tropican Air Services,tropicanairservices@email.com,5872
 TCB,Transporte del Caribe,transportedelcaribe@email.com,5873
 TCC,Trans Continental Airlines,transcontinentalairlines@email.com,5874
 TCD,Tchad Airlines,tchadairlines@email.com,5875
-TCE,Trans-Colorado Airlines,trans-coloradoairlines@email.com,5876
+TCE,Trans-Colorado Airlines,trans.coloradoairlines@email.com,5876
 TCG,Thai Air Cargo,thaiaircargo@email.com,5877
 TCH,Transcontinental Air,transcontinentalair@email.com,5878
 TCM,Teledyne Continental Motors,teledynecontinentalmotors@email.com,5879
@@ -4899,13 +4899,13 @@ TLW,Teamline Air,teamlineair@email.com,5896
 TEF,Tecnicas Fotograficas,tecnicasfotograficas@email.com,5897
 TEH,Tempelhof Airways,tempelhofairways@email.com,5898
 TEL,Telford Aviation,telfordaviation@email.com,5899
-TEM,Tech-Mont Helicopter Company,tech-monthelicoptercompany@email.com,5900
+TEM,Tech-Mont Helicopter Company,tech.monthelicoptercompany@email.com,5900
 TEN,Tennessee Airways,tennesseeairways@email.com,5901
 TER,Territorial Airlines,territorialairlines@email.com,5902
 TES,TAES Transportes Aereos de El Salvador,taestransportesaereosdeelsalvador@email.com,5903
 TEP,Transeuropean Airlines,transeuropeanairlines@email.com,5904
-TET,Tepavia-Trans Airlines,tepavia-transairlines@email.com,5905
-TFA,Trans-Florida Airlines,trans-floridaairlines@email.com,5906
+TET,Tepavia-Trans Airlines,tepavia.transairlines@email.com,5905
+TFA,Trans-Florida Airlines,trans.floridaairlines@email.com,5906
 TFB,Tair Airways,tairairways@email.com,5907
 TFF,Talon Air,talonair@email.com,5908
 AIM,Trabajos Aereos Murcianos,trabajosaereosmurcianos@email.com,5909
@@ -4950,7 +4950,7 @@ TIN,Taino Tours,tainotours@email.com,5947
 TIS,Tesis,tesis@email.com,5948
 TIW,Transcarga Intl Airways,transcargaintlairways@email.com,5949
 TJK,Tajikair,tajikair@email.com,5950
-TJN,Tien-Shan,tien-shan@email.com,5951
+TJN,Tien-Shan,tien.shan@email.com,5951
 TJS,Tyrolean Jet Service,tyroleanjetservice@email.com,5952
 TJT,Twin Jet,twinjet@email.com,5953
 TKC,Tikal Jets Airlines,tikaljetsairlines@email.com,5954
@@ -4967,10 +4967,10 @@ TLS,TLC Air,tlcair@email.com,5964
 TLT,Turtle Airways,turtleairways@email.com,5965
 TLV,Travelair,travelair@email.com,5966
 TLX,Telesis Transair,telesistransair@email.com,5967
-TLY,Top-Fly,top-fly@email.com,5968
+TLY,Top-Fly,top.fly@email.com,5968
 TMA,Trans Mediterranean Airlines,transmediterraneanairlines@email.com,5969
 TMD,Transmed Airlines,transmedairlines@email.com,5970
-TMG,Tri-MG Intra Asia Airlines,tri-mgintraasiaairlines@email.com,5971
+TMG,Tri-MG Intra Asia Airlines,tri.mgintraasiaairlines@email.com,5971
 TMH,Taxis Turisticos Marakame,taxisturisticosmarakame@email.com,5972
 TMI,Tamir Airways,tamirairways@email.com,5973
 TMK,Tomahawk Airways,tomahawkairways@email.com,5974
@@ -4983,7 +4983,7 @@ TMT,Trans Midwest Airlines,transmidwestairlines@email.com,5980
 TMX,Tramon Air,tramonair@email.com,5981
 TMY,Transportes Aereos del Mundo Maya,transportesaereosdelmundomaya@email.com,5982
 TMZ,Tranporte Amazonair,tranporteamazonair@email.com,5983
-TNB,Trans Air-Benin,transair-benin@email.com,5984
+TNB,Trans Air-Benin,transair.benin@email.com,5984
 TNE,Taxis Aereos del Noroeste,taxisaereosdelnoroeste@email.com,5985
 TNF,Transafricaine,transafricaine@email.com,5986
 TNG,Tennessee Air National Guard 164th Airlift Group,tennesseeairnationalguard164thairliftgroup@email.com,5987
@@ -4999,7 +4999,7 @@ TNX,Trener Ltd,trenerltd@email.com,5996
 TNY,Twin Town Leasing Company,twintownleasingcompany@email.com,5997
 TOB,Tobruk Air,tobrukair@email.com,5998
 TOJ,TOJ Airlines,tojairlines@email.com,5999
-TOL,Tol-Air Services,tol-airservices@email.com,6000
+TOL,Tol-Air Services,tol.airservices@email.com,6000
 TOM,Thomsonfly,thomsonfly@email.com,6001
 TOP,Top Air,topair@email.com,6002
 TOR,Toronto Airways,torontoairways@email.com,6003
@@ -5021,7 +5021,7 @@ TPT,Transportes Aereo del Sureste,transportesaereodelsureste@email.com,6018
 TPU,Trans American Airlines (Trans Am),transamericanairlines(transam)@email.com,6019
 TPV,Thai Pacific Airlines Business,thaipacificairlinesbusiness@email.com,6020
 TPX,Transportes Aereos De Xalapa,transportesaereosdexalapa@email.com,6021
-TPY,Trans-Provincial Airlines,trans-provincialairlines@email.com,6022
+TPY,Trans-Provincial Airlines,trans.provincialairlines@email.com,6022
 TPZ,Transportes La Paz,transporteslapaz@email.com,6023
 TQN,Taquan Air Services,taquanairservices@email.com,6024
 TQR,Transportacion Aerea De Queretaro,transportacionaereadequeretaro@email.com,6025
@@ -5034,7 +5034,7 @@ TRF,Taxi Air Fret,taxiairfret@email.com,6031
 TRG,TRAGSA (Medios Aereos),tragsa(mediosaereos)@email.com,6032
 TRJ,Trans Euro Air,transeuroair@email.com,6033
 TRM,Transport Aerien de Mauritanie,transportaeriendemauritanie@email.com,6034
-TRO,Tropic Airlines-Air Molokai,tropicairlines-airmolokai@email.com,6035
+TRO,Tropic Airlines-Air Molokai,tropicairlines.airmolokai@email.com,6035
 TRQ,Turdus Airways,turdusairways@email.com,6036
 TRR,Tramson Limited,tramsonlimited@email.com,6037
 TRT,Trans Arabian Air Transport,transarabianairtransport@email.com,6038
@@ -5043,9 +5043,9 @@ TRW,Transwestern Airlines of Utah,transwesternairlinesofutah@email.com,6040
 TRY,Tristar Airlines,tristarairlines@email.com,6041
 TRZ,TransMeridian Airlines,transmeridianairlines@email.com,6042
 TSA,Transair France,transairfrance@email.com,6043
-TSD,TAF-Linhas Aereas,taf-linhasaereas@email.com,6044
+TSD,TAF-Linhas Aereas,taf.linhasaereas@email.com,6044
 TSE,Transmile Air Services,transmileairservices@email.com,6045
-TSG,Trans-Air-Congo,trans-air-congo@email.com,6046
+TSG,Trans-Air-Congo,trans.air.congo@email.com,6046
 TSI,Transport'air,transport'air@email.com,6047
 TSJ,Trast Aero,trastaero@email.com,6048
 TSK,Trast Aero,trastaero@email.com,6049
@@ -5053,17 +5053,17 @@ TSL,Thai Aviation Services,thaiaviationservices@email.com,6050
 SBT,Taftan Airlines,taftanairlines@email.com,6051
 ABS,Transwest Air,transwestair@email.com,6052
 TSM,Trans Sayegh Airport Services,transsayeghairportservices@email.com,6053
-TSN,Trans-Air Services,trans-airservices@email.com,6054
+TSN,Trans-Air Services,trans.airservices@email.com,6054
 TSO,Transaero Airlines,transaeroairlines@email.com,6055
 TSP,Transportes Aereos Inter,transportesaereosinter@email.com,6056
 TSR,Trans Service Airlift,transserviceairlift@email.com,6057
-TSS,Tri-State Aero,tri-stateaero@email.com,6058
+TSS,Tri-State Aero,tri.stateaero@email.com,6058
 TST,TRAST,trast@email.com,6059
 TSV,Tropair Airservices,tropairairservices@email.com,6060
 TSW,Transwings,transwings@email.com,6061
 TSX,Thai Star Airlines,thaistarairlines@email.com,6062
 TSY,Tristar Air,tristarair@email.com,6063
-TTA,TTA - Sociedade de Transporte e Trabalho Aereo,tta-sociedadedetransporteetrabalhoaereo@email.com,6064
+TTA,TTA - Sociedade de Transporte e Trabalho Aereo,tta.sociedadedetransporteetrabalhoaereo@email.com,6064
 TTC,Transteco,transteco@email.com,6065
 TTH,Tarhan Tower Airlines,tarhantowerairlines@email.com,6066
 TTL,Total Linhas Aereas,totallinhasaereas@email.com,6067
@@ -5104,7 +5104,7 @@ TXS,Texas Airlines,texasairlines@email.com,6101
 TXT,Texas Air Charters,texasaircharters@email.com,6102
 TXZ,Tex Star Air Freight,texstarairfreight@email.com,6103
 TYF,Tayflite,tayflite@email.com,6104
-TYG,Trygg-Flyg,trygg-flyg@email.com,6105
+TYG,Trygg-Flyg,trygg.flyg@email.com,6105
 TYW,Tyrol Air Ambulance,tyrolairambulance@email.com,6106
 TZE,Transporte Aereo Ernesto Saenz,transporteaereoernestosaenz@email.com,6107
 TZK,Tajikstan,tajikstan@email.com,6108
@@ -5128,21 +5128,21 @@ FBO,TAG Farnborough Airport,tagfarnboroughairport@email.com,6125
 FNV,Transaviaservice,transaviaservice@email.com,6126
 FPG,TAG Aviation,tagaviation@email.com,6127
 GFN,The 955 Preservation Group,the955preservationgroup@email.com,6128
-GJB,Trans-Air-Link,trans-air-link@email.com,6129
+GJB,Trans-Air-Link,trans.air.link@email.com,6129
 GPD,Tradewind Aviation,tradewindaviation@email.com,6130
 HBA,Trail Lake Flying Service,traillakeflyingservice@email.com,6131
 HET,TAF Helicopters,tafhelicopters@email.com,6132
 HTO,Tango Bravo,tangobravo@email.com,6133
 HVK,Turkish Air Force,turkishairforce@email.com,6134
 IHS,Thryluthjonustan,thryluthjonustan@email.com,6135
-IRF,TA-Air Airline,ta-airairline@email.com,6136
+IRF,TA-Air Airline,ta.airairline@email.com,6136
 IRR,Tara Air Line,taraairline@email.com,6137
 JCH,Trading Air Cargo,tradingaircargo@email.com,6138
-KCA,Trans-Kiev,trans-kiev@email.com,6139
+KCA,Trans-Kiev,trans.kiev@email.com,6139
 JEL,Tal Air Charters,talaircharters@email.com,6140
 KRA,Transcontinental Airlines,transcontinentalairlines@email.com,6141
 KTB,Transaviabaltika,transaviabaltika@email.com,6142
-KTS,Transair-Gyraintiee,transair-gyraintiee@email.com,6143
+KTS,Transair-Gyraintiee,transair.gyraintiee@email.com,6143
 LAP,TAM Mercosur,tammercosur@email.com,6144
 LCC,The Lancair Company,thelancaircompany@email.com,6145
 LEG,The Army Aviation Heritage Foundation,thearmyaviationheritagefoundation@email.com,6146
@@ -5159,9 +5159,9 @@ MXQ,Transportes Aereos Mexiquenses,transportesaereosmexiquenses@email.com,6155
 ,Thalys,thalys@email.com,6157
 NTR,TNT International Aviation,tntinternationalaviation@email.com,6158
 OSY,Open Skies Consultative Commission,openskiesconsultativecommission@email.com,6159
-PCW,Trans-Pacific Orient Airways,trans-pacificorientairways@email.com,6160
+PCW,Trans-Pacific Orient Airways,trans.pacificorientairways@email.com,6160
 PGS,Tauranga Aer Club,taurangaaerclub@email.com,6161
-PSS,TSSKB-Progress,tsskb-progress@email.com,6162
+PSS,TSSKB-Progress,tsskb.progress@email.com,6162
 RBD,Trans World Express,transworldexpress@email.com,6163
 REC,Trans Reco,transreco@email.com,6164
 RMS,Tas Aviation,tasaviation@email.com,6165
@@ -5177,7 +5177,7 @@ URN,Turan Air,turanair@email.com,6174
 TIB,TRIP Linhas A,triplinhasa@email.com,6175
 USB,Tusheti,tusheti@email.com,6176
 UTM,TAPC Aviatrans Aircompany,tapcaviatransaircompany@email.com,6177
-UTN,Trans-Ulgii,trans-ulgii@email.com,6178
+UTN,Trans-Ulgii,trans.ulgii@email.com,6178
 UTT,Transarabian Transportation Services,transarabiantransportationservices@email.com,6179
 VEN,Transaven,transaven@email.com,6180
 VIP,Tag Aviation UK,tagaviationuk@email.com,6181
@@ -5225,7 +5225,7 @@ UAI,Union Africaine des Transports,unionafricainedestransports@email.com,6222
 UCC,Uganda Air Cargo,ugandaaircargo@email.com,6223
 UCH,US Airports Air Charter,usairportsaircharter@email.com,6224
 UCO,Ucoaviacion,ucoaviacion@email.com,6225
-UES,Ues-Avia Aircompany,ues-aviaaircompany@email.com,6226
+UES,Ues-Avia Aircompany,ues.aviaaircompany@email.com,6226
 UFS,UFS,ufs@email.com,6227
 UGA,Uganda Airlines,ugandaairlines@email.com,6228
 UGC,Urgemer Canarias,urgemercanarias@email.com,6229
@@ -5240,8 +5240,8 @@ UKN,Ukraine Air Enterprise,ukraineairenterprise@email.com,6237
 UKP,United Kingdom Home Office,unitedkingdomhomeoffice@email.com,6238
 UKS,Ukrainian Cargo Airways,ukrainiancargoairways@email.com,6239
 ULT,Ultrair,ultrair@email.com,6240
-UMS,Unitemp-M,unitemp-m@email.com,6241
-UNC,Uni-Fly,uni-fly@email.com,6242
+UMS,Unitemp-M,unitemp.m@email.com,6241
+UNC,Uni-Fly,uni.fly@email.com,6242
 UNF,Union Flights,unionflights@email.com,6243
 UNJ,Universal Jet,universaljet@email.com,6244
 UNS,Unsped Paket Servisi,unspedpaketservisi@email.com,6245
@@ -5259,7 +5259,7 @@ UTA,UTair Aviation,utairaviation@email.com,6256
 UTG,UTAGE,utage@email.com,6257
 UTR,Utair South Africa,utairsouthafrica@email.com,6258
 UTS,Ukrainian State Air Traffic Service Enterprise,ukrainianstateairtrafficserviceenterprise@email.com,6259
-UTU,Urartu-Air,urartu-air@email.com,6260
+UTU,Urartu-Air,urartu.air@email.com,6260
 UVA,Universal Airways,universalairways@email.com,6261
 UVG,Universal Airlines,universalairlines@email.com,6262
 UVM,Uvavemex,uvavemex@email.com,6263
@@ -5271,13 +5271,13 @@ WEC,Universal Airlines,universalairlines@email.com,6268
 ,US Helicopter Corporation,ushelicoptercorporation@email.com,6269
 VAU,V Australia Airlines,vaustraliaairlines@email.com,6270
 VBA,V Bird Airlines Netherlands,vbirdairlinesnetherlands@email.com,6271
-WIW,V-avia Airline,v-aviaairline@email.com,6272
-VBD,V-Berd-Avia,v-berd-avia@email.com,6273
+WIW,V-avia Airline,v.aviaairline@email.com,6272
+VBD,V-Berd-Avia,v.berd.avia@email.com,6273
 VAC,Vacationair,vacationair@email.com,6274
 RDW,Valair AG (Helicoptere),valairag(helicoptere)@email.com,6275
 VLA,Valan International Cargo Charter,valaninternationalcargocharter@email.com,6276
 VLN,Valan Limited,valanlimited@email.com,6277
-EHR,Valfell-Verkflug,valfell-verkflug@email.com,6278
+EHR,Valfell-Verkflug,valfell.verkflug@email.com,6278
 VLU,Valuair,valuair@email.com,6279
 VAA,Van Air Europe,vanaireurope@email.com,6280
 VGC,Vanguardia en Aviacion en Colima,vanguardiaenaviacionencolima@email.com,6281
@@ -5293,7 +5293,7 @@ GRV,Vernicos Aviation,vernicosaviation@email.com,6290
 HVN,Vietnam Airlines,vietnamairlines@email.com,6291
 KWA,Vozdushnaya Academy,vozdushnayaacademy@email.com,6292
 MOV,VIM Airlines,vimairlines@email.com,6293
-MVY,VIM-Aviaservice,vim-aviaservice@email.com,6294
+MVY,VIM-Aviaservice,vim.aviaservice@email.com,6294
 ,VIA Rail Canada,viarailcanada@email.com,6295
 ENV,Victoria Aviation,victoriaaviation@email.com,6296
 VCT,Viscount Air Service,viscountairservice@email.com,6297
@@ -5303,10 +5303,10 @@ PAV,VIP Avia,vipavia@email.com,6300
 PRX,VIP Avia,vipavia@email.com,6301
 VAT,Visionair,visionair@email.com,6302
 ,Viasa,viasa@email.com,6303
-VCA,VICA - Viacao Charter Aereos,vica-viacaocharteraereos@email.com,6304
+VCA,VICA - Viacao Charter Aereos,vica.viacaocharteraereos@email.com,6304
 VCM,Volare Air Charter Company,volareairchartercompany@email.com,6305
 VOI,Volaris,volaris@email.com,6306
-VDA,Volga-Dnepr Airlines,volga-dneprairlines@email.com,6307
+VDA,Volga-Dnepr Airlines,volga.dneprairlines@email.com,6307
 VEA,Vega Airlines,vegaairlines@email.com,6308
 VEC,Venescar Internacional,venescarinternacional@email.com,6309
 VEE,Victor Echo,victorecho@email.com,6310
@@ -5317,8 +5317,8 @@ VEX,Virgin Express,virginexpress@email.com,6314
 VFT,VZ Flights,vzflights@email.com,6315
 VGN,Virgin Nigeria Airways,virginnigeriaairways@email.com,6316
 VGV,Vologda State Air Enterprise,vologdastateairenterprise@email.com,6317
-VHA,VH-Air Industrie,vh-airindustrie@email.com,6318
-VHM,VHM Schul-und-Charterflug,vhmschul-und-charterflug@email.com,6319
+VHA,VH-Air Industrie,vh.airindustrie@email.com,6318
+VHM,VHM Schul-und-Charterflug,vhmschul.und.charterflug@email.com,6319
 VIB,Vibroair Flugservice,vibroairflugservice@email.com,6320
 VIC,VIP Servicios Aereos Ejecutivos,vipserviciosaereosejecutivos@email.com,6321
 VIE,VIP Empresarial,vipempresarial@email.com,6322
@@ -5326,7 +5326,7 @@ VIF,VIF Luftahrt,vifluftahrt@email.com,6323
 VIG,Vega Aviation,vegaaviation@email.com,6324
 VIH,Vichi,vichi@email.com,6325
 VIK,Viking Airlines,vikingairlines@email.com,6326
-VIN,Vinair - Helicoptereos,vinair-helicoptereos@email.com,6327
+VIN,Vinair - Helicoptereos,vinair.helicoptereos@email.com,6327
 VIR,Virgin Atlantic Airways,virginatlanticairways@email.com,6328
 VJM,Viajes Ejecutivos Mexicanos,viajesejecutivosmexicanos@email.com,6329
 VJT,Vistajet,vistajet@email.com,6330
@@ -5335,7 +5335,7 @@ VLE,Volare Airlines,volareairlines@email.com,6332
 VLG,Vueling Airlines,vuelingairlines@email.com,6333
 VLK,Vladivostok Air,vladivostokair@email.com,6334
 VLO,Varig Log,variglog@email.com,6335
-VLT,Vertical-T Air Company,vertical-taircompany@email.com,6336
+VLT,Vertical-T Air Company,vertical.taircompany@email.com,6336
 VMA,Vero Monmouth Airlines,veromonmouthairlines@email.com,6337
 VNK,Vipport Joint Stock Company,vipportjointstockcompany@email.com,6338
 VOA,Viaggio Air,viaggioair@email.com,6339
@@ -5344,7 +5344,7 @@ VOZ,Virgin Australia,virginaustralia@email.com,6341
 VBI,Virgin Blue,virginblue@email.com,6342
 VPA,VIP Air,vipair@email.com,6343
 VPB,Veteran Air,veteranair@email.com,6344
-VPV,VIP-Avia,vip-avia@email.com,6345
+VPV,VIP-Avia,vip.avia@email.com,6345
 VRA,Vertair,vertair@email.com,6346
 VRE,Volare Airlines,volareairlines@email.com,6347
 VRL,Voar Lda,voarlda@email.com,6348
@@ -5466,19 +5466,19 @@ CXA,Xiamen Airlines,xiamenairlines@email.com,6463
 CXJ,Xinjiang Airlines,xinjiangairlines@email.com,6464
 XJT,Xjet Limited,xjetlimited@email.com,6465
 CXP,Xtra Airways,xtraairways@email.com,6466
-AKY,Yak-Service,yak-service@email.com,6467
+AKY,Yak-Service,yak.service@email.com,6467
 YAK,Yakolev,yakolev@email.com,6468
 LLM,Yamal Airlines,yamalairlines@email.com,6469
 CYG,Yana Airlines,yanaairlines@email.com,6470
 YZR,Yangtze River Express,yangtzeriverexpress@email.com,6471
 ELW,Yellow Wings Air Services,yellowwingsairservices@email.com,6472
 IYE,Yemenia,yemenia@email.com,6473
-ERV,Yerevan-Avia,yerevan-avia@email.com,6474
+ERV,Yerevan-Avia,yerevan.avia@email.com,6474
 YFS,Young Flying Service,youngflyingservice@email.com,6475
 AYU,Yuhi Air Lines,yuhiairlines@email.com,6476
 UGN,Yuzhnaya Aircompany,yuzhnayaaircompany@email.com,6477
 UMK,Yuzhmashavia,yuzhmashavia@email.com,6478
-RZV,Z-Avia,z-avia@email.com,6479
+RZV,Z-Avia,z.avia@email.com,6479
 IZG,Zagros Airlines,zagrosairlines@email.com,6480
 ZAI,Zaire Aero Service,zaireaeroservice@email.com,6481
 ZAR,Zairean Airlines,zaireanairlines@email.com,6482
@@ -5514,7 +5514,7 @@ GLP,Globus,globus@email.com,6511
 KZK,Air Kazakhstan,airkazakhstan@email.com,6512
 JAS,Japan Air System,japanairsystem@email.com,6513
 RTL,Rheintalflug,rheintalflug@email.com,6514
-DAN,Dan-Air London,dan-airlondon@email.com,6515
+DAN,Dan-Air London,dan.airlondon@email.com,6515
 FOF,Fred. Olsen,fred.olsen@email.com,6516
 RHA,Robin Hood Aviation,robinhoodaviation@email.com,6517
 UBD,United Airways,unitedairways@email.com,6518
@@ -5546,8 +5546,8 @@ YCP,Canadian National Airways,canadiannationalairways@email.com,6543
 4AA,Epic Holiday,epicholiday@email.com,6544
 AXC,Indochina Airlines,indochinaairlines@email.com,6545
 JWW,JetWind,jetwind@email.com,6546
-FLB,German Air Force - FLB,germanairforce-flb@email.com,6547
-CIP,City-Air Germany,city-airgermany@email.com,6548
+FLB,German Air Force - FLB,germanairforce.flb@email.com,6547
+CIP,City-Air Germany,city.airgermany@email.com,6548
 LBL,Line Blue,lineblue@email.com,6549
 LLC,FlyLAL Charters,flylalcharters@email.com,6550
 BKY,Blue Sky America,blueskyamerica@email.com,6551
@@ -5709,9 +5709,9 @@ HA1,Hankook Air US,hankookairus@email.com,6706
 CNN,Canadian World,canadianworld@email.com,6707
 PHJ,Pim Air,pimair@email.com,6708
 SMW,Carpatair Flight Training,carpatairflighttraining@email.com,6709
-RSY,I-Fly,i-fly@email.com,6710
+RSY,I-Fly,i.fly@email.com,6710
 CFP,Compania de Aviacion Faucett,companiadeaviacionfaucett@email.com,6711
-KAR,Kar-Air,kar-air@email.com,6712
+KAR,Kar-Air,kar.air@email.com,6712
 WTJ,Whitejets,whitejets@email.com,6713
 VKJ,VickJet,vickjet@email.com,6714
 HAY,Hamburg Airways,hamburgairways@email.com,6715
@@ -5775,7 +5775,7 @@ SCO,Scoot,scoot@email.com,6772
 STS,Starling Airlines Spain,starlingairlinesspain@email.com,6773
 ZNA,Zenith International Airline,zenithinternationalairline@email.com,6774
 OAB,Orbit Airlines Azerbaijan,orbitairlinesazerbaijan@email.com,6775
-RQX,Air Engiadina-BRN,airengiadina-brn@email.com,6776
+RQX,Air Engiadina-BRN,airengiadina.brn@email.com,6776
 FVG,VG Airlines (IV),vgairlines(iv)@email.com,6777
 AAT,Austrian Airtransport,austrianairtransport@email.com,6778
 FKA,Flying kangaroo Airline,flyingkangarooairline@email.com,6779
@@ -5843,8 +5843,8 @@ RMK,Simrik Airlines,simrikairlines@email.com,6840
 GF5,Global Freightways,globalfreightways@email.com,6841
 XPT,XPTO,xpto@email.com,6842
 DME,Royal Flight,royalflight@email.com,6843
-EGH,BBN-Airways,bbn-airways@email.com,6844
-TKS,Tomsk-Avia,tomsk-avia@email.com,6845
+EGH,BBN-Airways,bbn.airways@email.com,6844
+TKS,Tomsk-Avia,tomsk.avia@email.com,6845
 VPP,Vintage Props and Jets,vintagepropsandjets@email.com,6846
 NYT,Yeti Airlines ,yetiairlines@email.com,6847
 ...,Avilu,avilu@email.com,6848
@@ -5887,7 +5887,7 @@ CBG,Guangxi Beibu Gulf Airlines,guangxibeibugulfairlines@email.com,6884
 MYU,My Indo Airlines,myindoairlines@email.com,6885
 FRV,Government of Morocco,governmentofmorocco@email.com,6886
 HKC,Hong Kong Air Cargo,hongkongaircargo@email.com,6887
-UBG,US-Bangla Airlines,us-banglaairlines@email.com,6888
+UBG,US-Bangla Airlines,us.banglaairlines@email.com,6888
 NJE,NetJets Europe,netjetseurope@email.com,6889
 BTN,Bhutan Airlines,bhutanairlines@email.com,6890
 IRB,Iran Airtour,iranairtour@email.com,6891

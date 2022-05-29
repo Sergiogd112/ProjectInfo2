@@ -73,11 +73,11 @@ namespace GestionClientes
         }
 
         //método para verificar la existencia de usuario con username introducido por parametro
-        public int ExistsUser(string name)
+        public int ExistsICAO(string name)
         {
             DataTable dt = new DataTable();
             string user =
-                "SELECT * FROM company WHERE username='" + name + "';";
+                "SELECT * FROM company WHERE ICAO='" + name + "';";
             SQLiteDataAdapter command = new SQLiteDataAdapter(user, this.cnx);
             command.Fill(dt);
             if (dt.Rows.Count == 1)
@@ -93,7 +93,7 @@ namespace GestionClientes
         }
 
         //método para encontrar usuario con cierto nombre y contraseña
-        public int findUser(string name, string pass)
+        public int findICAO(string name, string pass)
         {
             //tabla que contiene el nombre de usuario, si encontrado
             DataTable dt1 = new DataTable();
